@@ -621,5 +621,53 @@
     }
     </script>
 
+  <script>
+// REAKCE SYSTÉM
+document.addEventListener('DOMContentLoaded', function() {
+  const reactions = ['👍', '🤯', '😂', '❤️'];
+  const cards = document.querySelectorAll('.card');
+  
+  cards.forEach((card, index) => {
+    const cardId = 'card_' + index;
+    const reactionDiv = document.createElement('div');
+    reactionDiv.style.cssText = 'display:flex; gap:0.5rem; margin-top:1rem; padding-top:1rem; border-top:1px solid rgba(200,255,62,0.12);';
+    
+    reactions.forEach(emoji => {
+      const btn = document.createElement('button');
+      const saved = JSON.parse(localStorage.getItem(cardId + '_' + emoji) || '{"count":0,"voted":false}');
+      
+      btn.style.cssText = 'background:#12121a; border:1px solid rgba(200,255,62,0.12); color:#e8e8f0; padding:0.3rem 0.7rem; cursor:pointer; font-size:0.85rem; border-radius:2px; transition:all 0.2s;';
+      btn.innerHTML = emoji + ' <span>' + saved.count + '</span>';
+      
+      if (saved.voted) {
+        btn.style.borderColor = '#c8ff3e';
+        btn.style.color = '#c8ff3e';
+      }
+      
+      btn.addEventListener('click', function() {
+        const data = JSON.parse(localStorage.getItem(cardId + '_' + emoji) || '{"count":0,"voted":false}');
+        if (!data.voted) {
+          data.count++;
+          data.voted = true;
+          btn.style.borderColor = '#c8ff3e';
+          btn.style.color = '#c8ff3e';
+        } else {
+          data.count--;
+          data.voted = false;
+          btn.style.borderColor = 'rgba(200,255,62,0.12)';
+          btn.style.color = '#e8e8f0';
+        }
+        localStorage.setItem(cardId + '_' + emoji, JSON.stringify(data));
+        btn.querySelector('span').textContent = data.count;
+      });
+      
+      reactionDiv.appendChild(btn);
+    });
+    
+    card.appendChild(reactionDiv);
+  });
+});
+</script>
+  
 </body>
 </html>
