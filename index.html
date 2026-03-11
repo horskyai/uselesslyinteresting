@@ -444,6 +444,7 @@ window.addEventListener('load', function() {
       <a href="#" onclick="openCategories(); return false;">Categories</a>
       <a href="about.html">About</a>
       <a href="https://www.instagram.com/uselesslyinteresting" target="_blank">Instagram</a>
+      <a onclick="toggleMode()" style="cursor:pointer;">🌙</a>
     </nav>
   </header>
 
@@ -697,6 +698,29 @@ document.addEventListener('DOMContentLoaded', function() {
     
     card.appendChild(reactionDiv);
   });
+});
+</script>
+
+  <script>
+function toggleMode() {
+  const body = document.body;
+  const btn = document.querySelector('nav a[onclick="toggleMode()"]');
+  if (body.classList.contains('light-mode')) {
+    body.classList.remove('light-mode');
+    btn.textContent = '🌙';
+    localStorage.setItem('mode', 'dark');
+  } else {
+    body.classList.add('light-mode');
+    btn.textContent = '☀️';
+    localStorage.setItem('mode', 'light');
+  }
+}
+// Načti uložený režim
+window.addEventListener('load', function() {
+  if (localStorage.getItem('mode') === 'light') {
+    document.body.classList.add('light-mode');
+    document.querySelector('nav a[onclick="toggleMode()"]').textContent = '☀️';
+  }
 });
 </script>
   
