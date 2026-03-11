@@ -512,6 +512,52 @@
     <span>© 2026 UselesslyInteresting</span>
     <span>Facts nobody asked for, delivered daily</span>
   </footer>
+   <!-- CATEGORIES POPUP -->
+    <div id="categories-overlay" onclick="closeCategories()" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.7); z-index:999; backdrop-filter:blur(4px);"></div>
+
+    <div id="categories-popup" style="display:none; position:fixed; top:50%; left:50%; transform:translate(-50%,-50%); background:#1a1a26; border:1px solid rgba(200,255,62,0.2); padding:3rem; z-index:1000; min-width:340px; max-width:500px; width:90%;">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:2rem;">
+        <div style="font-family:'Syne',sans-serif; font-size:1.4rem; font-weight:800;">Categories</div>
+        <div onclick="closeCategories()" style="cursor:pointer; color:#6b6b88; font-size:1.5rem; line-height:1;">✕</div>
+      </div>
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.8rem;">
+        <div onclick="filterCategory('all')" style="background:#12121a; border:1px solid rgba(200,255,62,0.12); padding:1rem; cursor:pointer; font-size:0.8rem; letter-spacing:0.1em; text-transform:uppercase;">⚡ All Facts</div>
+        <div onclick="filterCategory('Biology')" style="background:#12121a; border:1px solid rgba(200,255,62,0.12); padding:1rem; cursor:pointer; font-size:0.8rem; letter-spacing:0.1em; text-transform:uppercase;">🧬 Biology</div>
+        <div onclick="filterCategory('Space')" style="background:#12121a; border:1px solid rgba(200,255,62,0.12); padding:1rem; cursor:pointer; font-size:0.8rem; letter-spacing:0.1em; text-transform:uppercase;">🚀 Space</div>
+        <div onclick="filterCategory('History')" style="background:#12121a; border:1px solid rgba(200,255,62,0.12); padding:1rem; cursor:pointer; font-size:0.8rem; letter-spacing:0.1em; text-transform:uppercase;">📅 History</div>
+        <div onclick="filterCategory('Nature')" style="background:#12121a; border:1px solid rgba(200,255,62,0.12); padding:1rem; cursor:pointer; font-size:0.8rem; letter-spacing:0.1em; text-transform:uppercase;">🌿 Nature</div>
+        <div onclick="filterCategory('Animals')" style="background:#12121a; border:1px solid rgba(200,255,62,0.12); padding:1rem; cursor:pointer; font-size:0.8rem; letter-spacing:0.1em; text-transform:uppercase;">🐾 Animals</div>
+        <div onclick="filterCategory('Science')" style="background:#12121a; border:1px solid rgba(200,255,62,0.12); padding:1rem; cursor:pointer; font-size:0.8rem; letter-spacing:0.1em; text-transform:uppercase;">🔬 Science</div>
+        <div onclick="filterCategory('Weird')" style="background:#12121a; border:1px solid rgba(200,255,62,0.12); padding:1rem; cursor:pointer; font-size:0.8rem; letter-spacing:0.1em; text-transform:uppercase;">😂 Weird</div>
+      </div>
+    </div>
+
+    <script>
+    function openCategories() {
+      document.getElementById('categories-overlay').style.display = 'block';
+      document.getElementById('categories-popup').style.display = 'block';
+    }
+    function closeCategories() {
+      document.getElementById('categories-overlay').style.display = 'none';
+      document.getElementById('categories-popup').style.display = 'none';
+    }
+    function filterCategory(cat) {
+      closeCategories();
+      const cards = document.querySelectorAll('.card');
+      cards.forEach(card => {
+        if (cat === 'all') {
+          card.style.display = 'block';
+        } else {
+          const tag = card.querySelector('.card-tag');
+          if (tag && tag.textContent.includes(cat)) {
+            card.style.display = 'block';
+          } else {
+            card.style.display = 'none';
+          }
+        }
+      });
+    }
+    </script>
 
 </body>
 </html>
