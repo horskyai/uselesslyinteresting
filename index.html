@@ -444,7 +444,6 @@ window.addEventListener('load', function() {
       <a href="#" onclick="openCategories(); return false;">Categories</a>
       <a href="about.html">About</a>
       <a href="https://www.instagram.com/uselesslyinteresting" target="_blank">Instagram</a>
-      <a id="mode-btn" onclick="toggleMode()" style="cursor:pointer;">🌙</a>
     </nav>
   </header>
 
@@ -698,28 +697,6 @@ document.addEventListener('DOMContentLoaded', function() {
     
     card.appendChild(reactionDiv);
   });
-});
-</script>
-
-  <script>
-function toggleMode() {
-  const body = document.body;
-  const btn = document.getElementById('mode-btn');
-  if (body.classList.contains('light-mode')) {
-    body.classList.remove('light-mode');
-    btn.textContent = '🌙';
-    localStorage.setItem('mode', 'dark');
-  } else {
-    body.classList.add('light-mode');
-    btn.textContent = '☀️';
-    localStorage.setItem('mode', 'light');
-  }
-}
-window.addEventListener('load', function() {
-  if (localStorage.getItem('mode') === 'light') {
-    document.body.classList.add('light-mode');
-    document.getElementById('mode-btn').textContent = '☀️';
-  }
 });
 </script>
   
