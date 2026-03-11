@@ -444,7 +444,7 @@ window.addEventListener('load', function() {
       <a href="#" onclick="openCategories(); return false;">Categories</a>
       <a href="about.html">About</a>
       <a href="https://www.instagram.com/uselesslyinteresting" target="_blank">Instagram</a>
-      <a onclick="toggleMode()" style="cursor:pointer;">🌙</a>
+      <a id="mode-btn" onclick="toggleMode()" style="cursor:pointer;">🌙</a>
     </nav>
   </header>
 
@@ -704,7 +704,7 @@ document.addEventListener('DOMContentLoaded', function() {
   <script>
 function toggleMode() {
   const body = document.body;
-  const btn = document.querySelector('nav a[onclick="toggleMode()"]');
+  const btn = document.getElementById('mode-btn');
   if (body.classList.contains('light-mode')) {
     body.classList.remove('light-mode');
     btn.textContent = '🌙';
@@ -715,11 +715,10 @@ function toggleMode() {
     localStorage.setItem('mode', 'light');
   }
 }
-// Načti uložený režim
 window.addEventListener('load', function() {
   if (localStorage.getItem('mode') === 'light') {
     document.body.classList.add('light-mode');
-    document.querySelector('nav a[onclick="toggleMode()"]').textContent = '☀️';
+    document.getElementById('mode-btn').textContent = '☀️';
   }
 });
 </script>
