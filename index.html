@@ -6,7 +6,46 @@
   <title>UselesslyInteresting — Facts Nobody Asked For</title>
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Mono:ital,wght@0,400;1,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet"/>
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+.hamburger {
+  display: none;
+  background: transparent;
+  border: 1px solid rgba(200,255,62,0.4);
+  color: #c8ff3e;
+  font-size: 1.2rem;
+  padding: 0.3rem 0.7rem;
+  cursor: pointer;
+}
+
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  background: #0a0a0a;
+  border-top: 1px solid rgba(200,255,62,0.2);
+  padding: 1rem 2rem;
+  gap: 1rem;
+}
+
+.mobile-menu a {
+  color: #fff;
+  text-decoration: none;
+  font-family: 'DM Mono', monospace;
+  font-size: 0.9rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.mobile-menu a:hover { color: #c8ff3e; }
+.mobile-menu.open { display: flex; }
+
+@media (max-width: 768px) {
+  nav a:not(.hamburger) { display: none; }
+  .hamburger { display: block; }
+}
+    
 
     :root {
       --bg: #0a0a0f;
