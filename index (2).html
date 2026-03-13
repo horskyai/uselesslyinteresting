@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>UselesslyInteresting — Facts Nobody Asked For</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Mono:ital,wght@0,400;1,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet"/>
+  <style>
+   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+.hamburger {
+  display: none;
+  background: transparent;
+  border: 1px solid rgba(200,255,62,0.4);
+  color: #c8ff3e;
+  font-size: 1.2rem;
+  padding: 0.3rem 0.7rem;
+  cursor: pointer;
+}
+
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  background: #0a0a0a;
+  border-top: 1px solid rgba(200,255,62,0.2);
+  padding: 1rem 2rem;
+  gap: 1rem;
+}
+
+.mobile-menu a {
+  color: #fff;
+  text-decoration: none;
+  font-family: 'DM Mono', monospace;
+  font-size: 0.9rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.mobile-menu a:hover { color: #c8ff3e; }
+.mobile-menu.open { display: flex; }
+
+@media (max-width: 768px) {
+  nav a:not(.hamburger) { display: none; }
+  .hamburger { display: block; }
+}
+    
+
+    :root {
+      --bg: #0a0a0f;
+      --surface: #12121a;
+      --card: #1a1a26;
+      --accent: #c8ff3e;
+      --accent2: #ff3ecb;
+      --accent3: #3ec8ff;
+      --text: #e8e8f0;
+      --muted: #6b6b88;
+      --border: rgba(200,255,62,0.12);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'DM Mono', monospace;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* Noise overlay */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 1000;
+      opacity: 0.4;
+    }
+
+    /* ── HEADER ── */
+    header {
+      padding: 2rem 2rem 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .logo {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: clamp(1.2rem, 3vw, 1.6rem);
+      letter-spacing: -0.03em;
+      line-height: 1;
+    }
+    .logo span { color: var(--accent); }
+
+    .logo-sub {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.62rem;
+      color: var(--muted);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-top: 2px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      font-size: 0.72rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    nav a { color: inherit; text-decoration: none; transition: color 0.2s; }
+    nav a:hover { color: var(--accent); }
+
+    /* ── HERO ── */
+    .hero {
+      padding: 4rem 2rem 2rem;
+      position: relative;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .hero-tag {
+      display: inline-block;
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent);
+      border: 1px solid var(--accent);
+      padding: 0.3rem 0.8rem;
+      margin-bottom: 1.5rem;
+      animation: fadeUp 0.6s ease both;
+    }
+
+    .hero h1 {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: clamp(2.8rem, 8vw, 6rem);
+      line-height: 0.95;
+      letter-spacing: -0.04em;
+      animation: fadeUp 0.6s 0.1s ease both;
+    }
+
+    .hero h1 em {
+      font-family: 'Instrument Serif', serif;
+      font-style: italic;
+      color: var(--accent);
+    }
+
+    .hero-desc {
+      max-width: 520px;
+      margin-top: 1.5rem;
+      font-size: 0.88rem;
+      color: var(--muted);
+      line-height: 1.7;
+      animation: fadeUp 0.6s 0.2s ease both;
+    }
+
+    .hero-deco {
+      position: absolute;
+      right: 2rem;
+      top: 3rem;
+      width: 260px;
+      height: 260px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(200,255,62,0.08) 0%, transparent 70%);
+      animation: pulse 4s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.1); opacity: 0.6; }
+    }
+
+    /* ── TICKER ── */
+    .ticker-wrap {
+      overflow: hidden;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 0.7rem 0;
+      margin: 3rem 0;
+      background: rgba(200,255,62,0.02);
+    }
+    .ticker {
+      display: flex;
+      gap: 3rem;
+      animation: ticker 30s linear infinite;
+      white-space: nowrap;
+      font-size: 0.7rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .ticker span { color: var(--accent); margin-right: 0.5rem; }
+    @keyframes ticker {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+
+    /* ── GRID ── */
+    .section {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 2rem 4rem;
+    }
+
+    .section-label {
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 2rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .section-label::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1.5px;
+    }
+
+    .card {
+      background: var(--card);
+      padding: 2rem;
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+      transition: background 0.3s;
+      animation: fadeUp 0.5s ease both;
+    }
+    .card:hover { background: #1f1f30; }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: var(--card-accent, var(--accent));
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.4s ease;
+    }
+    .card:hover::before { transform: scaleX(1); }
+
+    .card:nth-child(3n+1) { --card-accent: var(--accent); }
+    .card:nth-child(3n+2) { --card-accent: var(--accent2); }
+    .card:nth-child(3n+3) { --card-accent: var(--accent3); }
+
+    .card-num {
+      font-size: 0.6rem;
+      letter-spacing: 0.2em;
+      color: var(--muted);
+      margin-bottom: 1rem;
+    }
+
+    .card-emoji {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      display: block;
+    }
+
+    .card h2 {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      line-height: 1.3;
+      margin-bottom: 0.8rem;
+      letter-spacing: -0.02em;
+    }
+
+    .card p {
+      font-size: 0.82rem;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .card-twist {
+      margin-top: 1rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--border);
+      font-family: 'Instrument Serif', serif;
+      font-style: italic;
+      font-size: 0.9rem;
+      color: var(--accent);
+    }
+    .card:nth-child(3n+2) .card-twist { color: var(--accent2); }
+    .card:nth-child(3n+3) .card-twist { color: var(--accent3); }
+
+    .card-tag {
+      display: inline-block;
+      margin-top: 1.2rem;
+      font-size: 0.58rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      padding: 0.2rem 0.6rem;
+      border: 1px solid var(--border);
+      color: var(--muted);
+    }
+
+    /* Featured card */
+    .card.featured {
+      grid-column: span 2;
+      background: linear-gradient(135deg, #1a1a26 0%, #1f1a2e 100%);
+    }
+    .card.featured h2 { font-size: 1.5rem; }
+
+    @media (max-width: 680px) {
+      .card.featured { grid-column: span 1; }
+      nav { display: none; }
+    }
+
+    /* ── NEWSLETTER ── */
+    .newsletter {
+      max-width: 1100px;
+      margin: 0 auto 5rem;
+      padding: 0 2rem;
+    }
+
+    .newsletter-box {
+      border: 1px solid var(--border);
+      padding: 3rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .newsletter-box::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 80% 50%, rgba(200,255,62,0.04) 0%, transparent 60%);
+      pointer-events: none;
+    }
+
+    .newsletter-box h3 {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.8rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+    }
+    .newsletter-box h3 em {
+      font-family: 'Instrument Serif', serif;
+      font-style: italic;
+      color: var(--accent);
+    }
+
+    .newsletter-box p {
+      margin-top: 0.8rem;
+      font-size: 0.82rem;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .newsletter-form {
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+    }
+
+    .newsletter-form input {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 0.8rem 1rem;
+      font-family: 'DM Mono', monospace;
+      font-size: 0.82rem;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    .newsletter-form input:focus { border-color: var(--accent); }
+    .newsletter-form input::placeholder { color: var(--muted); }
+
+    .btn {
+      background: var(--accent);
+      color: #0a0a0f;
+      border: none;
+      padding: 0.9rem 1.5rem;
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      font-size: 0.8rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: opacity 0.2s, transform 0.2s;
+    }
+    .btn:hover { opacity: 0.85; transform: translateY(-1px); }
+
+    @media (max-width: 680px) {
+      .newsletter-box { grid-template-columns: 1fr; }
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.65rem;
+      letter-spacing: 0.1em;
+      color: var(--muted);
+      text-transform: uppercase;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+      .card { animation-delay: calc(var(--i, 0) * 0.08s); }
+
+</style>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9WG9QWXXV5"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-9WG9QWXXV5');
+  </script>
+
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  
+</head>
+<body>
+
+  <!-- COOKIE BANNER -->
+<div id="cookie-banner" style="display:none; position:fixed; bottom:0; left:0; right:0; background:#1a1a26; border-top:2px solid #c8ff3e; padding:1.2rem 2rem; z-index:9999; align-items:center; justify-content:space-between; gap:1rem; flex-wrap:wrap;">
+  <p style="font-size:0.75rem; color:#6b6b88; margin:0; max-width:700px;">
+    🍪 We use cookies to analyze website traffic via Google Analytics. By continuing to use this site, you agree to our use of cookies.
+    <a href="privacy.html" style="color:#c8ff3e; text-decoration:none;">Learn more</a>
+  </p>
+  <div style="display:flex; gap:0.8rem;">
+    <button onclick="acceptCookies()" style="background:#c8ff3e; color:#0a0a0f; border:none; padding:0.6rem 1.2rem; font-family:'Syne',sans-serif; font-weight:700; font-size:0.75rem; letter-spacing:0.1em; text-transform:uppercase; cursor:pointer;">Accept</button>
+    <button onclick="declineCookies()" style="background:transparent; color:#6b6b88; border:1px solid rgba(200,255,62,0.12); padding:0.6rem 1.2rem; font-size:0.75rem; letter-spacing:0.1em; text-transform:uppercase; cursor:pointer;">Decline</button>
+  </div>
+</div>
+
+<script>
+function acceptCookies() {
+  localStorage.setItem('cookieConsent', 'accepted');
+  document.getElementById('cookie-banner').style.display = 'none';
+}
+function declineCookies() {
+  localStorage.setItem('cookieConsent', 'declined');
+  document.getElementById('cookie-banner').style.display = 'none';
+}
+(function() {
+  if (!localStorage.getItem('cookieConsent')) {
+    document.getElementById('cookie-banner').style.display = 'flex';
+  }
+})();
+</script>
+  
+  <!-- HEADER -->
+  <header>
+   <nav>
+  <a href="index.html">Home</a>
+  <a href="#" onclick="openCategories(); return false;">Categories</a>
+  <a href="about.html">About</a>
+  <a href="https://www.instagram.com/uselesslyinteresting" target="_blank">Instagram</a>
+  <button class="hamburger" onclick="toggleMenu()" id="hamburger-btn">☰</button>
+</nav>
+
+<div class="mobile-menu" id="mobile-menu">
+  <a href="index.html" onclick="toggleMenu()">Home</a>
+  <a href="#" onclick="openCategories(); toggleMenu(); return false;">Categories</a>
+  <a href="about.html" onclick="toggleMenu()">About</a>
+  <a href="https://www.instagram.com/uselesslyinteresting" target="_blank" onclick="toggleMenu()">Instagram</a>
+</div>
+  </header>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-deco"></div>
+    <div class="hero-tag">✦ New facts every day</div>
+    <h1>Weird facts.<br/><em>Weirder</em> takes.</h1>
+    <p class="hero-desc">We dig up the most bizarre, useless, and oddly fascinating facts about animals, history, science, nature and beyond — then make them even stranger. No agenda. No ads. Just pure, unfiltered curiosity.</p>
+  </div>
+
+  <!-- TICKER -->
+  <div class="ticker-wrap">
+    <div class="ticker">
+      <span>✦</span> Cleopatra lived closer in time to the Moon landing than to the construction of the Great Pyramid &nbsp;&nbsp;
+      <span>✦</span> A group of flamingos is called a "flamboyance" &nbsp;&nbsp;
+      <span>✦</span> Oxford University is older than the Aztec Empire &nbsp;&nbsp;
+      <span>✦</span> Mammoths were still alive when the pyramids were being built &nbsp;&nbsp;
+      <span>✦</span> Bananas are berries. Strawberries are not &nbsp;&nbsp;
+      <span>✦</span> Cleopatra lived closer in time to the Moon landing than to the construction of the Great Pyramid &nbsp;&nbsp;
+      <span>✦</span> A group of flamingos is called a "flamboyance" &nbsp;&nbsp;
+      <span>✦</span> Oxford University is older than the Aztec Empire &nbsp;&nbsp;
+      <span>✦</span> Mammoths were still alive when the pyramids were being built &nbsp;&nbsp;
+      <span>✦</span> Bananas are berries. Strawberries are not &nbsp;&nbsp;
+    </div>
+  </div>
+
+ <div class="section">
+  <div class="section-label">Today's facts — March 12, 2026</div>
+  <div class="grid">
+
+    <div class="card" style="--i:12">
+      <div class="card-num">#012</div>
+      <span class="card-emoji">🏯</span>
+      <h2>The Great Wall of China is not visible from space.</h2>
+      <p>Despite what you've heard since childhood, astronauts cannot see the Great Wall from orbit with the naked eye. It's too narrow — about the width of a highway.</p>
+      <div id="more-12" style="display:none;">
+        <p style="margin-top:1rem;">The myth dates back to 1932, long before anyone had been to space. Even Chinese astronaut Yang Liwei confirmed after his 2003 mission that he couldn't see it. NASA has backed this up repeatedly. The wall is simply too thin — roughly 5–8 meters wide — to be visible from 400km altitude, no matter how long it is. You'd need eyes like a hawk. A very, very good hawk.</p>
+      </div>
+      <div class="card-twist">"One of history's greatest myths, built on… nothing."</div>
+      <span class="card-tag">📅 History</span>
+      <button onclick="toggleMore('more-12', this)" style="margin-top:1rem; background:transparent; border:1px solid rgba(200,255,62,0.3); color:#c8ff3e; padding:0.4rem 1rem; font-family:'DM Mono',monospace; font-size:0.72rem; cursor:pointer; letter-spacing:0.1em; text-transform:uppercase;">Read more ↓</button>
+    </div>
+
+    <div class="card" style="--i:13">
+      <div class="card-num">#013</div>
+      <span class="card-emoji">🍯</span>
+      <h2>Honey never expires. Archaeologists found 3,000-year-old honey still edible.</h2>
+      <p>Found in Egyptian tombs, ancient honey was perfectly preserved and still safe to eat. Its chemistry makes it basically immortal.</p>
+      <div id="more-13" style="display:none;">
+        <p style="margin-top:1rem;">Honey's secret is its incredibly low moisture content and naturally acidic pH — conditions that prevent bacteria and microorganisms from surviving. When sealed properly, it can last indefinitely. The honey found in Tutankhamun's tomb around 1323 BC was still perfectly edible. That means honey outlived the pharaohs, the Roman Empire, the Middle Ages, and is still going strong today. Respect the jar.</p>
+      </div>
+      <div class="card-twist">"Honey watched civilizations rise and fall. Still fine."</div>
+      <span class="card-tag">🌿 Nature</span>
+      <button onclick="toggleMore('more-13', this)" style="margin-top:1rem; background:transparent; border:1px solid rgba(200,255,62,0.3); color:#c8ff3e; padding:0.4rem 1rem; font-family:'DM Mono',monospace; font-size:0.72rem; cursor:pointer; letter-spacing:0.1em; text-transform:uppercase;">Read more ↓</button>
+    </div>
+
+    <div class="card" style="--i:14">
+      <div class="card-num">#014</div>
+      <span class="card-emoji">🦐</span>
+      <h2>Mantis shrimp can see 16 types of color receptors. Humans have only 3.</h2>
+      <p>While humans see with 3 color receptors (red, green, blue), mantis shrimp have 16. They see a world of color completely invisible to us.</p>
+      <div id="more-14" style="display:none;">
+        <p style="margin-top:1rem;">With 16 types of photoreceptors, mantis shrimp can detect UV light, infrared, and forms of polarized light that no other animal can see. Scientists originally assumed this made their vision incredibly rich — but research suggests their brains actually process color differently, using a simpler system than ours. They might not "see more" — they just see differently. Either way, their world looks nothing like ours.</p>
+      </div>
+      <div class="card-twist">"16 color receptors and still lives under a rock. Respect."</div>
+      <span class="card-tag">🐾 Animals</span>
+      <button onclick="toggleMore('more-14', this)" style="margin-top:1rem; background:transparent; border:1px solid rgba(200,255,62,0.3); color:#c8ff3e; padding:0.4rem 1rem; font-family:'DM Mono',monospace; font-size:0.72rem; cursor:pointer; letter-spacing:0.1em; text-transform:uppercase;">Read more ↓</button>
+    </div>
+
+    <div class="card" style="--i:15">
+      <div class="card-num">#015</div>
+      <span class="card-emoji">🪐</span>
+      <h2>Saturn's rings are only about 10 meters thick despite being 282,000 km wide.</h2>
+      <p>Saturn's iconic rings stretch nearly 300,000 km across — but they're thinner than a 10-story building.</p>
+      <div id="more-15" style="display:none;">
+        <p style="margin-top:1rem;">If you scaled Saturn's rings down to the size of a sheet of A4 paper, they'd be thinner than the paper itself. Made mostly of ice and rock, the rings span an enormous distance but are incredibly flat. Scientists believe they formed relatively recently — perhaps only 100 million years ago — when a moon was torn apart by Saturn's gravity. They won't last forever either, slowly raining down onto Saturn over millions of years.</p>
+      </div>
+      <div class="card-twist">"The most dramatic thing in the solar system is basically a piece of paper."</div>
+      <span class="card-tag">🚀 Space</span>
+      <button onclick="toggleMore('more-15', this)" style="margin-top:1rem; background:transparent; border:1px solid rgba(200,255,62,0.3); color:#c8ff3e; padding:0.4rem 1rem; font-family:'DM Mono',monospace; font-size:0.72rem; cursor:pointer; letter-spacing:0.1em; text-transform:uppercase;">Read more ↓</button>
+    </div>
+
+    <div class="card" style="--i:16">
+      <div class="card-num">#016</div>
+      <span class="card-emoji">🧬</span>
+      <h2>You share 50% of your DNA with a banana.</h2>
+      <p>Humans and bananas share about half their genetic material. All life on Earth shares the same basic building blocks of DNA.</p>
+      <div id="more-16" style="display:none;">
+        <p style="margin-top:1rem;">This doesn't mean you're half banana — it means that the fundamental biological machinery that keeps cells alive (like replicating DNA, producing energy, and managing proteins) is so ancient and essential that it's been preserved across millions of years of evolution. The genes we share with bananas are the ones responsible for basic cellular functions. The more unique you look compared to a banana, the less DNA you actually share in those specific areas.</p>
+      </div>
+      <div class="card-twist">"You're basically a banana that learned to overthink."</div>
+      <span class="card-tag">🧬 Biology</span>
+      <button onclick="toggleMore('more-16', this)" style="margin-top:1rem; background:transparent; border:1px solid rgba(200,255,62,0.3); color:#c8ff3e; padding:0.4rem 1rem; font-family:'DM Mono',monospace; font-size:0.72rem; cursor:pointer; letter-spacing:0.1em; text-transform:uppercase;">Read more ↓</button>
+    </div>
+
+    <div class="card" style="--i:17">
+      <div class="card-num">#017</div>
+      <span class="card-emoji">😴</span>
+      <h2>Humans are the only animals that delay sleep on purpose.</h2>
+      <p>Every other animal sleeps when tired. Only humans stay up to watch "one more episode." Scientists call it "bedtime procrastination."</p>
+      <div id="more-17" style="display:none;">
+        <p style="margin-top:1rem;">Researchers have identified a phenomenon called "revenge bedtime procrastination" — where people who feel they have no control over their daytime hours deliberately stay up late to reclaim personal time. It's most common among people with demanding jobs or heavy responsibilities. The irony? By staying up late, they make the next day harder, creating a cycle of stress and sleep deprivation. Every animal on Earth sleeps when it's tired. Humans invented insomnia on purpose.</p>
+      </div>
+      <div class="card-twist">"Every animal sleeps when tired. We invented insomnia on purpose."</div>
+      <span class="card-tag">😂 Weird</span>
+      <button onclick="toggleMore('more-17', this)" style="margin-top:1rem; background:transparent; border:1px solid rgba(200,255,62,0.3); color:#c8ff3e; padding:0.4rem 1rem; font-family:'DM Mono',monospace; font-size:0.72rem; cursor:pointer; letter-spacing:0.1em; text-transform:uppercase;">Read more ↓</button>
+    </div>
+
+  </div>
+</div>
+
+<script>
+function toggleMore(id, btn) {
+  const el = document.getElementById(id);
+  if (el.style.display === 'none') {
+    el.style.display = 'block';
+    btn.textContent = 'Read less ↑';
+  } else {
+    el.style.display = 'none';
+    btn.textContent = 'Read more ↓';
+  }
+}
+</script>
+
+  <div class="section">
+  <div class="section-label">March 11, 2026</div>
+  <div class="grid">
+
+    <div class="card" style="--i:7">
+      <div class="card-num">#007</div>
+      <span class="card-emoji">🐝</span>
+      <h2>Bees can recognize human faces.</h2>
+      <p>Despite having tiny brains with less than a million neurons, honeybees can distinguish between different human faces — a skill scientists thought was exclusive to vertebrates with large brains.</p>
+      <div class="card-twist">"They remember you. Choose kindness."</div>
+      <span class="card-tag">🐾 Animals</span>
+    </div>
+
+    <div class="card" style="--i:8">
+      <div class="card-num">#008</div>
+      <span class="card-emoji">🌙</span>
+      <h2>The Moon is slowly drifting away — about 3.8 cm per year.</h2>
+      <p>Every year the Moon moves slightly further from Earth due to tidal interactions. In about 600 million years it will be too far away to cause total solar eclipses.</p>
+      <div class="card-twist">"Even the Moon needs space sometimes."</div>
+      <span class="card-tag">🚀 Space</span>
+    </div>
+
+    <div class="card" style="--i:9">
+      <div class="card-num">#009</div>
+      <span class="card-emoji">🧊</span>
+      <h2>Hot water can freeze faster than cold water.</h2>
+      <p>It's called the Mpemba effect. Scientists still debate exactly why it happens. A Tanzanian student discovered it in 1963 while making ice cream — nobody believed him. He was right.</p>
+      <div class="card-twist">"Physics doesn't follow the rules. Neither should you."</div>
+      <span class="card-tag">🔬 Science</span>
+    </div>
+
+    <div class="card" style="--i:10">
+      <div class="card-num">#010</div>
+      <span class="card-emoji">🐬</span>
+      <h2>Dolphins have unique names for each other.</h2>
+      <p>Every dolphin develops a unique whistle — a signature sound that acts as their name. Other dolphins use these whistles to call each other individually, just like we use names.</p>
+      <div class="card-twist">"They invented contact lists before smartphones."</div>
+      <span class="card-tag">🐾 Animals</span>
+    </div>
+
+    <div class="card" style="--i:11">
+      <div class="card-num">#011</div>
+      <span class="card-emoji">⚡</span>
+      <h2>Lightning strikes Earth about 100 times every single second.</h2>
+      <p>That's 8 million lightning bolts per day. Every day. The sky is constantly throwing electricity at the ground and we just go about our lives like that's completely normal.</p>
+      <div class="card-twist">"The sky is having a very productive day. Every day."</div>
+      <span class="card-tag">🌿 Nature</span>
+    </div>
+
+  </div>
+</div>
+
+  <!-- FACTS GRID -->
+  <div class="section">
+    <div class="section-label">March 10, 2026</div>
+    <div class="grid">
+
+      <div class="card featured" style="--i:0">
+        <div class="card-num">#001 — Featured</div>
+        <span class="card-emoji">🐙</span>
+        <h2>Octopuses have three hearts — and two of them stop when they swim.</h2>
+        <p>Two hearts pump blood to the gills, while the third pumps it to the rest of the body. The central heart actually pauses during swimming, which is why octopuses prefer crawling — they'd literally get out of breath otherwise.</p>
+        <div class="card-twist">"Three hearts, zero chill. Scientifically incapable of cardio."</div>
+        <span class="card-tag">🧬 Biology</span>
+      </div>
+
+      <div class="card" style="--i:1">
+        <div class="card-num">#002</div>
+        <span class="card-emoji">🌍</span>
+        <h2>Cleopatra lived closer to the Moon landing than to the pyramids.</h2>
+        <p>The Great Pyramid was built around 2560 BC. Cleopatra lived around 30 BC. The Moon landing was 1969. Do the math — she's practically a modern woman.</p>
+        <div class="card-twist">"History class lied to us. Cleopatra was basically a contemporary."</div>
+        <span class="card-tag">📅 History</span>
+      </div>
+
+      <div class="card" style="--i:2">
+        <div class="card-num">#003</div>
+        <span class="card-emoji">🍌</span>
+        <h2>Bananas are berries. Strawberries are not berries. Botany is chaos.</h2>
+        <p>Botanically speaking, a berry must develop from a single flower with one ovary. Bananas qualify. Strawberries, raspberries, and blackberries? Imposters — all of them.</p>
+        <div class="card-twist">"Everything you know about fruit is a lie."</div>
+        <span class="card-tag">🌿 Nature</span>
+      </div>
+
+      <div class="card" style="--i:3">
+        <div class="card-num">#004</div>
+        <span class="card-emoji">🦩</span>
+        <h2>A group of flamingos is called a "flamboyance." Obviously.</h2>
+        <p>Whoever named collective animal groups clearly saved their best work for the flamingos. A murder of crows, a conspiracy of lemurs, a flamboyance of flamingos. Naturalists were having fun.</p>
+        <div class="card-twist">"Imagine calling your friend group a flamboyance. Peak energy."</div>
+        <span class="card-tag">🐦 Animals</span>
+      </div>
+
+      <div class="card" style="--i:4">
+        <div class="card-num">#005</div>
+        <span class="card-emoji">🏛️</span>
+        <h2>Oxford University is older than the Aztec Empire.</h2>
+        <p>Teaching began at Oxford around 1096–1167 AD. The Aztec Empire was founded in 1428. So when Aztecs were just starting out, Oxford students were already complaining about tuition fees.</p>
+        <div class="card-twist">"Oxford was old news before the Aztecs even existed."</div>
+        <span class="card-tag">📅 History</span>
+      </div>
+
+      <div class="card" style="--i:5">
+        <div class="card-num">#006</div>
+        <span class="card-emoji">🦣</span>
+        <h2>Woolly mammoths were still alive when the pyramids were being built.</h2>
+        <p>A small population of woolly mammoths survived on Wrangel Island until around 1650 BC. The Great Pyramid was completed around 2560 BC. They coexisted. Nobody told the pharaohs.</p>
+        <div class="card-twist">"Ancient Egyptians could have had mammoths. They chose to build pyramids instead."</div>
+        <span class="card-tag">🦴 Prehistory</span>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- NEWSLETTER -->
+  <div class="newsletter">
+    <div class="newsletter-box">
+      <div>
+        <h3>Get facts that are <em>actually</em> interesting.</h3>
+        <p>One email per week. Weird, funny, and oddly fascinating. No spam — we're too lazy for that.</p>
+      </div>
+      <div class="newsletter-form">
+        <input type="email" placeholder="your@email.com" />
+        <button class="btn" onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLScJQu_L8DgmLQVVAQ_XBrdTJXkG36Ec_Ez98AAa3qbxhqhWFg/viewform?usp=publish-editor', '_blank')">Subscribe — it's free</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+   <footer>
+    <span>© 2026 UselesslyInteresting</span>
+    <span>Facts nobody asked for, delivered daily</span>
+    <span><a href="privacy.html" style="color:var(--muted);text-decoration:none;">Privacy Policy</a></span>
+  </footer>
+   <!-- CATEGORIES POPUP -->
+    <div id="categories-overlay" onclick="closeCategories()" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.7); z-index:999; backdrop-filter:blur(4px);"></div>
+
+    <div id="categories-popup" style="display:none; position:fixed; top:50%; left:50%; transform:translate(-50%,-50%); background:#1a1a26; border:1px solid rgba(200,255,62,0.2); padding:3rem; z-index:1000; min-width:340px; max-width:500px; width:90%;">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:2rem;">
+        <div style="font-family:'Syne',sans-serif; font-size:1.4rem; font-weight:800;">Categories</div>
+        <div onclick="closeCategories()" style="cursor:pointer; color:#6b6b88; font-size:1.5rem; line-height:1;">✕</div>
+      </div>
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.8rem;">
+        <div onclick="filterCategory('all')" style="background:#12121a; border:1px solid rgba(200,255,62,0.12); padding:1rem; cursor:pointer; font-size:0.8rem; letter-spacing:0.1em; text-transform:uppercase;">⚡ All Facts</div>
+        <div onclick="filterCategory('Biology')" style="background:#12121a; border:1px solid rgba(200,255,62,0.12); padding:1rem; cursor:pointer; font-size:0.8rem; letter-spacing:0.1em; text-transform:uppercase;">🧬 Biology</div>
+        <div onclick="filterCategory('Space')" style="background:#12121a; border:1px solid rgba(200,255,62,0.12); padding:1rem; cursor:pointer; font-size:0.8rem; letter-spacing:0.1em; text-transform:uppercase;">🚀 Space</div>
+        <div onclick="filterCategory('History')" style="background:#12121a; border:1px solid rgba(200,255,62,0.12); padding:1rem; cursor:pointer; font-size:0.8rem; letter-spacing:0.1em; text-transform:uppercase;">📅 History</div>
+        <div onclick="filterCategory('Nature')" style="background:#12121a; border:1px solid rgba(200,255,62,0.12); padding:1rem; cursor:pointer; font-size:0.8rem; letter-spacing:0.1em; text-transform:uppercase;">🌿 Nature</div>
+        <div onclick="filterCategory('Animals')" style="background:#12121a; border:1px solid rgba(200,255,62,0.12); padding:1rem; cursor:pointer; font-size:0.8rem; letter-spacing:0.1em; text-transform:uppercase;">🐾 Animals</div>
+        <div onclick="filterCategory('Science')" style="background:#12121a; border:1px solid rgba(200,255,62,0.12); padding:1rem; cursor:pointer; font-size:0.8rem; letter-spacing:0.1em; text-transform:uppercase;">🔬 Science</div>
+        <div onclick="filterCategory('Weird')" style="background:#12121a; border:1px solid rgba(200,255,62,0.12); padding:1rem; cursor:pointer; font-size:0.8rem; letter-spacing:0.1em; text-transform:uppercase;">😂 Weird</div>
+      </div>
+    </div>
+
+    <script>
+    function openCategories() {
+      document.getElementById('categories-overlay').style.display = 'block';
+      document.getElementById('categories-popup').style.display = 'block';
+    }
+    function closeCategories() {
+      document.getElementById('categories-overlay').style.display = 'none';
+      document.getElementById('categories-popup').style.display = 'none';
+    }
+    function filterCategory(cat) {
+      closeCategories();
+      const cards = document.querySelectorAll('.card');
+      cards.forEach(card => {
+        if (cat === 'all') {
+          card.style.display = 'block';
+        } else {
+          const tag = card.querySelector('.card-tag');
+          if (tag && tag.textContent.includes(cat)) {
+            card.style.display = 'block';
+          } else {
+            card.style.display = 'none';
+          }
+        }
+      });
+    }
+    </script>
+
+  <script>
+// REAKCE SYSTÉM
+document.addEventListener('DOMContentLoaded', function() {
+  const reactions = ['👍', '🤯', '😂', '❤️'];
+  const cards = document.querySelectorAll('.card');
+  
+  cards.forEach((card, index) => {
+    const cardId = 'card_' + index;
+    const reactionDiv = document.createElement('div');
+    reactionDiv.style.cssText = 'display:flex; gap:0.5rem; margin-top:1rem; padding-top:1rem; border-top:1px solid rgba(200,255,62,0.12);';
+    
+    reactions.forEach(emoji => {
+      const btn = document.createElement('button');
+      const saved = JSON.parse(localStorage.getItem(cardId + '_' + emoji) || '{"count":0,"voted":false}');
+      
+      btn.style.cssText = 'background:#12121a; border:1px solid rgba(200,255,62,0.12); color:#e8e8f0; padding:0.3rem 0.7rem; cursor:pointer; font-size:0.85rem; border-radius:2px; transition:all 0.2s;';
+      btn.innerHTML = emoji + ' <span>' + saved.count + '</span>';
+      
+      if (saved.voted) {
+        btn.style.borderColor = '#c8ff3e';
+        btn.style.color = '#c8ff3e';
+      }
+      
+      btn.addEventListener('click', function() {
+        const data = JSON.parse(localStorage.getItem(cardId + '_' + emoji) || '{"count":0,"voted":false}');
+        if (!data.voted) {
+          data.count++;
+          data.voted = true;
+          btn.style.borderColor = '#c8ff3e';
+          btn.style.color = '#c8ff3e';
+        } else {
+          data.count--;
+          data.voted = false;
+          btn.style.borderColor = 'rgba(200,255,62,0.12)';
+          btn.style.color = '#e8e8f0';
+        }
+        localStorage.setItem(cardId + '_' + emoji, JSON.stringify(data));
+        btn.querySelector('span').textContent = data.count;
+      });
+      
+      reactionDiv.appendChild(btn);
+    });
+    
+    card.appendChild(reactionDiv);
+  });
+});
+</script>
+
+  <script>
+function toggleMenu() {
+  const menu = document.getElementById('mobile-menu');
+  menu.classList.toggle('open');
+  document.getElementById('hamburger-btn').textContent = 
+    menu.classList.contains('open') ? '✕' : '☰';
+}
+</script>
+</body>
+  
+</body>
+</html>
