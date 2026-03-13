@@ -435,16 +435,20 @@ window.addEventListener('load', function() {
   
   <!-- HEADER -->
   <header>
-    <div>
-      <div class="logo">Uselessly<span>Interesting</span></div>
-      <div class="logo-sub">Facts nobody asked for</div>
-    </div>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="#" onclick="openCategories(); return false;">Categories</a>
-      <a href="about.html">About</a>
-      <a href="https://www.instagram.com/uselesslyinteresting" target="_blank">Instagram</a>
-    </nav>
+   <nav>
+  <a href="index.html">Home</a>
+  <a href="#" onclick="openCategories(); return false;">Categories</a>
+  <a href="about.html">About</a>
+  <a href="https://www.instagram.com/uselesslyinteresting" target="_blank">Instagram</a>
+  <button class="hamburger" onclick="toggleMenu()" id="hamburger-btn">☰</button>
+</nav>
+
+<div class="mobile-menu" id="mobile-menu">
+  <a href="index.html" onclick="toggleMenu()">Home</a>
+  <a href="#" onclick="openCategories(); toggleMenu(); return false;">Categories</a>
+  <a href="about.html" onclick="toggleMenu()">About</a>
+  <a href="https://www.instagram.com/uselesslyinteresting" target="_blank" onclick="toggleMenu()">Instagram</a>
+</div>
   </header>
 
   <!-- HERO -->
