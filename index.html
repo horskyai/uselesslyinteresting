@@ -427,8 +427,38 @@
       to { opacity: 1; transform: translateY(0); }
     }
 
-    .card { animation-delay: calc(var(--i, 0) * 0.08s); }
-  </style>
+      .card { animation-delay: calc(var(--i, 0) * 0.08s); }
+
+    .hamburger {
+      display: none;
+      background: transparent;
+      border: 1px solid rgba(200,255,62,0.4);
+      color: #c8ff3e;
+      font-size: 1.3rem;
+      padding: 0.3rem 0.7rem;
+      cursor: pointer;
+    }
+    .mobile-menu {
+      display: none;
+      flex-direction: column;
+      background: #0e0e0e;
+      padding: 1rem 2rem;
+      border-bottom: 1px solid rgba(200,255,62,0.15);
+    }
+    .mobile-menu a {
+      color: #fff;
+      text-decoration: none;
+      padding: 0.6rem 0;
+      font-family: 'DM Mono', monospace;
+      font-size: 0.9rem;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .mobile-menu.open { display: flex; }
+    @media (max-width: 768px) {
+      nav a { display: none; }
+      .hamburger { display: block; }
+    }
+</style>
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-9WG9QWXXV5"></script>
