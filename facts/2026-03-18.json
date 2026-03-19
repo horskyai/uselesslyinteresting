@@ -1,0 +1,42 @@
+[
+  {
+    "id": "092",
+    "emoji": "🌋",
+    "title": "Yellowstone sits on a supervolcano that could blanket half of North America in ash.",
+    "short": "Beneath Yellowstone National Park lies a magma chamber 80 km long. Its last eruption — 640,000 years ago — was 2,500 times more powerful than Mount St. Helens.",
+    "twist": "America's favorite national park is a ticking geological bomb. Enjoy the geysers.",
+    "tag": "Nature",
+    "tagEmoji": "🌿",
+    "more": "The Yellowstone supervolcano has erupted catastrophically three times: 2.1 million years ago, 1.3 million years ago, and 640,000 years ago. The most recent eruption ejected over 1,000 cubic kilometers of rock and ash — enough to bury a large city under kilometers of debris. The ash cloud would have covered most of North America, blocking sunlight and triggering a volcanic winter lasting years.\n\nThe magma chamber beneath Yellowstone is enormous — roughly 80 km long, 40 km wide, and up to 15 km deep. It's fed by a mantle plume — a column of superheated rock rising from deep within Earth's interior. The geysers, hot springs, and mud pots that make Yellowstone famous are all surface symptoms of this underground furnace. Old Faithful erupts because groundwater seeps down, contacts superheated rock, and flashes to steam.\n\nShould you worry? Probably not. The USGS estimates the annual probability of a catastrophic eruption at roughly 1 in 730,000 — far less likely than an asteroid impact. The volcano is intensely monitored with seismographs, GPS stations, and satellite radar. Scientists would likely detect warning signs — increased seismicity, ground deformation, gas emissions — weeks to months before any major eruption. The more realistic threat is a smaller hydrothermal explosion, which happens every few thousand years and could devastate the park itself without triggering a continental catastrophe."
+  },
+  {
+    "id": "093",
+    "emoji": "🐘",
+    "title": "Elephants are the only animals that can't jump — but they mourn their dead like humans do.",
+    "short": "Elephants have been observed gently touching the bones and tusks of dead family members, standing vigil for days, and even covering bodies with leaves and branches.",
+    "twist": "They can't leave the ground. But their grief reaches just as deep as ours.",
+    "tag": "Animals",
+    "tagEmoji": "🐾",
+    "more": "Elephants are the largest living land animals, and their sheer mass (up to 6,000 kg) makes jumping biomechanically impossible — their leg bones are designed as pillars to support weight, not as springs to generate upward force. They're one of the only mammals that can't jump at all. But what they lack in vertical mobility, they more than make up for in emotional depth.\n\nElephant mourning behavior is among the most well-documented in the animal kingdom. When encountering the remains of a dead elephant, family groups will stop, become very quiet, and gently touch the bones with their trunks — particularly the skull and tusks. They've been observed standing vigil for hours or days, returning repeatedly to the remains even weeks later. Mothers who lose calves have been seen carrying the dead body for days, refusing to abandon it.\n\nResearchers believe this behavior reflects genuine grief, not just curiosity. Elephants have the largest brain of any land animal and possess a highly developed hippocampus — the brain region associated with emotion and memory. They recognize individual elephants they haven't seen in decades. They form complex social bonds, cooperate to solve problems, and display empathy by comforting distressed family members with trunk touches and vocalizations. When elephant researcher Iain Douglas-Hamilton died, colleagues reported that elephants he had studied visited the area near his home — a behavior that, while possibly coincidental, reflects the depth of connection these animals form."
+  },
+  {
+    "id": "094",
+    "emoji": "🔬",
+    "title": "A teaspoon of neutron star weighs about 6 billion tonnes.",
+    "short": "Neutron stars are so dense that their matter is packed to nuclear density — a sugar-cube-sized piece would weigh as much as Mount Everest. They spin up to 716 times per second.",
+    "twist": "A spoonful of star that weighs more than every human who ever lived. Combined.",
+    "tag": "Space",
+    "tagEmoji": "🚀",
+    "more": "When a massive star (8-30 times the Sun's mass) exhausts its nuclear fuel, its core collapses under gravity so violently that protons and electrons are crushed together into neutrons. The result is a neutron star — an object with more mass than the Sun compressed into a sphere about 20 km across. The density is roughly 10¹⁷ kg per cubic meter — the same density as an atomic nucleus, but scaled up to a city-sized object.\n\nA teaspoon of neutron star material would weigh approximately 6 billion tonnes — roughly equal to the weight of a cubic kilometer of Earth. If you could somehow bring it to Earth's surface, it would immediately punch through the ground like a bullet through tissue paper, sinking toward the planet's core while releasing catastrophic amounts of energy.\n\nSome neutron stars spin incredibly fast. Millisecond pulsars rotate hundreds of times per second — the fastest known, PSR J1748-2446ad, spins 716 times per second, meaning its surface moves at about 24% the speed of light. They also have magnetic fields a trillion times stronger than Earth's. A neutron star's magnetic field is so powerful that at a distance of 1,000 km, it would erase every credit card on Earth, pull the iron from your blood, and disassemble your body at the atomic level. They are, without exaggeration, the most extreme objects in the visible universe short of black holes."
+  },
+  {
+    "id": "095",
+    "emoji": "🎵",
+    "title": "Plants grow faster when you play music to them — and they prefer classical.",
+    "short": "Multiple studies have shown that sound vibrations stimulate plant growth. Plants exposed to classical music grew significantly more than those in silence — or those subjected to heavy metal.",
+    "twist": "Your houseplant has better music taste than you do.",
+    "tag": "Science",
+    "tagEmoji": "🔬",
+    "more": "The idea that plants respond to music sounds like pseudoscience, but there's genuine research behind it. In the 1960s, T.C. Singh at Annamalai University found that balsam plants exposed to classical music grew 20% taller and produced 72% more biomass than silent controls. More recent studies at South Korea's National Institute of Agricultural Biotechnology discovered that sound frequencies between 125-250 Hz accelerated gene expression related to growth in rice plants.\n\nPlants don't 'hear' music the way we do — they have no ears or nervous system. Instead, they respond to sound vibrations mechanically. Sound waves cause microscopic vibrations in plant cell walls and membranes, which can trigger mechanoreceptor proteins and influence the opening of stomata (tiny pores used for gas exchange and water regulation). Certain frequencies appear to enhance nutrient absorption and cell division.\n\nThe 'genre preference' findings are more nuanced than headlines suggest. It's not that plants appreciate Bach — it's that classical music tends to produce consistent, moderate sound pressure in frequency ranges that stimulate growth. Heavy metal and loud rock music produce erratic, high-amplitude vibrations that may stress plants, similar to how wind damage triggers defensive responses. Some vineyards in Italy and South Africa now play classical music in their fields, claiming it improves grape quality. Whether it's the vibrations or the vineyard workers' improved mood is still debated."
+  }
+]

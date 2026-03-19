@@ -985,8 +985,8 @@ function toggleMore(id, btn) {
     var container = document.getElementById('scheduled-facts');
     var now = new Date();
 
-    // Only load facts from March 20 onwards (earlier ones are hardcoded above)
-    var startDate = new Date('2026-03-20T14:00:00');
+    // Only load facts from March 16 onwards (earlier ones are hardcoded above)
+    var startDate = new Date('2026-03-16T00:00:00');
     // Go up to 60 days ahead to cover future scheduled facts
     var endDate = new Date(now);
     endDate.setDate(endDate.getDate() + 60);
@@ -1006,9 +1006,11 @@ function toggleMore(id, btn) {
         if (!resp.ok) continue;
         var facts = await resp.json();
 
-        // Check publish time - facts go live at 14:00 CET (13:00 UTC)
-        var publishTime = new Date(dateStr + 'T13:00:00Z'); // 14:00 CET = 13:00 UTC
-        if (now < publishTime) continue; // Not yet time to show
+        // March 16-19 show immediately (already released), March 20+ go live at 14:00 CET (13:00 UTC)
+        if (dateStr >= '2026-03-20') {
+          var publishTime = new Date(dateStr + 'T13:00:00Z'); // 14:00 CET = 13:00 UTC
+          if (now < publishTime) continue; // Not yet time to show
+        }
 
         var dateObj = new Date(dateStr + 'T00:00:00');
         var label = dateObj.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });

@@ -1,0 +1,42 @@
+[
+  {
+    "id": "084",
+    "emoji": "🧠",
+    "title": "Your brain can't actually feel pain — it has no pain receptors at all.",
+    "short": "The organ responsible for processing every pain signal in your body is itself completely immune to pain. Brain surgery can be performed while the patient is fully awake and talking.",
+    "twist": "The thing that makes you feel everything can't feel anything itself.",
+    "tag": "Biology",
+    "tagEmoji": "🧬",
+    "more": "The brain contains about 86 billion neurons and processes every pain signal your body generates — from stubbed toes to migraines. But the brain tissue itself has zero nociceptors (pain receptors). If you could somehow touch your own brain, you'd feel nothing. Headaches aren't actually brain pain — they're caused by inflammation or tension in the surrounding meninges, blood vessels, and muscles of the head and neck.\n\nThis is why neurosurgeons can perform 'awake craniotomies' — brain surgery while the patient is conscious and responsive. After numbing the scalp and skull (which DO have pain receptors), surgeons can probe the exposed brain directly. The patient talks, moves their fingers, or names objects while the surgeon maps which brain regions control which functions. This technique is critical for removing tumors near speech or motor areas — the surgeon needs real-time feedback to avoid damaging essential functions.\n\nThe paradox runs deeper than surgery. The brain is the sole interpreter of pain for the entire body, yet it evolved no mechanism to monitor its own condition through pain. It can detect when your finger touches a hot stove in milliseconds, but it can't detect a tumor growing inside itself. This is why brain cancers are often caught late — there's no pain signal to trigger an early warning. The organ that guards your body has no guard of its own."
+  },
+  {
+    "id": "085",
+    "emoji": "🌊",
+    "title": "The ocean's deepest point is so deep that if you dropped Mount Everest into it, the peak would still be underwater.",
+    "short": "The Challenger Deep in the Mariana Trench reaches 10,935 meters below sea level. Everest is 8,849 meters tall. There'd still be over 2 km of water above the summit.",
+    "twist": "The tallest mountain on Earth would drown in the ocean's deepest bathtub.",
+    "tag": "Nature",
+    "tagEmoji": "🌿",
+    "more": "The Mariana Trench stretches 2,550 km across the western Pacific Ocean, and its deepest point — Challenger Deep — sits 10,935 meters below the surface. The pressure at the bottom is about 1,086 bars — over 1,000 times the atmospheric pressure at sea level. That's roughly equivalent to having 50 jumbo jets stacked on top of you.\n\nOnly three crewed expeditions have ever reached the bottom. In 1960, Jacques Piccard and Don Walsh descended in the bathyscaphe Trieste — a journey that took nearly five hours. They spent just 20 minutes on the bottom before ascending. In 2012, filmmaker James Cameron made the trip solo in the Deepsea Challenger, spending about three hours on the seafloor. In 2019, explorer Victor Vescovo made multiple dives, discovering new species — and plastic waste at the deepest point on Earth.\n\nDespite the crushing pressure, complete darkness, and near-freezing temperatures, life thrives there. Scientists have found amphipods, sea cucumbers, translucent shrimp, and xenophyophores (giant single-celled organisms) at the bottom. Microbial life exists in the sediment itself. The deepest ocean is not a dead zone — it's an alien ecosystem that has been evolving in isolation for millions of years, under conditions that would instantly kill any surface creature."
+  },
+  {
+    "id": "086",
+    "emoji": "⏰",
+    "title": "Cleopatra lived closer in time to the Moon landing than to the building of the Great Pyramid.",
+    "short": "The Great Pyramid was built around 2560 BC. Cleopatra ruled around 30 BC. The Moon landing was 1969 AD. She's about 500 years closer to Apollo 11 than to the pyramids.",
+    "twist": "The pyramids were already ancient history when Cleopatra was alive. Let that sink in.",
+    "tag": "History",
+    "tagEmoji": "📅",
+    "more": "The Great Pyramid of Giza was completed around 2560 BC during the reign of Pharaoh Khufu. Cleopatra VII ruled Egypt from 51 BC until her death in 30 BC. That puts roughly 2,530 years between the pyramid's construction and Cleopatra's reign. The Moon landing happened in 1969 AD — only about 2,000 years after Cleopatra. She lived 500 years closer to smartphones than to the construction of the pyramids she's so often associated with.\n\nThis fact shatters the common misconception that ancient Egypt was a single, continuous civilization with a consistent culture. By Cleopatra's time, the pyramids were already crumbling tourist attractions — ancient ruins that Egyptians of her era viewed with the same historical distance we feel looking at Roman ruins today. Cleopatra herself was actually Greek, a descendant of Ptolemy I, one of Alexander the Great's generals who took control of Egypt after Alexander's death in 323 BC.\n\nThe deeper lesson is that human intuition is terrible at grasping deep time. We compress 'ancient history' into a single mental category, losing the vast stretches of time between civilizations. The Stegosaurus lived closer in time to us than to the Tyrannosaurus Rex. The Oxford University was teaching students for 300 years before the Aztec Empire was founded. History is far longer and stranger than the compressed version we carry in our heads."
+  },
+  {
+    "id": "087",
+    "emoji": "🐜",
+    "title": "The total weight of all ants on Earth roughly equals the total weight of all humans.",
+    "short": "There are an estimated 20 quadrillion ants on Earth. Individually tiny, their combined biomass is approximately 80 million tonnes — close to the total mass of humanity.",
+    "twist": "Pound for pound, they match us. And they were here first.",
+    "tag": "Animals",
+    "tagEmoji": "🐾",
+    "more": "A 2022 study published in the Proceedings of the National Academy of Sciences estimated there are roughly 20 quadrillion (20 × 10¹⁵) ants on Earth — about 2.5 million ants for every human. Their combined biomass is approximately 80 million tonnes of dry carbon, which is comparable to — and by some estimates exceeds — the total biomass of all humans on the planet.\n\nAnts have been incredibly successful for 100 million years. They've colonized every continent except Antarctica, evolved agriculture (leafcutter ants farm fungus), developed animal husbandry (herding aphids for honeydew), waged wars with organized military strategies, and built underground cities with climate-controlled chambers, waste disposal systems, and nurseries. Some supercolonies span thousands of kilometers — the Argentine ant has a single supercolony stretching from Portugal to Italy across 6,000 km.\n\nThe reason ants dominate is cooperation. A single ant weighs about 1-2 milligrams and has roughly 250,000 neurons (compared to our 86 billion). Individually, they're simple. But collectively, a colony behaves like a single superorganism — making complex decisions, solving optimization problems, and adapting to threats in real time. Computer scientists study ant algorithms to solve routing problems. Their collective intelligence emerges from millions of tiny, simple interactions — no central brain required. In many ways, an ant colony is nature's version of the internet."
+  }
+]
