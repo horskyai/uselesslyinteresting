@@ -41,6 +41,52 @@
 .mobile-menu a:hover { color: var(--accent); }
 .mobile-menu.open { display: flex; }
 
+/* ── LANGUAGE DROPDOWN ── */
+.lang-dropdown {
+  position: relative;
+  display: inline-block;
+}
+.lang-btn {
+  background: transparent;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  font-family: 'DM Mono', monospace;
+  font-size: 0.72rem;
+  padding: 0.35rem 0.9rem;
+  cursor: pointer;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition: background 0.2s, color 0.2s;
+}
+.lang-btn:hover { background: var(--accent); color: var(--bg); }
+.lang-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: var(--card);
+  border: 1px solid var(--border);
+  min-width: 140px;
+  z-index: 100;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+.lang-menu.open { display: block; }
+.lang-menu button {
+  display: block;
+  width: 100%;
+  background: transparent;
+  border: none;
+  color: var(--text);
+  font-family: 'DM Mono', monospace;
+  font-size: 0.75rem;
+  padding: 0.6rem 1rem;
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.2s;
+}
+.lang-menu button:hover { background: var(--surface); }
+.lang-menu button.active { color: var(--accent); font-weight: bold; }
+
 /* ── THEME TOGGLE ── */
 .theme-toggle {
   background: transparent;
@@ -506,12 +552,12 @@
   <!-- COOKIE BANNER -->
 <div id="cookie-banner" style="display:none; position:fixed; bottom:0; left:0; right:0; background:var(--card); border-top:2px solid var(--accent); padding:1.2rem 2rem; z-index:9999; align-items:center; justify-content:space-between; gap:1rem; flex-wrap:wrap;">
   <p style="font-size:0.75rem; color:var(--muted); margin:0; max-width:700px;">
-    🍪 We use cookies to analyze website traffic via Google Analytics. By continuing to use this site, you agree to our use of cookies.
-    <a href="privacy.html" style="color:var(--accent); text-decoration:none;">Learn more</a>
+    <span data-i18n="cookie_text">🍪 We use cookies to analyze website traffic via Google Analytics. By continuing to use this site, you agree to our use of cookies.</span>
+    <a href="privacy.html" style="color:var(--accent); text-decoration:none;" data-i18n="cookie_learn">Learn more</a>
   </p>
   <div style="display:flex; gap:0.8rem;">
-    <button onclick="acceptCookies()" style="background:var(--accent); color:var(--bg); border:none; padding:0.6rem 1.2rem; font-family:'Syne',sans-serif; font-weight:700; font-size:0.75rem; letter-spacing:0.1em; text-transform:uppercase; cursor:pointer;">Accept</button>
-    <button onclick="declineCookies()" style="background:transparent; color:var(--muted); border:1px solid var(--border); padding:0.6rem 1.2rem; font-size:0.75rem; letter-spacing:0.1em; text-transform:uppercase; cursor:pointer;">Decline</button>
+    <button onclick="acceptCookies()" style="background:var(--accent); color:var(--bg); border:none; padding:0.6rem 1.2rem; font-family:'Syne',sans-serif; font-weight:700; font-size:0.75rem; letter-spacing:0.1em; text-transform:uppercase; cursor:pointer;" data-i18n="cookie_accept">Accept</button>
+    <button onclick="declineCookies()" style="background:transparent; color:var(--muted); border:1px solid var(--border); padding:0.6rem 1.2rem; font-size:0.75rem; letter-spacing:0.1em; text-transform:uppercase; cursor:pointer;" data-i18n="cookie_decline">Decline</button>
   </div>
 </div>
 
@@ -534,20 +580,34 @@ function declineCookies() {
   <!-- HEADER -->
   <header>
    <nav>
-  <a href="index.html">Home</a>
-  <a href="#" onclick="openCategories(); return false;">Categories</a>
-  <a href="about.html">About</a>
-  <a href="https://www.instagram.com/uselesslyinteresting" target="_blank">Instagram</a>
+  <a href="index.html" data-i18n="nav_home">Home</a>
+  <a href="#" onclick="openCategories(); return false;" data-i18n="nav_categories">Categories</a>
+  <a href="about.html" data-i18n="nav_about">About</a>
+  <a href="https://www.instagram.com/uselesslyinteresting" target="_blank" data-i18n="nav_instagram">Instagram</a>
+  <div class="lang-dropdown">
+    <button class="lang-btn" onclick="toggleLangMenu()" id="lang-btn">🌐 EN</button>
+    <div class="lang-menu" id="lang-menu">
+      <button onclick="setLanguage('en')" class="active">🇬🇧 English</button>
+      <button onclick="setLanguage('de')">🇩🇪 Deutsch</button>
+      <button onclick="setLanguage('es')">🇪🇸 Español</button>
+      <button onclick="setLanguage('ar')">🇸🇦 العربية</button>
+      <button onclick="setLanguage('it')">🇮🇹 Italiano</button>
+      <button onclick="setLanguage('fr')">🇫🇷 Français</button>
+      <button onclick="setLanguage('zh')">🇨🇳 中文</button>
+      <button onclick="setLanguage('ja')">🇯🇵 日本語</button>
+    </div>
+  </div>
   <button class="theme-toggle" onclick="toggleTheme()" id="theme-btn" title="Toggle dark mode">☀️</button>
   <button class="hamburger" onclick="toggleMenu()" id="hamburger-btn">☰</button>
 </nav>
 
 <div class="mobile-menu" id="mobile-menu">
-  <a href="index.html" onclick="toggleMenu()">Home</a>
-  <a href="#" onclick="openCategories(); toggleMenu(); return false;">Categories</a>
-  <a href="about.html" onclick="toggleMenu()">About</a>
-  <a href="https://www.instagram.com/uselesslyinteresting" target="_blank" onclick="toggleMenu()">Instagram</a>
+  <a href="index.html" onclick="toggleMenu()" data-i18n="nav_home">Home</a>
+  <a href="#" onclick="openCategories(); toggleMenu(); return false;" data-i18n="nav_categories">Categories</a>
+  <a href="about.html" onclick="toggleMenu()" data-i18n="nav_about">About</a>
+  <a href="https://www.instagram.com/uselesslyinteresting" target="_blank" onclick="toggleMenu()" data-i18n="nav_instagram">Instagram</a>
   <a href="#" onclick="toggleTheme(); toggleMenu(); return false;" id="mobile-theme-btn">🌙 Dark Mode</a>
+  <a href="#" onclick="cycleLang(); toggleMenu(); return false;" id="mobile-lang-btn">🌐 English</a>
 </div>
   </header>
 
@@ -555,9 +615,9 @@ function declineCookies() {
   <div class="hero">
     <div class="hero-deco"></div>
 
-    <div class="hero-tag">✦ New facts every day</div>
-    <h1>Weird facts.<br/><em>Weirder</em> takes.</h1>
-    <p class="hero-desc">We dig up the most bizarre, useless, and oddly fascinating facts about animals, history, science, nature and beyond — then make them even stranger. No agenda. No ads. Just pure, unfiltered curiosity.</p>
+    <div class="hero-tag" data-i18n="hero_tag">✦ New facts every day</div>
+    <h1 id="hero-title">Weird facts.<br/><em>Weirder</em> takes.</h1>
+    <p class="hero-desc" data-i18n="hero_desc">We dig up the most bizarre, useless, and oddly fascinating facts about animals, history, science, nature and beyond — then make them even stranger. No agenda. No ads. Just pure, unfiltered curiosity.</p>
   </div>
 
   <!-- TICKER -->
@@ -994,82 +1054,6 @@ function toggleMore(id, btn) {
 
 
   <script>
-  (async function loadScheduledFacts() {
-    var container = document.getElementById('scheduled-facts');
-    var now = new Date();
-
-    // Only load facts from March 16 onwards (earlier ones are hardcoded above)
-    var startDate = new Date('2026-03-16T00:00:00');
-    // Go up to 60 days ahead to cover future scheduled facts
-    var endDate = new Date(now);
-    endDate.setDate(endDate.getDate() + 60);
-
-    var dates = [];
-    var d = new Date(now);
-    // Go backwards from today to startDate
-    while (d >= startDate) {
-      dates.push(d.toISOString().split('T')[0]);
-      d.setDate(d.getDate() - 1);
-    }
-
-    var isFirstSection = true;
-    for (var di = 0; di < dates.length; di++) {
-      var dateStr = dates[di];
-      try {
-        var resp = await fetch('facts/' + dateStr + '.json');
-        if (!resp.ok) continue;
-        var facts = await resp.json();
-
-        // March 16-19 show immediately (already released), March 20+ go live at 14:00 CET (13:00 UTC)
-        if (dateStr >= '2026-03-20') {
-          var publishTime = new Date(dateStr + 'T13:00:00Z'); // 14:00 CET = 13:00 UTC
-          if (now < publishTime) continue; // Not yet time to show
-        }
-
-        var dateObj = new Date(dateStr + 'T00:00:00');
-        var label = dateObj.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
-
-        var sectionLabel = isFirstSection ? "Today's facts \u2014 " + label : label;
-        isFirstSection = false;
-
-        var section = document.createElement('div');
-        section.className = 'section';
-
-        var html = '<div class="section-label">' + sectionLabel + '</div><div class="grid">';
-
-        for (var fi = 0; fi < facts.length; fi++) {
-          var fact = facts[fi];
-          var featuredClass = fact.featured ? ' featured' : '';
-          var featuredNum = fact.featured ? ' \u2014 Featured' : '';
-          var moreId = 'more-' + fact.id;
-
-          html += '<div class="card' + featuredClass + '" style="--i:' + fi + '">';
-          html += '<span class="card-emoji">' + fact.emoji + '</span>';
-          html += '<h2>' + escapeHtml(fact.title) + '</h2>';
-          html += '<p>' + escapeHtml(fact.short) + '</p>';
-          html += '<div class="card-twist">\u201C' + escapeHtml(fact.twist) + '\u201D</div>';
-          html += '<span class="card-tag">' + fact.tagEmoji + ' ' + escapeHtml(fact.tag) + '</span>';
-
-          if (fact.more) {
-            html += "<button onclick=\"toggleMore('" + moreId + "', this)\" style=\"margin-top:1rem; background:transparent; border:1px solid rgba(200,255,62,0.3); color:#c8ff3e; padding:0.4rem 1rem; font-family:'DM Mono',monospace; font-size:0.72rem; cursor:pointer; letter-spacing:0.1em; text-transform:uppercase;\">Read more \u2193</button>";
-            html += '<div id="' + moreId + '" style="display:none; margin-top:1rem; font-size:0.82rem; color:#9090a8; line-height:1.8; text-transform:none; letter-spacing:normal;">' + escapeHtml(fact.more) + '</div>';
-          }
-
-          html += '</div>';
-        }
-
-        html += '</div>';
-        section.innerHTML = html;
-        container.appendChild(section);
-
-      } catch (e) {
-        // Skip dates with no facts file
-      }
-    }
-
-    // Re-run reactions for new cards
-    if (typeof addScheduledReactions === 'function') addScheduledReactions();
-  })();
 
   function escapeHtml(text) {
     var div = document.createElement('div');
@@ -1129,21 +1113,21 @@ function toggleMore(id, btn) {
   <div class="newsletter">
     <div class="newsletter-box">
       <div>
-        <h3>Get facts that are <em>actually</em> interesting.</h3>
-        <p>One email per week. Weird, funny, and oddly fascinating. No spam — we're too lazy for that.</p>
+        <h3 id="newsletter-title">Get facts that are <em>actually</em> interesting.</h3>
+        <p data-i18n="newsletter_desc">One email per week. Weird, funny, and oddly fascinating. No spam — we're too lazy for that.</p>
       </div>
       <div class="newsletter-form">
-        <input type="email" placeholder="your@email.com" />
-        <button class="btn" onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLScJQu_L8DgmLQVVAQ_XBrdTJXkG36Ec_Ez98AAa3qbxhqhWFg/viewform?usp=publish-editor', '_blank')">Subscribe — it's free</button>
+        <input type="email" placeholder="your@email.com" id="newsletter-email" />
+        <button class="btn" data-i18n="newsletter_btn" onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLScJQu_L8DgmLQVVAQ_XBrdTJXkG36Ec_Ez98AAa3qbxhqhWFg/viewform?usp=publish-editor', '_blank')">Subscribe — it's free</button>
       </div>
     </div>
   </div>
 
   <!-- FOOTER -->
    <footer>
-    <span>© 2026 UselesslyInteresting</span>
-    <span>Facts nobody asked for, delivered daily</span>
-    <span><a href="privacy.html" style="color:var(--muted);text-decoration:none;">Privacy Policy</a></span>
+    <span data-i18n="footer_copy">© 2026 UselesslyInteresting</span>
+    <span data-i18n="footer_tagline">Facts nobody asked for, delivered daily</span>
+    <span><a href="privacy.html" style="color:var(--muted);text-decoration:none;" data-i18n="footer_privacy">Privacy Policy</a></span>
   </footer>
    <!-- CATEGORIES POPUP -->
     <div id="categories-overlay" onclick="closeCategories()" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.7); z-index:999; backdrop-filter:blur(4px);"></div>
@@ -1283,6 +1267,246 @@ function updateThemeButtons(theme) {
   } else {
     updateThemeButtons('light');
   }
+})();
+</script>
+
+<script src="hardcoded-translations.js"></script>
+<script>
+// ── LANGUAGE SWITCHER ──
+var i18nData = null;
+var currentLang = localStorage.getItem('lang') || 'en';
+var langNames = { en: 'English', de: 'Deutsch', es: 'Español', ar: 'العربية', it: 'Italiano', fr: 'Français', zh: '中文', ja: '日本語' };
+var langCodes = ['en', 'de', 'es', 'ar', 'it', 'fr', 'zh', 'ja'];
+var langFlags = { en: '🇬🇧', de: '🇩🇪', es: '🇪🇸', ar: '🇸🇦', it: '🇮🇹', fr: '🇫🇷', zh: '🇨🇳', ja: '🇯🇵' };
+
+// Load translations
+fetch('translations.json').then(function(r) { return r.json(); }).then(function(data) {
+  i18nData = data;
+  if (currentLang !== 'en') applyLanguage(currentLang);
+  updateLangButtons();
+});
+
+function toggleLangMenu() {
+  document.getElementById('lang-menu').classList.toggle('open');
+}
+
+// Close lang menu when clicking outside
+document.addEventListener('click', function(e) {
+  if (!e.target.closest('.lang-dropdown')) {
+    document.getElementById('lang-menu').classList.remove('open');
+  }
+});
+
+function setLanguage(lang) {
+  currentLang = lang;
+  localStorage.setItem('lang', lang);
+  document.getElementById('lang-menu').classList.remove('open');
+  applyLanguage(lang);
+  updateLangButtons();
+  // Reload dynamic facts with new language
+  reloadFactsWithLang(lang);
+}
+
+function cycleLang() {
+  var idx = langCodes.indexOf(currentLang);
+  var next = langCodes[(idx + 1) % langCodes.length];
+  setLanguage(next);
+}
+
+function updateLangButtons() {
+  var btn = document.getElementById('lang-btn');
+  if (btn) btn.textContent = '🌐 ' + currentLang.toUpperCase();
+  var mobileBtn = document.getElementById('mobile-lang-btn');
+  if (mobileBtn) mobileBtn.textContent = '🌐 ' + langNames[currentLang];
+  // Update active state in menu
+  var menuBtns = document.querySelectorAll('#lang-menu button');
+  menuBtns.forEach(function(b) {
+    b.classList.remove('active');
+    var bLang = b.getAttribute('onclick').match(/setLanguage\('(\w+)'\)/);
+    if (bLang && bLang[1] === currentLang) b.classList.add('active');
+  });
+}
+
+function applyLanguage(lang) {
+  if (!i18nData || !i18nData[lang]) return;
+  var t = i18nData[lang];
+
+  // Apply all data-i18n elements
+  document.querySelectorAll('[data-i18n]').forEach(function(el) {
+    var key = el.getAttribute('data-i18n');
+    if (t[key]) el.textContent = t[key];
+  });
+
+  // Special: hero title (has HTML structure)
+  var heroTitle = document.getElementById('hero-title');
+  if (heroTitle && t.hero_title_1) {
+    heroTitle.innerHTML = t.hero_title_1 + '<br/><em>' + t.hero_title_2 + '</em> ' + t.hero_title_3;
+  }
+
+  // Special: newsletter title (has em tag)
+  var nlTitle = document.getElementById('newsletter-title');
+  if (nlTitle && t.newsletter_title_1) {
+    nlTitle.innerHTML = t.newsletter_title_1 + '<em>' + t.newsletter_title_em + '</em>' + t.newsletter_title_2;
+  }
+
+  // Special: email placeholder
+  var emailInput = document.getElementById('newsletter-email');
+  if (emailInput && t.newsletter_placeholder) emailInput.placeholder = t.newsletter_placeholder;
+
+  // Special: ticker
+  var ticker = document.querySelector('.ticker');
+  if (ticker && t.ticker_1) {
+    var tickerHtml = '';
+    for (var i = 1; i <= 5; i++) {
+      tickerHtml += '<span>✦</span> ' + t['ticker_' + i] + ' &nbsp;&nbsp;\n      ';
+    }
+    ticker.innerHTML = tickerHtml + tickerHtml; // Duplicate for seamless scroll
+  }
+
+  // Special: categories popup
+  var catLabels = ['cat_all','cat_biology','cat_space','cat_history','cat_nature','cat_animals','cat_science','cat_weird'];
+  var catDivs = document.querySelectorAll('#categories-popup [onclick^="filterCategory"]');
+  catDivs.forEach(function(div, idx) {
+    if (t[catLabels[idx]]) div.textContent = t[catLabels[idx]];
+  });
+
+  // Categories popup title
+  var catTitle = document.querySelector('#categories-popup div[style*="font-size:1.4rem"]');
+  if (catTitle && t.categories_title) catTitle.textContent = t.categories_title;
+
+  // Handle RTL for Arabic
+  if (lang === 'ar') {
+    document.documentElement.setAttribute('dir', 'rtl');
+  } else {
+    document.documentElement.removeAttribute('dir');
+  }
+
+  // Translate hardcoded card content
+  translateHardcodedCards(lang);
+}
+
+function translateHardcodedCards(lang) {
+  if (lang === 'en') {
+    // Restore original English content from data attributes
+    document.querySelectorAll('.card[data-title-en]').forEach(function(card) {
+      card.querySelector('h2').textContent = card.getAttribute('data-title-en');
+      card.querySelector('p').textContent = card.getAttribute('data-short-en');
+      card.querySelector('.card-twist').textContent = '\u201C' + card.getAttribute('data-twist-en') + '\u201D';
+    });
+    return;
+  }
+  // Translated hardcoded cards stored in window._hardcodedTranslations
+  if (!window._hardcodedTranslations || !window._hardcodedTranslations[lang]) return;
+  var translations = window._hardcodedTranslations[lang];
+  var cards = document.querySelectorAll('.section:not(#scheduled-facts .section) .card');
+  cards.forEach(function(card, idx) {
+    var tr = translations[idx];
+    if (!tr) return;
+    // Store English originals on first switch
+    if (!card.hasAttribute('data-title-en')) {
+      card.setAttribute('data-title-en', card.querySelector('h2').textContent);
+      card.setAttribute('data-short-en', card.querySelector('p').textContent);
+      var twistEl = card.querySelector('.card-twist');
+      card.setAttribute('data-twist-en', twistEl.textContent.replace(/[\u201C\u201D"]/g, ''));
+    }
+    card.querySelector('h2').textContent = tr.title;
+    card.querySelector('p').textContent = tr.short;
+    card.querySelector('.card-twist').textContent = '\u201C' + tr.twist + '\u201D';
+    // Translate "more" content if present
+    var moreDiv = card.querySelector('[id^="more-"]');
+    if (moreDiv && tr.more) {
+      if (!card.hasAttribute('data-more-en')) card.setAttribute('data-more-en', moreDiv.innerHTML);
+      moreDiv.textContent = tr.more;
+    } else if (moreDiv && lang === 'en' && card.hasAttribute('data-more-en')) {
+      moreDiv.innerHTML = card.getAttribute('data-more-en');
+    }
+  });
+}
+
+function reloadFactsWithLang(lang) {
+  var container = document.getElementById('scheduled-facts');
+  container.innerHTML = '';
+  // Re-run the loader with language support
+  loadScheduledFactsWithLang(lang);
+}
+
+async function loadScheduledFactsWithLang(lang) {
+  var container = document.getElementById('scheduled-facts');
+  var now = new Date();
+  var startDate = new Date('2026-03-16T00:00:00');
+  var dates = [];
+  var d = new Date(now);
+  while (d >= startDate) {
+    dates.push(d.toISOString().split('T')[0]);
+    d.setDate(d.getDate() - 1);
+  }
+
+  var t = i18nData ? i18nData[lang] || i18nData['en'] : null;
+  var isFirstSection = true;
+
+  for (var di = 0; di < dates.length; di++) {
+    var dateStr = dates[di];
+    try {
+      var resp = await fetch('facts/' + dateStr + '.json');
+      if (!resp.ok) continue;
+      var facts = await resp.json();
+
+      if (dateStr >= '2026-03-20') {
+        var publishTime = new Date(dateStr + 'T13:00:00Z');
+        if (now < publishTime) continue;
+      }
+
+      var dateObj = new Date(dateStr + 'T00:00:00');
+      var label = dateObj.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+      var todayLabel = (t && t.todays_facts) ? t.todays_facts : "Today's facts";
+      var sectionLabel = isFirstSection ? todayLabel + " \u2014 " + label : label;
+      isFirstSection = false;
+
+      var section = document.createElement('div');
+      section.className = 'section';
+
+      var readMoreText = (t && t.read_more) ? t.read_more : 'Read more \u2193';
+      var html = '<div class="section-label">' + sectionLabel + '</div><div class="grid">';
+
+      for (var fi = 0; fi < facts.length; fi++) {
+        var fact = facts[fi];
+        // Use translated fields if available
+        var title = (lang !== 'en' && fact['title_' + lang]) ? fact['title_' + lang] : fact.title;
+        var short = (lang !== 'en' && fact['short_' + lang]) ? fact['short_' + lang] : fact.short;
+        var twist = (lang !== 'en' && fact['twist_' + lang]) ? fact['twist_' + lang] : fact.twist;
+        var more = (lang !== 'en' && fact['more_' + lang]) ? fact['more_' + lang] : fact.more;
+
+        var featuredClass = fact.featured ? ' featured' : '';
+        var moreId = 'more-' + fact.id;
+
+        html += '<div class="card' + featuredClass + '" style="--i:' + fi + '">';
+        html += '<span class="card-emoji">' + fact.emoji + '</span>';
+        html += '<h2>' + escapeHtml(title) + '</h2>';
+        html += '<p>' + escapeHtml(short) + '</p>';
+        html += '<div class="card-twist">\u201C' + escapeHtml(twist) + '\u201D</div>';
+        html += '<span class="card-tag">' + fact.tagEmoji + ' ' + escapeHtml(fact.tag) + '</span>';
+
+        if (more) {
+          html += "<button onclick=\"toggleMore('" + moreId + "', this)\" style=\"margin-top:1rem; background:transparent; border:1px solid var(--border); color:var(--accent); padding:0.4rem 1rem; font-family:'DM Mono',monospace; font-size:0.72rem; cursor:pointer; letter-spacing:0.1em; text-transform:uppercase;\">" + readMoreText + "</button>";
+          html += '<div id="' + moreId + '" style="display:none; margin-top:1rem; font-size:0.82rem; color:var(--muted); line-height:1.8; text-transform:none; letter-spacing:normal;">' + escapeHtml(more) + '</div>';
+        }
+
+        html += '</div>';
+      }
+
+      html += '</div>';
+      section.innerHTML = html;
+      container.appendChild(section);
+    } catch (e) {}
+  }
+
+  if (typeof addScheduledReactions === 'function') addScheduledReactions();
+}
+
+// Initial load of scheduled facts
+(function() {
+  var lang = localStorage.getItem('lang') || 'en';
+  loadScheduledFactsWithLang(lang);
 })();
 </script>
 </body>
