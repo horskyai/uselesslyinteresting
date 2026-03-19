@@ -558,6 +558,17 @@
   <script>if(localStorage.getItem('theme')==='dark')document.documentElement.setAttribute('data-theme','dark');</script>
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 
+  <!-- OneSignal -->
+  <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+  <script>
+    window.OneSignalDeferred = window.OneSignalDeferred || [];
+    OneSignalDeferred.push(function(OneSignal) {
+      OneSignal.init({
+        appId: "24700e99-9d0e-47fe-93a7-cd255c8cc047",
+      });
+    });
+  </script>
+
 </head>
 <body>
 
