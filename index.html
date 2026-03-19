@@ -565,6 +565,26 @@
     OneSignalDeferred.push(function(OneSignal) {
       OneSignal.init({
         appId: "24700e99-9d0e-47fe-93a7-cd255c8cc047",
+        notifyButton: {
+          enable: true
+        },
+        promptOptions: {
+          slidedown: {
+            prompts: [{
+              type: "push",
+              autoPrompt: true,
+              text: {
+                actionMessage: "We'd like to notify you when new weird facts drop.",
+                acceptButton: "Allow",
+                cancelButton: "No thanks"
+              },
+              delay: {
+                pageViews: 1,
+                timeDelay: 3
+              }
+            }]
+          }
+        }
       });
     });
   </script>
