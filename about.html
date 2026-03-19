@@ -5,24 +5,70 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>About — UselesslyInteresting</title>
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Mono:ital,wght@0,400;1,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet"/>
+  <script>if(localStorage.getItem('theme')==='dark')document.documentElement.setAttribute('data-theme','dark');</script>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    /* ── LIGHT MODE (default) ── */
     :root {
+      --bg: #f5f5f0; --surface: #eaeae4; --card: #ffffff;
+      --accent: #5a8a00; --accent2: #c4168c; --accent3: #0088bb;
+      --text: #1a1a2e; --muted: #5c5c72; --border: rgba(90,138,0,0.15);
+      --card-hover: #f0f0ea; --noise-opacity: 0.15; --shadow: 0 1px 3px rgba(0,0,0,0.06);
+    }
+
+    /* ── DARK MODE ── */
+    [data-theme="dark"] {
       --bg: #0a0a0f; --surface: #12121a; --card: #1a1a26;
       --accent: #c8ff3e; --accent2: #ff3ecb; --accent3: #3ec8ff;
       --text: #e8e8f0; --muted: #6b6b88; --border: rgba(200,255,62,0.12);
+      --card-hover: #1f1f30; --noise-opacity: 0.4; --shadow: none;
     }
-    body { background: var(--bg); color: var(--text); font-family: 'DM Mono', monospace; min-height: 100vh; overflow-x: hidden; }
+
+    body { background: var(--bg); color: var(--text); font-family: 'DM Mono', monospace; min-height: 100vh; overflow-x: hidden; transition: background 0.3s, color 0.3s; }
 
     /* HEADER */
-    header { padding: 2rem 2rem 0; display: flex; align-items: center; justify-content: space-between; }
+    header { padding: 2rem 2rem 0; display: flex; align-items: center; justify-content: center; position: relative; }
     .logo { font-family: 'Syne', sans-serif; font-weight: 800; font-size: clamp(1.2rem, 3vw, 1.6rem); letter-spacing: -0.03em; text-decoration: none; color: var(--text); }
     .logo span { color: var(--accent); }
     .logo-sub { font-size: 0.62rem; color: var(--muted); letter-spacing: 0.15em; text-transform: uppercase; margin-top: 2px; }
-    nav { display: flex; gap: 1.5rem; font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); align-items: center; }
+    nav { display: flex; gap: 1.5rem; font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); align-items: center; position: absolute; right: 2rem; }
     nav a { color: inherit; text-decoration: none; transition: color 0.2s; }
     nav a:hover { color: var(--accent); }
     nav a.active { color: var(--accent); }
+
+    /* TOP-RIGHT CONTROLS */
+    .top-controls {
+      position: fixed; top: 1.5rem; right: 2rem;
+      display: flex; gap: 0.5rem; align-items: center; z-index: 999;
+    }
+    .lang-dropdown { position: relative; display: inline-block; }
+    .lang-btn {
+      background: var(--bg); border: 1px solid var(--border); color: var(--text);
+      font-family: 'DM Mono', monospace; font-size: 0.72rem; padding: 0.35rem 0.9rem;
+      cursor: pointer; letter-spacing: 0.1em; text-transform: uppercase;
+      transition: background 0.2s, color 0.2s, border-color 0.2s;
+    }
+    .lang-btn:hover { border-color: var(--accent); color: var(--accent); }
+    .lang-menu {
+      display: none; position: absolute; top: 100%; right: 0;
+      background: var(--card); border: 1px solid var(--border);
+      min-width: 140px; z-index: 100; box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+    .lang-menu.open { display: block; }
+    .lang-menu button {
+      display: block; width: 100%; background: transparent; border: none;
+      color: var(--text); font-family: 'DM Mono', monospace; font-size: 0.75rem;
+      padding: 0.6rem 1rem; cursor: pointer; text-align: left; transition: background 0.2s;
+    }
+    .lang-menu button:hover { background: var(--surface); }
+    .lang-menu button.active { color: var(--accent); font-weight: bold; }
+    .theme-toggle {
+      background: var(--bg); border: 1px solid var(--border); color: var(--muted);
+      font-size: 1rem; padding: 0.3rem 0.6rem; cursor: pointer;
+      transition: color 0.2s, border-color 0.2s; line-height: 1;
+    }
+    .theme-toggle:hover { color: var(--accent); border-color: var(--accent); }
 
     /* HERO */
     .hero { padding: 5rem 2rem 3rem; max-width: 1100px; margin: 0 auto; }
@@ -58,6 +104,7 @@
     @media (max-width: 680px) {
       .stats { grid-template-columns: 1fr; }
       nav { display: none; }
+      .top-controls { top: 1rem; right: 1rem; }
     }
 
     /* FOOTER */
@@ -75,11 +122,28 @@
     </a>
     <nav>
       <a href="index.html">Home</a>
-      <a href="#">Categories</a>
+      <a href="index.html#categories">Categories</a>
       <a href="about.html" class="active">About</a>
       <a href="https://www.instagram.com/uselesslyinteresting" target="_blank">Instagram</a>
     </nav>
   </header>
+
+  <div class="top-controls">
+    <div class="lang-dropdown">
+      <button class="lang-btn" onclick="toggleLangMenu()" id="lang-btn">🌐 EN</button>
+      <div class="lang-menu" id="lang-menu">
+        <button onclick="setLanguage('en')" class="active">🇬🇧 English</button>
+        <button onclick="setLanguage('de')">🇩🇪 Deutsch</button>
+        <button onclick="setLanguage('es')">🇪🇸 Español</button>
+        <button onclick="setLanguage('ar')">🇸🇦 العربية</button>
+        <button onclick="setLanguage('it')">🇮🇹 Italiano</button>
+        <button onclick="setLanguage('fr')">🇫🇷 Français</button>
+        <button onclick="setLanguage('zh')">🇨🇳 中文</button>
+        <button onclick="setLanguage('ja')">🇯🇵 日本語</button>
+      </div>
+    </div>
+    <button class="theme-toggle" onclick="toggleTheme()" id="theme-btn" title="Toggle dark mode">☀️</button>
+  </div>
 
   <div class="hero">
     <div class="hero-tag">✦ Our story</div>
@@ -133,6 +197,55 @@
     <span>© 2026 UselesslyInteresting</span>
     <span>Facts nobody asked for, delivered daily</span>
   </footer>
+
+  <script>
+  var langNames = { en: 'English', de: 'Deutsch', es: 'Español', ar: 'العربية', it: 'Italiano', fr: 'Français', zh: '中文', ja: '日本語' };
+  var langFlags = { en: '🇬🇧', de: '🇩🇪', es: '🇪🇸', ar: '🇸🇦', it: '🇮🇹', fr: '🇫🇷', zh: '🇨🇳', ja: '🇯🇵' };
+
+  function toggleLangMenu() {
+    document.getElementById('lang-menu').classList.toggle('open');
+  }
+  function setLanguage(lang) {
+    localStorage.setItem('lang', lang);
+    document.getElementById('lang-menu').classList.remove('open');
+    document.getElementById('lang-btn').textContent = '🌐 ' + lang.toUpperCase();
+    var btns = document.querySelectorAll('.lang-menu button');
+    btns.forEach(function(b) { b.classList.remove('active'); });
+    btns.forEach(function(b) { if (b.textContent.includes(langNames[lang])) b.classList.add('active'); });
+    if (lang === 'ar') { document.documentElement.setAttribute('dir', 'rtl'); }
+    else { document.documentElement.removeAttribute('dir'); }
+  }
+  document.addEventListener('click', function(e) {
+    if (!e.target.closest('.lang-dropdown')) {
+      document.getElementById('lang-menu').classList.remove('open');
+    }
+  });
+
+  function toggleTheme() {
+    var html = document.documentElement;
+    var isDark = html.getAttribute('data-theme') === 'dark';
+    if (isDark) {
+      html.removeAttribute('data-theme');
+      localStorage.setItem('theme', 'light');
+      document.getElementById('theme-btn').textContent = '☀️';
+    } else {
+      html.setAttribute('data-theme', 'dark');
+      localStorage.setItem('theme', 'dark');
+      document.getElementById('theme-btn').textContent = '🌙';
+    }
+  }
+
+  // Apply saved settings on load
+  (function() {
+    var saved = localStorage.getItem('theme');
+    if (saved === 'dark') {
+      document.getElementById('theme-btn').textContent = '🌙';
+    }
+    var lang = localStorage.getItem('lang') || 'en';
+    if (lang !== 'en') setLanguage(lang);
+    else document.getElementById('lang-btn').textContent = '🌐 EN';
+  })();
+  </script>
 
 </body>
 </html>
