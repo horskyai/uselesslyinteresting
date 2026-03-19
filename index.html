@@ -998,6 +998,7 @@ function toggleMore(id, btn) {
       d.setDate(d.getDate() - 1);
     }
 
+    var isFirstSection = true;
     for (var di = 0; di < dates.length; di++) {
       var dateStr = dates[di];
       try {
@@ -1014,9 +1015,8 @@ function toggleMore(id, btn) {
         var dateObj = new Date(dateStr + 'T00:00:00');
         var label = dateObj.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
 
-        var todayStr = now.toISOString().split('T')[0];
-        var isToday = dateStr === todayStr;
-        var sectionLabel = isToday ? "Today's facts \u2014 " + label : label;
+        var sectionLabel = isFirstSection ? "Today's facts \u2014 " + label : label;
+        isFirstSection = false;
 
         var section = document.createElement('div');
         section.className = 'section';
