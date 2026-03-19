@@ -559,16 +559,16 @@
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 
   <!-- OneSignal -->
-  <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async></script>
+  <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
   <script>
-    window.OneSignal = window.OneSignal || [];
-    OneSignal.push(function() {
-      OneSignal.init({
+    window.OneSignalDeferred = window.OneSignalDeferred || [];
+    OneSignalDeferred.push(async function(OneSignal) {
+      await OneSignal.init({
         appId: "24700e99-9d0e-47fe-93a7-cd255c8cc047",
-        autoResubscribe: true,
+        safari_web_id: "web.onesignal.auto.2b30b273-8f48-4327-8bae-bed77c33071b",
         notifyButton: {
-          enable: true
-        }
+          enable: true,
+        },
       });
     });
   </script>
