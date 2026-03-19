@@ -522,41 +522,6 @@
       .newsletter-box { grid-template-columns: 1fr; }
     }
 
-    /* ── NOTIFICATION BAR ── */
-    .notify-bar {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 0.7rem 2rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 1rem;
-      font-size: 0.72rem;
-      letter-spacing: 0.05em;
-      color: var(--muted);
-      border-bottom: 1px solid var(--border);
-    }
-    .notify-bar button {
-      background: transparent;
-      border: 1px solid var(--accent);
-      color: var(--accent);
-      padding: 0.3rem 0.8rem;
-      font-family: 'DM Mono', monospace;
-      font-size: 0.68rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      cursor: pointer;
-      transition: background 0.2s, color 0.2s;
-    }
-    .notify-bar button:hover { background: var(--accent); color: var(--bg); }
-    .notify-bar button:disabled { opacity: 0.4; cursor: not-allowed; }
-    .notify-bar button:disabled:hover { background: transparent; color: var(--accent); }
-    .notify-bar .dismiss {
-      background: transparent; border: none; color: var(--muted);
-      font-size: 1rem; cursor: pointer; padding: 0 0.3rem; line-height: 1;
-    }
-    .notify-bar .dismiss:hover { color: var(--text); }
-
     /* ── FOOTER ── */
     footer {
       border-top: 1px solid var(--border);
@@ -592,12 +557,6 @@
 
   <script>if(localStorage.getItem('theme')==='dark')document.documentElement.setAttribute('data-theme','dark');</script>
   <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link rel="manifest" href="manifest.json">
-  <meta name="theme-color" content="#5a8a00">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="default">
-  <meta name="apple-mobile-web-app-title" content="UselesslyInteresting">
-  <link rel="apple-touch-icon" href="icon-192.svg">
 
 </head>
 <body>
@@ -666,13 +625,6 @@ function declineCookies() {
   <a href="#" onclick="cycleLang(); toggleMenu(); return false;" id="mobile-lang-btn">🌐 English</a>
 </div>
   </header>
-
-  <!-- NOTIFICATION BAR -->
-  <div class="notify-bar" id="notify-bar">
-    <span>🔔 Never miss a weird fact.</span>
-    <button id="notify-btn" onclick="requestNotifications()">Enable notifications</button>
-    <button class="dismiss" onclick="dismissNotifyBar()" title="Dismiss">✕</button>
-  </div>
 
   <!-- HERO -->
   <div class="hero">
@@ -1560,57 +1512,5 @@ async function loadScheduledFactsWithLang(lang) {
 })();
 </script>
 
-<!-- SERVICE WORKER + NOTIFICATIONS + INSTALL -->
-<script>
-// Register service worker
-if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js').then(function(reg) {
-    console.log('SW registered:', reg.scope);
-  }).catch(function(err) {
-    console.log('SW registration failed:', err);
-  });
-}
-
-// Notification bar
-function requestNotifications() {
-  var btn = document.getElementById('notify-btn');
-  var bar = document.getElementById('notify-bar');
-
-  if (!('Notification' in window)) {
-    btn.textContent = 'Not supported';
-    btn.disabled = true;
-    return;
-  }
-
-  Notification.requestPermission().then(function(permission) {
-    if (permission === 'granted') {
-      localStorage.setItem('notificationsEnabled', 'true');
-      localStorage.setItem('notifyBarDismissed', 'true');
-      if (bar) bar.style.display = 'none';
-    } else if (permission === 'denied') {
-      btn.textContent = 'Blocked';
-      btn.disabled = true;
-    }
-  });
-}
-
-function dismissNotifyBar() {
-  var bar = document.getElementById('notify-bar');
-  if (bar) bar.style.display = 'none';
-  localStorage.setItem('notifyBarDismissed', 'true');
-}
-
-// Hide bar if already granted or dismissed
-(function() {
-  var bar = document.getElementById('notify-bar');
-  if (!bar) return;
-  var dismissed = localStorage.getItem('notifyBarDismissed');
-  var granted = 'Notification' in window && Notification.permission === 'granted';
-  if (dismissed || granted) {
-    bar.style.display = 'none';
-  }
-})();
-
-</script>
 </body>
 </html>
