@@ -1,0 +1,52 @@
+[
+  {
+    "id": "029",
+    "emoji": "🐙",
+    "title": "Octopuses have three hearts — and two of them stop when they swim.",
+    "short": "Two hearts pump blood to the gills, one pumps it to the rest of the body. When an octopus swims, the main heart stops beating — which is why they prefer crawling.",
+    "twist": "Three hearts and still no feelings? Iconic.",
+    "tag": "Animals",
+    "tagEmoji": "🐾",
+    "more": "Octopuses have a cardiovascular system unlike anything else on Earth. The two branchial hearts push blood through the gills where it picks up oxygen, while the systemic heart distributes oxygenated blood to the organs and muscles. The problem: swimming requires the systemic heart to stop, which causes octopuses to tire quickly. This is why octopuses are ambush predators rather than chasers. Their blue blood — caused by copper-based hemocyanin instead of iron-based hemoglobin — is also more efficient in cold, low-oxygen environments. To top it off, octopuses have nine brains. One central brain and one in each of their eight arms."
+  },
+  {
+    "id": "030",
+    "emoji": "🌡️",
+    "title": "Cleopatra lived closer in time to the Moon landing than to the pyramids.",
+    "short": "The Great Pyramid was built around 2560 BC. Cleopatra died in 30 BC — 2,500 years later. The Moon landing was 1969 — only 2,000 years after her. Ancient Egypt was ancient even to ancient Egyptians.",
+    "twist": "History is not a straight line. It's a series of shocks.",
+    "tag": "History",
+    "tagEmoji": "📅",
+    "more": "The Great Pyramid of Giza was completed around 2560 BC. Cleopatra VII was born in 69 BC and died in 30 BC — meaning she lived roughly 2,500 years after the pyramid was built. Meanwhile, the Apollo 11 Moon landing happened in 1969 AD — only about 2,000 years after Cleopatra's death."
+  },
+  {
+    "id": "031",
+    "emoji": "🦠",
+    "title": "There are more bacteria in your mouth right now than there are people on Earth.",
+    "short": "A single human mouth contains between 1,000 and 10,000 bacteria per square millimeter of tissue — totaling over 6 billion bacteria. The entire human population is about 8 billion. You are outnumbered. In your own mouth.",
+    "twist": "You are a ecosystem. Act accordingly.",
+    "tag": "Biology",
+    "tagEmoji": "🧬",
+    "more": "The human mouth is home to over 700 species of bacteria — making it one of the most diverse microbial ecosystems on the planet. Most of them are harmless or actively beneficial. These bacteria form complex communities called biofilms — more commonly known as plaque. Your oral microbiome is as unique as your fingerprint."
+  },
+  {
+    "id": "032",
+    "emoji": "🪐",
+    "title": "If you removed all the empty space from atoms, all of humanity would fit in a sugar cube.",
+    "short": "Atoms are 99.9999999% empty space. The nucleus is tiny compared to the electron cloud surrounding it. If you compressed out all that space from every human body on Earth, the remaining matter would fit in about one cubic centimeter.",
+    "twist": "You are mostly nothing. And yet here you are.",
+    "tag": "Science",
+    "tagEmoji": "🔬",
+    "more": "An atom consists of a nucleus surrounded by a cloud of electrons. If you scaled a hydrogen atom up to the size of a football stadium, the nucleus would be roughly the size of a marble sitting in the center. Everything else is empty space. The reason solid objects feel solid is electromagnetic forces between atoms that repel each other. Physical contact is, technically, an illusion."
+  },
+  {
+    "id": "033",
+    "emoji": "🎵",
+    "title": "Music gives you chills because your brain thinks you're experiencing something emotional — not just hearing sound.",
+    "short": "About 65% of people experience \"frisson\" — goosebumps or chills from music. It happens when the brain's reward system releases dopamine in response to unexpected musical moments, the same system triggered by food, sex, and drugs.",
+    "twist": "Your brain can't tell the difference between a symphony and survival.",
+    "tag": "Psychology",
+    "tagEmoji": "🧠",
+    "more": "The phenomenon is called \"frisson\" — from the French word for shiver. It occurs when music violates your expectations in a pleasing way. Research shows that people who experience frisson tend to score higher on \"openness to experience\" and show greater connectivity between the auditory cortex and emotional processing areas."
+  }
+]

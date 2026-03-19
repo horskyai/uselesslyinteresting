@@ -1,0 +1,57 @@
+[
+  {
+    "id": "001",
+    "emoji": "🐙",
+    "title": "Octopuses have three hearts — and two of them stop when they swim.",
+    "short": "Two hearts pump blood to the gills, while the third pumps it to the rest of the body. The central heart actually pauses during swimming, which is why octopuses prefer crawling — they'd literally get out of breath otherwise.",
+    "twist": "Three hearts, zero chill. Scientifically incapable of cardio.",
+    "tag": "Biology",
+    "tagEmoji": "🧬",
+    "featured": true
+  },
+  {
+    "id": "002",
+    "emoji": "🌍",
+    "title": "Cleopatra lived closer to the Moon landing than to the pyramids.",
+    "short": "The Great Pyramid was built around 2560 BC. Cleopatra lived around 30 BC. The Moon landing was 1969. Do the math — she's practically a modern woman.",
+    "twist": "History class lied to us. Cleopatra was basically a contemporary.",
+    "tag": "History",
+    "tagEmoji": "📅"
+  },
+  {
+    "id": "003",
+    "emoji": "🍌",
+    "title": "Bananas are berries. Strawberries are not berries. Botany is chaos.",
+    "short": "Botanically speaking, a berry must develop from a single flower with one ovary. Bananas qualify. Strawberries, raspberries, and blackberries? Imposters — all of them.",
+    "twist": "Everything you know about fruit is a lie.",
+    "tag": "Nature",
+    "tagEmoji": "🌿"
+  },
+  {
+    "id": "004",
+    "emoji": "🦩",
+    "title": "A group of flamingos is called a \"flamboyance.\" Obviously.",
+    "short": "Whoever named collective animal groups clearly saved their best work for the flamingos. A murder of crows, a conspiracy of lemurs, a flamboyance of flamingos. Naturalists were having fun.",
+    "twist": "Imagine calling your friend group a flamboyance. Peak energy.",
+    "tag": "Animals",
+    "tagEmoji": "🐦"
+  },
+  {
+    "id": "005",
+    "emoji": "🏛️",
+    "title": "Oxford University is older than the Aztec Empire.",
+    "short": "Teaching began at Oxford around 1096–1167 AD. The Aztec Empire was founded in 1428. So when Aztecs were just starting out, Oxford students were already complaining about tuition fees.",
+    "twist": "Oxford was old news before the Aztecs even existed.",
+    "tag": "History",
+    "tagEmoji": "📅"
+  },
+  {
+    "id": "006",
+    "emoji": "🦣",
+    "title": "Woolly mammoths were still alive when the pyramids were being built.",
+    "short": "A small population of woolly mammoths survived on Wrangel Island until around 1650 BC. The Great Pyramid was completed around 2560 BC. They coexisted. Nobody told the pharaohs.",
+    "twist": "Ancient Egyptians could have had mammoths. They chose to build pyramids instead.",
+    "tag": "Prehistory",
+    "tagEmoji": "🦴"
+  }
+]

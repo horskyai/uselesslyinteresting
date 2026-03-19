@@ -1,0 +1,47 @@
+[
+  {
+    "id": "007",
+    "emoji": "🐝",
+    "title": "Bees can recognize human faces.",
+    "short": "Despite having tiny brains with less than a million neurons, honeybees can distinguish between different human faces — a skill scientists thought was exclusive to vertebrates with large brains.",
+    "twist": "They remember you. Choose kindness.",
+    "tag": "Animals",
+    "tagEmoji": "🐾"
+  },
+  {
+    "id": "008",
+    "emoji": "🌙",
+    "title": "The Moon is slowly drifting away — about 3.8 cm per year.",
+    "short": "Every year the Moon moves slightly further from Earth due to tidal interactions. In about 600 million years it will be too far away to cause total solar eclipses.",
+    "twist": "Even the Moon needs space sometimes.",
+    "tag": "Space",
+    "tagEmoji": "🚀"
+  },
+  {
+    "id": "009",
+    "emoji": "🧊",
+    "title": "Hot water can freeze faster than cold water.",
+    "short": "It's called the Mpemba effect. Scientists still debate exactly why it happens. A Tanzanian student discovered it in 1963 while making ice cream — nobody believed him. He was right.",
+    "twist": "Physics doesn't follow the rules. Neither should you.",
+    "tag": "Science",
+    "tagEmoji": "🔬"
+  },
+  {
+    "id": "010",
+    "emoji": "🐬",
+    "title": "Dolphins have unique names for each other.",
+    "short": "Every dolphin develops a unique whistle — a signature sound that acts as their name. Other dolphins use these whistles to call each other individually, just like we use names.",
+    "twist": "They invented contact lists before smartphones.",
+    "tag": "Animals",
+    "tagEmoji": "🐾"
+  },
+  {
+    "id": "011",
+    "emoji": "⚡",
+    "title": "Lightning strikes Earth about 100 times every single second.",
+    "short": "That's 8 million lightning bolts per day. Every day. The sky is constantly throwing electricity at the ground and we just go about our lives like that's completely normal.",
+    "twist": "The sky is having a very productive day. Every day.",
+    "tag": "Nature",
+    "tagEmoji": "🌿"
+  }
+]
