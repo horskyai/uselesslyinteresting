@@ -522,83 +522,40 @@
       .newsletter-box { grid-template-columns: 1fr; }
     }
 
-    /* ── NOTIFY + INSTALL SECTION ── */
-    .notify-install {
+    /* ── NOTIFICATION BAR ── */
+    .notify-bar {
       max-width: 1100px;
       margin: 0 auto;
-      padding: 2rem 2rem 3rem;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1.5rem;
-    }
-    .ni-card {
-      border: 1px solid var(--border);
-      padding: 2.5rem;
-      position: relative;
-      overflow: hidden;
-    }
-    .ni-card::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 2px;
-      background: var(--accent);
-      transform: scaleX(0);
-      transform-origin: left;
-      transition: transform 0.4s ease;
-    }
-    .ni-card:hover::before { transform: scaleX(1); }
-    .ni-card:nth-child(2)::before { background: var(--accent2); }
-    .ni-icon { font-size: 2rem; margin-bottom: 1rem; }
-    .ni-card h3 {
-      font-family: 'Syne', sans-serif;
-      font-weight: 800;
-      font-size: 1.3rem;
-      letter-spacing: -0.02em;
-      margin-bottom: 0.8rem;
-    }
-    .ni-card h3 em {
-      font-family: 'Instrument Serif', serif;
-      font-style: italic;
-      color: var(--accent);
-    }
-    .ni-card p {
-      font-size: 0.82rem;
+      padding: 0.7rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      font-size: 0.72rem;
+      letter-spacing: 0.05em;
       color: var(--muted);
-      line-height: 1.8;
-      margin-bottom: 1.2rem;
+      border-bottom: 1px solid var(--border);
     }
-    .ni-btn {
+    .notify-bar button {
       background: transparent;
       border: 1px solid var(--accent);
       color: var(--accent);
-      padding: 0.6rem 1.2rem;
+      padding: 0.3rem 0.8rem;
       font-family: 'DM Mono', monospace;
-      font-size: 0.72rem;
+      font-size: 0.68rem;
       letter-spacing: 0.1em;
       text-transform: uppercase;
       cursor: pointer;
       transition: background 0.2s, color 0.2s;
     }
-    .ni-btn:hover { background: var(--accent); color: var(--bg); }
-    .ni-btn:disabled { opacity: 0.4; cursor: not-allowed; }
-    .ni-btn:disabled:hover { background: transparent; color: var(--accent); }
-    .ni-steps {
-      margin-top: 1rem;
-      font-size: 0.75rem;
-      color: var(--muted);
-      line-height: 1.9;
+    .notify-bar button:hover { background: var(--accent); color: var(--bg); }
+    .notify-bar button:disabled { opacity: 0.4; cursor: not-allowed; }
+    .notify-bar button:disabled:hover { background: transparent; color: var(--accent); }
+    .notify-bar .dismiss {
+      background: transparent; border: none; color: var(--muted);
+      font-size: 1rem; cursor: pointer; padding: 0 0.3rem; line-height: 1;
     }
-    .ni-steps strong { color: var(--text); }
-    .ni-status {
-      margin-top: 0.8rem;
-      font-size: 0.72rem;
-      color: var(--accent);
-      display: none;
-    }
-    @media (max-width: 680px) {
-      .notify-install { grid-template-columns: 1fr; }
-    }
+    .notify-bar .dismiss:hover { color: var(--text); }
 
     /* ── FOOTER ── */
     footer {
@@ -709,6 +666,13 @@ function declineCookies() {
   <a href="#" onclick="cycleLang(); toggleMenu(); return false;" id="mobile-lang-btn">🌐 English</a>
 </div>
   </header>
+
+  <!-- NOTIFICATION BAR -->
+  <div class="notify-bar" id="notify-bar">
+    <span>🔔 Never miss a weird fact.</span>
+    <button id="notify-btn" onclick="requestNotifications()">Enable notifications</button>
+    <button class="dismiss" onclick="dismissNotifyBar()" title="Dismiss">✕</button>
+  </div>
 
   <!-- HERO -->
   <div class="hero">
@@ -1208,28 +1172,6 @@ function toggleMore(id, btn) {
   }
   </script>
 
-  <!-- NOTIFICATIONS + INSTALL -->
-  <div class="notify-install">
-    <div class="ni-card">
-      <div class="ni-icon">🔔</div>
-      <h3>Never miss a <em>weird fact.</em></h3>
-      <p>Get a notification on your device whenever a new fact drops. No spam, no emails — just a gentle nudge from your browser.</p>
-      <button class="ni-btn" id="notify-btn" onclick="requestNotifications()">Enable notifications</button>
-      <div class="ni-status" id="notify-status"></div>
-    </div>
-    <div class="ni-card">
-      <div class="ni-icon">📲</div>
-      <h3>Install as an <em>app.</em></h3>
-      <p>Add UselesslyInteresting to your home screen for instant access — no app store needed. Works on phone and desktop.</p>
-      <button class="ni-btn" id="install-btn" onclick="installApp()">Install app</button>
-      <div class="ni-steps" id="install-steps">
-        <strong>How to install:</strong><br/>
-        <strong>Chrome / Edge:</strong> Tap the menu (⋮) → 'Install app' or 'Add to Home screen'<br/>
-        <strong>Safari (iPhone):</strong> Tap the share button (⬆) → 'Add to Home Screen'<br/>
-        <strong>Firefox:</strong> Tap the menu (☰) → 'Install'
-      </div>
-    </div>
-  </div>
 
   <!-- FOOTER -->
    <footer>
@@ -1629,89 +1571,46 @@ if ('serviceWorker' in navigator) {
   });
 }
 
-// Notification permission
+// Notification bar
 function requestNotifications() {
   var btn = document.getElementById('notify-btn');
-  var status = document.getElementById('notify-status');
+  var bar = document.getElementById('notify-bar');
 
   if (!('Notification' in window)) {
-    status.textContent = 'Notifications are not supported in this browser.';
-    status.style.display = 'block';
-    status.style.color = 'var(--muted)';
+    btn.textContent = 'Not supported';
+    btn.disabled = true;
     return;
   }
 
   Notification.requestPermission().then(function(permission) {
-    status.style.display = 'block';
     if (permission === 'granted') {
-      btn.textContent = 'Notifications enabled ✓';
-      btn.disabled = true;
-      status.textContent = 'You will be notified when new facts are published.';
-      status.style.color = 'var(--accent)';
       localStorage.setItem('notificationsEnabled', 'true');
+      localStorage.setItem('notifyBarDismissed', 'true');
+      if (bar) bar.style.display = 'none';
     } else if (permission === 'denied') {
-      status.textContent = 'Notifications were blocked. You can enable them in your browser settings.';
-      status.style.color = 'var(--accent2)';
-    } else {
-      status.textContent = 'Notification permission was dismissed.';
-      status.style.color = 'var(--muted)';
+      btn.textContent = 'Blocked';
+      btn.disabled = true;
     }
   });
 }
 
-// Check if already granted
+function dismissNotifyBar() {
+  var bar = document.getElementById('notify-bar');
+  if (bar) bar.style.display = 'none';
+  localStorage.setItem('notifyBarDismissed', 'true');
+}
+
+// Hide bar if already granted or dismissed
 (function() {
-  if ('Notification' in window && Notification.permission === 'granted') {
-    var btn = document.getElementById('notify-btn');
-    if (btn) {
-      btn.textContent = 'Notifications enabled ✓';
-      btn.disabled = true;
-    }
+  var bar = document.getElementById('notify-bar');
+  if (!bar) return;
+  var dismissed = localStorage.getItem('notifyBarDismissed');
+  var granted = 'Notification' in window && Notification.permission === 'granted';
+  if (dismissed || granted) {
+    bar.style.display = 'none';
   }
 })();
 
-// PWA Install prompt
-var deferredPrompt = null;
-
-window.addEventListener('beforeinstallprompt', function(e) {
-  e.preventDefault();
-  deferredPrompt = e;
-  var btn = document.getElementById('install-btn');
-  if (btn) btn.style.display = 'inline-block';
-});
-
-function installApp() {
-  if (deferredPrompt) {
-    deferredPrompt.prompt();
-    deferredPrompt.userChoice.then(function(result) {
-      if (result.outcome === 'accepted') {
-        var btn = document.getElementById('install-btn');
-        btn.textContent = 'Installed ✓';
-        btn.disabled = true;
-      }
-      deferredPrompt = null;
-    });
-  } else {
-    // No install prompt available — show manual instructions
-    var steps = document.getElementById('install-steps');
-    if (steps) {
-      steps.style.display = 'block';
-      steps.style.background = 'var(--surface)';
-      steps.style.padding = '1rem';
-      steps.style.border = '1px solid var(--border)';
-      steps.style.marginTop = '1rem';
-    }
-  }
-}
-
-// If already installed as PWA, update button
-if (window.matchMedia('(display-mode: standalone)').matches) {
-  var btn = document.getElementById('install-btn');
-  if (btn) {
-    btn.textContent = 'Already installed ✓';
-    btn.disabled = true;
-  }
-}
 </script>
 </body>
 </html>
