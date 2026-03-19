@@ -150,8 +150,14 @@
       text-transform: uppercase;
       color: var(--muted);
     }
-    nav a { color: inherit; text-decoration: none; transition: color 0.2s; }
-    nav a:hover { color: var(--accent); }
+    nav a {
+      color: var(--accent);
+      text-decoration: none;
+      border: 1px solid var(--accent);
+      padding: 0.35rem 0.9rem;
+      transition: background 0.2s, color 0.2s;
+    }
+    nav a:hover { background: var(--accent); color: var(--bg); }
 
     /* ── HERO ── */
     .hero {
