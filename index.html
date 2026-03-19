@@ -114,9 +114,31 @@
 @media (max-width: 768px) {
   nav a { display: none; }
   .hamburger { display: block; }
-  .theme-toggle { display: inline-block; }
-  .top-controls { top: 1rem; right: 4rem; }
+  .top-controls { display: none !important; }
 }
+
+.mobile-lang-submenu {
+  display: none;
+  flex-direction: column;
+  padding-left: 1rem;
+  gap: 0.5rem;
+}
+.mobile-lang-submenu.open {
+  display: flex;
+}
+.mobile-lang-submenu button {
+  background: transparent;
+  border: none;
+  color: var(--text);
+  font-family: 'DM Mono', monospace;
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  padding: 0.3rem 0;
+  cursor: pointer;
+  text-align: right;
+}
+.mobile-lang-submenu button:hover { color: var(--accent); }
+.mobile-lang-submenu button.active { color: var(--accent); font-weight: bold; }
     
 
     /* ── LIGHT MODE (default) ── */
@@ -637,8 +659,18 @@ function declineCookies() {
   <a href="#" onclick="openCategories(); toggleMenu(); return false;" data-i18n="nav_categories">Categories</a>
   <a href="about.html" onclick="toggleMenu()" data-i18n="nav_about">About</a>
   <a href="https://www.instagram.com/uselesslyinteresting" target="_blank" onclick="toggleMenu()" data-i18n="nav_instagram">Instagram</a>
-  <a href="#" onclick="toggleTheme(); toggleMenu(); return false;" id="mobile-theme-btn">🌙 Dark Mode</a>
-  <a href="#" onclick="cycleLang(); toggleMenu(); return false;" id="mobile-lang-btn">🌐 English</a>
+  <a href="#" onclick="toggleTheme(); return false;" id="mobile-theme-btn">☀️ Light Mode</a>
+  <a href="#" onclick="toggleMobileLangSubmenu(); return false;" id="mobile-lang-btn">🌐 English ▾</a>
+  <div class="mobile-lang-submenu" id="mobile-lang-submenu">
+    <button onclick="setLanguage('en'); closeMobileLangSubmenu();">🇬🇧 English</button>
+    <button onclick="setLanguage('de'); closeMobileLangSubmenu();">🇩🇪 Deutsch</button>
+    <button onclick="setLanguage('es'); closeMobileLangSubmenu();">🇪🇸 Español</button>
+    <button onclick="setLanguage('ar'); closeMobileLangSubmenu();">🇸🇦 العربية</button>
+    <button onclick="setLanguage('it'); closeMobileLangSubmenu();">🇮🇹 Italiano</button>
+    <button onclick="setLanguage('fr'); closeMobileLangSubmenu();">🇫🇷 Français</button>
+    <button onclick="setLanguage('zh'); closeMobileLangSubmenu();">🇨🇳 中文</button>
+    <button onclick="setLanguage('ja'); closeMobileLangSubmenu();">🇯🇵 日本語</button>
+  </div>
 </div>
   </header>
 
@@ -1246,8 +1278,30 @@ document.addEventListener('DOMContentLoaded', function() {
 function toggleMenu() {
   const menu = document.getElementById('mobile-menu');
   menu.classList.toggle('open');
+  // Close lang submenu when closing menu
+  if (!menu.classList.contains('open')) {
+    document.getElementById('mobile-lang-submenu').classList.remove('open');
+  }
   document.getElementById('hamburger-btn').textContent =
     menu.classList.contains('open') ? '✕' : '☰';
+}
+
+function toggleMobileLangSubmenu() {
+  document.getElementById('mobile-lang-submenu').classList.toggle('open');
+}
+
+function closeMobileLangSubmenu() {
+  document.getElementById('mobile-lang-submenu').classList.remove('open');
+  // Update mobile lang button text
+  var langNames = {en:'English',de:'Deutsch',es:'Español',ar:'العربية',it:'Italiano',fr:'Français',zh:'中文',ja:'日本語'};
+  var langFlags = {en:'🇬🇧',de:'🇩🇪',es:'🇪🇸',ar:'🇸🇦',it:'🇮🇹',fr:'🇫🇷',zh:'🇨🇳',ja:'🇯🇵'};
+  var lang = localStorage.getItem('lang') || 'en';
+  document.getElementById('mobile-lang-btn').textContent = '🌐 ' + langNames[lang] + ' ▾';
+  // Update active state in submenu
+  var btns = document.getElementById('mobile-lang-submenu').querySelectorAll('button');
+  var codes = ['en','de','es','ar','it','fr','zh','ja'];
+  btns.forEach(function(b, i) { b.classList.toggle('active', codes[i] === lang); });
+  toggleMenu();
 }
 
 function toggleTheme() {
