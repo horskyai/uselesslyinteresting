@@ -41,24 +41,35 @@
 .mobile-menu a:hover { color: var(--accent); }
 .mobile-menu.open { display: flex; }
 
+/* ── TOP-RIGHT CONTROLS ── */
+.top-controls {
+  position: fixed;
+  top: 1.5rem;
+  right: 2rem;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  z-index: 999;
+}
+
 /* ── LANGUAGE DROPDOWN ── */
 .lang-dropdown {
   position: relative;
   display: inline-block;
 }
 .lang-btn {
-  background: transparent;
-  border: 1px solid var(--accent);
-  color: var(--accent);
+  background: var(--bg);
+  border: 1px solid var(--border);
+  color: var(--text);
   font-family: 'DM Mono', monospace;
   font-size: 0.72rem;
   padding: 0.35rem 0.9rem;
   cursor: pointer;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  transition: background 0.2s, color 0.2s;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
 }
-.lang-btn:hover { background: var(--accent); color: var(--bg); }
+.lang-btn:hover { border-color: var(--accent); color: var(--accent); }
 .lang-menu {
   display: none;
   position: absolute;
@@ -89,7 +100,7 @@
 
 /* ── THEME TOGGLE ── */
 .theme-toggle {
-  background: transparent;
+  background: var(--bg);
   border: 1px solid var(--border);
   color: var(--muted);
   font-size: 1rem;
@@ -104,6 +115,7 @@
   nav a { display: none; }
   .hamburger { display: block; }
   .theme-toggle { display: inline-block; }
+  .top-controls { top: 1rem; right: 4rem; }
 }
     
 
@@ -584,6 +596,10 @@ function declineCookies() {
   <a href="#" onclick="openCategories(); return false;" data-i18n="nav_categories">Categories</a>
   <a href="about.html" data-i18n="nav_about">About</a>
   <a href="https://www.instagram.com/uselesslyinteresting" target="_blank" data-i18n="nav_instagram">Instagram</a>
+  <button class="hamburger" onclick="toggleMenu()" id="hamburger-btn">☰</button>
+</nav>
+
+<div class="top-controls">
   <div class="lang-dropdown">
     <button class="lang-btn" onclick="toggleLangMenu()" id="lang-btn">🌐 EN</button>
     <div class="lang-menu" id="lang-menu">
@@ -598,8 +614,7 @@ function declineCookies() {
     </div>
   </div>
   <button class="theme-toggle" onclick="toggleTheme()" id="theme-btn" title="Toggle dark mode">☀️</button>
-  <button class="hamburger" onclick="toggleMenu()" id="hamburger-btn">☰</button>
-</nav>
+</div>
 
 <div class="mobile-menu" id="mobile-menu">
   <a href="index.html" onclick="toggleMenu()" data-i18n="nav_home">Home</a>
