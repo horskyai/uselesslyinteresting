@@ -14,3 +14,40 @@ jobs:
     steps:
       - name: Trigger Netlify Build
         run: curl -X POST -d {} "${{ secrets.NETLIFY_BUILD_HOOK }}"
+
+  send-notification:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+    needs: trigger-netlify
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Send push notification
+        env:
+          ONESIGNAL_API_KEY: ${{ secrets.ONESIGNAL_API_KEY }}
+          ONESIGNAL_APP_ID: "24700e99-9d0e-47fe-93a7-cd255c8cc047"
+        run: |
+          TODAY=$(date -u +%Y-%m-%d)
+          FACT_FILE="facts/${TODAY}.json"
+
+          if [ ! -f "$FACT_FILE" ]; then
+            echo "No fact file for today ($TODAY), skipping notification."
+            exit 0
+          fi
+
+          TITLE=$(cat "$FACT_FILE" | python3 -c "import sys,json; print(json.load(sys.stdin)[0]['title'])")
+          EMOJI=$(cat "$FACT_FILE" | python3 -c "import sys,json; print(json.load(sys.stdin)[0]['emoji'])")
+
+          curl -s -X POST "https://onesignal.com/api/v1/notifications" \
+            -H "Authorization: Basic ${ONESIGNAL_API_KEY}" \
+            -H "Content-Type: application/json" \
+            -d "{
+              \"app_id\": \"${ONESIGNAL_APP_ID}\",
+              \"included_segments\": [\"Subscribed Users\"],
+              \"headings\": {\"en\": \"${EMOJI} New fact just dropped!\"},
+              \"contents\": {\"en\": \"${TITLE}\"},
+              \"url\": \"https://uselesslyinteresting.com\"
+            }"
+
+          echo "Notification sent: ${TITLE}"
