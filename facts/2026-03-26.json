@@ -1,0 +1,42 @@
+[
+  {
+    "id": "059",
+    "emoji": "🐍",
+    "title": "Some snakes can fly — and they're better at gliding than flying squirrels.",
+    "short": "Paradise tree snakes in Southeast Asia launch themselves from trees and flatten their bodies to glide up to 24 meters through the air. No wings, no legs, no problem.",
+    "twist": "Snakes weren't scary enough on the ground. Now they fly.",
+    "tag": "Animals",
+    "tagEmoji": "🐾",
+    "more": "Chrysopelea snakes achieve flight by sucking in their stomachs to create a concave cross-section, effectively turning their body into a wing. They undulate through the air in an S-shape, which provides additional stability. Research using high-speed cameras showed their aerial maneuvers are remarkably controlled — they can even turn mid-air."
+  },
+  {
+    "id": "060",
+    "emoji": "🏛️",
+    "title": "Ancient Romans used urine as mouthwash — and it actually worked.",
+    "short": "Roman dentistry included rinsing with human urine. The ammonia in urine is an effective cleaning agent that kills bacteria. Urine-based mouthwash was used well into the 18th century.",
+    "twist": "Ancient dental hygiene: disgusting, but scientifically sound.",
+    "tag": "History",
+    "tagEmoji": "📅",
+    "more": "Ammonia, which forms as urine decomposes, is a powerful antibacterial and whitening agent. Romans even imported Portuguese urine, which was considered premium quality. Emperor Nero taxed the urine trade. The practice persisted across cultures — European textile workers used it to treat fabrics, and it remained in some dental preparations until modern antiseptics were developed."
+  },
+  {
+    "id": "061",
+    "emoji": "🌌",
+    "title": "The observable universe has a smell — and it's apparently like rum and raspberries.",
+    "short": "The chemical ethyl formate, found in vast dust clouds at the center of the Milky Way, smells like rum and tastes like raspberries. Space has a flavor profile.",
+    "twist": "The galaxy smells like a cocktail. The universe is a party.",
+    "tag": "Space",
+    "tagEmoji": "🚀",
+    "more": "In 2009, astronomers detected ethyl formate in Sagittarius B2, a massive dust cloud near the center of our galaxy. This chemical is the same ester that gives raspberries their flavor and rum its distinctive smell. Of course, you'd need to survive the vacuum of space, intense radiation, and temperatures near absolute zero to actually smell it."
+  },
+  {
+    "id": "062",
+    "emoji": "🦠",
+    "title": "There are more viruses on Earth than stars in the entire observable universe.",
+    "short": "Scientists estimate there are 10³¹ (10 nonillion) viruses on Earth. The observable universe contains roughly 10²⁴ stars. Viruses outnumber stars by a factor of 10 million.",
+    "twist": "You're not surrounded by viruses. You're swimming in them.",
+    "tag": "Biology",
+    "tagEmoji": "🧬",
+    "more": "If you lined up all the viruses on Earth end to end, they'd stretch about 100 million light-years — enough to span several galaxy clusters. Most of these viruses infect bacteria (called bacteriophages) and are harmless to humans. They play a crucial role in regulating ecosystems, controlling bacterial populations, and driving evolution through horizontal gene transfer."
+  }
+]

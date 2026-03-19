@@ -1,0 +1,42 @@
+[
+  {
+    "id": "071",
+    "emoji": "🏺",
+    "title": "The ancient Greeks had a working vending machine — over 2,000 years ago.",
+    "short": "Hero of Alexandria invented a coin-operated holy water dispenser around 50 AD. Insert a coin, it falls on a lever, lever tips a valve, water pours out. Mechanical genius.",
+    "twist": "Ancient engineers invented vending machines before they invented zero.",
+    "tag": "History",
+    "tagEmoji": "📅",
+    "more": "Hero's device was designed for Egyptian temples — worshippers inserted a 5-drachma coin that fell onto a metal lever. The coin's weight tipped the lever, opening a valve that released a measured amount of holy water. When the coin slid off, a counterweight closed the valve. It's the exact same principle modern vending machines use, just without the electricity."
+  },
+  {
+    "id": "072",
+    "emoji": "🫁",
+    "title": "If you unfolded all the air sacs in your lungs, they'd cover an entire tennis court.",
+    "short": "Your lungs contain about 480 million tiny air sacs called alveoli. Spread flat, their combined surface area is approximately 70 square meters — about the size of a tennis court.",
+    "twist": "You're carrying a tennis court inside your chest. Folded.",
+    "tag": "Biology",
+    "tagEmoji": "🧬",
+    "more": "Each alveolus is only about 0.2mm across, surrounded by a network of capillaries just one cell thick. Oxygen passes through this ultra-thin barrier into your blood, while CO2 passes the other way. This massive surface area — packed into organs that weigh only about 1.1 kg — is one of evolution's most elegant engineering solutions. You take about 22,000 breaths per day across this hidden tennis court."
+  },
+  {
+    "id": "073",
+    "emoji": "🌍",
+    "title": "Earth's rotation is slowing down so much that in 140 million years, a day will be 25 hours long.",
+    "short": "Tidal friction from the Moon brakes Earth by about 2.3 milliseconds per century. Ancient corals show that 400 million years ago, a year had about 400 days — each only 22 hours long.",
+    "twist": "The Moon has been stealing your time for 4 billion years. And nobody pressed charges.",
+    "tag": "Science",
+    "tagEmoji": "🔬",
+    "more": "Scientists confirmed this by counting daily growth rings in ancient coral fossils — like tree rings, but for each day. Devonian corals from 380 million years ago show roughly 400 growth rings per year, proving days were shorter and years had more of them. Leap seconds are occasionally added to our clocks to account for this ongoing slowdown."
+  },
+  {
+    "id": "074",
+    "emoji": "🦜",
+    "title": "Parrots name their children — and the names stick for life.",
+    "short": "Green-rumped parrotlets assign unique call signatures to each chick before they can even vocalize themselves. Siblings and parents use these 'names' to address each other individually.",
+    "twist": "Parrots have been doing baby name reveals longer than Instagram.",
+    "tag": "Animals",
+    "tagEmoji": "🐾",
+    "more": "Research by Karl Berg showed that parrot parents begin using specific contact calls for each chick within the first weeks of life — before the chicks can respond. The chicks then learn and adopt these names, using them throughout their lives. Other parrots in the flock also learn and use these names. This is true naming — not just recognition — and it's one of the very few examples of culturally transmitted names in non-human animals."
+  }
+]

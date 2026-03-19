@@ -1,0 +1,42 @@
+[
+  {
+    "id": "055",
+    "emoji": "🧲",
+    "title": "There's a place in the ocean where compasses don't work — the Bermuda Triangle isn't even the weirdest one.",
+    "short": "The South Atlantic Anomaly is a region where Earth's magnetic field is significantly weaker. Satellites malfunction, astronauts see flashes of light, and compasses behave erratically.",
+    "twist": "Earth has a weak spot. And we built the ISS to fly right through it.",
+    "tag": "Science",
+    "tagEmoji": "🔬",
+    "more": "The South Atlantic Anomaly is caused by the tilt between Earth's rotational and magnetic axes. The inner Van Allen radiation belt dips closer to Earth's surface here, exposing satellites and the ISS to higher radiation levels. Astronauts report seeing white flashes — caused by cosmic rays hitting their retinas. Laptops on the ISS sometimes crash when passing through it."
+  },
+  {
+    "id": "056",
+    "emoji": "🦷",
+    "title": "Shark teeth are actually modified scales — and they grow new ones every two weeks.",
+    "short": "A shark can go through over 30,000 teeth in its lifetime. Their teeth are embedded in gums rather than jaw bone, and new rows constantly push forward like a conveyor belt.",
+    "twist": "Imagine having a conveyor belt of fresh teeth. Sharks are playing a different game.",
+    "tag": "Animals",
+    "tagEmoji": "🐾",
+    "more": "Shark teeth are structurally similar to the dermal denticles (tiny tooth-like scales) covering their skin. Evolution essentially weaponized their own skin texture. The replacement rate varies by species — some sharks replace teeth every 8-10 days. The great white shark can have up to 300 teeth in rotation at once."
+  },
+  {
+    "id": "057",
+    "emoji": "🌋",
+    "title": "There's enough gold in Earth's core to coat the entire surface of the planet in a 1.5-foot layer.",
+    "short": "When Earth was forming, heavy elements like gold sank to the core. An estimated 1.6 quadrillion tonnes of gold sits about 2,900 km beneath your feet — completely unreachable.",
+    "twist": "We're all standing on a fortune we'll never touch.",
+    "tag": "Nature",
+    "tagEmoji": "🌿",
+    "more": "The gold in Earth's crust — everything we've ever mined — came from asteroid impacts after the planet's core had already formed. Without those cosmic deliveries, gold would be as rare as platinum group metals. The core's gold alone would be worth approximately 7 quintillion dollars at current prices. But since you can't reach it through 2,900 km of molten rock, it's purely theoretical wealth."
+  },
+  {
+    "id": "058",
+    "emoji": "🧪",
+    "title": "Water can boil and freeze at the same time. It's called the triple point.",
+    "short": "At exactly 0.01°C and 611.73 pascals of pressure, water exists simultaneously as a solid, liquid, and gas. All three states coexist in perfect balance.",
+    "twist": "Water having an identity crisis — and physics said: all of the above.",
+    "tag": "Science",
+    "tagEmoji": "🔬",
+    "more": "The triple point of water is so precisely defined that it was used to calibrate the Kelvin temperature scale until 2019. At this exact combination of temperature and pressure, you can watch ice, liquid water, and water vapor all existing together in a single container. If you add the tiniest amount of heat, more ice melts. Remove some, and more vapor condenses. It's a perfect thermodynamic knife-edge."
+  }
+]

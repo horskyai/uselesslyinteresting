@@ -1,0 +1,42 @@
+[
+  {
+    "id": "067",
+    "emoji": "🪱",
+    "title": "Tardigrades can survive in the vacuum of space — for years.",
+    "short": "These microscopic 'water bears' can endure temperatures from -272°C to 150°C, radiation doses 1,000x lethal to humans, and the complete vacuum of space. They're virtually indestructible.",
+    "twist": "0.5mm long and harder to kill than anything else on Earth. Respect.",
+    "tag": "Biology",
+    "tagEmoji": "🧬",
+    "more": "Tardigrades survive extreme conditions by entering a state called cryptobiosis — they expel 99% of their water and curl into a tiny ball called a 'tun.' Their metabolism drops to nearly zero. In this state, they've survived being exposed to open space for 10 days on a European Space Agency experiment. They also survived the crash-landing of an Israeli lunar probe in 2019 — meaning there may be tardigrades on the Moon right now."
+  },
+  {
+    "id": "068",
+    "emoji": "🎭",
+    "title": "The word 'sarcasm' comes from a Greek word meaning 'to tear flesh.'",
+    "short": "The Greek word 'sarkazein' literally means 'to strip off flesh' or 'to bite lips in rage.' Ancient Greeks considered sarcasm a verbal attack so sharp it was compared to ripping skin.",
+    "twist": "Next time someone says you're 'too sarcastic,' remind them it's supposed to hurt.",
+    "tag": "Weird",
+    "tagEmoji": "😂",
+    "more": "The evolution of 'sarcasm' from flesh-tearing to witty remarks is one of the most dramatic semantic shifts in language history. The Greeks took verbal combat seriously — rhetoric was considered a weapon, and sarcasm was its sharpest edge. The Romans adopted the term, and by the time it reached English in the 1600s, it had softened to mean 'a sharp, bitter remark' — still cutting, just less literally."
+  },
+  {
+    "id": "069",
+    "emoji": "🌑",
+    "title": "There are rogue planets wandering through space with no star — completely alone in the dark.",
+    "short": "Billions of planets in our galaxy orbit nothing. Ejected from their solar systems by gravitational chaos, they drift through interstellar space in total darkness — forever.",
+    "twist": "Somewhere out there, a planet is having the worst breakup in the universe.",
+    "tag": "Space",
+    "tagEmoji": "🚀",
+    "more": "Studies suggest there may be more rogue planets in the Milky Way than stars. Most were likely ejected early in their solar system's formation when gravitational interactions between planets flung them outward. Some could theoretically retain subsurface oceans heated by radioactive decay — meaning life could exist on a planet with no sun, no daylight, drifting alone through interstellar space."
+  },
+  {
+    "id": "070",
+    "emoji": "🐕",
+    "title": "Dogs can smell time — literally detecting the passage of hours through changing scent patterns.",
+    "short": "As the day progresses, scent molecules in your home shift — concentrations rise and fall in predictable patterns. Dogs learn this, effectively 'reading' time through their nose.",
+    "twist": "Your dog knows what time you come home. They smelled it.",
+    "tag": "Animals",
+    "tagEmoji": "🐾",
+    "more": "Alexandra Horowitz's research at Barnard College showed that dogs track the dissipation of scent molecules left by their owners. Your scent gets weaker throughout the day as molecules disperse. Dogs learn that a certain scent concentration means you'll arrive home soon. One experiment confirmed this by introducing the owner's scent mid-day — the dog didn't greet them at the door because the scent level was 'wrong' for arrival time."
+  }
+]

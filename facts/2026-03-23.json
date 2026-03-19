@@ -1,0 +1,42 @@
+[
+  {
+    "id": "047",
+    "emoji": "📡",
+    "title": "The Voyager 1 spacecraft is so far away that its signals take over 22 hours to reach Earth.",
+    "short": "Launched in 1977, Voyager 1 is now over 24 billion km from Earth — the most distant human-made object. It's in interstellar space, carrying a golden record with sounds of Earth.",
+    "twist": "We threw a mixtape into infinity. Peak humanity.",
+    "tag": "Space",
+    "tagEmoji": "🚀",
+    "more": "Voyager 1 crossed into interstellar space in 2012. Its Golden Record contains greetings in 55 languages, music from Bach to Chuck Berry, and encoded images of life on Earth. By the 2030s, it won't have enough power to operate any instruments. But the Golden Record will continue drifting essentially forever."
+  },
+  {
+    "id": "048",
+    "emoji": "🧠",
+    "title": "Your brain uses 20% of your body's energy — but is only 2% of your body weight.",
+    "short": "Despite being relatively small, the brain is the most energy-hungry organ. It consumes about 400 calories per day just to keep you conscious and thinking.",
+    "twist": "Thinking is literally exhausting. You were right all along.",
+    "tag": "Science",
+    "tagEmoji": "🔬",
+    "more": "The brain's enormous energy consumption is mostly spent on maintaining electrical signals between neurons — even when you're doing 'nothing.' The brain cannot store energy — it relies on a constant supply of glucose from the bloodstream, which is why skipping meals makes it hard to concentrate."
+  },
+  {
+    "id": "049",
+    "emoji": "🐋",
+    "title": "A blue whale's heart is so large that a small child could crawl through its arteries.",
+    "short": "The blue whale's heart weighs about 180 kg — the size of a golf cart. It beats only 8–10 times per minute and can be heard from over 3 km away.",
+    "twist": "A heartbeat you can hear from another zip code.",
+    "tag": "Animals",
+    "tagEmoji": "🐾",
+    "more": "Blue whales are the largest animals to have ever lived — larger than any dinosaur. Their tongue alone weighs as much as an elephant. When a blue whale dives, its heart rate drops to as low as 2 beats per minute to conserve oxygen."
+  },
+  {
+    "id": "050",
+    "emoji": "🗿",
+    "title": "The Easter Island statues have full bodies buried underground.",
+    "short": "The famous Moai heads aren't just heads — they have complete torsos buried under centuries of soil. Some are up to 10 meters tall, with detailed carvings on their backs.",
+    "twist": "They've been standing there for 500 years. Nobody thought to dig.",
+    "tag": "History",
+    "tagEmoji": "📅",
+    "more": "Excavations revealed that most Moai are buried up to their shoulders or deeper. The buried portions feature detailed petroglyphs preserved perfectly by the soil. How they transported statues weighing up to 82 tonnes remains debated — the leading theory suggests they were 'walked' upright using a rocking motion with ropes."
+  }
+]

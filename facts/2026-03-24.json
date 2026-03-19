@@ -1,0 +1,42 @@
+[
+  {
+    "id": "051",
+    "emoji": "🌀",
+    "title": "There's a giant hexagonal storm on Saturn's north pole — and nobody knows why it's a hexagon.",
+    "short": "Saturn has a persistent hexagonal weather pattern at its north pole, roughly 30,000 km across — wider than Earth. It's been there since at least 1981.",
+    "twist": "The universe runs on geometry nobody approved.",
+    "tag": "Space",
+    "tagEmoji": "🚀",
+    "more": "First observed by Voyager in 1981, Saturn's hexagonal storm has persisted for over 40 years. Each side is about 14,500 km long — longer than Earth's diameter. Wind speeds inside reach 320 km/h. Why Saturn produces such a stable geometric structure while Jupiter's storms are circular remains one of planetary science's most stunning mysteries."
+  },
+  {
+    "id": "052",
+    "emoji": "🍄",
+    "title": "The largest living organism on Earth is a fungus — and it's 2,400 years old.",
+    "short": "The Armillaria ostoyae in Oregon covers 9.6 square kilometers — larger than 1,600 football fields. It's a single connected organism living mostly underground.",
+    "twist": "A mushroom bigger than a city. Nature is unhinged.",
+    "tag": "Nature",
+    "tagEmoji": "🌿",
+    "more": "Known as the 'Humongous Fungus,' this colony spreads through underground root-like structures called rhizomorphs. It kills trees by attacking their roots. DNA testing confirmed it's a single genetic individual, estimated to weigh around 6,000 tonnes. It's technically edible — it produces honey mushrooms — but you'd never finish it."
+  },
+  {
+    "id": "053",
+    "emoji": "⚗️",
+    "title": "There are colors that exist but your brain refuses to see — called 'impossible colors.'",
+    "short": "Colors like 'reddish-green' or 'bluish-yellow' are real wavelength combinations, but your brain's opponent-process system makes them mutually exclusive.",
+    "twist": "Your eyes work fine. It's your brain that's censoring reality.",
+    "tag": "Science",
+    "tagEmoji": "🔬",
+    "more": "Human color perception works on an opponent-process system: red vs. green, and blue vs. yellow. Your brain literally cannot process 'reddish-green.' However, researchers used eye-tracking to show each eye a different pure color simultaneously — some subjects reported seeing a new, indescribable color. These 'impossible colors' suggest our visual reality is a constructed model, not a direct feed."
+  },
+  {
+    "id": "054",
+    "emoji": "🐈",
+    "title": "Cats have over 20 different vocalizations — and they developed most of them just to talk to humans.",
+    "short": "Wild cats rarely meow at each other. Domestic cats evolved an expanded vocal range specifically to communicate with humans. Each meow means something different.",
+    "twist": "They literally invented a language just to boss us around.",
+    "tag": "Animals",
+    "tagEmoji": "🐾",
+    "more": "Adult wild cats almost never meow — it's a behavior retained from kittenhood that domestic cats continue using because it works on humans. Research shows cats modify their vocalizations based on which sounds get the best response from their specific owner. They're essentially training us, not the other way around."
+  }
+]

@@ -1,0 +1,42 @@
+[
+  {
+    "id": "043",
+    "emoji": "🐊",
+    "title": "Crocodiles have barely changed in 200 million years. They watched the dinosaurs come and go.",
+    "short": "Modern crocodilians are nearly identical to their Jurassic ancestors. They survived the asteroid that wiped out the dinosaurs, multiple ice ages, and continental shifts — without needing to evolve much.",
+    "twist": "When your design is perfect, you don't need updates.",
+    "tag": "Biology",
+    "tagEmoji": "🧬",
+    "more": "Crocodilians survived the extinction event that killed 75% of all species, likely because of their ability to go months without food, their semi-aquatic lifestyle, and their cold-blooded metabolism. They are, by any measure, one of evolution's greatest success stories."
+  },
+  {
+    "id": "044",
+    "emoji": "🫀",
+    "title": "Your heart creates enough pressure to squirt blood 30 feet across a room.",
+    "short": "The left ventricle generates enough force to push blood through 100,000 km of blood vessels. If a major artery were severed, the pressure could send blood arcing nearly 10 meters.",
+    "twist": "Your heart is basically a pressure washer wearing a ribcage.",
+    "tag": "Biology",
+    "tagEmoji": "🧬",
+    "more": "The human heart beats about 100,000 times per day, pumping roughly 7,500 liters of blood. Over a lifetime, that's about 2.5 billion beats and enough blood to fill more than three supertankers. Your blood vessels, laid end to end, would wrap around the Earth more than twice."
+  },
+  {
+    "id": "045",
+    "emoji": "🕳️",
+    "title": "If you fell into a black hole, the universe would watch you freeze in time — while you'd be spaghettified.",
+    "short": "From an outside observer's view, you'd slow down and freeze at the event horizon forever. From YOUR perspective, you'd be stretched like spaghetti by tidal forces in seconds.",
+    "twist": "Two realities, one death. Physics is brutal.",
+    "tag": "Space",
+    "tagEmoji": "🚀",
+    "more": "As you approach a black hole's event horizon, time dilates so severely that outside observers would see you slow down asymptotically. But from your perspective, you'd cross the event horizon without noticing, only to be torn apart — a process physicists cheerfully call 'spaghettification.'"
+  },
+  {
+    "id": "046",
+    "emoji": "🦎",
+    "title": "Some species of lizard reproduce without males — every individual is female.",
+    "short": "Whiptail lizards in New Mexico reproduce through parthenogenesis — females clone themselves. No males exist. They still perform mating rituals with each other to trigger ovulation.",
+    "twist": "Evolution said: men are optional. And meant it.",
+    "tag": "Animals",
+    "tagEmoji": "🐾",
+    "more": "The New Mexico whiptail is an all-female species that arose from hybridization between two other lizard species. Each offspring is a genetic clone of the mother. Despite no males existing, females still engage in pseudo-mating behavior because the physical stimulation triggers hormonal changes needed for egg production."
+  }
+]
