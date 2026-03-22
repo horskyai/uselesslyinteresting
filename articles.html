@@ -343,23 +343,23 @@
 
   <!-- HERO -->
   <div class="hero">
-    <div class="hero-tag">✦ Long reads</div>
-    <h1>All <em>Articles.</em></h1>
-    <p class="hero-desc">Deep dives into the weird, wild, and wonderfully useless.</p>
+    <div class="hero-tag" data-i18n="articles_hero_tag">✦ Long reads</div>
+    <h1 data-i18n="articles_hero_title">All <em>Articles.</em></h1>
+    <p class="hero-desc" data-i18n="articles_hero_desc">Deep dives into the weird, wild, and wonderfully useless.</p>
   </div>
 
   <!-- ARTICLES LIST -->
   <div class="articles-section">
-    <div class="section-label">Pillar articles</div>
+    <div class="section-label" data-i18n="articles_section_label">Pillar articles</div>
     <div class="articles-grid">
 
-      <a href="articles/mind-bending-science-facts-that-sound-fake.html" class="article-card" style="animation-delay: 0s;">
-        <span class="cat-tag">Science</span>
-        <h2>20 Mind-Bending Science Facts That Sound Completely Fake</h2>
-        <p class="desc">Quantum weirdness, time dilation, and bananas that are radioactive — science is full of truths that sound like fiction. Here are 20 that will rewire your brain.</p>
+      <a href="articles/mind-bending-science-facts-that-sound-fake.html" class="article-card" id="article-link-science" style="animation-delay: 0s;">
+        <span class="cat-tag" data-i18n="articles_cat_science">Science</span>
+        <h2 data-i18n="articles_title_science">20 Mind-Bending Science Facts That Sound Completely Fake</h2>
+        <p class="desc" data-i18n="articles_desc_science">Quantum weirdness, time dilation, and bananas that are radioactive — science is full of truths that sound like fiction. Here are 20 that will rewire your brain.</p>
         <div class="meta">
-          <span class="date">March 22, 2026</span>
-          <span class="read-link">Read article →</span>
+          <span class="date" data-i18n="articles_date_science">March 22, 2026</span>
+          <span class="read-link" data-i18n="articles_read_article">Read article →</span>
         </div>
       </a>
 
@@ -376,23 +376,70 @@
   <script>
   var langNames = { en: 'English', de: 'Deutsch', es: 'Español', ar: 'العربية', it: 'Italiano', fr: 'Français', zh: '中文', ja: '日本語' };
   var langFlags = { en: '🇬🇧', de: '🇩🇪', es: '🇪🇸', ar: '🇸🇦', it: '🇮🇹', fr: '🇫🇷', zh: '🇨🇳', ja: '🇯🇵' };
+  var i18nData = null;
+  var currentLang = 'en';
+
+  // Article link paths (slug => base path)
+  var articleSlugs = {
+    'article-link-science': 'mind-bending-science-facts-that-sound-fake.html'
+  };
 
   function toggleLangMenu() {
     document.getElementById('lang-menu').classList.toggle('open');
   }
-  function setLanguage(lang) {
-    localStorage.setItem('lang', lang);
-    document.getElementById('lang-menu').classList.remove('open');
-    document.getElementById('lang-btn').textContent = '🌐 ' + lang.toUpperCase();
+
+  function updateLangButtons() {
+    document.getElementById('lang-btn').textContent = '🌐 ' + currentLang.toUpperCase();
     var btns = document.querySelectorAll('.lang-menu button');
     btns.forEach(function(b) { b.classList.remove('active'); });
-    btns.forEach(function(b) { if (b.textContent.includes(langNames[lang])) b.classList.add('active'); });
+    btns.forEach(function(b) { if (b.textContent.includes(langNames[currentLang])) b.classList.add('active'); });
+    // Mobile lang buttons
+    var mlb = document.getElementById('mobile-lang-btn');
+    if (mlb) mlb.textContent = '🌐 ' + langNames[currentLang] + ' ▾';
+    var mobileButtons = document.querySelectorAll('.mobile-lang-submenu button');
+    mobileButtons.forEach(function(b) { b.classList.remove('active'); });
+    mobileButtons.forEach(function(b) { if (b.textContent.includes(langNames[currentLang])) b.classList.add('active'); });
+  }
+
+  function applyLanguage(lang) {
+    if (!i18nData || !i18nData[lang]) return;
+    var t = i18nData[lang];
+    // Apply all data-i18n elements
+    document.querySelectorAll('[data-i18n]').forEach(function(el) {
+      var key = el.getAttribute('data-i18n');
+      if (t[key]) el.textContent = t[key];
+    });
+    // Update article card links based on language
+    Object.keys(articleSlugs).forEach(function(id) {
+      var link = document.getElementById(id);
+      if (link) {
+        if (lang === 'en') {
+          link.href = 'articles/' + articleSlugs[id];
+        } else {
+          link.href = 'articles/' + lang + '/' + articleSlugs[id];
+        }
+      }
+    });
+    // Update mobile theme button text
+    var mtb = document.getElementById('mobile-theme-btn');
+    if (mtb) {
+      var isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+      var themeKey = isDark ? 'theme_dark' : 'theme_light';
+      if (t[themeKey]) mtb.textContent = (isDark ? '🌙 ' : '☀️ ') + t[themeKey];
+    }
+  }
+
+  function setLanguage(lang) {
+    currentLang = lang;
+    localStorage.setItem('lang', lang);
+    document.getElementById('lang-menu').classList.remove('open');
+    // RTL for Arabic
     if (lang === 'ar') { document.documentElement.setAttribute('dir', 'rtl'); }
     else { document.documentElement.removeAttribute('dir'); }
-    // Update mobile lang button
-    var mlb = document.getElementById('mobile-lang-btn');
-    if (mlb) mlb.textContent = '🌐 ' + langNames[lang] + ' ▾';
+    updateLangButtons();
+    applyLanguage(lang);
   }
+
   document.addEventListener('click', function(e) {
     if (!e.target.closest('.lang-dropdown')) {
       document.getElementById('lang-menu').classList.remove('open');
@@ -415,6 +462,8 @@
       var mtb = document.getElementById('mobile-theme-btn');
       if (mtb) mtb.textContent = '🌙 Dark Mode';
     }
+    // Re-apply language for theme button text
+    if (i18nData && i18nData[currentLang]) applyLanguage(currentLang);
   }
 
   function toggleMenu() {
@@ -434,21 +483,35 @@
     window.location.href = 'index.html#categories';
   }
 
-  // Apply saved settings on load
+  // Fetch translations and apply saved language on load
   (function() {
+    // Apply saved theme
     var saved = localStorage.getItem('theme');
     if (saved === 'dark') {
       document.getElementById('theme-btn').textContent = '🌙';
       var mtb = document.getElementById('mobile-theme-btn');
       if (mtb) mtb.textContent = '🌙 Dark Mode';
     }
+
     var lang = localStorage.getItem('lang') || 'en';
-    if (lang !== 'en') setLanguage(lang);
-    else {
-      document.getElementById('lang-btn').textContent = '🌐 EN';
-      var mlb = document.getElementById('mobile-lang-btn');
-      if (mlb) mlb.textContent = '🌐 English ▾';
-    }
+    currentLang = lang;
+
+    // Set RTL immediately if Arabic
+    if (lang === 'ar') document.documentElement.setAttribute('dir', 'rtl');
+
+    // Update buttons immediately
+    updateLangButtons();
+
+    // Fetch translations then apply
+    fetch('translations.json')
+      .then(function(r) { return r.json(); })
+      .then(function(data) {
+        i18nData = data;
+        applyLanguage(currentLang);
+      })
+      .catch(function(err) {
+        console.warn('Could not load translations:', err);
+      });
   })();
   </script>
 
