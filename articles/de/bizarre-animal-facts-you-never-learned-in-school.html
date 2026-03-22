@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>25 bizarre Tierfakten, die du in der Schule nie gelernt hast — UselesslyInteresting</title>
+  <meta name="description" content="Von Fangschreckenkrebsen, die Mini-Sonnen erzeugen, bis zu Wombats mit würfelförmigem Kot — 25 wilde Tierfakten, die dein Biologielehrer nie erwähnt hat." />
+  <meta name="keywords" content="Tierfakten, bizarre Tiere, verrückte Natur, Fun Facts, uselesslyinteresting" />
+  <link rel="canonical" href="https://uselesslyinteresting.com/articles/de/bizarre-animal-facts-you-never-learned-in-school.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="25 bizarre Tierfakten, die du in der Schule nie gelernt hast" />
+  <meta property="og:description" content="Von Fangschreckenkrebsen, die Mini-Sonnen erzeugen, bis zu Wombats mit würfelförmigem Kot — 25 wilde Tierfakten, die dein Biologielehrer nie erwähnt hat." />
+  <meta property="og:url" content="https://uselesslyinteresting.com/articles/de/bizarre-animal-facts-you-never-learned-in-school.html" />
+  <meta property="og:site_name" content="UselesslyInteresting" />
+  <meta property="og:locale" content="de_DE" />
+  <meta property="article:published_time" content="2026-03-25" />
+  <meta property="article:section" content="Tiere" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="25 bizarre Tierfakten, die du in der Schule nie gelernt hast" />
+  <meta name="twitter:description" content="Von Fangschreckenkrebsen, die Mini-Sonnen erzeugen, bis zu Wombats mit würfelförmigem Kot — 25 wilde Tierfakten, die dein Biologielehrer nie erwähnt hat." />
+
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Mono:ital,wght@0,400;1,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    /* ── LIGHT MODE (default) ── */
+    :root {
+      --bg: #f5f5f0;
+      --surface: #eaeae4;
+      --card: #ffffff;
+      --accent: #5a8a00;
+      --accent2: #c4168c;
+      --accent3: #0088bb;
+      --text: #1a1a2e;
+      --muted: #5c5c72;
+      --border: rgba(90,138,0,0.15);
+      --card-hover: #f0f0ea;
+      --noise-opacity: 0.15;
+      --shadow: 0 1px 3px rgba(0,0,0,0.06);
+    }
+
+    /* ── DARK MODE ── */
+    [data-theme="dark"] {
+      --bg: #0a0a0f;
+      --surface: #12121a;
+      --card: #1a1a26;
+      --accent: #c8ff3e;
+      --accent2: #ff3ecb;
+      --accent3: #3ec8ff;
+      --text: #e8e8f0;
+      --muted: #6b6b88;
+      --border: rgba(200,255,62,0.12);
+      --card-hover: #1f1f30;
+      --noise-opacity: 0.4;
+      --shadow: none;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'DM Mono', monospace;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* Noise overlay */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 1000;
+      opacity: var(--noise-opacity, 0.15);
+    }
+
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* ── HEADER ── */
+    header {
+      padding: 2rem 2rem 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .logo {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: clamp(1.2rem, 3vw, 1.6rem);
+      letter-spacing: -0.03em;
+      line-height: 1;
+      text-decoration: none;
+      color: var(--text);
+    }
+    .logo:hover { text-decoration: none; }
+    .logo span { color: var(--accent); }
+
+    .logo-sub {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.62rem;
+      color: var(--muted);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-top: 2px;
+    }
+
+    /* ── THEME TOGGLE ── */
+    .theme-toggle {
+      position: fixed;
+      top: 1.5rem;
+      right: 2rem;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 1rem;
+      padding: 0.3rem 0.6rem;
+      cursor: pointer;
+      transition: color 0.2s, border-color 0.2s;
+      line-height: 1;
+      z-index: 999;
+    }
+    .theme-toggle:hover { color: var(--accent); border-color: var(--accent); }
+
+    /* ── BREADCRUMB ── */
+    .breadcrumb {
+      max-width: 820px;
+      margin: 2rem auto 0;
+      padding: 0 2rem;
+      font-size: 0.7rem;
+      color: var(--muted);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+    .breadcrumb a { color: var(--muted); transition: color 0.2s; }
+    .breadcrumb a:hover { color: var(--accent); text-decoration: none; }
+    .breadcrumb .sep { margin: 0 0.4rem; opacity: 0.5; }
+
+    /* ── ARTICLE HEADER ── */
+    .article-header {
+      max-width: 820px;
+      margin: 2rem auto 0;
+      padding: 0 2rem;
+    }
+
+    .category-tag {
+      display: inline-block;
+      font-size: 0.62rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent);
+      border: 1px solid var(--accent);
+      padding: 0.25rem 0.7rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .article-header h1 {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+      margin-bottom: 1rem;
+    }
+
+    .article-meta {
+      display: flex;
+      gap: 1.5rem;
+      font-size: 0.72rem;
+      color: var(--muted);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      flex-wrap: wrap;
+    }
+
+    /* ── ARTICLE BODY ── */
+    .article-body {
+      max-width: 820px;
+      margin: 3rem auto;
+      padding: 0 2rem;
+    }
+
+    .article-intro {
+      font-family: 'Instrument Serif', serif;
+      font-size: 1.25rem;
+      line-height: 1.7;
+      color: var(--text);
+      margin-bottom: 2.5rem;
+      font-style: italic;
+    }
+
+    .article-body p {
+      font-size: 0.92rem;
+      line-height: 1.8;
+      color: var(--text);
+      margin-bottom: 1.2rem;
+    }
+
+    .article-body p.section-intro {
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+
+    /* ── FACT CARDS ── */
+    .fact-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      padding: 1.8rem 2rem;
+      margin-bottom: 1.5rem;
+      position: relative;
+      transition: border-color 0.2s;
+    }
+    .fact-card:hover {
+      border-color: var(--accent);
+    }
+
+    .fact-number {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: 2.5rem;
+      color: var(--accent);
+      opacity: 0.2;
+      position: absolute;
+      top: 0.8rem;
+      right: 1.2rem;
+      line-height: 1;
+    }
+
+    .fact-card h2 {
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      font-size: 1.1rem;
+      line-height: 1.3;
+      margin-bottom: 0.8rem;
+      padding-right: 2.5rem;
+      letter-spacing: -0.01em;
+    }
+
+    .fact-card .fact-text {
+      font-size: 0.88rem;
+      line-height: 1.75;
+      color: var(--text);
+      margin-bottom: 0.8rem;
+    }
+
+    .fact-card .fact-twist {
+      font-family: 'Instrument Serif', serif;
+      font-style: italic;
+      font-size: 0.92rem;
+      color: var(--accent);
+      line-height: 1.5;
+    }
+
+    /* ── BOTTOM NAV ── */
+    .article-footer-nav {
+      max-width: 820px;
+      margin: 3rem auto 2rem;
+      padding: 0 2rem;
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .article-footer-nav a {
+      display: inline-block;
+      font-size: 0.72rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      border: 1px solid var(--accent);
+      padding: 0.5rem 1.2rem;
+      transition: background 0.2s, color 0.2s;
+      text-decoration: none;
+    }
+    .article-footer-nav a:hover {
+      background: var(--accent);
+      color: var(--bg);
+      text-decoration: none;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      text-align: center;
+      padding: 3rem 2rem 2rem;
+      font-size: 0.7rem;
+      color: var(--muted);
+      letter-spacing: 0.05em;
+      border-top: 1px solid var(--border);
+      max-width: 820px;
+      margin: 0 auto;
+    }
+
+    /* ── ANIMATIONS ── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(16px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .article-header, .article-intro, .fact-card {
+      animation: fadeUp 0.5s ease both;
+    }
+
+    .fact-card:nth-child(2) { animation-delay: 0.03s; }
+    .fact-card:nth-child(3) { animation-delay: 0.06s; }
+    .fact-card:nth-child(4) { animation-delay: 0.09s; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 600px) {
+      .article-header h1 { font-size: 1.8rem; }
+      .fact-card { padding: 1.4rem 1.2rem; }
+      .fact-number { font-size: 2rem; top: 0.6rem; right: 0.8rem; }
+      .fact-card h2 { font-size: 1rem; }
+      .theme-toggle { top: 1rem; right: 1rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Theme Toggle -->
+  <button class="theme-toggle" aria-label="Dunkelmodus umschalten" onclick="toggleTheme()">&#9790;</button>
+
+  <!-- Header -->
+  <header>
+    <div style="text-align:center;">
+      <a href="../../index.html" class="logo">Usessly<span>Interesting</span></a>
+      <div class="logo-sub">Fakten, die niemand gefragt hat</div>
+    </div>
+  </header>
+
+  <!-- Breadcrumb -->
+  <nav class="breadcrumb" aria-label="Brotkrümelnavigation">
+    <a href="../../index.html">Startseite</a>
+    <span class="sep">&rsaquo;</span>
+    <span>Artikel</span>
+    <span class="sep">&rsaquo;</span>
+    <span>25 bizarre Tierfakten, die du in der Schule nie gelernt hast</span>
+  </nav>
+
+  <!-- Article Header -->
+  <div class="article-header">
+    <span class="category-tag">Tiere</span>
+    <h1>25 bizarre Tierfakten, die du in der Schule nie gelernt hast</h1>
+    <div class="article-meta">
+      <span>25. März 2026</span>
+      <span>&bull; 10 Min. Lesezeit</span>
+    </div>
+  </div>
+
+  <!-- Article Body -->
+  <main class="article-body">
+
+    <p class="article-intro">
+      Dein Biologiebuch hat dir Mitochondrien und die Nahrungskette beigebracht. Es hat jedoch nicht erwähnt, dass eine Garnele hart genug zuschlagen kann, um Wasser zum Kochen zu bringen, oder dass ein bestimmter Käfer überlebt, indem er explodiert. Hier sind 25 Tierfakten, die es nie in den Lehrplan geschafft haben &mdash; und ehrlich gesagt hätten sie es verdient.
+    </p>
+
+    <p class="section-intro">Einige davon klingen erfunden. Wir haben nachgeprüft. Sie sind echt. Die Natur ist einfach so.</p>
+
+    <!-- Fakt 1 -->
+    <div class="fact-card">
+      <div class="fact-number">01</div>
+      <h2>Fangschreckenkrebse schlagen härter zu als eine Kugel</h2>
+      <p class="fact-text">Die keulenartigen Anhängsel des Fangschreckenkrebses beschleunigen mit der Geschwindigkeit einer .22-Kaliber-Kugel und liefern eine Kraft von über 1.500 Newton. Der Schlag ist so schnell, dass er das Wasser durch Kavitation zum Kochen bringt, einen Lichtblitz erzeugt und eine Schockwelle auslöst, die Beute betäuben kann, selbst wenn der Schlag daneben geht.</p>
+      <p class="fact-twist">Stell dir vor, du bist so aggressiv, dass du buchstäblich Wasser zur Waffe machst. Der Fangschreckenkrebs braucht kein Aggressionsmanagement &mdash; er braucht einen Waffenschein.</p>
+    </div>
+
+    <!-- Fakt 2 -->
+    <div class="fact-card">
+      <div class="fact-number">02</div>
+      <h2>Wombats kacken Würfel</h2>
+      <p class="fact-text">Wombats sind die einzigen Tiere auf der Erde, die würfelförmigen Kot produzieren. Ihr Darm hat unterschiedliche Elastizität, die den Kot zu nahezu perfekten Würfeln formt, während er die letzten 17 % des Verdauungstrakts passiert. Anschließend stapeln sie diese Würfel, um ihr Revier zu markieren.</p>
+      <p class="fact-twist">Der größte Ingenieur der Natur hat keinen Damm oder Bienenstock gebaut. Er hat stapelbaren Kot geschaffen. Irgendwo macht sich ein LEGO-Designer Notizen.</p>
+    </div>
+
+    <!-- Fakt 3 -->
+    <div class="fact-card">
+      <div class="fact-number">03</div>
+      <h2>Bombardierkäfer verteidigen sich durch Explosion</h2>
+      <p class="fact-text">Bei Bedrohung mischt der Bombardierkäfer Hydrochinon und Wasserstoffperoxid in einer speziellen Kammer in seinem Hinterleib und löst eine heftige exotherme Reaktion aus. Das resultierende kochend heiße Spray erreicht 100&deg;C und wird mit einem Schnellfeuer-Pulsmechanismus auf den Angreifer geschleudert &mdash; bis zu 500 Impulse pro Sekunde.</p>
+      <p class="fact-twist">Die Verteidigungsstrategie dieses Käfers ist buchstäblich chemische Kriegsführung. Er taucht mit einem eingebauten Flammenwerfer zum Kampf auf und kennt dabei null Zurückhaltung.</p>
+    </div>
+
+    <!-- Fakt 4 -->
+    <div class="fact-card">
+      <div class="fact-number">04</div>
+      <h2>Delfine rufen sich gegenseitig beim Namen</h2>
+      <p class="fact-text">Große Tümmler entwickeln einzigartige Signaturpfiffe, die als Namen fungieren. Forschungen, veröffentlicht in den <em>Proceedings of the National Academy of Sciences</em>, zeigten, dass Delfine selektiv reagieren, wenn sie ihren eigenen Pfiff vorgespielt bekommen, und sie verwenden die Pfiffe anderer Delfine, um bestimmte Individuen zu rufen.</p>
+      <p class="fact-twist">Sie haben buchstäblich eine Kontaktliste. Währenddessen kommt dein Hund immer noch nicht, wenn du ihn rufst.</p>
+    </div>
+
+    <!-- Fakt 5 -->
+    <div class="fact-card">
+      <div class="fact-number">05</div>
+      <h2>Die Knallgarnele erzeugt bei jedem Schnappen eine Mini-Sonne</h2>
+      <p class="fact-text">Wenn eine Knallgarnele ihre Schere zuschnappen lässt, erreicht die kollabierende Kavitationsblase Temperaturen von etwa 4.700&deg;C &mdash; fast so heiß wie die Oberfläche der Sonne. Das Schnappen erzeugt zudem einen Schall von 218 Dezibel unter Wasser und macht sie zu einem der lautesten Tiere überhaupt. Das gesamte Ereignis dauert weniger als eine Millisekunde.</p>
+      <p class="fact-twist">Eine Garnele, kleiner als dein Daumen, erzeugt beiläufig Sternoberflächen-Temperaturen. Das Universum hat einen wilden Sinn für Humor, wo es seine Physik platziert.</p>
+    </div>
+
+    <!-- Fakt 6 -->
+    <div class="fact-card">
+      <div class="fact-number">06</div>
+      <h2>Schnabeltiere leuchten unter UV-Licht</h2>
+      <p class="fact-text">Im Jahr 2020 entdeckten Wissenschaftler, dass das Fell des Schnabeltiers biofluoreszierend ist &mdash; es absorbiert ultraviolettes Licht und sendet es als blau-grünes Leuchten wieder aus. Niemand weiß genau warum. Das Schnabeltier hat bereits einen giftigen Sporn, einen Entenschnabel, einen Biberschwanz und legt Eier. Offenbar war Leuchten das Nächste auf der Liste.</p>
+      <p class="fact-twist">An diesem Punkt spielt das Schnabeltier einfach den Charakter-Editor der Evolution im Speedrun durch und klickt bei jedem Merkmal auf „Zufällig".</p>
+    </div>
+
+    <!-- Fakt 7 -->
+    <div class="fact-card">
+      <div class="fact-number">07</div>
+      <h2>Axolotl können ihr Gehirn nachwachsen lassen</h2>
+      <p class="fact-text">Axolotl sind berühmt für die Regeneration von Gliedmaßen, aber sie können auch Teile ihres Gehirns, Herzens und Rückenmarks nachwachsen lassen. Anders als bei den meisten Wirbeltieren ist ihr regeneriertes Gewebe voll funktionsfähig &mdash; kein Narbengewebe. Wissenschaftler untersuchen aktiv ihr Genom, um zu verstehen, wie man ähnliche Fähigkeiten beim Menschen freisetzen könnte.</p>
+      <p class="fact-twist">Du kannst nicht mal einen Sonnenbrand heilen, und dieses Amphibium lässt beiläufig seinen Frontallappen nachwachsen. Das Leben ist nicht fair.</p>
+    </div>
+
+    <!-- Fakt 8 -->
+    <div class="fact-card">
+      <div class="fact-number">08</div>
+      <h2>Elefanten haben panische Angst vor Bienen</h2>
+      <p class="fact-text">Obwohl sie die größten Landtiere sind, fliehen Elefanten vor dem Summen von Bienen. Sie haben sogar einen speziellen Alarmruf, der grob übersetzt „Bienen!" bedeutet. Afrikanische Bauern nutzen jetzt Bienenstockzäune, um ihre Ernten vor Elefantenüberfällen zu schützen. Das funktioniert besser als jede Mauer.</p>
+      <p class="fact-twist">Ein sechs Tonnen schweres Tier mit zentimeterdicker Haut rennt schreiend vor einem Insekt weg, das weniger wiegt als eine Büroklammer. Die Evolution hat wirklich gesagt: „Jeder bekommt eine Schwäche."</p>
+    </div>
+
+    <!-- Fakt 9 -->
+    <div class="fact-card">
+      <div class="fact-number">09</div>
+      <h2>Tintenfische haben drei Herzen, blaues Blut und W-förmige Pupillen</h2>
+      <p class="fact-text">Tintenfische besitzen drei Herzen (zwei pumpen Blut zu den Kiemen, eines zum Körper), kupferbasiertes blaues Blut und W-förmige Pupillen, die ihnen ein nahezu 360-Grad-Sichtfeld ermöglichen. Sie können außerdem Farbe, Textur und sogar die scheinbare Form ihres Körpers in Millisekunden ändern.</p>
+      <p class="fact-twist">Der Tintenfisch ist im Grunde ein Alien, das versehentlich auf der Erde gelandet ist und einfach im Ozean chillt, in der Hoffnung, dass es niemand bemerkt.</p>
+    </div>
+
+    <!-- Fakt 10 -->
+    <div class="fact-card">
+      <div class="fact-number">10</div>
+      <h2>Honigdachse können Kobragift widerstehen</h2>
+      <p class="fact-text">Honigdachse haben eine spezifische Mutation in ihren nikotinischen Acetylcholinrezeptoren entwickelt, die sie weitgehend resistent gegen Kobra- und Mambagift macht. Wenn sie gebissen werden, werden sie vielleicht kurz ohnmächtig, wachen dann auf und fressen die Schlange weiter, die sie gebissen hat. Das ist keine Übertreibung.</p>
+      <p class="fact-twist">Die Überlebensstrategie des Honigdachses besteht darin, sich einfach zu weigern zu sterben. Er ist der abgedrehteste Hauptcharakter des Tierreichs.</p>
+    </div>
+
+    <!-- Fakt 11 -->
+    <div class="fact-card">
+      <div class="fact-number">11</div>
+      <h2>Der Leierschwanz kann Kettensägen, Autoalarme und Kameraauslöser imitieren</h2>
+      <p class="fact-text">Australiens Leierschwanz gilt als der beste Stimmimitator der Welt. Männchen können die Gesänge von über 20 Vogelarten gleichzeitig perfekt nachahmen, ebenso wie menschengemachte Geräusche wie Kettensägen, Kameraauslöser und sogar weinende Babys. Sie nutzen diese Geräusche in aufwendigen Balztänzen.</p>
+      <p class="fact-twist">Stell dir vor, du versuchst ein Date zu beeindrucken, indem du eine makellose Kettensägen-Imitation machst. In der Vogelwelt ist das ein Power-Move.</p>
+    </div>
+
+    <!-- Fakt 12 -->
+    <div class="fact-card">
+      <div class="fact-number">12</div>
+      <h2>Schützenfische spucken Wasser, um Insekten aus der Luft zu jagen</h2>
+      <p class="fact-text">Schützenfische können präzise Wasserstrahlen bis zu 3 Meter weit schießen, um Insekten von Ästen und Blättern über der Wasseroberfläche zu stoßen. Sie kompensieren die Lichtbrechung zwischen Wasser und Luft und lösen im Grunde physikalische Probleme in Echtzeit. Junge Schützenfische lernen, indem sie erfahrenen Erwachsenen zuschauen.</p>
+      <p class="fact-twist">Ein Fisch, der mit einer Wasserpistole jagt und es durch Beobachtung seiner Älteren gelernt hat. Dieser Fisch hat ein besseres Bildungssystem als manche Länder.</p>
+    </div>
+
+    <!-- Fakt 13 -->
+    <div class="fact-card">
+      <div class="fact-number">13</div>
+      <h2>Alpensteinböcke klettern fast senkrechte Staudämme, um Salz zu lecken</h2>
+      <p class="fact-text">Alpensteinböcke in Italien wurden dabei fotografiert, wie sie die nahezu senkrechte Wand des Cingino-Staudamms erklimmen &mdash; eine 50 Meter hohe Betonwand mit einer Neigung von fast 90 Grad &mdash; nur um Mineralsalze vom Stein zu lecken. Ihre Hufe haben weiche, gummiartige Polster, umgeben von einer harten Außenkante, die an winzigen Unebenheiten im Beton greift und ihnen einen Halt gibt, bei dem Kletterer vor Neid weinen würden.</p>
+      <p class="fact-twist">Diese Ziegen haben eine senkrechte Betonmauer angeschaut und gedacht: „Ja, das ist eine Snack-Wand." Währenddessen wirst du auf einer Trittleiter nervös.</p>
+    </div>
+
+    <!-- Fakt 14 -->
+    <div class="fact-card">
+      <div class="fact-number">14</div>
+      <h2>Pfeilschwanzkrebse haben blaues Blut im Wert von 60.000 Dollar pro Gallone</h2>
+      <p class="fact-text">Das Blut der Pfeilschwanzkrebse enthält ein Gerinnungsmittel namens Limulus-Amöbozyten-Lysat (LAL), das für die Sicherheitsprüfung von Impfstoffen und medizinischen Geräten unerlässlich ist. Ihr kupferbasiertes Blut wird blau, wenn es mit Sauerstoff in Kontakt kommt. Pharmaunternehmen fangen jährlich rund 600.000 Pfeilschwanzkrebse, entnehmen etwa 30 % ihres Blutes und setzen sie dann wieder im Meer aus.</p>
+      <p class="fact-twist">Ein 450 Millionen Jahre altes Wesen hält buchstäblich die moderne Medizin am Laufen. Der Pfeilschwanzkrebs ist seit länger nützlich, als die meisten Arten existiert haben.</p>
+    </div>
+
+    <!-- Fakt 15 -->
+    <div class="fact-card">
+      <div class="fact-number">15</div>
+      <h2>Männliche Seepferdchen bringen die Babys zur Welt</h2>
+      <p class="fact-text">In einer der dramatischsten Rollenumkehrungen der Natur legen weibliche Seepferdchen ihre Eier in eine spezielle Tasche am Bauch des Männchens. Das Männchen befruchtet dann die Embryonen und versorgt sie mit Nährstoffen und Sauerstoff, bevor es durch Muskelkontraktionen bis zu 2.500 voll ausgebildete Babys auf einmal zur Welt bringt.</p>
+      <p class="fact-twist">Der Seepferdchen-Papa „hilft nicht nur aus" &mdash; er leitet den gesamten Betrieb. Vater des Jahres, jedes Jahr, seit 50 Millionen Jahren am Stück.</p>
+    </div>
+
+    <!-- Fakt 16 -->
+    <div class="fact-card">
+      <div class="fact-number">16</div>
+      <h2>Der Haarfrosch bricht sich selbst die Knochen, um Krallen zu bilden</h2>
+      <p class="fact-text">Wenn er bedroht wird, bricht der Haarfrosch (auch „Horrorfrosch" genannt) absichtlich die Knochen in seinen eigenen Zehen und drückt die scharfen, gebrochenen Enden durch seine Haut, um katzenartige Krallen zu erzeugen. Dies ist das einzige bekannte Beispiel eines Tieres, das sein eigenes Skelett in Echtzeit zur Waffe macht.</p>
+      <p class="fact-twist">Wolverine aus den X-Men wurde offenbar von einem Frosch inspiriert. Einem Frosch, der entschieden hat, dass Schmerz vorübergehend ist, aber Überleben ewig währt.</p>
+    </div>
+
+    <!-- Fakt 17 -->
+    <div class="fact-card">
+      <div class="fact-number">17</div>
+      <h2>Mimik-Oktopusse können über 15 verschiedene Arten nachahmen</h2>
+      <p class="fact-text">Der Mimik-Oktopus, der in südostasiatischen Gewässern lebt, kann seine Form, Farbe, Textur und Bewegung verändern, um überzeugend Rotfeuerfische, Plattfische, Quallen, Seeschlangen und mindestens ein Dutzend weitere Arten zu imitieren. Er wählt je nach Bedrohung aus, welches Tier er nachahmt.</p>
+      <p class="fact-twist">Dieser Oktopus hat nicht nur eine Verkleidung &mdash; er hat eine ganze Garderobe, sortiert nach Bedrohungsstufe. Method Acting in Perfektion.</p>
+    </div>
+
+    <!-- Fakt 18 -->
+    <div class="fact-card">
+      <div class="fact-number">18</div>
+      <h2>Turritopsis dohrnii &mdash; Die unsterbliche Qualle &mdash; kann rückwärts altern</h2>
+      <p class="fact-text">Wenn diese winzige Qualle verletzt oder gestresst ist, kann sie ihre Zellen in ihre jüngste Form zurückverwandeln und im Wesentlichen ihren Lebenszyklus neu starten. Sie verwandelt ihr erwachsenes Medusa-Stadium zurück in einen jugendlichen Polypen. Theoretisch kann sie dies unbegrenzt tun, was sie zum einzigen bekannten biologisch unsterblichen Tier macht.</p>
+      <p class="fact-twist">Die Menschheit hat Milliarden für die Suche nach dem Jungbrunnen ausgegeben. Wie sich herausstellt, hat eine Qualle, kleiner als dein kleiner Finger, das schon vor Ewigkeiten gelöst.</p>
+    </div>
+
+    <!-- Fakt 19 -->
+    <div class="fact-card">
+      <div class="fact-number">19</div>
+      <h2>Nacktmulle sind im Grunde Säugetier-Insekten</h2>
+      <p class="fact-text">Nacktmulle leben in Kolonien mit einer einzigen Brutkönigin, wie Ameisen oder Bienen. Sie sind wechselwarm (die einzigen wechselwarmen Säugetiere), praktisch immun gegen Krebs, können 18 Minuten ohne Sauerstoff überleben, empfinden auf ihrer Haut fast keinen Schmerz und können über 30 Jahre alt werden &mdash; etwa zehnmal länger als ähnlich große Nagetiere.</p>
+      <p class="fact-twist">Der Nacktmull hat so viele Regeln der Säugetierbiologie gebrochen, dass Wissenschaftler irgendwann aufgehört haben, überrascht zu sein.</p>
+    </div>
+
+    <!-- Fakt 20 -->
+    <div class="fact-card">
+      <div class="fact-number">20</div>
+      <h2>Krähen halten Beerdigungen für ihre Toten</h2>
+      <p class="fact-text">Wenn eine Krähe ein totes Mitglied ihrer Gruppe findet, ruft sie laut, um andere herbeizurufen. Dutzende Krähen versammeln sich dann um den Körper in dem, was Forscher eine „kakophone Ansammlung" nennen &mdash; im Grunde eine Krähenbeerdigung. Studien zeigen, dass sie dies tun, um Bedrohungen einzuschätzen: Sie lernen, was ihren Gefährten getötet hat, damit sie es vermeiden können.</p>
+      <p class="fact-twist">Krähen haben das True-Crime-Genre Millionen von Jahren vor Podcasts erfunden. Sie erscheinen am Tatort, analysieren die Beweise und verbreiten die Nachricht.</p>
+    </div>
+
+    <!-- Fakt 21 -->
+    <div class="fact-card">
+      <div class="fact-number">21</div>
+      <h2>Buckelwale komponieren Hits, die viral gehen</h2>
+      <p class="fact-text">Männliche Buckelwale singen komplexe Lieder, die bis zu 24 Stunden dauern können. Das Bemerkenswerte: Wenn ein Wal ein neues Gesangsmuster erfindet, verbreitet es sich innerhalb weniger Jahre über ganze Ozeanbecken. Wale, die Tausende Kilometer voneinander entfernt sind, wechseln alle zur neuen Version, wie ein biologischer Hit, der die Charts erobert.</p>
+      <p class="fact-twist">Wale hatten virale Inhalte vor dem Internet. Irgendwo im Pazifik hat ein Buckelwal gerade das heißeste Album der Saison veröffentlicht, und jeder Wal im Umkreis von 5.000 Meilen lernt den Text.</p>
+    </div>
+
+    <!-- Fakt 22 -->
+    <div class="fact-card">
+      <div class="fact-number">22</div>
+      <h2>Der Waldfrosch friert im Winter komplett ein und taut im Frühling wieder auf</h2>
+      <p class="fact-text">Der Waldfrosch überlebt die Winter Alaskas, indem er bis zu 65 % seines Körperwassers gefrieren lässt. Sein Herz hört auf zu schlagen, seine Lunge funktioniert nicht mehr, und sein Gehirn zeigt keine Aktivität. Im Frühling taut er von innen nach außen auf und hüpft davon, als wäre nichts gewesen, dank eines natürlichen Frostschutzmittels aus Glukose, das seine Zellen schützt.</p>
+      <p class="fact-twist">Dieser Frosch stirbt jeden Winter und wird jeden Frühling wiedergeboren. Er macht das seit Millionen von Jahren. Kein großes Ding. Einfach beiläufige Wiedergeburt nach Fahrplan.</p>
+    </div>
+
+    <!-- Fakt 23 -->
+    <div class="fact-card">
+      <div class="fact-number">23</div>
+      <h2>Kugelfische erschaffen kunstvolle Sand-Mandalas, um Partner anzulocken</h2>
+      <p class="fact-text">Männliche Weißgefleckte Kugelfische verbringen bis zu eine Woche damit, komplizierte geometrische Muster im Sand auf dem Meeresboden zu konstruieren. Diese kreisförmigen „Mysterienkreise", die über zwei Meter Durchmesser haben können, werden nur mit ihren Flossen erstellt. Weibchen begutachten die Kunstwerke und wählen Partner basierend auf der Komplexität und Symmetrie des Designs.</p>
+      <p class="fact-twist">Dieser Fisch baut buchstäblich eine Kunstinstallation auf dem Meeresboden als Dating-Profil. Und es funktioniert. Macht euch Notizen, Leute.</p>
+    </div>
+
+    <!-- Fakt 24 -->
+    <div class="fact-card">
+      <div class="fact-number">24</div>
+      <h2>Pangoline sind wandelnde Artischocken, vor denen Ameisen sich fürchten</h2>
+      <p class="fact-text">Pangoline sind die einzigen Säugetiere, die vollständig mit Keratinschuppen bedeckt sind. Bei Bedrohung rollen sie sich zu einer undurchdringlichen Kugel zusammen, die selbst Löwen nicht knacken können. Sie haben keine Zähne und verschlucken daher Steine, um die rund 70 Millionen Ameisen und Termiten zu zerkleinern, die sie jährlich verspeisen. Ihre Zunge, die in einer Tasche nahe dem Becken verstaut ist, kann länger sein als ihr gesamter Körper.</p>
+      <p class="fact-twist">Ein gepanzerter, zahnloser Ameisenfresser mit einer Zunge, die an der Hüfte beginnt. Die Evolution hatte offensichtlich eine experimentelle Phase.</p>
+    </div>
+
+    <!-- Fakt 25 -->
+    <div class="fact-card">
+      <div class="fact-number">25</div>
+      <h2>Der Plumplori ist der einzige giftige Primat</h2>
+      <p class="fact-text">Der Plumplori produziert ein Toxin aus einer Drüse an der Innenseite seines Ellbogens. Er leckt die Drüse und mischt das Sekret mit Speichel, um Gift zu erzeugen, das er durch seinen Biss verabreicht. Das Gift kann beim Menschen Anaphylaxie auslösen und ist stark genug, um kleine Tiere zu töten. Damit ist er der einzige bekannte giftige Primat der Welt.</p>
+      <p class="fact-twist">Er sieht aus wie ein Kuscheltier mit riesigen, entzückenden Augen. Er ist tatsächlich der einzige Primat auf der Erde, der buchstäblich Gift mit sich trägt. Der größte Köder-und-Tausch-Trick der Natur.</p>
+    </div>
+
+    <p style="margin-top: 2rem;">Und da hast du es &mdash; 25 Gründe, warum dein Biologiebuch dich hinters Licht geführt hat. Das Tierreich ist wilder, verrückter und kreativer als jede Fiktion. Wenn das nächste Mal jemand sagt „Die Wahrheit ist seltsamer als Fiktion", zeig einfach auf den Haarfrosch, der sein eigenes Skelett zur Waffe macht, oder die Garnele, die beiläufig Sonnentemperaturen erzeugt.</p>
+
+    <p>Du willst mehr Fakten, nach denen niemand gefragt hat? Wir haben reichlich davon. Jeden Tag gibt es neue Fakten auf unserer Startseite &mdash; über <a href="../../index.html">alles von Weltraum über Geschichte bis zum menschlichen Körper</a>. Denn das Universum ist zu verrückt, um es zu ignorieren.</p>
+
+  </main>
+
+  <!-- Bottom Navigation -->
+  <div class="article-footer-nav">
+    <a href="../../index.html">&larr; Zurück zur Startseite</a>
+    <a href="../../index.html">Tägliche Fakten entdecken</a>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 UselesslyInteresting. Alle Fakten überprüft. Einige Gehirne dauerhaft verändert.</p>
+  </footer>
+
+  <!-- Theme Toggle Script -->
+  <script>
+    function toggleTheme() {
+      const html = document.documentElement;
+      const current = html.getAttribute('data-theme');
+      const next = current === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('ui-theme', next);
+      document.querySelector('.theme-toggle').textContent = next === 'dark' ? '\u2600' : '\u263E';
+    }
+
+    // Restore saved theme
+    (function() {
+      const saved = localStorage.getItem('ui-theme');
+      if (saved === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        document.addEventListener('DOMContentLoaded', function() {
+          document.querySelector('.theme-toggle').textContent = '\u2600';
+        });
+      }
+    })();
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>25个你在学校从未学过的离奇动物事实 — UselesslyInteresting</title>
+  <meta name="description" content="从能制造微型太阳的枪虾到拉方形便便的袋熊——25个你的生物老师从未提及的疯狂动物事实。" />
+  <meta name="keywords" content="动物事实, 奇异动物, 奇妙自然, 趣味知识, uselesslyinteresting" />
+  <link rel="canonical" href="https://uselesslyinteresting.com/articles/zh/bizarre-animal-facts-you-never-learned-in-school.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="25个你在学校从未学过的离奇动物事实" />
+  <meta property="og:description" content="从能制造微型太阳的枪虾到拉方形便便的袋熊——25个你的生物老师从未提及的疯狂动物事实。" />
+  <meta property="og:url" content="https://uselesslyinteresting.com/articles/zh/bizarre-animal-facts-you-never-learned-in-school.html" />
+  <meta property="og:site_name" content="UselesslyInteresting" />
+  <meta property="og:locale" content="zh_CN" />
+  <meta property="article:published_time" content="2026-03-25" />
+  <meta property="article:section" content="动物" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="25个你在学校从未学过的离奇动物事实" />
+  <meta name="twitter:description" content="从能制造微型太阳的枪虾到拉方形便便的袋熊——25个你的生物老师从未提及的疯狂动物事实。" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Mono:ital,wght@0,400;1,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    /* ── LIGHT MODE (default) ── */
+    :root {
+      --bg: #f5f5f0;
+      --surface: #eaeae4;
+      --card: #ffffff;
+      --accent: #5a8a00;
+      --accent2: #c4168c;
+      --accent3: #0088bb;
+      --text: #1a1a2e;
+      --muted: #5c5c72;
+      --border: rgba(90,138,0,0.15);
+      --card-hover: #f0f0ea;
+      --noise-opacity: 0.15;
+      --shadow: 0 1px 3px rgba(0,0,0,0.06);
+    }
+
+    /* ── DARK MODE ── */
+    [data-theme="dark"] {
+      --bg: #0a0a0f;
+      --surface: #12121a;
+      --card: #1a1a26;
+      --accent: #c8ff3e;
+      --accent2: #ff3ecb;
+      --accent3: #3ec8ff;
+      --text: #e8e8f0;
+      --muted: #6b6b88;
+      --border: rgba(200,255,62,0.12);
+      --card-hover: #1f1f30;
+      --noise-opacity: 0.4;
+      --shadow: none;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'DM Mono', monospace;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* Noise overlay */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 1000;
+      opacity: var(--noise-opacity, 0.15);
+    }
+
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* ── HEADER ── */
+    header {
+      padding: 2rem 2rem 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .logo {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: clamp(1.2rem, 3vw, 1.6rem);
+      letter-spacing: -0.03em;
+      line-height: 1;
+      text-decoration: none;
+      color: var(--text);
+    }
+    .logo:hover { text-decoration: none; }
+    .logo span { color: var(--accent); }
+
+    .logo-sub {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.62rem;
+      color: var(--muted);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-top: 2px;
+    }
+
+    /* ── THEME TOGGLE ── */
+    .theme-toggle {
+      position: fixed;
+      top: 1.5rem;
+      right: 2rem;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 1rem;
+      padding: 0.3rem 0.6rem;
+      cursor: pointer;
+      transition: color 0.2s, border-color 0.2s;
+      line-height: 1;
+      z-index: 999;
+    }
+    .theme-toggle:hover { color: var(--accent); border-color: var(--accent); }
+
+    /* ── BREADCRUMB ── */
+    .breadcrumb {
+      max-width: 820px;
+      margin: 2rem auto 0;
+      padding: 0 2rem;
+      font-size: 0.7rem;
+      color: var(--muted);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+    .breadcrumb a { color: var(--muted); transition: color 0.2s; }
+    .breadcrumb a:hover { color: var(--accent); text-decoration: none; }
+    .breadcrumb .sep { margin: 0 0.4rem; opacity: 0.5; }
+
+    /* ── ARTICLE HEADER ── */
+    .article-header {
+      max-width: 820px;
+      margin: 2rem auto 0;
+      padding: 0 2rem;
+    }
+
+    .category-tag {
+      display: inline-block;
+      font-size: 0.62rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent);
+      border: 1px solid var(--accent);
+      padding: 0.25rem 0.7rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .article-header h1 {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+      margin-bottom: 1rem;
+    }
+
+    .article-meta {
+      display: flex;
+      gap: 1.5rem;
+      font-size: 0.72rem;
+      color: var(--muted);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      flex-wrap: wrap;
+    }
+
+    /* ── ARTICLE BODY ── */
+    .article-body {
+      max-width: 820px;
+      margin: 3rem auto;
+      padding: 0 2rem;
+    }
+
+    .article-intro {
+      font-family: 'Instrument Serif', serif;
+      font-size: 1.25rem;
+      line-height: 1.7;
+      color: var(--text);
+      margin-bottom: 2.5rem;
+      font-style: italic;
+    }
+
+    .article-body p {
+      font-size: 0.92rem;
+      line-height: 1.8;
+      color: var(--text);
+      margin-bottom: 1.2rem;
+    }
+
+    .article-body p.section-intro {
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+
+    /* ── FACT CARDS ── */
+    .fact-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      padding: 1.8rem 2rem;
+      margin-bottom: 1.5rem;
+      position: relative;
+      transition: border-color 0.2s;
+    }
+    .fact-card:hover {
+      border-color: var(--accent);
+    }
+
+    .fact-number {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: 2.5rem;
+      color: var(--accent);
+      opacity: 0.2;
+      position: absolute;
+      top: 0.8rem;
+      right: 1.2rem;
+      line-height: 1;
+    }
+
+    .fact-card h2 {
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      font-size: 1.1rem;
+      line-height: 1.3;
+      margin-bottom: 0.8rem;
+      padding-right: 2.5rem;
+      letter-spacing: -0.01em;
+    }
+
+    .fact-card .fact-text {
+      font-size: 0.88rem;
+      line-height: 1.75;
+      color: var(--text);
+      margin-bottom: 0.8rem;
+    }
+
+    .fact-card .fact-twist {
+      font-family: 'Instrument Serif', serif;
+      font-style: italic;
+      font-size: 0.92rem;
+      color: var(--accent);
+      line-height: 1.5;
+    }
+
+    /* ── BOTTOM NAV ── */
+    .article-footer-nav {
+      max-width: 820px;
+      margin: 3rem auto 2rem;
+      padding: 0 2rem;
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .article-footer-nav a {
+      display: inline-block;
+      font-size: 0.72rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      border: 1px solid var(--accent);
+      padding: 0.5rem 1.2rem;
+      transition: background 0.2s, color 0.2s;
+      text-decoration: none;
+    }
+    .article-footer-nav a:hover {
+      background: var(--accent);
+      color: var(--bg);
+      text-decoration: none;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      text-align: center;
+      padding: 3rem 2rem 2rem;
+      font-size: 0.7rem;
+      color: var(--muted);
+      letter-spacing: 0.05em;
+      border-top: 1px solid var(--border);
+      max-width: 820px;
+      margin: 0 auto;
+    }
+
+    /* ── ANIMATIONS ── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(16px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .article-header, .article-intro, .fact-card {
+      animation: fadeUp 0.5s ease both;
+    }
+
+    .fact-card:nth-child(2) { animation-delay: 0.03s; }
+    .fact-card:nth-child(3) { animation-delay: 0.06s; }
+    .fact-card:nth-child(4) { animation-delay: 0.09s; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 600px) {
+      .article-header h1 { font-size: 1.8rem; }
+      .fact-card { padding: 1.4rem 1.2rem; }
+      .fact-number { font-size: 2rem; top: 0.6rem; right: 0.8rem; }
+      .fact-card h2 { font-size: 1rem; }
+      .theme-toggle { top: 1rem; right: 1rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Theme Toggle -->
+  <button class="theme-toggle" aria-label="切换深色模式" onclick="toggleTheme()">&#9790;</button>
+
+  <!-- Header -->
+  <header>
+    <div style="text-align:center;">
+      <a href="../../index.html" class="logo">Usessly<span>Interesting</span></a>
+      <div class="logo-sub">没人要求的冷知识</div>
+    </div>
+  </header>
+
+  <!-- Breadcrumb -->
+  <nav class="breadcrumb" aria-label="面包屑导航">
+    <a href="../../index.html">首页</a>
+    <span class="sep">&rsaquo;</span>
+    <span>文章</span>
+    <span class="sep">&rsaquo;</span>
+    <span>25个你在学校从未学过的离奇动物事实</span>
+  </nav>
+
+  <!-- Article Header -->
+  <div class="article-header">
+    <span class="category-tag">动物</span>
+    <h1>25个你在学校从未学过的离奇动物事实</h1>
+    <div class="article-meta">
+      <span>2026年3月25日</span>
+      <span>&bull; 阅读约10分钟</span>
+    </div>
+  </div>
+
+  <!-- Article Body -->
+  <main class="article-body">
+
+    <p class="article-intro">
+      你的生物课本给了你线粒体和食物链。但它没有提到，有一种虾能打出让水沸腾的力度，或者某种甲虫靠爆炸来求生。以下是25个从未进入教学大纲的动物事实 &mdash; 老实说，它们本应该在里面。
+    </p>
+
+    <p class="section-intro">其中一些听起来像假的。我们查证过了。都是真的。大自然就是这样。</p>
+
+    <!-- Fact 1 -->
+    <div class="fact-card">
+      <div class="fact-number">01</div>
+      <h2>螳螂虾的拳头比子弹还猛</h2>
+      <p class="fact-text">螳螂虾的锤状附肢加速度相当于.22口径子弹，释放超过1,500牛顿的力量。这一击快到能通过空化效应使周围的水沸腾，产生一道闪光和冲击波，即使没打中也能击晕猎物。</p>
+      <p class="fact-twist">想象一下你暴躁到把水变成了武器。螳螂虾不需要情绪管理 &mdash; 它需要的是武器许可证。</p>
+    </div>
+
+    <!-- Fact 2 -->
+    <div class="fact-card">
+      <div class="fact-number">02</div>
+      <h2>袋熊拉方形便便</h2>
+      <p class="fact-text">袋熊是地球上唯一能产出方形粪便的动物。它们的肠道弹性不均匀，在粪便通过消化道最后17%的过程中将其塑造成近乎完美的方块。然后它们把这些方块堆起来标记领地。</p>
+      <p class="fact-twist">大自然最伟大的工程师没有建造水坝或蜂巢。它造了可堆叠的便便。某个乐高设计师正在做笔记。</p>
+    </div>
+
+    <!-- Fact 3 -->
+    <div class="fact-card">
+      <div class="fact-number">03</div>
+      <h2>炮弹甲虫靠爆炸来自卫</h2>
+      <p class="fact-text">受到威胁时，炮弹甲虫在腹部的特殊腔室中混合对苯二酚和过氧化氢，触发剧烈的放热反应。产生的沸腾喷雾温度高达100&deg;C，以快速脉冲机制射向捕食者 &mdash; 每秒高达500次脉冲。</p>
+      <p class="fact-twist">这种甲虫的防御策略就是化学战。它自带喷火器上战场，毫不含糊。</p>
+    </div>
+
+    <!-- Fact 4 -->
+    <div class="fact-card">
+      <div class="fact-number">04</div>
+      <h2>海豚用名字互相呼唤</h2>
+      <p class="fact-text">宽吻海豚会发展出独特的标志性哨声，相当于名字。发表在<em>《美国国家科学院院刊》</em>上的研究表明，海豚听到自己的哨声回放时会有选择性地回应，并且它们会用其他海豚的哨声来呼叫特定个体。</p>
+      <p class="fact-twist">它们真的有通讯录。与此同时，你的狗叫它名字还是不来。</p>
+    </div>
+
+    <!-- Fact 5 -->
+    <div class="fact-card">
+      <div class="fact-number">05</div>
+      <h2>枪虾每次弹指都制造一个迷你太阳</h2>
+      <p class="fact-text">当枪虾弹击它的螯时，塌缩的空化气泡温度大约达到4,700&deg;C &mdash; 几乎和太阳表面一样热。这一弹击还会在水下产生218分贝的声音，使它成为最吵的动物之一。整个过程不到一毫秒。</p>
+      <p class="fact-twist">一只比你拇指还小的虾随随便便就再现了恒星表面温度。宇宙对于把物理学放在哪里这件事，幽默感实在太野了。</p>
+    </div>
+
+    <!-- Fact 6 -->
+    <div class="fact-card">
+      <div class="fact-number">06</div>
+      <h2>鸭嘴兽在紫外线下会发光</h2>
+      <p class="fact-text">2020年，科学家发现鸭嘴兽的皮毛具有生物荧光性 &mdash; 它吸收紫外线并重新发出蓝绿色的光。没人完全确定为什么。鸭嘴兽已经有了毒刺、鸭嘴、河狸尾巴，还会下蛋。显然，发光是清单上的下一项。</p>
+      <p class="fact-twist">到这个地步，鸭嘴兽就是在进化的角色创建器里速通，每个特征都点"随机"。</p>
+    </div>
+
+    <!-- Fact 7 -->
+    <div class="fact-card">
+      <div class="fact-number">07</div>
+      <h2>蝾螈能再生大脑</h2>
+      <p class="fact-text">蝾螈以再生四肢闻名，但它们还能重新长出部分大脑、心脏和脊髓。与大多数脊椎动物不同，它们再生的组织完全功能正常 &mdash; 不是疤痕组织。科学家正在积极研究它们的基因组，以了解如何在人类身上解锁类似的能力。</p>
+      <p class="fact-twist">你连晒伤都恢复不了，这种两栖动物却在悠哉地重新长出额叶。生活不公平。</p>
+    </div>
+
+    <!-- Fact 8 -->
+    <div class="fact-card">
+      <div class="fact-number">08</div>
+      <h2>大象害怕蜜蜂</h2>
+      <p class="fact-text">尽管是最大的陆地动物，大象听到蜜蜂嗡嗡声就会逃跑。它们甚至有一种特定的警报叫声，大致翻译为"蜜蜂！"非洲农民现在用蜂箱围栏来保护庄稼免受大象袭击。效果比任何墙都好。</p>
+      <p class="fact-twist">一个六吨重、皮厚一英寸的动物，被一只比回形针还轻的昆虫吓得尖叫逃跑。进化确实说了"每个人都有弱点。"</p>
+    </div>
+
+    <!-- Fact 9 -->
+    <div class="fact-card">
+      <div class="fact-number">09</div>
+      <h2>墨鱼有三颗心脏、蓝色血液和W形瞳孔</h2>
+      <p class="fact-text">墨鱼拥有三颗心脏（两颗将血液泵向鳃，一颗泵向身体）、基于铜的蓝色血液以及W形瞳孔，赋予它们接近360度的视野。它们还能在毫秒内改变颜色、质地，甚至身体的外观形状。</p>
+      <p class="fact-twist">墨鱼基本上就是一个不小心来到地球的外星人，在海洋里低调生活，希望没人发现。</p>
+    </div>
+
+    <!-- Fact 10 -->
+    <div class="fact-card">
+      <div class="fact-number">10</div>
+      <h2>蜜獾能扛住眼镜蛇毒液</h2>
+      <p class="fact-text">蜜獾进化出了一种特定的烟碱型乙酰胆碱受体突变，使其对眼镜蛇和曼巴蛇的毒液具有很强的抵抗力。如果被咬，它可能会短暂昏迷，然后醒来继续吃咬它的那条蛇。这不是夸张。</p>
+      <p class="fact-twist">蜜獾的生存策略就是拒绝死亡。它是动物王国里最疯狂的主角。</p>
+    </div>
+
+    <!-- Fact 11 -->
+    <div class="fact-card">
+      <div class="fact-number">11</div>
+      <h2>琴鸟能模仿电锯、汽车警报和相机快门</h2>
+      <p class="fact-text">澳大利亚的琴鸟被认为是世界上最伟大的声音模仿者。雄鸟能同时完美复制20多种鸟类的叫声，以及电锯、相机快门甚至婴儿哭声等人造声音。它们在精心编排的求偶舞蹈中使用这些声音。</p>
+      <p class="fact-twist">想象一下你在约会时表演完美的电锯模仿来打动对方。在鸟类世界里，这是一个强力招数。</p>
+    </div>
+
+    <!-- Fact 12 -->
+    <div class="fact-card">
+      <div class="fact-number">12</div>
+      <h2>射水鱼喷水捕捉空中昆虫</h2>
+      <p class="fact-text">射水鱼能射出精准的水柱，射程可达3米，将树枝和叶子上的昆虫击落水面。它们补偿水和空气之间的光折射，本质上是在实时解决物理问题。年幼的射水鱼通过观察有经验的成鱼来学习。</p>
+      <p class="fact-twist">一条用水枪捕猎的鱼，还是跟长辈学的。这条鱼的教育体系比某些国家还好。</p>
+    </div>
+
+    <!-- Fact 13 -->
+    <div class="fact-card">
+      <div class="fact-number">13</div>
+      <h2>阿尔卑斯山羊攀爬近乎垂直的大坝只为舔盐</h2>
+      <p class="fact-text">意大利的阿尔卑斯山羊被拍到攀爬辛吉诺大坝近乎垂直的表面 &mdash; 一面高160英尺、坡度接近90度的混凝土墙 &mdash; 只为舔石头上的矿物盐。它们的蹄子有柔软的橡胶垫，外围是坚硬的边缘，能抓住混凝土上的微小缺陷，提供的抓地力让任何攀岩者都会羡慕哭。</p>
+      <p class="fact-twist">这些山羊看着一面垂直的混凝土大坝，心想"嗯，这是零食墙。"与此同时，你站在梯子上都紧张。</p>
+    </div>
+
+    <!-- Fact 14 -->
+    <div class="fact-card">
+      <div class="fact-number">14</div>
+      <h2>鲎的蓝色血液价值每加仑60,000美元</h2>
+      <p class="fact-text">鲎的血液含有一种叫做LAL的凝血剂，对疫苗和医疗器械的安全检测至关重要。它们基于铜的血液在接触氧气时变为蓝色。制药公司每年采集约600,000只鲎，提取约30%的血液后将其放回海洋。</p>
+      <p class="fact-twist">一种存在了4.5亿年的生物正在守护现代医学的安全。鲎有用的时间比大多数物种存在的时间都长。</p>
+    </div>
+
+    <!-- Fact 15 -->
+    <div class="fact-card">
+      <div class="fact-number">15</div>
+      <h2>雄性海马负责生育</h2>
+      <p class="fact-text">在自然界最戏剧性的角色互换中，雌性海马将卵子存入雄性腹部的专用育儿袋中。然后雄性负责受精和孕育胚胎，提供营养和氧气，最后通过肌肉收缩一次性生出多达2,500只完全成形的小海马。</p>
+      <p class="fact-twist">海马爸爸不只是"帮个忙" &mdash; 他负责整个流程。年度最佳父亲，年年如此，已经持续了5000万年。</p>
+    </div>
+
+    <!-- Fact 16 -->
+    <div class="fact-card">
+      <div class="fact-number">16</div>
+      <h2>毛蛙折断自己的骨头来制造爪子</h2>
+      <p class="fact-text">受到威胁时，毛蛙（又称"恐怖蛙"）会故意折断自己脚趾的骨头，将尖锐的断端推出皮肤，形成类似猫爪的利爪。这是已知唯一一种动物在实时中将自己的骨骼武器化的例子。</p>
+      <p class="fact-twist">X战警里的金刚狼显然是从一只青蛙身上获得的灵感。一只认定痛苦是暂时的但生存是永恒的青蛙。</p>
+    </div>
+
+    <!-- Fact 17 -->
+    <div class="fact-card">
+      <div class="fact-number">17</div>
+      <h2>拟态章鱼能模仿15种以上不同物种</h2>
+      <p class="fact-text">栖息在东南亚水域的拟态章鱼能改变形状、颜色、质地和运动方式，令人信服地模仿狮子鱼、比目鱼、水母、海蛇和至少十几种其他物种。它根据正在威胁它的捕食者来选择模仿哪种动物。</p>
+      <p class="fact-twist">这只章鱼不只有一个伪装 &mdash; 它有一整个衣柜，按威胁等级分类。方法派演技的巅峰。</p>
+    </div>
+
+    <!-- Fact 18 -->
+    <div class="fact-card">
+      <div class="fact-number">18</div>
+      <h2>灯塔水母 &mdash; 永生水母 &mdash; 能逆转衰老</h2>
+      <p class="fact-text">当受伤或受到压力时，这种微小的水母可以将细胞恢复到最年轻的形态，本质上是重启了生命周期。它将成年的水母体阶段转变回幼年的水螅体。理论上，它可以无限次这样做，使其成为唯一已知的生物学上不朽的动物。</p>
+      <p class="fact-twist">人类花了数十亿寻找青春之泉。结果，一只比你小拇指指甲还小的水母早就破解了这个秘密。</p>
+    </div>
+
+    <!-- Fact 19 -->
+    <div class="fact-card">
+      <div class="fact-number">19</div>
+      <h2>裸鼹鼠基本上是哺乳动物版的昆虫</h2>
+      <p class="fact-text">裸鼹鼠生活在只有一个繁殖女王的群落中，就像蚂蚁或蜜蜂。它们是冷血的（唯一的冷血哺乳动物），几乎对癌症免疫，能在无氧环境中存活18分钟，皮肤几乎感觉不到疼痛，寿命可超过30年 &mdash; 大约是同等体型啮齿动物的十倍。</p>
+      <p class="fact-twist">裸鼹鼠打破了太多哺乳动物生物学的规则，以至于科学家到某个时候就不再惊讶了。</p>
+    </div>
+
+    <!-- Fact 20 -->
+    <div class="fact-card">
+      <div class="fact-number">20</div>
+      <h2>乌鸦为死者举行葬礼</h2>
+      <p class="fact-text">当一只乌鸦发现同伴的尸体时，它会大声呼叫召集其他乌鸦。几十只乌鸦会围聚在尸体周围，研究人员称之为"喧嚣聚集" &mdash; 本质上就是乌鸦的葬礼。研究表明它们这样做是为了评估威胁：它们在学习是什么杀死了同伴，以便避开。</p>
+      <p class="fact-twist">乌鸦在播客出现的数百万年前就发明了真实犯罪类型。它们赶到现场，分析证据，传播消息。</p>
+    </div>
+
+    <!-- Fact 21 -->
+    <div class="fact-card">
+      <div class="fact-number">21</div>
+      <h2>座头鲸创作热门歌曲并病毒式传播</h2>
+      <p class="fact-text">雄性座头鲸唱出复杂的歌曲，可持续长达24小时。令人惊叹的是：当一头鲸鱼创新出一种新的歌曲模式，它会在几年内传遍整个海洋盆地。相隔数千公里的鲸鱼都会切换到新版本，就像一首热门单曲席卷排行榜。</p>
+      <p class="fact-twist">鲸鱼在互联网出现之前就有了病毒式传播内容。在太平洋的某个地方，一头座头鲸刚发布了本季最火的专辑，方圆8000公里内的每头鲸鱼都在学歌词。</p>
+    </div>
+
+    <!-- Fact 22 -->
+    <div class="fact-card">
+      <div class="fact-number">22</div>
+      <h2>林蛙冬天冻成冰块，春天复活</h2>
+      <p class="fact-text">林蛙通过允许身体中高达65%的水分完全冻结来度过阿拉斯加的冬天。心脏停跳，肺部停止工作，大脑没有任何活动。春天一到，它从内到外解冻，然后像什么都没发生一样跳走了，这得益于一种天然的葡萄糖防冻剂保护细胞。</p>
+      <p class="fact-twist">这只青蛙每年冬天死一次，每年春天复活一次。已经持续了数百万年。没什么大不了的。只是按季节进行的日常轮回。</p>
+    </div>
+
+    <!-- Fact 23 -->
+    <div class="fact-card">
+      <div class="fact-number">23</div>
+      <h2>河鲀在海底创作精美的沙画曼陀罗来吸引配偶</h2>
+      <p class="fact-text">雄性白点河鲀会花长达一周的时间在海底沙地上建造复杂的几何图案。这些直径可超过两米的圆形"神秘圈"仅用鱼鳍制作。雌鱼会检查这些艺术品，根据设计的复杂性和对称性来选择配偶。</p>
+      <p class="fact-twist">这条鱼真的在海底建了一个艺术装置当交友资料。而且还管用。各位，记笔记吧。</p>
+    </div>
+
+    <!-- Fact 24 -->
+    <div class="fact-card">
+      <div class="fact-number">24</div>
+      <h2>穿山甲是让蚂蚁闻风丧胆的行走朝鲜蓟</h2>
+      <p class="fact-text">穿山甲是唯一全身覆盖角蛋白鳞片的哺乳动物。受到威胁时，它们蜷缩成一个连狮子都打不开的坚不可摧的球。它们没有牙齿，所以吞下石头来磨碎每年消耗的约7000万只蚂蚁和白蚁。它们的舌头收纳在骨盆附近的一个口袋里，可以比整个身体还长。</p>
+      <p class="fact-twist">一个有盔甲的、没牙的食蚁兽，舌头从臀部开始。进化显然正处于实验阶段。</p>
+    </div>
+
+    <!-- Fact 25 -->
+    <div class="fact-card">
+      <div class="fact-number">25</div>
+      <h2>懒猴是唯一有毒的灵长类动物</h2>
+      <p class="fact-text">懒猴从内肘的腺体中产生毒素。它舔舐腺体，将分泌物与唾液混合制成毒液，通过咬伤传递。这种毒液可导致人类过敏性休克，且足以杀死小动物。这使它成为世界上唯一已知的有毒灵长类动物。</p>
+      <p class="fact-twist">它看起来像一个有着巨大可爱眼睛的毛绒玩具。但实际上，它是地球上唯一携带真正毒液的灵长类动物。大自然最厉害的钓鱼执法。</p>
+    </div>
+
+    <p style="margin-top: 2rem;">就是这样 &mdash; 25个理由证明你的生物课本一直在藏私。动物王国比任何虚构作品都更狂野、更奇异、更有创意。下次有人说"真相比小说更离奇"，直接把他们指向那只把骨骼变成武器的毛蛙，或者那只随随便便制造太阳温度的虾。</p>
+
+    <p>想要更多没人要求的冷知识？我们有的是。每天首页都有新知识更新 &mdash; 涵盖<a href="../../index.html">从太空到历史再到人体的一切</a>。因为这个宇宙太奇妙了，不容忽视。</p>
+
+  </main>
+
+  <!-- Bottom Navigation -->
+  <div class="article-footer-nav">
+    <a href="../../index.html">&larr; 返回首页</a>
+    <a href="../../index.html">探索每日冷知识</a>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 UselesslyInteresting。所有事实均已核实。部分大脑已被永久改变。</p>
+  </footer>
+
+  <!-- Theme Toggle Script -->
+  <script>
+    function toggleTheme() {
+      const html = document.documentElement;
+      const current = html.getAttribute('data-theme');
+      const next = current === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('ui-theme', next);
+      document.querySelector('.theme-toggle').textContent = next === 'dark' ? '\u2600' : '\u263E';
+    }
+
+    // Restore saved theme
+    (function() {
+      const saved = localStorage.getItem('ui-theme');
+      if (saved === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        document.addEventListener('DOMContentLoaded', function() {
+          document.querySelector('.theme-toggle').textContent = '\u2600';
+        });
+      }
+    })();
+  </script>
+
+</body>
+</html>

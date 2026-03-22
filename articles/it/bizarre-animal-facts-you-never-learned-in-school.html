@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>25 fatti bizzarri sugli animali che non hai mai imparato a scuola — UselesslyInteresting</title>
+  <meta name="description" content="Dal gambero pistola che crea mini soli ai wombat con cacca a forma di cubo — 25 fatti incredibili sugli animali che il tuo insegnante di biologia non ha mai menzionato." />
+  <meta name="keywords" content="fatti sugli animali, animali bizzarri, natura strana, curiosità, uselesslyinteresting" />
+  <link rel="canonical" href="https://uselesslyinteresting.com/articles/it/bizarre-animal-facts-you-never-learned-in-school.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="25 fatti bizzarri sugli animali che non hai mai imparato a scuola" />
+  <meta property="og:description" content="Dal gambero pistola che crea mini soli ai wombat con cacca a forma di cubo — 25 fatti incredibili sugli animali che il tuo insegnante di biologia non ha mai menzionato." />
+  <meta property="og:url" content="https://uselesslyinteresting.com/articles/it/bizarre-animal-facts-you-never-learned-in-school.html" />
+  <meta property="og:site_name" content="UselesslyInteresting" />
+  <meta property="og:locale" content="it_IT" />
+  <meta property="article:published_time" content="2026-03-25" />
+  <meta property="article:section" content="Animali" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="25 fatti bizzarri sugli animali che non hai mai imparato a scuola" />
+  <meta name="twitter:description" content="Dal gambero pistola che crea mini soli ai wombat con cacca a forma di cubo — 25 fatti incredibili sugli animali che il tuo insegnante di biologia non ha mai menzionato." />
+
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Mono:ital,wght@0,400;1,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    /* ── LIGHT MODE (default) ── */
+    :root {
+      --bg: #f5f5f0;
+      --surface: #eaeae4;
+      --card: #ffffff;
+      --accent: #5a8a00;
+      --accent2: #c4168c;
+      --accent3: #0088bb;
+      --text: #1a1a2e;
+      --muted: #5c5c72;
+      --border: rgba(90,138,0,0.15);
+      --card-hover: #f0f0ea;
+      --noise-opacity: 0.15;
+      --shadow: 0 1px 3px rgba(0,0,0,0.06);
+    }
+
+    /* ── DARK MODE ── */
+    [data-theme="dark"] {
+      --bg: #0a0a0f;
+      --surface: #12121a;
+      --card: #1a1a26;
+      --accent: #c8ff3e;
+      --accent2: #ff3ecb;
+      --accent3: #3ec8ff;
+      --text: #e8e8f0;
+      --muted: #6b6b88;
+      --border: rgba(200,255,62,0.12);
+      --card-hover: #1f1f30;
+      --noise-opacity: 0.4;
+      --shadow: none;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'DM Mono', monospace;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* Noise overlay */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 1000;
+      opacity: var(--noise-opacity, 0.15);
+    }
+
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* ── HEADER ── */
+    header {
+      padding: 2rem 2rem 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .logo {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: clamp(1.2rem, 3vw, 1.6rem);
+      letter-spacing: -0.03em;
+      line-height: 1;
+      text-decoration: none;
+      color: var(--text);
+    }
+    .logo:hover { text-decoration: none; }
+    .logo span { color: var(--accent); }
+
+    .logo-sub {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.62rem;
+      color: var(--muted);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-top: 2px;
+    }
+
+    /* ── THEME TOGGLE ── */
+    .theme-toggle {
+      position: fixed;
+      top: 1.5rem;
+      right: 2rem;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 1rem;
+      padding: 0.3rem 0.6rem;
+      cursor: pointer;
+      transition: color 0.2s, border-color 0.2s;
+      line-height: 1;
+      z-index: 999;
+    }
+    .theme-toggle:hover { color: var(--accent); border-color: var(--accent); }
+
+    /* ── BREADCRUMB ── */
+    .breadcrumb {
+      max-width: 820px;
+      margin: 2rem auto 0;
+      padding: 0 2rem;
+      font-size: 0.7rem;
+      color: var(--muted);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+    .breadcrumb a { color: var(--muted); transition: color 0.2s; }
+    .breadcrumb a:hover { color: var(--accent); text-decoration: none; }
+    .breadcrumb .sep { margin: 0 0.4rem; opacity: 0.5; }
+
+    /* ── ARTICLE HEADER ── */
+    .article-header {
+      max-width: 820px;
+      margin: 2rem auto 0;
+      padding: 0 2rem;
+    }
+
+    .category-tag {
+      display: inline-block;
+      font-size: 0.62rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent);
+      border: 1px solid var(--accent);
+      padding: 0.25rem 0.7rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .article-header h1 {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+      margin-bottom: 1rem;
+    }
+
+    .article-meta {
+      display: flex;
+      gap: 1.5rem;
+      font-size: 0.72rem;
+      color: var(--muted);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      flex-wrap: wrap;
+    }
+
+    /* ── ARTICLE BODY ── */
+    .article-body {
+      max-width: 820px;
+      margin: 3rem auto;
+      padding: 0 2rem;
+    }
+
+    .article-intro {
+      font-family: 'Instrument Serif', serif;
+      font-size: 1.25rem;
+      line-height: 1.7;
+      color: var(--text);
+      margin-bottom: 2.5rem;
+      font-style: italic;
+    }
+
+    .article-body p {
+      font-size: 0.92rem;
+      line-height: 1.8;
+      color: var(--text);
+      margin-bottom: 1.2rem;
+    }
+
+    .article-body p.section-intro {
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+
+    /* ── FACT CARDS ── */
+    .fact-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      padding: 1.8rem 2rem;
+      margin-bottom: 1.5rem;
+      position: relative;
+      transition: border-color 0.2s;
+    }
+    .fact-card:hover {
+      border-color: var(--accent);
+    }
+
+    .fact-number {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: 2.5rem;
+      color: var(--accent);
+      opacity: 0.2;
+      position: absolute;
+      top: 0.8rem;
+      right: 1.2rem;
+      line-height: 1;
+    }
+
+    .fact-card h2 {
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      font-size: 1.1rem;
+      line-height: 1.3;
+      margin-bottom: 0.8rem;
+      padding-right: 2.5rem;
+      letter-spacing: -0.01em;
+    }
+
+    .fact-card .fact-text {
+      font-size: 0.88rem;
+      line-height: 1.75;
+      color: var(--text);
+      margin-bottom: 0.8rem;
+    }
+
+    .fact-card .fact-twist {
+      font-family: 'Instrument Serif', serif;
+      font-style: italic;
+      font-size: 0.92rem;
+      color: var(--accent);
+      line-height: 1.5;
+    }
+
+    /* ── BOTTOM NAV ── */
+    .article-footer-nav {
+      max-width: 820px;
+      margin: 3rem auto 2rem;
+      padding: 0 2rem;
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .article-footer-nav a {
+      display: inline-block;
+      font-size: 0.72rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      border: 1px solid var(--accent);
+      padding: 0.5rem 1.2rem;
+      transition: background 0.2s, color 0.2s;
+      text-decoration: none;
+    }
+    .article-footer-nav a:hover {
+      background: var(--accent);
+      color: var(--bg);
+      text-decoration: none;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      text-align: center;
+      padding: 3rem 2rem 2rem;
+      font-size: 0.7rem;
+      color: var(--muted);
+      letter-spacing: 0.05em;
+      border-top: 1px solid var(--border);
+      max-width: 820px;
+      margin: 0 auto;
+    }
+
+    /* ── ANIMATIONS ── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(16px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .article-header, .article-intro, .fact-card {
+      animation: fadeUp 0.5s ease both;
+    }
+
+    .fact-card:nth-child(2) { animation-delay: 0.03s; }
+    .fact-card:nth-child(3) { animation-delay: 0.06s; }
+    .fact-card:nth-child(4) { animation-delay: 0.09s; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 600px) {
+      .article-header h1 { font-size: 1.8rem; }
+      .fact-card { padding: 1.4rem 1.2rem; }
+      .fact-number { font-size: 2rem; top: 0.6rem; right: 0.8rem; }
+      .fact-card h2 { font-size: 1rem; }
+      .theme-toggle { top: 1rem; right: 1rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Theme Toggle -->
+  <button class="theme-toggle" aria-label="Attiva/disattiva modalità scura" onclick="toggleTheme()">&#9790;</button>
+
+  <!-- Header -->
+  <header>
+    <div style="text-align:center;">
+      <a href="../../index.html" class="logo">Usessly<span>Interesting</span></a>
+      <div class="logo-sub">Curiosità che nessuno ha chiesto</div>
+    </div>
+  </header>
+
+  <!-- Breadcrumb -->
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="../../index.html">Home</a>
+    <span class="sep">&rsaquo;</span>
+    <span>Articoli</span>
+    <span class="sep">&rsaquo;</span>
+    <span>25 fatti bizzarri sugli animali che non hai mai imparato a scuola</span>
+  </nav>
+
+  <!-- Article Header -->
+  <div class="article-header">
+    <span class="category-tag">Animali</span>
+    <h1>25 fatti bizzarri sugli animali che non hai mai imparato a scuola</h1>
+    <div class="article-meta">
+      <span>25 marzo 2026</span>
+      <span>&bull; 10 min di lettura</span>
+    </div>
+  </div>
+
+  <!-- Article Body -->
+  <main class="article-body">
+
+    <p class="article-intro">
+      Il tuo libro di biologia ti ha dato i mitocondri e la catena alimentare. Non ha menzionato, però, che un gambero può colpire con una forza tale da far bollire l'acqua, o che un certo coleottero sopravvive esplodendo. Ecco 25 fatti sugli animali che non sono mai entrati nel programma scolastico &mdash; e onestamente, avrebbero dovuto esserci.
+    </p>
+
+    <p class="section-intro">Alcuni di questi sembrano falsi. Abbiamo verificato. Sono veri. La natura è semplicemente così.</p>
+
+    <!-- Fact 1 -->
+    <div class="fact-card">
+      <div class="fact-number">01</div>
+      <h2>Il gambero mantide colpisce più forte di un proiettile</h2>
+      <p class="fact-text">Gli arti a clava del gambero mantide accelerano alla velocità di un proiettile calibro .22, generando una forza di oltre 1.500 Newton. Il colpo è così rapido che fa bollire l'acqua circostante attraverso la cavitazione, producendo un lampo di luce e un'onda d'urto capace di stordire la preda anche se il pugno manca il bersaglio.</p>
+      <p class="fact-twist">Immagina di essere così aggressivo da trasformare letteralmente l'acqua in un'arma. Il gambero mantide non ha bisogno di gestione della rabbia &mdash; ha bisogno di un porto d'armi.</p>
+    </div>
+
+    <!-- Fact 2 -->
+    <div class="fact-card">
+      <div class="fact-number">02</div>
+      <h2>I wombat fanno la cacca a cubetti</h2>
+      <p class="fact-text">I wombat sono gli unici animali sulla Terra che producono feci a forma di cubo. I loro intestini hanno un'elasticità variabile che modella gli escrementi in cubi quasi perfetti mentre attraversano l'ultimo 17% del tratto digerente. Poi impilano questi cubi per marcare il territorio.</p>
+      <p class="fact-twist">Il più grande ingegnere della natura non ha costruito una diga o un alveare. Ha costruito cacca impilabile. Da qualche parte, un designer LEGO sta prendendo appunti.</p>
+    </div>
+
+    <!-- Fact 3 -->
+    <div class="fact-card">
+      <div class="fact-number">03</div>
+      <h2>I coleotteri bombardieri si difendono esplodendo</h2>
+      <p class="fact-text">Quando minacciato, il coleottero bombardiere mescola idrochinone e perossido di idrogeno in una camera speciale nell'addome, innescando una violenta reazione esotermica. Lo spray bollente risultante raggiunge i 100&deg;C e viene espulso sul predatore con un meccanismo a impulsi rapidi &mdash; fino a 500 impulsi al secondo.</p>
+      <p class="fact-twist">La strategia difensiva di questo coleottero è letteralmente guerra chimica. Si presenta a un combattimento con un lanciafiamme integrato e zero esitazioni.</p>
+    </div>
+
+    <!-- Fact 4 -->
+    <div class="fact-card">
+      <div class="fact-number">04</div>
+      <h2>I delfini si chiamano per nome</h2>
+      <p class="fact-text">I delfini tursiopi sviluppano fischi-firma unici che funzionano come nomi. Ricerche pubblicate su <em>Proceedings of the National Academy of Sciences</em> hanno dimostrato che i delfini rispondono selettivamente quando sentono il proprio fischio riprodotto, e usano i fischi di altri delfini per chiamare individui specifici.</p>
+      <p class="fact-twist">Hanno letteralmente una rubrica. Nel frattempo, il tuo cane ancora non viene quando lo chiami.</p>
+    </div>
+
+    <!-- Fact 5 -->
+    <div class="fact-card">
+      <div class="fact-number">05</div>
+      <h2>Il gambero pistola crea un mini sole ogni volta che schiocca</h2>
+      <p class="fact-text">Quando un gambero pistola schiocca la sua chela, la bolla di cavitazione che collassa raggiunge temperature di circa 4.700&deg;C &mdash; quasi quanto la superficie del sole. Lo schiocco produce anche un suono di 218 decibel sott'acqua, rendendolo uno degli animali più rumorosi al mondo. L'intero evento dura meno di un millisecondo.</p>
+      <p class="fact-twist">Un gambero più piccolo del tuo pollice ricrea casualmente le temperature della superficie stellare. L'universo ha un senso dell'umorismo selvaggio su dove mette la sua fisica.</p>
+    </div>
+
+    <!-- Fact 6 -->
+    <div class="fact-card">
+      <div class="fact-number">06</div>
+      <h2>Gli ornitorinchi brillano sotto la luce UV</h2>
+      <p class="fact-text">Nel 2020, gli scienziati hanno scoperto che la pelliccia dell'ornitorinco è biofluorescente &mdash; assorbe la luce ultravioletta e la riemette come un bagliore blu-verde. Nessuno sa esattamente perché. L'ornitorinco ha già uno sperone velenoso, un becco d'anatra, una coda da castoro e depone le uova. A quanto pare, brillare era il prossimo nella lista.</p>
+      <p class="fact-twist">A questo punto, l'ornitorinco sta facendo uno speedrun del creatore di personaggi dell'evoluzione cliccando "casuale" su ogni tratto.</p>
+    </div>
+
+    <!-- Fact 7 -->
+    <div class="fact-card">
+      <div class="fact-number">07</div>
+      <h2>Gli axolotl possono rigenerare il cervello</h2>
+      <p class="fact-text">Gli axolotl sono famosi per rigenerare gli arti, ma possono anche far ricrescere parti del cervello, del cuore e del midollo spinale. A differenza della maggior parte dei vertebrati, il loro tessuto rigenerato è completamente funzionale &mdash; non tessuto cicatriziale. Gli scienziati stanno studiando attivamente il loro genoma per capire come sbloccare abilità simili negli esseri umani.</p>
+      <p class="fact-twist">Tu non riesci a far ricrescere una scottatura solare e questo anfibio sta tranquillamente rigenerando il lobo frontale. La vita non è giusta.</p>
+    </div>
+
+    <!-- Fact 8 -->
+    <div class="fact-card">
+      <div class="fact-number">08</div>
+      <h2>Gli elefanti sono terrorizzati dalle api</h2>
+      <p class="fact-text">Nonostante siano i più grandi animali terrestri, gli elefanti fuggono al suono del ronzio delle api. Hanno persino un richiamo d'allarme specifico che si traduce approssimativamente in "api!" I contadini africani ora usano recinzioni di alveari per proteggere i raccolti dalle incursioni degli elefanti. Funziona meglio di qualsiasi muro.</p>
+      <p class="fact-twist">Un animale da sei tonnellate con pelle spessa un pollice scappa urlando da un insetto che pesa meno di una graffetta. L'evoluzione ha davvero detto "tutti hanno un punto debole."</p>
+    </div>
+
+    <!-- Fact 9 -->
+    <div class="fact-card">
+      <div class="fact-number">09</div>
+      <h2>Le seppie hanno tre cuori, sangue blu e pupille a W</h2>
+      <p class="fact-text">Le seppie possiedono tre cuori (due pompano sangue alle branchie, uno al corpo), sangue blu a base di rame e pupille a forma di W che danno loro una visione quasi a 360 gradi. Possono anche cambiare colore, consistenza e persino la forma apparente del corpo in millisecondi.</p>
+      <p class="fact-twist">La seppia è fondamentalmente un alieno che è finito accidentalmente sulla Terra e sta semplicemente vivendo nell'oceano, sperando che nessuno se ne accorga.</p>
+    </div>
+
+    <!-- Fact 10 -->
+    <div class="fact-card">
+      <div class="fact-number">10</div>
+      <h2>Il tasso del miele resiste al veleno del cobra</h2>
+      <p class="fact-text">Il tasso del miele ha evoluto una mutazione specifica nei recettori nicotinici dell'acetilcolina che lo rende largamente resistente al veleno di cobra e mamba. Se morso, può svenire brevemente, poi si sveglia e continua a mangiare il serpente che lo ha morso. Non è un'esagerazione.</p>
+      <p class="fact-twist">La strategia di sopravvivenza del tasso del miele è semplicemente rifiutarsi di morire. È il protagonista più folle del regno animale.</p>
+    </div>
+
+    <!-- Fact 11 -->
+    <div class="fact-card">
+      <div class="fact-number">11</div>
+      <h2>L'uccello lira può imitare motoseghe, allarmi auto e otturatori di fotocamere</h2>
+      <p class="fact-text">L'uccello lira australiano è considerato il più grande imitatore vocale al mondo. I maschi possono replicare perfettamente i suoni di oltre 20 specie di uccelli simultaneamente, così come suoni artificiali come motoseghe, otturatori di fotocamere e persino pianti di bambini. Usano questi suoni in elaborate danze di corteggiamento.</p>
+      <p class="fact-twist">Immagina di provare a impressionare un appuntamento con un'imitazione perfetta di una motosega. Nel mondo degli uccelli, è una mossa vincente.</p>
+    </div>
+
+    <!-- Fact 12 -->
+    <div class="fact-card">
+      <div class="fact-number">12</div>
+      <h2>I pesci arciere sputano acqua per cacciare insetti dall'aria</h2>
+      <p class="fact-text">I pesci arciere possono sparare getti d'acqua precisi fino a 3 metri per abbattere insetti da rami e foglie sopra la superficie dell'acqua. Compensano la rifrazione della luce tra acqua e aria, risolvendo essenzialmente problemi di fisica in tempo reale. I giovani pesci arciere imparano osservando gli adulti esperti.</p>
+      <p class="fact-twist">Un pesce che caccia con una pistola ad acqua e l'ha imparato studiando i suoi anziani. Questo pesce ha un sistema educativo migliore di alcune nazioni.</p>
+    </div>
+
+    <!-- Fact 13 -->
+    <div class="fact-card">
+      <div class="fact-number">13</div>
+      <h2>Gli stambecchi alpini scalano dighe quasi verticali per leccare il sale</h2>
+      <p class="fact-text">Gli stambecchi alpini in Italia sono stati fotografati mentre scalavano la parete quasi verticale della diga del Cingino &mdash; un muro di cemento alto 50 metri con una pendenza di quasi 90 gradi &mdash; solo per leccare i sali minerali dalla pietra. I loro zoccoli hanno cuscinetti morbidi e gommosi circondati da un bordo esterno duro che si aggrappa alle minime imperfezioni del cemento, dando loro un'aderenza che farebbe piangere d'invidia qualsiasi arrampicatore.</p>
+      <p class="fact-twist">Queste capre hanno guardato una diga di cemento a strapiombo e hanno pensato "sì, quello è un muro di snack." Nel frattempo, tu ti innervosisci su una scala a pioli.</p>
+    </div>
+
+    <!-- Fact 14 -->
+    <div class="fact-card">
+      <div class="fact-number">14</div>
+      <h2>I limuli hanno sangue blu che vale 60.000 dollari al gallone</h2>
+      <p class="fact-text">Il sangue del limulo contiene un agente coagulante chiamato Limulus Amebocyte Lysate (LAL) essenziale per testare la sicurezza di vaccini e dispositivi medici. Il loro sangue a base di rame diventa blu quando esposto all'ossigeno. Le aziende farmaceutiche raccolgono circa 600.000 limuli all'anno, estraendo circa il 30% del loro sangue prima di restituirli all'oceano.</p>
+      <p class="fact-twist">Una creatura di 450 milioni di anni sta letteralmente mantenendo al sicuro la medicina moderna. Il limulo è stato utile più a lungo di quanto la maggior parte delle specie sia esistita.</p>
+    </div>
+
+    <!-- Fact 15 -->
+    <div class="fact-card">
+      <div class="fact-number">15</div>
+      <h2>I cavallucci marini maschi partoriscono</h2>
+      <p class="fact-text">In uno dei più drammatici scambi di ruoli della natura, le femmine di cavalluccio marino depositano le uova in una sacca specializzata sul ventre del maschio. Il maschio poi fertilizza e trasporta gli embrioni, fornendo nutrienti e ossigeno, prima di attraversare contrazioni muscolari per dare alla luce fino a 2.500 piccoli completamente formati in una volta sola.</p>
+      <p class="fact-twist">Il papà cavalluccio marino non "dà solo una mano" &mdash; gestisce l'intera operazione. Padre dell'anno, ogni anno, da 50 milioni di anni consecutivi.</p>
+    </div>
+
+    <!-- Fact 16 -->
+    <div class="fact-card">
+      <div class="fact-number">16</div>
+      <h2>La rana pelosa si rompe le ossa per creare artigli</h2>
+      <p class="fact-text">Quando minacciata, la rana pelosa (chiamata anche "rana dell'orrore") rompe deliberatamente le ossa delle dita dei piedi, spingendo le estremità aguzze rotte attraverso la pelle per creare artigli simili a quelli dei gatti. Questo è l'unico esempio conosciuto di un animale che trasforma il proprio scheletro in un'arma in tempo reale.</p>
+      <p class="fact-twist">Wolverine degli X-Men era apparentemente ispirato a una rana. Una rana che ha deciso che il dolore è temporaneo ma la sopravvivenza è per sempre.</p>
+    </div>
+
+    <!-- Fact 17 -->
+    <div class="fact-card">
+      <div class="fact-number">17</div>
+      <h2>Il polpo mimo può imitare più di 15 specie diverse</h2>
+      <p class="fact-text">Il polpo mimo, trovato nelle acque del Sud-est asiatico, può alterare forma, colore, consistenza e movimento per imitare in modo convincente pesci leone, pesci piatti, meduse, serpenti marini e almeno una dozzina di altre specie. Sceglie quale animale imitare in base a quale predatore lo sta minacciando.</p>
+      <p class="fact-twist">Questo polpo non ha solo un travestimento &mdash; ha un intero guardaroba, organizzato per livello di minaccia. Il metodo Stanislavskij al suo meglio.</p>
+    </div>
+
+    <!-- Fact 18 -->
+    <div class="fact-card">
+      <div class="fact-number">18</div>
+      <h2>Turritopsis dohrnii &mdash; la medusa immortale &mdash; può invertire l'invecchiamento</h2>
+      <p class="fact-text">Quando ferita o stressata, questa piccola medusa può riportare le sue cellule alla loro forma più giovane, essenzialmente ricominciando il suo ciclo vitale. Trasforma il suo stadio adulto di medusa in un polipo giovanile. Teoricamente, può farlo all'infinito, rendendola l'unico animale conosciuto biologicamente immortale.</p>
+      <p class="fact-twist">L'umanità ha speso miliardi alla ricerca della fonte della giovinezza. A quanto pare, una medusa più piccola del tuo mignolo l'aveva già scoperta secoli fa.</p>
+    </div>
+
+    <!-- Fact 19 -->
+    <div class="fact-card">
+      <div class="fact-number">19</div>
+      <h2>Le talpe senza pelo sono fondamentalmente insetti mammiferi</h2>
+      <p class="fact-text">Le talpe senza pelo vivono in colonie con un'unica regina riproduttrice, come formiche o api. Sono a sangue freddo (gli unici mammiferi a sangue freddo), virtualmente immuni al cancro, possono sopravvivere 18 minuti senza ossigeno, non sentono quasi dolore sulla pelle e possono vivere oltre 30 anni &mdash; circa dieci volte più dei roditori di dimensioni simili.</p>
+      <p class="fact-twist">La talpa senza pelo ha infranto così tante regole della biologia dei mammiferi che a un certo punto gli scienziati hanno semplicemente smesso di sorprendersi.</p>
+    </div>
+
+    <!-- Fact 20 -->
+    <div class="fact-card">
+      <div class="fact-number">20</div>
+      <h2>I corvi celebrano funerali per i loro morti</h2>
+      <p class="fact-text">Quando un corvo trova un membro morto del suo gruppo, chiama ad alta voce per radunare gli altri. Decine di corvi si riuniranno attorno al corpo in quello che i ricercatori chiamano una "aggregazione cacofonica" &mdash; essenzialmente un funerale di corvi. Gli studi mostrano che lo fanno per valutare le minacce: stanno imparando cosa ha ucciso il loro compagno per poterlo evitare.</p>
+      <p class="fact-twist">I corvi hanno inventato il genere true crime milioni di anni prima dei podcast. Si presentano sulla scena, analizzano le prove e diffondono la notizia.</p>
+    </div>
+
+    <!-- Fact 21 -->
+    <div class="fact-card">
+      <div class="fact-number">21</div>
+      <h2>Le megattere compongono canzoni di successo che diventano virali</h2>
+      <p class="fact-text">Le megattere maschio cantano canzoni complesse che possono durare fino a 24 ore. La parte notevole: quando una balena innova un nuovo schema canoro, questo si diffonde attraverso interi bacini oceanici nel giro di pochi anni. Balene a migliaia di chilometri di distanza passeranno tutte alla nuova versione, come un singolo di successo che scala le classifiche.</p>
+      <p class="fact-twist">Le balene avevano contenuti virali prima di internet. Da qualche parte nel Pacifico, una megattera ha appena pubblicato l'album più caldo della stagione e ogni balena nel raggio di 8.000 km sta imparando i testi.</p>
+    </div>
+
+    <!-- Fact 22 -->
+    <div class="fact-card">
+      <div class="fact-number">22</div>
+      <h2>La rana dei boschi si congela d'inverno e torna in vita scongelata</h2>
+      <p class="fact-text">La rana dei boschi sopravvive agli inverni dell'Alaska permettendo fino al 65% dell'acqua corporea di congelarsi completamente. Il cuore si ferma, i polmoni cessano di funzionare e il cervello non mostra attività. Con la primavera, si scongela dall'interno verso l'esterno e salta via come se niente fosse successo, grazie a un antigelo naturale di glucosio che protegge le cellule.</p>
+      <p class="fact-twist">Questa rana muore ogni inverno e risorge ogni primavera. Lo fa da milioni di anni. Niente di che. Solo reincarnazione casuale con cadenza stagionale.</p>
+    </div>
+
+    <!-- Fact 23 -->
+    <div class="fact-card">
+      <div class="fact-number">23</div>
+      <h2>I pesci palla creano mandala di sabbia elaborati per attirare le femmine</h2>
+      <p class="fact-text">I maschi del pesce palla a macchie bianche trascorrono fino a una settimana a costruire intricati motivi geometrici nella sabbia sul fondo oceanico. Questi "cerchi misteriosi", che possono superare i due metri di diametro, sono realizzati usando solo le pinne. Le femmine ispezionano le opere d'arte e scelgono il partner in base alla complessità e alla simmetria del disegno.</p>
+      <p class="fact-twist">Questo pesce costruisce letteralmente un'installazione artistica sul fondo dell'oceano come profilo di appuntamenti. E funziona. Prendete appunti, tutti.</p>
+    </div>
+
+    <!-- Fact 24 -->
+    <div class="fact-card">
+      <div class="fact-number">24</div>
+      <h2>I pangolini sono carciofi ambulanti temuti dalle formiche</h2>
+      <p class="fact-text">I pangolini sono gli unici mammiferi interamente ricoperti di scaglie di cheratina. Quando minacciati, si arrotolano in una palla impenetrabile che nemmeno i leoni riescono ad aprire. Non hanno denti, quindi ingoiano pietre per macinare i circa 70 milioni di formiche e termiti che consumano ogni anno. La loro lingua, riposta in una tasca vicino al bacino, può essere più lunga dell'intero corpo.</p>
+      <p class="fact-twist">Un formichiere corazzato, senza denti, con una lingua che parte dai fianchi. L'evoluzione stava chiaramente attraversando una fase sperimentale.</p>
+    </div>
+
+    <!-- Fact 25 -->
+    <div class="fact-card">
+      <div class="fact-number">25</div>
+      <h2>Il lori lento è l'unico primate velenoso</h2>
+      <p class="fact-text">Il lori lento produce una tossina da una ghiandola sul gomito interno. Lecca la ghiandola e mescola la secrezione con la saliva per creare un veleno che somministra attraverso il morso. Il veleno può causare anafilassi negli esseri umani ed è abbastanza potente da uccidere piccoli animali. Questo lo rende l'unico primate velenoso conosciuto al mondo.</p>
+      <p class="fact-twist">Sembra un peluche con enormi occhi adorabili. In realtà è l'unico primate sulla Terra che porta letteralmente del veleno. Il più grande specchietto per le allodole della natura.</p>
+    </div>
+
+    <p style="margin-top: 2rem;">E il gioco è fatto &mdash; 25 motivi per cui il tuo libro di biologia ti stava nascondendo qualcosa. Il regno animale è più selvaggio, più strano e più creativo di qualsiasi finzione. La prossima volta che qualcuno dice "la realtà supera la fantasia", indicagli la rana pelosa che trasforma il suo scheletro in arma alla Wolverine, o il gambero che crea casualmente temperature solari.</p>
+
+    <p>Vuoi altre curiosità che nessuno ha chiesto? Ne abbiamo in abbondanza. Nuove curiosità ogni giorno sulla nostra homepage &mdash; che coprono <a href="../../index.html">tutto, dallo spazio alla storia al corpo umano</a>. Perché l'universo è troppo strano per essere ignorato.</p>
+
+  </main>
+
+  <!-- Bottom Navigation -->
+  <div class="article-footer-nav">
+    <a href="../../index.html">&larr; Torna alla Home</a>
+    <a href="../../index.html">Esplora le curiosità del giorno</a>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 UselesslyInteresting. Tutti i fatti verificati. Alcuni cervelli permanentemente alterati.</p>
+  </footer>
+
+  <!-- Theme Toggle Script -->
+  <script>
+    function toggleTheme() {
+      const html = document.documentElement;
+      const current = html.getAttribute('data-theme');
+      const next = current === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('ui-theme', next);
+      document.querySelector('.theme-toggle').textContent = next === 'dark' ? '\u2600' : '\u263E';
+    }
+
+    // Restore saved theme
+    (function() {
+      const saved = localStorage.getItem('ui-theme');
+      if (saved === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        document.addEventListener('DOMContentLoaded', function() {
+          document.querySelector('.theme-toggle').textContent = '\u2600';
+        });
+      }
+    })();
+  </script>
+
+</body>
+</html>

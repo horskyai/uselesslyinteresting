@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>学校では絶対に教わらなかった25の奇妙な動物の事実 — UselesslyInteresting</title>
+  <meta name="description" content="ミニ太陽を作るテッポウエビから四角いうんちをするウォンバットまで——生物の先生が絶対に教えなかった25の驚愕動物雑学。" />
+  <meta name="keywords" content="動物の事実, 奇妙な動物, 不思議な自然, 雑学, uselesslyinteresting" />
+  <link rel="canonical" href="https://uselesslyinteresting.com/articles/ja/bizarre-animal-facts-you-never-learned-in-school.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="学校では絶対に教わらなかった25の奇妙な動物の事実" />
+  <meta property="og:description" content="ミニ太陽を作るテッポウエビから四角いうんちをするウォンバットまで——生物の先生が絶対に教えなかった25の驚愕動物雑学。" />
+  <meta property="og:url" content="https://uselesslyinteresting.com/articles/ja/bizarre-animal-facts-you-never-learned-in-school.html" />
+  <meta property="og:site_name" content="UselesslyInteresting" />
+  <meta property="og:locale" content="ja_JP" />
+  <meta property="article:published_time" content="2026-03-25" />
+  <meta property="article:section" content="動物" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="学校では絶対に教わらなかった25の奇妙な動物の事実" />
+  <meta name="twitter:description" content="ミニ太陽を作るテッポウエビから四角いうんちをするウォンバットまで——生物の先生が絶対に教えなかった25の驚愕動物雑学。" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Mono:ital,wght@0,400;1,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    /* ── LIGHT MODE (default) ── */
+    :root {
+      --bg: #f5f5f0;
+      --surface: #eaeae4;
+      --card: #ffffff;
+      --accent: #5a8a00;
+      --accent2: #c4168c;
+      --accent3: #0088bb;
+      --text: #1a1a2e;
+      --muted: #5c5c72;
+      --border: rgba(90,138,0,0.15);
+      --card-hover: #f0f0ea;
+      --noise-opacity: 0.15;
+      --shadow: 0 1px 3px rgba(0,0,0,0.06);
+    }
+
+    /* ── DARK MODE ── */
+    [data-theme="dark"] {
+      --bg: #0a0a0f;
+      --surface: #12121a;
+      --card: #1a1a26;
+      --accent: #c8ff3e;
+      --accent2: #ff3ecb;
+      --accent3: #3ec8ff;
+      --text: #e8e8f0;
+      --muted: #6b6b88;
+      --border: rgba(200,255,62,0.12);
+      --card-hover: #1f1f30;
+      --noise-opacity: 0.4;
+      --shadow: none;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'DM Mono', monospace;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* Noise overlay */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 1000;
+      opacity: var(--noise-opacity, 0.15);
+    }
+
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* ── HEADER ── */
+    header {
+      padding: 2rem 2rem 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .logo {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: clamp(1.2rem, 3vw, 1.6rem);
+      letter-spacing: -0.03em;
+      line-height: 1;
+      text-decoration: none;
+      color: var(--text);
+    }
+    .logo:hover { text-decoration: none; }
+    .logo span { color: var(--accent); }
+
+    .logo-sub {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.62rem;
+      color: var(--muted);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-top: 2px;
+    }
+
+    /* ── THEME TOGGLE ── */
+    .theme-toggle {
+      position: fixed;
+      top: 1.5rem;
+      right: 2rem;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 1rem;
+      padding: 0.3rem 0.6rem;
+      cursor: pointer;
+      transition: color 0.2s, border-color 0.2s;
+      line-height: 1;
+      z-index: 999;
+    }
+    .theme-toggle:hover { color: var(--accent); border-color: var(--accent); }
+
+    /* ── BREADCRUMB ── */
+    .breadcrumb {
+      max-width: 820px;
+      margin: 2rem auto 0;
+      padding: 0 2rem;
+      font-size: 0.7rem;
+      color: var(--muted);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+    .breadcrumb a { color: var(--muted); transition: color 0.2s; }
+    .breadcrumb a:hover { color: var(--accent); text-decoration: none; }
+    .breadcrumb .sep { margin: 0 0.4rem; opacity: 0.5; }
+
+    /* ── ARTICLE HEADER ── */
+    .article-header {
+      max-width: 820px;
+      margin: 2rem auto 0;
+      padding: 0 2rem;
+    }
+
+    .category-tag {
+      display: inline-block;
+      font-size: 0.62rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent);
+      border: 1px solid var(--accent);
+      padding: 0.25rem 0.7rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .article-header h1 {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+      margin-bottom: 1rem;
+    }
+
+    .article-meta {
+      display: flex;
+      gap: 1.5rem;
+      font-size: 0.72rem;
+      color: var(--muted);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      flex-wrap: wrap;
+    }
+
+    /* ── ARTICLE BODY ── */
+    .article-body {
+      max-width: 820px;
+      margin: 3rem auto;
+      padding: 0 2rem;
+    }
+
+    .article-intro {
+      font-family: 'Instrument Serif', serif;
+      font-size: 1.25rem;
+      line-height: 1.7;
+      color: var(--text);
+      margin-bottom: 2.5rem;
+      font-style: italic;
+    }
+
+    .article-body p {
+      font-size: 0.92rem;
+      line-height: 1.8;
+      color: var(--text);
+      margin-bottom: 1.2rem;
+    }
+
+    .article-body p.section-intro {
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+
+    /* ── FACT CARDS ── */
+    .fact-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      padding: 1.8rem 2rem;
+      margin-bottom: 1.5rem;
+      position: relative;
+      transition: border-color 0.2s;
+    }
+    .fact-card:hover {
+      border-color: var(--accent);
+    }
+
+    .fact-number {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: 2.5rem;
+      color: var(--accent);
+      opacity: 0.2;
+      position: absolute;
+      top: 0.8rem;
+      right: 1.2rem;
+      line-height: 1;
+    }
+
+    .fact-card h2 {
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      font-size: 1.1rem;
+      line-height: 1.3;
+      margin-bottom: 0.8rem;
+      padding-right: 2.5rem;
+      letter-spacing: -0.01em;
+    }
+
+    .fact-card .fact-text {
+      font-size: 0.88rem;
+      line-height: 1.75;
+      color: var(--text);
+      margin-bottom: 0.8rem;
+    }
+
+    .fact-card .fact-twist {
+      font-family: 'Instrument Serif', serif;
+      font-style: italic;
+      font-size: 0.92rem;
+      color: var(--accent);
+      line-height: 1.5;
+    }
+
+    /* ── BOTTOM NAV ── */
+    .article-footer-nav {
+      max-width: 820px;
+      margin: 3rem auto 2rem;
+      padding: 0 2rem;
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .article-footer-nav a {
+      display: inline-block;
+      font-size: 0.72rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      border: 1px solid var(--accent);
+      padding: 0.5rem 1.2rem;
+      transition: background 0.2s, color 0.2s;
+      text-decoration: none;
+    }
+    .article-footer-nav a:hover {
+      background: var(--accent);
+      color: var(--bg);
+      text-decoration: none;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      text-align: center;
+      padding: 3rem 2rem 2rem;
+      font-size: 0.7rem;
+      color: var(--muted);
+      letter-spacing: 0.05em;
+      border-top: 1px solid var(--border);
+      max-width: 820px;
+      margin: 0 auto;
+    }
+
+    /* ── ANIMATIONS ── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(16px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .article-header, .article-intro, .fact-card {
+      animation: fadeUp 0.5s ease both;
+    }
+
+    .fact-card:nth-child(2) { animation-delay: 0.03s; }
+    .fact-card:nth-child(3) { animation-delay: 0.06s; }
+    .fact-card:nth-child(4) { animation-delay: 0.09s; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 600px) {
+      .article-header h1 { font-size: 1.8rem; }
+      .fact-card { padding: 1.4rem 1.2rem; }
+      .fact-number { font-size: 2rem; top: 0.6rem; right: 0.8rem; }
+      .fact-card h2 { font-size: 1rem; }
+      .theme-toggle { top: 1rem; right: 1rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Theme Toggle -->
+  <button class="theme-toggle" aria-label="ダークモード切替" onclick="toggleTheme()">&#9790;</button>
+
+  <!-- Header -->
+  <header>
+    <div style="text-align:center;">
+      <a href="../../index.html" class="logo">Usessly<span>Interesting</span></a>
+      <div class="logo-sub">誰も頼んでいない雑学</div>
+    </div>
+  </header>
+
+  <!-- Breadcrumb -->
+  <nav class="breadcrumb" aria-label="パンくずリスト">
+    <a href="../../index.html">ホーム</a>
+    <span class="sep">&rsaquo;</span>
+    <span>記事</span>
+    <span class="sep">&rsaquo;</span>
+    <span>学校では絶対に教わらなかった25の奇妙な動物の事実</span>
+  </nav>
+
+  <!-- Article Header -->
+  <div class="article-header">
+    <span class="category-tag">動物</span>
+    <h1>学校では絶対に教わらなかった25の奇妙な動物の事実</h1>
+    <div class="article-meta">
+      <span>2026年3月25日</span>
+      <span>&bull; 読了時間約10分</span>
+    </div>
+  </div>
+
+  <!-- Article Body -->
+  <main class="article-body">
+
+    <p class="article-intro">
+      生物の教科書はミトコンドリアと食物連鎖を教えてくれた。でも、エビが水を沸騰させるほどのパンチを繰り出すことや、ある甲虫が爆発して生き延びることは教えてくれなかった。ここに、カリキュラムに載らなかった25の動物雑学を紹介する &mdash; 正直、載せるべきだった。
+    </p>
+
+    <p class="section-intro">いくつかは嘘っぽく聞こえる。確認した。本当だった。自然はそういうものだ。</p>
+
+    <!-- Fact 1 -->
+    <div class="fact-card">
+      <div class="fact-number">01</div>
+      <h2>モンハナシャコは弾丸より強いパンチを放つ</h2>
+      <p class="fact-text">モンハナシャコの棍棒状の付属肢は.22口径の弾丸の速度で加速し、1,500ニュートン以上の力を生み出す。その打撃は高速すぎてキャビテーション（空洞化）を起こし、周囲の水を沸騰させ、光のフラッシュと衝撃波を生む。パンチが外れても獲物を気絶させるほどだ。</p>
+      <p class="fact-twist">攻撃的すぎて水を文字通り武器にしてしまうとは。モンハナシャコに必要なのはアンガーマネジメントではなく、武器所持許可証だ。</p>
+    </div>
+
+    <!-- Fact 2 -->
+    <div class="fact-card">
+      <div class="fact-number">02</div>
+      <h2>ウォンバットは四角いうんちをする</h2>
+      <p class="fact-text">ウォンバットは地球上で唯一、立方体の糞をする動物だ。腸の弾性が部分的に異なり、消化管の最後の17%を通過する間に糞をほぼ完璧な立方体に成形する。そしてこの立方体を積み上げて縄張りを示す。</p>
+      <p class="fact-twist">自然界最高のエンジニアはダムも巣も作らなかった。積み上げ可能なうんちを作った。どこかでレゴのデザイナーがメモを取っている。</p>
+    </div>
+
+    <!-- Fact 3 -->
+    <div class="fact-card">
+      <div class="fact-number">03</div>
+      <h2>ミイデラゴミムシは爆発して身を守る</h2>
+      <p class="fact-text">脅威を感じると、ミイデラゴミムシは腹部の特殊な腔室でヒドロキノンと過酸化水素を混合し、激しい発熱反応を引き起こす。生成された沸騰スプレーは100&deg;Cに達し、高速パルス機構で捕食者に噴射される &mdash; 毎秒最大500パルスだ。</p>
+      <p class="fact-twist">この甲虫の防御戦略は文字通り化学兵器だ。内蔵火炎放射器を持って戦場に現れ、容赦なし。</p>
+    </div>
+
+    <!-- Fact 4 -->
+    <div class="fact-card">
+      <div class="fact-number">04</div>
+      <h2>イルカは名前で呼び合う</h2>
+      <p class="fact-text">バンドウイルカは名前のように機能する固有の「シグネチャーホイッスル」を発達させる。<em>Proceedings of the National Academy of Sciences</em>に発表された研究では、イルカは自分のホイッスルが再生されると選択的に反応し、他のイルカのホイッスルを使って特定の個体を呼ぶことが示された。</p>
+      <p class="fact-twist">文字通り連絡先リストを持っている。一方で、あなたの犬はまだ呼んでも来ない。</p>
+    </div>
+
+    <!-- Fact 5 -->
+    <div class="fact-card">
+      <div class="fact-number">05</div>
+      <h2>テッポウエビはパチンと鳴らすたびにミニ太陽を作る</h2>
+      <p class="fact-text">テッポウエビがハサミをパチンと鳴らすと、崩壊するキャビテーション泡の温度は約4,700&deg;C &mdash; 太陽の表面温度に近い &mdash; に達する。そのスナップ音は水中で218デシベルにもなり、地球上で最も音が大きい動物の一つだ。この現象全体は1ミリ秒未満で終わる。</p>
+      <p class="fact-twist">親指より小さいエビが、さりげなく恒星表面の温度を再現している。宇宙は物理学をどこに配置するかについて、とんでもないユーモアのセンスを持っている。</p>
+    </div>
+
+    <!-- Fact 6 -->
+    <div class="fact-card">
+      <div class="fact-number">06</div>
+      <h2>カモノハシは紫外線で光る</h2>
+      <p class="fact-text">2020年、科学者たちはカモノハシの毛皮が生物蛍光性であることを発見した &mdash; 紫外線を吸収し、青緑色の光として再放出する。理由は完全にはわかっていない。カモノハシにはすでに毒の蹴爪、アヒルのくちばし、ビーバーの尻尾があり、卵も産む。どうやら発光がリストの次だったらしい。</p>
+      <p class="fact-twist">ここまで来ると、カモノハシは進化のキャラクタークリエイターをスピードランして、全ての特性で「ランダム」をクリックしているだけだ。</p>
+    </div>
+
+    <!-- Fact 7 -->
+    <div class="fact-card">
+      <div class="fact-number">07</div>
+      <h2>アホロートルは脳を再生できる</h2>
+      <p class="fact-text">アホロートルは四肢の再生で有名だが、脳、心臓、脊髄の一部も再生できる。他の脊椎動物と異なり、再生された組織は完全に機能する &mdash; 瘢痕組織ではない。科学者たちは人間でも同様の能力を解放する方法を理解するため、そのゲノムを積極的に研究している。</p>
+      <p class="fact-twist">日焼けすら元に戻せないのに、この両生類は前頭葉を平然と再生している。人生は不公平だ。</p>
+    </div>
+
+    <!-- Fact 8 -->
+    <div class="fact-card">
+      <div class="fact-number">08</div>
+      <h2>ゾウはミツバチが怖い</h2>
+      <p class="fact-text">最大の陸上動物であるにもかかわらず、ゾウはミツバチの羽音から逃げ出す。「ハチだ！」とおおよそ訳せる特定の警戒コールすらある。アフリカの農家は今やミツバチの巣フェンスを使ってゾウの襲撃から作物を守っている。どんな壁よりも効果的だ。</p>
+      <p class="fact-twist">皮膚が2.5cmもある6トンの動物が、クリップより軽い昆虫から悲鳴を上げて逃げる。進化は確かに「全員に弱点をあげる」と言った。</p>
+    </div>
+
+    <!-- Fact 9 -->
+    <div class="fact-card">
+      <div class="fact-number">09</div>
+      <h2>コウイカは心臓3つ、青い血、W型の瞳孔を持つ</h2>
+      <p class="fact-text">コウイカは3つの心臓（2つはエラへ、1つは体へ血液を送る）、銅ベースの青い血液、そしてほぼ360度の視野を与えるW型の瞳孔を持っている。さらに、色、質感、そして体の見かけの形状さえもミリ秒単位で変えることができる。</p>
+      <p class="fact-twist">コウイカは基本的に、うっかり地球に来てしまった宇宙人で、海でのんびり暮らしながら誰にもバレないことを祈っている。</p>
+    </div>
+
+    <!-- Fact 10 -->
+    <div class="fact-card">
+      <div class="fact-number">10</div>
+      <h2>ラーテルはコブラの毒に耐えられる</h2>
+      <p class="fact-text">ラーテル（ミツアナグマ）はニコチン性アセチルコリン受容体に特定の変異を進化させ、コブラやマンバの毒に対して大きな耐性を持つ。噛まれても一時的に気絶するだけで、その後起き上がって噛んだヘビを食べ続ける。これは誇張ではない。</p>
+      <p class="fact-twist">ラーテルの生存戦略は単純に死ぬことを拒否すること。動物界で最もぶっ飛んだ主人公だ。</p>
+    </div>
+
+    <!-- Fact 11 -->
+    <div class="fact-card">
+      <div class="fact-number">11</div>
+      <h2>コトドリはチェーンソー、車のアラーム、カメラのシャッター音を真似できる</h2>
+      <p class="fact-text">オーストラリアのコトドリは世界最高の声帯模倣者とされている。オスは20種以上の鳥の鳴き声を同時に完璧に再現でき、チェーンソー、カメラのシャッター音、さらには赤ちゃんの泣き声などの人工音も模倣できる。これらの音を精巧な求愛ダンスで使用する。</p>
+      <p class="fact-twist">デートの相手にチェーンソーの完璧な物真似で印象づけようとするのを想像してほしい。鳥の世界では、それが最強の手だ。</p>
+    </div>
+
+    <!-- Fact 12 -->
+    <div class="fact-card">
+      <div class="fact-number">12</div>
+      <h2>テッポウウオは水を吹いて空中の昆虫を狩る</h2>
+      <p class="fact-text">テッポウウオは最大3メートルの精密な水流を発射し、水面上の枝や葉から昆虫を叩き落とす。水と空気の間の光の屈折を補正し、本質的にリアルタイムで物理の問題を解いている。若いテッポウウオは経験豊富な成魚を観察して学ぶ。</p>
+      <p class="fact-twist">水鉄砲で狩りをする魚で、しかも先輩を見て学んだ。この魚の教育システムはいくつかの国より優れている。</p>
+    </div>
+
+    <!-- Fact 13 -->
+    <div class="fact-card">
+      <div class="fact-number">13</div>
+      <h2>アルプスアイベックスは塩を舐めるためにほぼ垂直なダムを登る</h2>
+      <p class="fact-text">イタリアのアルプスアイベックスは、チンジーノダムのほぼ垂直な壁面 &mdash; ほぼ90度の勾配で高さ約50メートルのコンクリート壁 &mdash; を登る姿が撮影されている。石のミネラル塩を舐めるためだけに。蹄には柔らかいゴム状のパッドがあり、硬い外縁で囲まれ、コンクリートの微小な凹凸を掴む。そのグリップ力はロッククライマーが嫉妬で泣くレベルだ。</p>
+      <p class="fact-twist">このヤギたちは垂直なコンクリートダムを見て「うん、あれはおやつの壁だね」と思った。一方、あなたは脚立の上でも緊張する。</p>
+    </div>
+
+    <!-- Fact 14 -->
+    <div class="fact-card">
+      <div class="fact-number">14</div>
+      <h2>カブトガニの青い血は1ガロン60,000ドルの価値がある</h2>
+      <p class="fact-text">カブトガニの血液には、ワクチンや医療機器の安全性テストに不可欠なLAL（リムルス変形細胞溶解物）と呼ばれる凝固剤が含まれている。銅ベースの血液は酸素に触れると青くなる。製薬会社は毎年約60万匹のカブトガニを採集し、血液の約30%を抽出してから海に戻す。</p>
+      <p class="fact-twist">4億5000万年前の生き物が文字通り現代医学の安全を守っている。カブトガニはほとんどの種が存在するよりも長い間、役に立ってきた。</p>
+    </div>
+
+    <!-- Fact 15 -->
+    <div class="fact-card">
+      <div class="fact-number">15</div>
+      <h2>オスのタツノオトシゴが出産する</h2>
+      <p class="fact-text">自然界で最も劇的な役割逆転の一つとして、メスのタツノオトシゴはオスの腹部にある特殊な育児嚢に卵を預ける。オスはそこで受精し、栄養と酸素を供給しながら胚を育て、筋肉の収縮を経て一度に最大2,500匹の完全に成形された赤ちゃんを産む。</p>
+      <p class="fact-twist">タツノオトシゴのお父さんは「手伝う」だけではない &mdash; 全作業を仕切っている。5000万年連続で、毎年最優秀父親賞。</p>
+    </div>
+
+    <!-- Fact 16 -->
+    <div class="fact-card">
+      <div class="fact-number">16</div>
+      <h2>ケガエルは自分の骨を折って爪を作る</h2>
+      <p class="fact-text">脅かされると、ケガエル（「ホラーフロッグ」とも呼ばれる）は意図的に自分の足指の骨を折り、鋭い骨の先端を皮膚から突き出して猫のような爪を作る。動物が自分の骨格をリアルタイムで武器化する唯一の既知の例だ。</p>
+      <p class="fact-twist">X-MENのウルヴァリンはどうやらカエルからインスピレーションを得たらしい。痛みは一時的だが生存は永遠だと決めたカエルだ。</p>
+    </div>
+
+    <!-- Fact 17 -->
+    <div class="fact-card">
+      <div class="fact-number">17</div>
+      <h2>ミミックオクトパスは15種以上の生物に化ける</h2>
+      <p class="fact-text">東南アジアの海に生息するミミックオクトパスは、形状、色、質感、動きを変えて、ミノカサゴ、ヒラメ、クラゲ、ウミヘビなど少なくとも十数種の生物を説得力を持って真似できる。どの捕食者に脅かされているかに基づいて、どの動物に化けるかを選ぶ。</p>
+      <p class="fact-twist">このタコは変装が一つあるだけではない &mdash; 脅威レベル別に整理されたワードローブ丸ごとを持っている。メソッド演技の極致。</p>
+    </div>
+
+    <!-- Fact 18 -->
+    <div class="fact-card">
+      <div class="fact-number">18</div>
+      <h2>ベニクラゲ &mdash; 不老不死のクラゲ &mdash; は逆に若返る</h2>
+      <p class="fact-text">傷ついたりストレスを受けたりすると、この小さなクラゲは細胞を最も若い形態に戻すことができ、本質的に生命サイクルをリスタートする。成体のメデューサ段階を幼体のポリプに戻す。理論的にはこれを無限に繰り返すことができ、生物学的に不死の唯一の既知動物だ。</p>
+      <p class="fact-twist">人類は若返りの泉を探すのに何十億も費やしてきた。実は、小指の爪より小さいクラゲがとっくに解決済みだった。</p>
+    </div>
+
+    <!-- Fact 19 -->
+    <div class="fact-card">
+      <div class="fact-number">19</div>
+      <h2>ハダカデバネズミは基本的に哺乳類版の昆虫</h2>
+      <p class="fact-text">ハダカデバネズミはアリやハチのように、唯一の繁殖女王がいるコロニーで暮らす。変温動物（唯一の変温哺乳類）であり、がんにほぼ免疫があり、酸素なしで18分間生存でき、皮膚にほとんど痛みを感じず、30年以上生きられる &mdash; 同サイズの齧歯類の約10倍だ。</p>
+      <p class="fact-twist">ハダカデバネズミは哺乳類生物学のルールを破りすぎて、ある時点で科学者たちは驚くのをやめた。</p>
+    </div>
+
+    <!-- Fact 20 -->
+    <div class="fact-card">
+      <div class="fact-number">20</div>
+      <h2>カラスは仲間の葬式を行う</h2>
+      <p class="fact-text">カラスがグループの死んだ仲間を見つけると、大声で鳴いて他のカラスを呼び寄せる。数十羽のカラスが遺体の周りに集まり、研究者はこれを「騒がしい集会」と呼ぶ &mdash; 本質的にカラスの葬式だ。研究によると、これは脅威を評価するために行う：仲間を殺したものを学び、避けるためだ。</p>
+      <p class="fact-twist">カラスはポッドキャストの何百万年も前に真実犯罪ジャンルを発明した。現場に駆けつけ、証拠を分析し、情報を広める。</p>
+    </div>
+
+    <!-- Fact 21 -->
+    <div class="fact-card">
+      <div class="fact-number">21</div>
+      <h2>ザトウクジラはヒット曲を作曲してバイラルにする</h2>
+      <p class="fact-text">オスのザトウクジラは最長24時間にも及ぶ複雑な歌を歌う。驚くべきは、一頭のクジラが新しい歌のパターンを生み出すと、それが数年以内に海洋盆地全体に広がること。数千キロ離れたクジラたちが全員新しいバージョンに切り替える。まるでヒットシングルがチャートを席巻するかのように。</p>
+      <p class="fact-twist">クジラにはインターネットの前からバイラルコンテンツがあった。太平洋のどこかで、ザトウクジラが今シーズン最高のアルバムをリリースしたばかりで、8,000km圏内の全クジラが歌詞を覚えている最中だ。</p>
+    </div>
+
+    <!-- Fact 22 -->
+    <div class="fact-card">
+      <div class="fact-number">22</div>
+      <h2>アメリカアカガエルは冬にカチカチに凍り、春に生き返る</h2>
+      <p class="fact-text">アメリカアカガエルはアラスカの冬を、体内の水分の最大65%を完全に凍らせることで乗り切る。心臓は止まり、肺は機能を停止し、脳は活動を示さない。春が来ると内側から解凍され、何事もなかったかのように跳んでいく。細胞を守る天然のグルコース不凍液のおかげだ。</p>
+      <p class="fact-twist">このカエルは毎年冬に死に、毎年春に復活する。何百万年もそうしてきた。大したことではない。季節スケジュールでのカジュアルな転生だ。</p>
+    </div>
+
+    <!-- Fact 23 -->
+    <div class="fact-card">
+      <div class="fact-number">23</div>
+      <h2>フグは配偶者を引きつけるために精巧な砂のマンダラを作る</h2>
+      <p class="fact-text">シロサバフグのオスは最大1週間かけて、海底の砂に複雑な幾何学模様を作る。直径2メートルを超えることもあるこの円形の「ミステリーサークル」はヒレだけで作られる。メスはこのアート作品を検査し、デザインの複雑さと対称性に基づいて相手を選ぶ。</p>
+      <p class="fact-twist">この魚は文字通り海底にアートインスタレーションを作ってマッチングプロフィールにしている。しかもうまくいっている。みんな、メモを取れ。</p>
+    </div>
+
+    <!-- Fact 24 -->
+    <div class="fact-card">
+      <div class="fact-number">24</div>
+      <h2>センザンコウはアリが恐れる歩くアーティチョーク</h2>
+      <p class="fact-text">センザンコウはケラチンの鱗で全身が覆われた唯一の哺乳類だ。脅かされると、ライオンでもこじ開けられない難攻不落の球に丸まる。歯がないので石を飲み込んで、年間約7000万匹のアリとシロアリをすり潰す。骨盤近くのポケットに収納された舌は、体全体より長くなることがある。</p>
+      <p class="fact-twist">装甲付き、歯なし、舌が腰から始まるアリクイ。進化は明らかに実験段階にあった。</p>
+    </div>
+
+    <!-- Fact 25 -->
+    <div class="fact-card">
+      <div class="fact-number">25</div>
+      <h2>スローロリスは唯一の毒を持つ霊長類</h2>
+      <p class="fact-text">スローロリスは内肘の腺から毒素を生成する。腺を舐めて分泌物を唾液と混ぜ、噛みつきで毒を注入する。この毒は人間にアナフィラキシーショックを引き起こし、小動物を殺すのに十分な強さがある。これにより、世界で唯一知られている有毒霊長類となっている。</p>
+      <p class="fact-twist">巨大で愛らしい目をしたぬいぐるみのように見える。実際には、地球上で唯一本物の毒を持つ霊長類だ。自然界最大の詐欺。</p>
+    </div>
+
+    <p style="margin-top: 2rem;">以上 &mdash; 生物の教科書があなたに隠していた25の理由だ。動物の王国はどんなフィクションよりも野性的で、奇妙で、クリエイティブだ。次に誰かが「事実は小説より奇なり」と言ったら、自分の骨格をウルヴァリン化するケガエルか、さりげなく太陽温度を生み出すエビを教えてあげよう。</p>
+
+    <p>誰も頼んでいない雑学をもっと知りたい？たくさんあります。毎日ホームページに新しい雑学が登場 &mdash; <a href="../../index.html">宇宙から歴史、人体まであらゆるもの</a>をカバーしています。だって宇宙は無視するには奇妙すぎるから。</p>
+
+  </main>
+
+  <!-- Bottom Navigation -->
+  <div class="article-footer-nav">
+    <a href="../../index.html">&larr; ホームに戻る</a>
+    <a href="../../index.html">毎日の雑学を探索</a>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 UselesslyInteresting。全ての事実は検証済み。一部の脳は永久に変わりました。</p>
+  </footer>
+
+  <!-- Theme Toggle Script -->
+  <script>
+    function toggleTheme() {
+      const html = document.documentElement;
+      const current = html.getAttribute('data-theme');
+      const next = current === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('ui-theme', next);
+      document.querySelector('.theme-toggle').textContent = next === 'dark' ? '\u2600' : '\u263E';
+    }
+
+    // Restore saved theme
+    (function() {
+      const saved = localStorage.getItem('ui-theme');
+      if (saved === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        document.addEventListener('DOMContentLoaded', function() {
+          document.querySelector('.theme-toggle').textContent = '\u2600';
+        });
+      }
+    })();
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>25 faits bizarres sur les animaux que tu n'as jamais appris à l'école — UselesslyInteresting</title>
+  <meta name="description" content="Des crevettes-pistolet qui créent des mini-soleils aux wombats qui font caca en cubes — 25 faits animaux délirants que ton prof de biologie n'a jamais mentionnés." />
+  <meta name="keywords" content="faits animaux, animaux bizarres, nature étrange, faits amusants, uselesslyinteresting" />
+  <link rel="canonical" href="https://uselesslyinteresting.com/articles/fr/bizarre-animal-facts-you-never-learned-in-school.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="25 faits bizarres sur les animaux que tu n'as jamais appris à l'école" />
+  <meta property="og:description" content="Des crevettes-pistolet qui créent des mini-soleils aux wombats qui font caca en cubes — 25 faits animaux délirants que ton prof de biologie n'a jamais mentionnés." />
+  <meta property="og:url" content="https://uselesslyinteresting.com/articles/fr/bizarre-animal-facts-you-never-learned-in-school.html" />
+  <meta property="og:site_name" content="UselesslyInteresting" />
+  <meta property="og:locale" content="fr_FR" />
+  <meta property="article:published_time" content="2026-03-25" />
+  <meta property="article:section" content="Animaux" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="25 faits bizarres sur les animaux que tu n'as jamais appris à l'école" />
+  <meta name="twitter:description" content="Des crevettes-pistolet qui créent des mini-soleils aux wombats qui font caca en cubes — 25 faits animaux délirants que ton prof de biologie n'a jamais mentionnés." />
+
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Mono:ital,wght@0,400;1,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    /* ── LIGHT MODE (default) ── */
+    :root {
+      --bg: #f5f5f0;
+      --surface: #eaeae4;
+      --card: #ffffff;
+      --accent: #5a8a00;
+      --accent2: #c4168c;
+      --accent3: #0088bb;
+      --text: #1a1a2e;
+      --muted: #5c5c72;
+      --border: rgba(90,138,0,0.15);
+      --card-hover: #f0f0ea;
+      --noise-opacity: 0.15;
+      --shadow: 0 1px 3px rgba(0,0,0,0.06);
+    }
+
+    /* ── DARK MODE ── */
+    [data-theme="dark"] {
+      --bg: #0a0a0f;
+      --surface: #12121a;
+      --card: #1a1a26;
+      --accent: #c8ff3e;
+      --accent2: #ff3ecb;
+      --accent3: #3ec8ff;
+      --text: #e8e8f0;
+      --muted: #6b6b88;
+      --border: rgba(200,255,62,0.12);
+      --card-hover: #1f1f30;
+      --noise-opacity: 0.4;
+      --shadow: none;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'DM Mono', monospace;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* Noise overlay */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 1000;
+      opacity: var(--noise-opacity, 0.15);
+    }
+
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* ── HEADER ── */
+    header {
+      padding: 2rem 2rem 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .logo {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: clamp(1.2rem, 3vw, 1.6rem);
+      letter-spacing: -0.03em;
+      line-height: 1;
+      text-decoration: none;
+      color: var(--text);
+    }
+    .logo:hover { text-decoration: none; }
+    .logo span { color: var(--accent); }
+
+    .logo-sub {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.62rem;
+      color: var(--muted);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-top: 2px;
+    }
+
+    /* ── THEME TOGGLE ── */
+    .theme-toggle {
+      position: fixed;
+      top: 1.5rem;
+      right: 2rem;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 1rem;
+      padding: 0.3rem 0.6rem;
+      cursor: pointer;
+      transition: color 0.2s, border-color 0.2s;
+      line-height: 1;
+      z-index: 999;
+    }
+    .theme-toggle:hover { color: var(--accent); border-color: var(--accent); }
+
+    /* ── BREADCRUMB ── */
+    .breadcrumb {
+      max-width: 820px;
+      margin: 2rem auto 0;
+      padding: 0 2rem;
+      font-size: 0.7rem;
+      color: var(--muted);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+    .breadcrumb a { color: var(--muted); transition: color 0.2s; }
+    .breadcrumb a:hover { color: var(--accent); text-decoration: none; }
+    .breadcrumb .sep { margin: 0 0.4rem; opacity: 0.5; }
+
+    /* ── ARTICLE HEADER ── */
+    .article-header {
+      max-width: 820px;
+      margin: 2rem auto 0;
+      padding: 0 2rem;
+    }
+
+    .category-tag {
+      display: inline-block;
+      font-size: 0.62rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent);
+      border: 1px solid var(--accent);
+      padding: 0.25rem 0.7rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .article-header h1 {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+      margin-bottom: 1rem;
+    }
+
+    .article-meta {
+      display: flex;
+      gap: 1.5rem;
+      font-size: 0.72rem;
+      color: var(--muted);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      flex-wrap: wrap;
+    }
+
+    /* ── ARTICLE BODY ── */
+    .article-body {
+      max-width: 820px;
+      margin: 3rem auto;
+      padding: 0 2rem;
+    }
+
+    .article-intro {
+      font-family: 'Instrument Serif', serif;
+      font-size: 1.25rem;
+      line-height: 1.7;
+      color: var(--text);
+      margin-bottom: 2.5rem;
+      font-style: italic;
+    }
+
+    .article-body p {
+      font-size: 0.92rem;
+      line-height: 1.8;
+      color: var(--text);
+      margin-bottom: 1.2rem;
+    }
+
+    .article-body p.section-intro {
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+
+    /* ── FACT CARDS ── */
+    .fact-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      padding: 1.8rem 2rem;
+      margin-bottom: 1.5rem;
+      position: relative;
+      transition: border-color 0.2s;
+    }
+    .fact-card:hover {
+      border-color: var(--accent);
+    }
+
+    .fact-number {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: 2.5rem;
+      color: var(--accent);
+      opacity: 0.2;
+      position: absolute;
+      top: 0.8rem;
+      right: 1.2rem;
+      line-height: 1;
+    }
+
+    .fact-card h2 {
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      font-size: 1.1rem;
+      line-height: 1.3;
+      margin-bottom: 0.8rem;
+      padding-right: 2.5rem;
+      letter-spacing: -0.01em;
+    }
+
+    .fact-card .fact-text {
+      font-size: 0.88rem;
+      line-height: 1.75;
+      color: var(--text);
+      margin-bottom: 0.8rem;
+    }
+
+    .fact-card .fact-twist {
+      font-family: 'Instrument Serif', serif;
+      font-style: italic;
+      font-size: 0.92rem;
+      color: var(--accent);
+      line-height: 1.5;
+    }
+
+    /* ── BOTTOM NAV ── */
+    .article-footer-nav {
+      max-width: 820px;
+      margin: 3rem auto 2rem;
+      padding: 0 2rem;
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .article-footer-nav a {
+      display: inline-block;
+      font-size: 0.72rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      border: 1px solid var(--accent);
+      padding: 0.5rem 1.2rem;
+      transition: background 0.2s, color 0.2s;
+      text-decoration: none;
+    }
+    .article-footer-nav a:hover {
+      background: var(--accent);
+      color: var(--bg);
+      text-decoration: none;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      text-align: center;
+      padding: 3rem 2rem 2rem;
+      font-size: 0.7rem;
+      color: var(--muted);
+      letter-spacing: 0.05em;
+      border-top: 1px solid var(--border);
+      max-width: 820px;
+      margin: 0 auto;
+    }
+
+    /* ── ANIMATIONS ── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(16px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .article-header, .article-intro, .fact-card {
+      animation: fadeUp 0.5s ease both;
+    }
+
+    .fact-card:nth-child(2) { animation-delay: 0.03s; }
+    .fact-card:nth-child(3) { animation-delay: 0.06s; }
+    .fact-card:nth-child(4) { animation-delay: 0.09s; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 600px) {
+      .article-header h1 { font-size: 1.8rem; }
+      .fact-card { padding: 1.4rem 1.2rem; }
+      .fact-number { font-size: 2rem; top: 0.6rem; right: 0.8rem; }
+      .fact-card h2 { font-size: 1rem; }
+      .theme-toggle { top: 1rem; right: 1rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Theme Toggle -->
+  <button class="theme-toggle" aria-label="Basculer le mode sombre" onclick="toggleTheme()">&#9790;</button>
+
+  <!-- Header -->
+  <header>
+    <div style="text-align:center;">
+      <a href="../../index.html" class="logo">Usessly<span>Interesting</span></a>
+      <div class="logo-sub">Des faits que personne n'a demandés</div>
+    </div>
+  </header>
+
+  <!-- Breadcrumb -->
+  <nav class="breadcrumb" aria-label="Fil d'Ariane">
+    <a href="../../index.html">Accueil</a>
+    <span class="sep">&rsaquo;</span>
+    <span>Articles</span>
+    <span class="sep">&rsaquo;</span>
+    <span>25 faits bizarres sur les animaux que tu n'as jamais appris à l'école</span>
+  </nav>
+
+  <!-- Article Header -->
+  <div class="article-header">
+    <span class="category-tag">Animaux</span>
+    <h1>25 faits bizarres sur les animaux que tu n'as jamais appris à l'école</h1>
+    <div class="article-meta">
+      <span>25 mars 2026</span>
+      <span>&bull; 10 min de lecture</span>
+    </div>
+  </div>
+
+  <!-- Article Body -->
+  <main class="article-body">
+
+    <p class="article-intro">
+      Ton manuel de biologie t'a appris les mitochondries et la chaîne alimentaire. En revanche, il n'a pas mentionné qu'une crevette peut frapper assez fort pour faire bouillir l'eau, ni qu'un certain coléoptère survit en explosant. Voici 25 faits animaliers qui n'ont jamais figuré au programme &mdash; et honnêtement, ils auraient dû.
+    </p>
+
+    <p class="section-intro">Certains de ces faits semblent inventés. On a vérifié. Ils sont vrais. La nature est juste comme ça.</p>
+
+    <!-- Fait 1 -->
+    <div class="fact-card">
+      <div class="fact-number">01</div>
+      <h2>La crevette-mante frappe plus fort qu'une balle</h2>
+      <p class="fact-text">Les appendices en forme de massue de la crevette-mante accélèrent à la vitesse d'une balle de calibre .22, délivrant une force de plus de 1 500 Newtons. La frappe est si rapide qu'elle fait bouillir l'eau autour d'elle par cavitation, produisant un éclair de lumière et une onde de choc capable d'étourdir la proie même si le coup rate.</p>
+      <p class="fact-twist">Imagine être si agressif que tu transformes littéralement l'eau en arme. La crevette-mante n'a pas besoin de gestion de la colère &mdash; elle a besoin d'un permis d'arme.</p>
+    </div>
+
+    <!-- Fait 2 -->
+    <div class="fact-card">
+      <div class="fact-number">02</div>
+      <h2>Les wombats font caca en cubes</h2>
+      <p class="fact-text">Les wombats sont les seuls animaux sur Terre qui produisent des excréments en forme de cube. Leur intestin a une élasticité variable qui donne aux crottes une forme de cubes quasi parfaits en traversant les derniers 17 % du tube digestif. Ils empilent ensuite ces cubes pour marquer leur territoire.</p>
+      <p class="fact-twist">Le plus grand ingénieur de la nature n'a pas construit un barrage ni une ruche. Il a construit du caca empilable. Quelque part, un designer LEGO prend des notes.</p>
+    </div>
+
+    <!-- Fait 3 -->
+    <div class="fact-card">
+      <div class="fact-number">03</div>
+      <h2>Les scarabées bombardiers se défendent en explosant</h2>
+      <p class="fact-text">Lorsqu'il est menacé, le scarabée bombardier mélange de l'hydroquinone et du peroxyde d'hydrogène dans une chambre spéciale de son abdomen, déclenchant une violente réaction exothermique. Le spray bouillant qui en résulte atteint 100&deg;C et est projeté sur le prédateur avec un mécanisme de pulsation rapide &mdash; jusqu'à 500 pulses par seconde.</p>
+      <p class="fact-twist">La stratégie de défense de ce scarabée est littéralement de la guerre chimique. Il se pointe au combat avec un lance-flammes intégré et zéro retenue.</p>
+    </div>
+
+    <!-- Fait 4 -->
+    <div class="fact-card">
+      <div class="fact-number">04</div>
+      <h2>Les dauphins s'appellent par leur nom</h2>
+      <p class="fact-text">Les grands dauphins développent des sifflements uniques qui fonctionnent comme des noms. Des recherches publiées dans les <em>Proceedings of the National Academy of Sciences</em> ont montré que les dauphins répondent de manière sélective lorsqu'ils entendent leur propre sifflement, et ils utilisent les sifflements d'autres dauphins pour appeler des individus spécifiques.</p>
+      <p class="fact-twist">Ils ont littéralement un répertoire de contacts. Pendant ce temps, ton chien ne vient toujours pas quand tu l'appelles.</p>
+    </div>
+
+    <!-- Fait 5 -->
+    <div class="fact-card">
+      <div class="fact-number">05</div>
+      <h2>La crevette-pistolet crée un mini-soleil à chaque claquement</h2>
+      <p class="fact-text">Quand une crevette-pistolet claque sa pince, la bulle de cavitation qui s'effondre atteint des températures d'environ 4 700&deg;C &mdash; presque aussi chaud que la surface du soleil. Le claquement produit également un son de 218 décibels sous l'eau, faisant d'elle l'un des animaux les plus bruyants de la planète. L'événement entier dure moins d'une milliseconde.</p>
+      <p class="fact-twist">Une crevette plus petite que ton pouce recrée nonchalamment des températures de surface stellaire. L'univers a un sens de l'humour délirant quand il s'agit de placer sa physique.</p>
+    </div>
+
+    <!-- Fait 6 -->
+    <div class="fact-card">
+      <div class="fact-number">06</div>
+      <h2>Les ornithorynques brillent sous la lumière UV</h2>
+      <p class="fact-text">En 2020, des scientifiques ont découvert que la fourrure de l'ornithorynque est biofluorescente &mdash; elle absorbe la lumière ultraviolette et la réémet sous forme d'un éclat bleu-vert. Personne ne sait vraiment pourquoi. L'ornithorynque possède déjà un éperon venimeux, un bec de canard, une queue de castor et pond des œufs. Apparemment, briller était la prochaine étape sur la liste.</p>
+      <p class="fact-twist">À ce stade, l'ornithorynque speedrun le créateur de personnage de l'évolution en cliquant sur « aléatoire » pour chaque trait.</p>
+    </div>
+
+    <!-- Fait 7 -->
+    <div class="fact-card">
+      <div class="fact-number">07</div>
+      <h2>Les axolotls peuvent régénérer leur cerveau</h2>
+      <p class="fact-text">Les axolotls sont célèbres pour régénérer leurs membres, mais ils peuvent aussi faire repousser des parties de leur cerveau, de leur cœur et de leur moelle épinière. Contrairement à la plupart des vertébrés, leur tissu régénéré est pleinement fonctionnel &mdash; pas du tissu cicatriciel. Les scientifiques étudient activement leur génome pour comprendre comment débloquer des capacités similaires chez l'humain.</p>
+      <p class="fact-twist">Tu n'arrives pas à guérir un coup de soleil et cet amphibien régénère tranquillement son lobe frontal. La vie est injuste.</p>
+    </div>
+
+    <!-- Fait 8 -->
+    <div class="fact-card">
+      <div class="fact-number">08</div>
+      <h2>Les éléphants sont terrifiés par les abeilles</h2>
+      <p class="fact-text">Malgré leur statut de plus grands animaux terrestres, les éléphants fuient au son du bourdonnement des abeilles. Ils ont même un cri d'alarme spécifique qui se traduit grossièrement par « abeilles ! » Les fermiers africains utilisent désormais des clôtures de ruches pour protéger leurs cultures des raids d'éléphants. Ça marche mieux que n'importe quel mur.</p>
+      <p class="fact-twist">Un animal de six tonnes avec une peau de plusieurs centimètres d'épaisseur s'enfuit en hurlant devant un insecte qui pèse moins qu'un trombone. L'évolution a vraiment dit « tout le monde a une faiblesse ».</p>
+    </div>
+
+    <!-- Fait 9 -->
+    <div class="fact-card">
+      <div class="fact-number">09</div>
+      <h2>Les seiches ont trois cœurs, du sang bleu et des pupilles en forme de W</h2>
+      <p class="fact-text">Les seiches possèdent trois cœurs (deux pompent le sang vers les branchies, un vers le corps), du sang bleu à base de cuivre et des pupilles en forme de W qui leur donnent une vision de presque 360 degrés. Elles peuvent aussi changer de couleur, de texture et même de forme apparente en quelques millisecondes.</p>
+      <p class="fact-twist">La seiche est en gros un extraterrestre qui a atterri sur Terre par accident et qui vit sa meilleure vie dans l'océan en espérant que personne ne remarque.</p>
+    </div>
+
+    <!-- Fait 10 -->
+    <div class="fact-card">
+      <div class="fact-number">10</div>
+      <h2>Les ratels peuvent résister au venin de cobra</h2>
+      <p class="fact-text">Les ratels ont développé une mutation spécifique dans leurs récepteurs nicotiniques de l'acétylcholine qui les rend largement résistants au venin de cobra et de mamba. S'ils sont mordus, ils peuvent s'évanouir brièvement, puis se réveiller et continuer à manger le serpent qui les a mordus. Ce n'est pas une exagération.</p>
+      <p class="fact-twist">La stratégie de survie du ratel est tout simplement de refuser de mourir. C'est le personnage principal le plus déjanté du règne animal.</p>
+    </div>
+
+    <!-- Fait 11 -->
+    <div class="fact-card">
+      <div class="fact-number">11</div>
+      <h2>L'oiseau-lyre peut imiter des tronçonneuses, des alarmes de voiture et des déclencheurs d'appareil photo</h2>
+      <p class="fact-text">L'oiseau-lyre d'Australie est considéré comme le meilleur imitateur vocal du monde. Les mâles peuvent reproduire parfaitement les sons de plus de 20 espèces d'oiseaux simultanément, ainsi que des sons d'origine humaine comme des tronçonneuses, des déclencheurs d'appareil photo et même des bébés qui pleurent. Ils utilisent ces sons dans des danses de parade nuptiale élaborées.</p>
+      <p class="fact-twist">Imagine essayer d'impressionner quelqu'un en rendez-vous en faisant une imitation parfaite de tronçonneuse. Dans le monde des oiseaux, c'est un coup de maître.</p>
+    </div>
+
+    <!-- Fait 12 -->
+    <div class="fact-card">
+      <div class="fact-number">12</div>
+      <h2>Les poissons-archers crachent de l'eau pour chasser les insectes dans les airs</h2>
+      <p class="fact-text">Les poissons-archers peuvent tirer des jets d'eau précis jusqu'à 3 mètres pour faire tomber les insectes des branches et des feuilles au-dessus de la surface de l'eau. Ils compensent la réfraction de la lumière entre l'eau et l'air, résolvant essentiellement des problèmes de physique en temps réel. Les jeunes poissons-archers apprennent en observant les adultes expérimentés.</p>
+      <p class="fact-twist">Un poisson qui chasse avec un pistolet à eau et qui l'a appris en étudiant ses aînés. Ce poisson a un meilleur système éducatif que certains pays.</p>
+    </div>
+
+    <!-- Fait 13 -->
+    <div class="fact-card">
+      <div class="fact-number">13</div>
+      <h2>Les bouquetins des Alpes escaladent des barrages quasi verticaux pour lécher du sel</h2>
+      <p class="fact-text">Des bouquetins des Alpes en Italie ont été photographiés en train d'escalader la face quasi verticale du barrage de Cingino &mdash; un mur de béton de 50 mètres avec une pente de près de 90 degrés &mdash; juste pour lécher des sels minéraux sur la pierre. Leurs sabots ont des coussinets souples et caoutchouteux entourés d'un bord extérieur dur qui s'accroche aux minuscules imperfections du béton, leur donnant une adhérence qui ferait pleurer d'envie un grimpeur.</p>
+      <p class="fact-twist">Ces chèvres ont regardé un barrage en béton vertical et se sont dit « ouais, c'est un mur à snacks ». Pendant ce temps, toi tu stresses sur un escabeau.</p>
+    </div>
+
+    <!-- Fait 14 -->
+    <div class="fact-card">
+      <div class="fact-number">14</div>
+      <h2>Les limules ont du sang bleu qui vaut 60 000 $ le gallon</h2>
+      <p class="fact-text">Le sang des limules contient un agent coagulant appelé Lysat d'Amébocytes de Limulus (LAL) qui est essentiel pour tester la sécurité des vaccins et des dispositifs médicaux. Leur sang à base de cuivre devient bleu au contact de l'oxygène. Les entreprises pharmaceutiques récoltent environ 600 000 limules par an, extrayant environ 30 % de leur sang avant de les remettre dans l'océan.</p>
+      <p class="fact-twist">Une créature vieille de 450 millions d'années assure littéralement la sécurité de la médecine moderne. La limule est utile depuis plus longtemps que la plupart des espèces n'ont existé.</p>
+    </div>
+
+    <!-- Fait 15 -->
+    <div class="fact-card">
+      <div class="fact-number">15</div>
+      <h2>Les hippocampes mâles donnent naissance</h2>
+      <p class="fact-text">Dans l'une des inversions de rôles les plus spectaculaires de la nature, les hippocampes femelles déposent leurs œufs dans une poche spécialisée sur le ventre du mâle. Le mâle féconde ensuite et porte les embryons, fournissant nutriments et oxygène, avant de passer par des contractions musculaires pour donner naissance à jusqu'à 2 500 bébés entièrement formés en une seule fois.</p>
+      <p class="fact-twist">Le papa hippocampe ne fait pas que « donner un coup de main » &mdash; il dirige toute l'opération. Père de l'année, chaque année, depuis 50 millions d'années d'affilée.</p>
+    </div>
+
+    <!-- Fait 16 -->
+    <div class="fact-card">
+      <div class="fact-number">16</div>
+      <h2>La grenouille poilue se casse ses propres os pour fabriquer des griffes</h2>
+      <p class="fact-text">Lorsqu'elle est menacée, la grenouille poilue (aussi appelée « grenouille de l'horreur ») casse délibérément les os de ses propres orteils, poussant les extrémités cassées et pointues à travers sa peau pour créer des griffes semblables à celles d'un chat. C'est le seul exemple connu d'un animal qui transforme son propre squelette en arme en temps réel.</p>
+      <p class="fact-twist">Wolverine des X-Men a apparemment été inspiré par une grenouille. Une grenouille qui a décidé que la douleur est temporaire mais que la survie est éternelle.</p>
+    </div>
+
+    <!-- Fait 17 -->
+    <div class="fact-card">
+      <div class="fact-number">17</div>
+      <h2>La pieuvre mimétique peut imiter plus de 15 espèces différentes</h2>
+      <p class="fact-text">La pieuvre mimétique, que l'on trouve dans les eaux d'Asie du Sud-Est, peut modifier sa forme, sa couleur, sa texture et ses mouvements pour imiter de manière convaincante des rascasses volantes, des poissons plats, des méduses, des serpents de mer et au moins une douzaine d'autres espèces. Elle choisit quel animal imiter en fonction du prédateur qui la menace.</p>
+      <p class="fact-twist">Cette pieuvre n'a pas qu'un déguisement &mdash; elle a toute une garde-robe, organisée par niveau de menace. Du jeu d'acteur méthode à son meilleur.</p>
+    </div>
+
+    <!-- Fait 18 -->
+    <div class="fact-card">
+      <div class="fact-number">18</div>
+      <h2>Turritopsis dohrnii &mdash; La méduse immortelle &mdash; peut vieillir à l'envers</h2>
+      <p class="fact-text">Lorsqu'elle est blessée ou stressée, cette minuscule méduse peut ramener ses cellules à leur forme la plus jeune, redémarrant essentiellement son cycle de vie. Elle transforme son stade adulte de méduse en un polype juvénile. Théoriquement, elle peut le faire indéfiniment, ce qui en fait le seul animal connu qui soit biologiquement immortel.</p>
+      <p class="fact-twist">L'humanité a dépensé des milliards à chercher la fontaine de jouvence. Il s'avère qu'une méduse plus petite que ton auriculaire a résolu le problème il y a une éternité.</p>
+    </div>
+
+    <!-- Fait 19 -->
+    <div class="fact-card">
+      <div class="fact-number">19</div>
+      <h2>Les rats-taupes nus sont essentiellement des insectes mammifères</h2>
+      <p class="fact-text">Les rats-taupes nus vivent dans des colonies avec une seule reine reproductrice, comme les fourmis ou les abeilles. Ils sont à sang froid (les seuls mammifères à sang froid), quasiment immunisés contre le cancer, peuvent survivre 18 minutes sans oxygène, ne ressentent presque aucune douleur sur leur peau et peuvent vivre plus de 30 ans &mdash; environ dix fois plus longtemps que des rongeurs de taille similaire.</p>
+      <p class="fact-twist">Le rat-taupe nu a brisé tellement de règles de la biologie des mammifères qu'à un moment, les scientifiques ont juste arrêté d'être surpris.</p>
+    </div>
+
+    <!-- Fait 20 -->
+    <div class="fact-card">
+      <div class="fact-number">20</div>
+      <h2>Les corbeaux organisent des funérailles pour leurs morts</h2>
+      <p class="fact-text">Quand un corbeau trouve un membre mort de son groupe, il croasse fort pour en appeler d'autres. Des dizaines de corbeaux se rassemblent alors autour du corps dans ce que les chercheurs appellent une « agrégation cacophonique » &mdash; essentiellement des funérailles de corbeaux. Les études montrent qu'ils font cela pour évaluer les menaces : ils apprennent ce qui a tué leur compagnon pour pouvoir l'éviter.</p>
+      <p class="fact-twist">Les corbeaux ont inventé le genre true crime des millions d'années avant l'existence des podcasts. Ils arrivent sur la scène, analysent les preuves et font passer le mot.</p>
+    </div>
+
+    <!-- Fait 21 -->
+    <div class="fact-card">
+      <div class="fact-number">21</div>
+      <h2>Les baleines à bosse composent des tubes qui deviennent viraux</h2>
+      <p class="fact-text">Les baleines à bosse mâles chantent des chansons complexes qui peuvent durer jusqu'à 24 heures. Le plus remarquable : quand une baleine innove un nouveau motif de chant, il se propage à travers des bassins océaniques entiers en quelques années. Des baleines séparées par des milliers de kilomètres passent toutes à la nouvelle version, comme un tube biologique qui envahit les classements.</p>
+      <p class="fact-twist">Les baleines avaient du contenu viral avant internet. Quelque part dans le Pacifique, une baleine à bosse vient de sortir l'album le plus chaud de la saison et chaque baleine dans un rayon de 8 000 km apprend les paroles.</p>
+    </div>
+
+    <!-- Fait 22 -->
+    <div class="fact-card">
+      <div class="fact-number">22</div>
+      <h2>La grenouille des bois gèle entièrement en hiver et revient à la vie</h2>
+      <p class="fact-text">La grenouille des bois survit aux hivers de l'Alaska en laissant jusqu'à 65 % de l'eau de son corps geler complètement. Son cœur s'arrête, ses poumons cessent de fonctionner et son cerveau ne montre aucune activité. Au printemps, elle dégèle de l'intérieur vers l'extérieur et sautille comme si de rien n'était, grâce à un antigel naturel de glucose qui protège ses cellules.</p>
+      <p class="fact-twist">Cette grenouille meurt chaque hiver et ressuscite chaque printemps. Elle fait ça depuis des millions d'années. Pas de quoi en faire un plat. Juste une réincarnation décontractée selon un calendrier saisonnier.</p>
+    </div>
+
+    <!-- Fait 23 -->
+    <div class="fact-card">
+      <div class="fact-number">23</div>
+      <h2>Les poissons-globes créent des mandalas de sable élaborés pour attirer les partenaires</h2>
+      <p class="fact-text">Les mâles du poisson-globe à points blancs passent jusqu'à une semaine à construire des motifs géométriques complexes dans le sable au fond de l'océan. Ces « cercles mystérieux » circulaires, qui peuvent avoir plus de deux mètres de diamètre, sont réalisés uniquement avec leurs nageoires. Les femelles inspectent les œuvres d'art et choisissent les partenaires en fonction de la complexité et de la symétrie du design.</p>
+      <p class="fact-twist">Ce poisson construit littéralement une installation artistique sur le fond de l'océan comme profil de rencontre. Et ça marche. Prenez-en de la graine.</p>
+    </div>
+
+    <!-- Fait 24 -->
+    <div class="fact-card">
+      <div class="fact-number">24</div>
+      <h2>Les pangolins sont des artichauts ambulants que les fourmis redoutent</h2>
+      <p class="fact-text">Les pangolins sont les seuls mammifères entièrement couverts d'écailles de kératine. Lorsqu'ils sont menacés, ils se roulent en boule impénétrable que même les lions ne peuvent ouvrir. Ils n'ont pas de dents, alors ils avalent des pierres pour broyer les quelque 70 millions de fourmis et termites qu'ils consomment chaque année. Leur langue, stockée dans une poche près du bassin, peut être plus longue que leur corps entier.</p>
+      <p class="fact-twist">Un fourmilier blindé et édenté avec une langue qui part des hanches. L'évolution traversait clairement une phase expérimentale.</p>
+    </div>
+
+    <!-- Fait 25 -->
+    <div class="fact-card">
+      <div class="fact-number">25</div>
+      <h2>Le loris lent est le seul primate venimeux</h2>
+      <p class="fact-text">Le loris lent produit une toxine à partir d'une glande située à l'intérieur de son coude. Il lèche la glande et mélange la sécrétion avec sa salive pour créer un venin qu'il administre par sa morsure. Le venin peut provoquer une anaphylaxie chez l'humain et est suffisamment puissant pour tuer de petits animaux. Cela en fait le seul primate venimeux connu au monde.</p>
+      <p class="fact-twist">Il ressemble à une peluche avec d'énormes yeux adorables. En réalité, c'est le seul primate sur Terre qui transporte littéralement du poison. Le plus grand piège de la nature.</p>
+    </div>
+
+    <p style="margin-top: 2rem;">Et voilà &mdash; 25 raisons pour lesquelles ton manuel de biologie te cachait des choses. Le règne animal est plus sauvage, plus étrange et plus créatif que n'importe quelle fiction. La prochaine fois que quelqu'un dit « la réalité dépasse la fiction », montre-lui simplement la grenouille poilue qui transforme son squelette en arme, ou la crevette qui crée nonchalamment des températures solaires.</p>
+
+    <p>Tu veux plus de faits que personne n'a demandés ? On en a plein. De nouveaux faits tombent chaque jour sur notre page d'accueil &mdash; couvrant <a href="../../index.html">tout, de l'espace à l'histoire en passant par le corps humain</a>. Parce que l'univers est trop bizarre pour être ignoré.</p>
+
+  </main>
+
+  <!-- Bottom Navigation -->
+  <div class="article-footer-nav">
+    <a href="../../index.html">&larr; Retour à l'accueil</a>
+    <a href="../../index.html">Explorer les faits du jour</a>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 UselesslyInteresting. Tous les faits vérifiés. Quelques cerveaux définitivement altérés.</p>
+  </footer>
+
+  <!-- Theme Toggle Script -->
+  <script>
+    function toggleTheme() {
+      const html = document.documentElement;
+      const current = html.getAttribute('data-theme');
+      const next = current === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('ui-theme', next);
+      document.querySelector('.theme-toggle').textContent = next === 'dark' ? '\u2600' : '\u263E';
+    }
+
+    // Restore saved theme
+    (function() {
+      const saved = localStorage.getItem('ui-theme');
+      if (saved === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        document.addEventListener('DOMContentLoaded', function() {
+          document.querySelector('.theme-toggle').textContent = '\u2600';
+        });
+      }
+    })();
+  </script>
+
+</body>
+</html>
