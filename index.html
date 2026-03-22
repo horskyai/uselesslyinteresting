@@ -1535,6 +1535,9 @@ function applyLanguage(lang) {
 
   // Translate hardcoded card content
   translateHardcodedCards(lang);
+
+  // Reload Article of the Week in correct language
+  loadArticleOfTheWeek();
 }
 
 function translateHardcodedCards(lang) {
@@ -1700,14 +1703,20 @@ async function loadArticleOfTheWeek() {
   var labelText = lang === 'en' ? 'ARTICLE OF THE WEEK' : (i18nData && i18nData[lang] && i18nData[lang]['article_week'] ? i18nData[lang]['article_week'] : 'ARTICLE OF THE WEEK');
   var readText = lang === 'en' ? 'READ ARTICLE →' : (i18nData && i18nData[lang] && i18nData[lang]['read_article'] ? i18nData[lang]['read_article'] : 'READ ARTICLE →');
 
+  var aTitle = (lang !== 'en' && latest['title_' + lang]) ? latest['title_' + lang] : latest.title;
+  var aDesc = (lang !== 'en' && latest['description_' + lang]) ? latest['description_' + lang] : latest.description;
+  var aCat = (lang !== 'en' && latest['category_' + lang]) ? latest['category_' + lang] : latest.category;
+  var aRead = (lang !== 'en' && latest['readTime_' + lang]) ? latest['readTime_' + lang] : latest.readTime;
+  var aHref = lang !== 'en' ? 'articles/' + lang + '/' + latest.slug + '.html' : 'articles/' + latest.slug + '.html';
+
   container.innerHTML = '<div class="section-label">' + labelText + '</div>' +
-    '<a href="articles/' + latest.slug + '.html" class="article-week-card">' +
+    '<a href="' + aHref + '" class="article-week-card">' +
       '<div class="article-week-accent"></div>' +
       '<div class="article-week-body">' +
-        '<div class="article-week-tag">' + latest.emoji + ' ' + latest.category + '</div>' +
-        '<h3>' + latest.title + '</h3>' +
-        '<p>' + latest.description + '</p>' +
-        '<div class="article-week-meta"><span>' + readText + '</span> · ' + latest.readTime + ' · ' + latest.date + '</div>' +
+        '<div class="article-week-tag">' + latest.emoji + ' ' + aCat + '</div>' +
+        '<h3>' + aTitle + '</h3>' +
+        '<p>' + aDesc + '</p>' +
+        '<div class="article-week-meta"><span>' + readText + '</span> · ' + aRead + ' · ' + latest.date + '</div>' +
       '</div>' +
     '</a>';
 }
