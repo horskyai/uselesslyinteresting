@@ -2,6 +2,7 @@
   "en": {
     "nav_home": "Home",
     "nav_categories": "Categories",
+    "nav_articles": "Articles",
     "nav_about": "About",
     "nav_instagram": "Instagram",
     "theme_dark": "Dark Mode",
@@ -45,6 +46,7 @@
   "de": {
     "nav_home": "Startseite",
     "nav_categories": "Kategorien",
+    "nav_articles": "Artikel",
     "nav_about": "Über uns",
     "nav_instagram": "Instagram",
     "theme_dark": "Dunkelmodus",
@@ -88,6 +90,7 @@
   "es": {
     "nav_home": "Inicio",
     "nav_categories": "Categorías",
+    "nav_articles": "Artículos",
     "nav_about": "Acerca de",
     "nav_instagram": "Instagram",
     "theme_dark": "Modo oscuro",
@@ -131,6 +134,7 @@
   "ar": {
     "nav_home": "الرئيسية",
     "nav_categories": "التصنيفات",
+    "nav_articles": "مقالات",
     "nav_about": "من نحن",
     "nav_instagram": "انستغرام",
     "theme_dark": "الوضع الداكن",
@@ -174,6 +178,7 @@
   "it": {
     "nav_home": "Home",
     "nav_categories": "Categorie",
+    "nav_articles": "Articoli",
     "nav_about": "Chi siamo",
     "nav_instagram": "Instagram",
     "theme_dark": "Modalità scura",
@@ -217,6 +222,7 @@
   "fr": {
     "nav_home": "Accueil",
     "nav_categories": "Catégories",
+    "nav_articles": "Articles",
     "nav_about": "À propos",
     "nav_instagram": "Instagram",
     "theme_dark": "Mode sombre",
@@ -260,6 +266,7 @@
   "zh": {
     "nav_home": "首页",
     "nav_categories": "分类",
+    "nav_articles": "文章",
     "nav_about": "关于",
     "nav_instagram": "Instagram",
     "theme_dark": "深色模式",
@@ -303,6 +310,7 @@
   "ja": {
     "nav_home": "ホーム",
     "nav_categories": "カテゴリー",
+    "nav_articles": "記事",
     "nav_about": "について",
     "nav_instagram": "Instagram",
     "theme_dark": "ダークモード",
