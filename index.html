@@ -318,6 +318,70 @@
     }
 
 
+    /* ── ARTICLE OF THE WEEK ── */
+    .article-week {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 2rem 3rem;
+    }
+    .article-week-card {
+      display: flex;
+      gap: 2rem;
+      background: var(--card);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      transition: box-shadow 0.3s;
+      text-decoration: none;
+      color: inherit;
+    }
+    .article-week-card:hover { box-shadow: 0 4px 20px rgba(0,0,0,0.1); }
+    .article-week-accent {
+      width: 6px;
+      flex-shrink: 0;
+      background: var(--accent);
+    }
+    .article-week-body {
+      padding: 2rem 2rem 2rem 0;
+      flex: 1;
+    }
+    .article-week-tag {
+      font-size: 0.6rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent);
+      border: 1px solid var(--accent);
+      padding: 0.2rem 0.6rem;
+      display: inline-block;
+      margin-bottom: 0.8rem;
+    }
+    .article-week-body h3 {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: clamp(1.2rem, 3vw, 1.8rem);
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.8rem;
+    }
+    .article-week-body p {
+      font-size: 0.82rem;
+      color: var(--muted);
+      line-height: 1.6;
+      margin-bottom: 1rem;
+      max-width: 600px;
+    }
+    .article-week-meta {
+      font-size: 0.65rem;
+      color: var(--muted);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+    .article-week-meta span { color: var(--accent); }
+    @media (max-width: 600px) {
+      .article-week-card { flex-direction: column; }
+      .article-week-accent { width: 100%; height: 4px; }
+      .article-week-body { padding: 1.5rem; }
+    }
+
     /* ── TICKER ── */
     .ticker-wrap {
       overflow: hidden;
@@ -709,6 +773,9 @@ function declineCookies() {
       <span>✦</span> Bananas are berries. Strawberries are not &nbsp;&nbsp;
     </div>
   </div>
+
+  <!-- ARTICLE OF THE WEEK -->
+  <div id="article-of-the-week" class="article-week" style="display:none;"></div>
 
   <div id="scheduled-facts"></div>
 
@@ -1586,10 +1653,68 @@ async function loadScheduledFactsWithLang(lang) {
   if (typeof addScheduledReactions === 'function') addScheduledReactions();
 }
 
-// Initial load of scheduled facts
+// Load Article of the Week
+async function loadArticleOfTheWeek() {
+  var container = document.getElementById('article-of-the-week');
+  if (!container) return;
+
+  var today = new Date();
+  var y = today.getFullYear();
+  var m = String(today.getMonth() + 1).padStart(2, '0');
+  var d = String(today.getDate()).padStart(2, '0');
+  var todayStr = y + '-' + m + '-' + d;
+
+  // Check recent Tuesdays and Thursdays (last 7 days)
+  var latest = null;
+  for (var i = 0; i < 7; i++) {
+    var check = new Date(today);
+    check.setDate(check.getDate() - i);
+    var dow = check.getDay(); // 0=Sun, 2=Tue, 4=Thu
+    if (dow === 2 || dow === 4 || i === 0) {
+      var cy = check.getFullYear();
+      var cm = String(check.getMonth() + 1).padStart(2, '0');
+      var cd = String(check.getDate()).padStart(2, '0');
+      var dateStr = cy + '-' + cm + '-' + cd;
+      try {
+        var resp = await fetch('articles/schedule/' + dateStr + '.json');
+        if (resp.ok) {
+          var data = await resp.json();
+          if (dateStr <= todayStr) {
+            latest = data;
+            break;
+          }
+        }
+      } catch(e) {}
+    }
+  }
+
+  if (!latest) {
+    container.style.display = 'none';
+    return;
+  }
+
+  container.style.display = 'block';
+  var lang = localStorage.getItem('lang') || 'en';
+  var labelText = lang === 'en' ? 'ARTICLE OF THE WEEK' : (i18nData && i18nData[lang] && i18nData[lang]['article_week'] ? i18nData[lang]['article_week'] : 'ARTICLE OF THE WEEK');
+  var readText = lang === 'en' ? 'READ ARTICLE →' : (i18nData && i18nData[lang] && i18nData[lang]['read_article'] ? i18nData[lang]['read_article'] : 'READ ARTICLE →');
+
+  container.innerHTML = '<div class="section-label">' + labelText + '</div>' +
+    '<a href="articles/' + latest.slug + '.html" class="article-week-card">' +
+      '<div class="article-week-accent"></div>' +
+      '<div class="article-week-body">' +
+        '<div class="article-week-tag">' + latest.emoji + ' ' + latest.category + '</div>' +
+        '<h3>' + latest.title + '</h3>' +
+        '<p>' + latest.description + '</p>' +
+        '<div class="article-week-meta"><span>' + readText + '</span> · ' + latest.readTime + ' · ' + latest.date + '</div>' +
+      '</div>' +
+    '</a>';
+}
+
+// Initial load
 (function() {
   var lang = localStorage.getItem('lang') || 'en';
   loadScheduledFactsWithLang(lang);
+  loadArticleOfTheWeek();
 })();
 </script>
 
