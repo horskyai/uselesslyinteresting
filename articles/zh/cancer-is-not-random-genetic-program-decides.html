@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>癌症并非随机 &mdash; 一个隐藏的基因程序决定你的生死 &mdash; UselesslyInteresting</title>
+  <meta name="description" content="来自日内瓦大学、约翰霍普金斯大学和纪念斯隆-凯特琳癌症中心的新研究揭示：癌症并非混乱 &mdash; 它遵循一个隐藏的基因和表观遗传程序。一个名为MangroveGS的AI工具现在可以预测谁能存活。" />
+  <meta name="keywords" content="癌症研究, 转移, 基因程序, 表观遗传学, MangroveGS, KLF5, 癌症扩散, AI癌症预测, uselesslyinteresting" />
+  <link rel="canonical" href="https://uselesslyinteresting.com/articles/zh/cancer-is-not-random-genetic-program-decides.html" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="癌症并非随机 &mdash; 一个隐藏的基因程序决定你的生死" />
+  <meta property="og:description" content="新研究揭示癌症并非混乱 &mdash; 它遵循一个隐藏的基因和表观遗传程序。AI工具现在可以预测谁能存活。" />
+  <meta property="og:url" content="https://uselesslyinteresting.com/articles/zh/cancer-is-not-random-genetic-program-decides.html" />
+  <meta property="og:site_name" content="UselesslyInteresting" />
+  <meta property="og:locale" content="zh_CN" />
+  <meta property="article:published_time" content="2026-03-23" />
+  <meta property="article:section" content="科学" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="癌症并非随机 &mdash; 一个隐藏的基因程序决定你的生死" />
+  <meta name="twitter:description" content="新研究揭示癌症并非混乱 &mdash; 它遵循一个隐藏的基因和表观遗传程序。AI工具现在可以预测谁能存活。" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Mono:ital,wght@0,400;1,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #f5f5f0; --surface: #eaeae4; --card: #ffffff; --accent: #5a8a00;
+      --accent2: #c4168c; --accent3: #0088bb; --text: #1a1a2e; --muted: #5c5c72;
+      --border: rgba(90,138,0,0.15); --card-hover: #f0f0ea; --noise-opacity: 0.15;
+      --shadow: 0 1px 3px rgba(0,0,0,0.06);
+    }
+    [data-theme="dark"] {
+      --bg: #0a0a0f; --surface: #12121a; --card: #1a1a26; --accent: #c8ff3e;
+      --accent2: #ff3ecb; --accent3: #3ec8ff; --text: #e8e8f0; --muted: #6b6b88;
+      --border: rgba(200,255,62,0.12); --card-hover: #1f1f30; --noise-opacity: 0.4;
+      --shadow: none;
+    }
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--text); font-family: 'DM Mono', monospace; min-height: 100vh; overflow-x: hidden; }
+    body::before { content: ''; position: fixed; inset: 0; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E"); pointer-events: none; z-index: 1000; opacity: var(--noise-opacity, 0.15); }
+    a { color: var(--accent); text-decoration: none; } a:hover { text-decoration: underline; }
+    header { padding: 2rem 2rem 0; display: flex; align-items: center; justify-content: center; position: relative; }
+    .logo { font-family: 'Syne', sans-serif; font-weight: 800; font-size: clamp(1.2rem, 3vw, 1.6rem); letter-spacing: -0.03em; line-height: 1; text-decoration: none; color: var(--text); }
+    .logo:hover { text-decoration: none; } .logo span { color: var(--accent); }
+    .logo-sub { font-family: 'DM Mono', monospace; font-size: 0.62rem; color: var(--muted); letter-spacing: 0.15em; text-transform: uppercase; margin-top: 2px; }
+    .theme-toggle { position: fixed; top: 1.5rem; right: 2rem; background: var(--bg); border: 1px solid var(--border); color: var(--muted); font-size: 1rem; padding: 0.3rem 0.6rem; cursor: pointer; transition: color 0.2s, border-color 0.2s; line-height: 1; z-index: 999; }
+    .theme-toggle:hover { color: var(--accent); border-color: var(--accent); }
+    .breadcrumb { max-width: 820px; margin: 2rem auto 0; padding: 0 2rem; font-size: 0.7rem; color: var(--muted); letter-spacing: 0.05em; text-transform: uppercase; }
+    .breadcrumb a { color: var(--muted); transition: color 0.2s; } .breadcrumb a:hover { color: var(--accent); text-decoration: none; }
+    .breadcrumb .sep { margin: 0 0.4rem; opacity: 0.5; }
+    .article-header { max-width: 820px; margin: 2rem auto 0; padding: 0 2rem; }
+    .category-tag { display: inline-block; font-size: 0.62rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); border: 1px solid var(--accent); padding: 0.25rem 0.7rem; margin-bottom: 1.2rem; }
+    .article-header h1 { font-family: 'Syne', sans-serif; font-weight: 800; font-size: clamp(2rem, 5vw, 3.2rem); line-height: 1.05; letter-spacing: -0.03em; margin-bottom: 1rem; }
+    .article-meta { display: flex; gap: 1.5rem; font-size: 0.72rem; color: var(--muted); letter-spacing: 0.05em; text-transform: uppercase; flex-wrap: wrap; }
+    .article-body { max-width: 820px; margin: 3rem auto; padding: 0 2rem; }
+    .article-intro { font-family: 'Instrument Serif', serif; font-size: 1.25rem; line-height: 1.7; color: var(--text); margin-bottom: 2.5rem; font-style: italic; }
+    .article-body p { font-size: 0.92rem; line-height: 1.8; color: var(--text); margin-bottom: 1.2rem; }
+    .article-body p.section-intro { color: var(--muted); font-size: 0.85rem; }
+    .fact-card { background: var(--card); border: 1px solid var(--border); padding: 1.8rem 2rem; margin-bottom: 1.5rem; position: relative; transition: border-color 0.2s; opacity: 0; transform: translateY(16px); }
+    .fact-card:hover { border-color: var(--accent); } .fact-card.visible { animation: fadeUp 0.5s ease both; }
+    .fact-number { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 2.5rem; color: var(--accent); opacity: 0.2; position: absolute; top: 0.8rem; right: 1.2rem; line-height: 1; }
+    .fact-card h2 { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 1.1rem; line-height: 1.3; margin-bottom: 0.8rem; padding-right: 2.5rem; letter-spacing: -0.01em; }
+    .fact-card .fact-text { font-size: 0.88rem; line-height: 1.75; color: var(--text); margin-bottom: 0.8rem; }
+    .fact-card .fact-twist { font-family: 'Instrument Serif', serif; font-style: italic; font-size: 0.92rem; color: var(--accent); line-height: 1.5; }
+    .fact-card blockquote { border-left: 3px solid var(--accent); padding: 0.6rem 1rem; margin: 1rem 0; font-family: 'Instrument Serif', serif; font-style: italic; font-size: 0.95rem; color: var(--accent); line-height: 1.6; }
+    .category-links { max-width: 820px; margin: 2rem auto 0; padding: 0 2rem; }
+    .category-links p { font-size: 0.82rem; color: var(--muted); margin-bottom: 0.8rem; line-height: 1.7; } .category-links a { font-weight: 700; }
+    .article-footer-nav { max-width: 820px; margin: 3rem auto 2rem; padding: 0 2rem; display: flex; gap: 1rem; flex-wrap: wrap; }
+    .article-footer-nav a { display: inline-block; font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); border: 1px solid var(--accent); padding: 0.5rem 1.2rem; transition: background 0.2s, color 0.2s; text-decoration: none; }
+    .article-footer-nav a:hover { background: var(--accent); color: var(--bg); text-decoration: none; }
+    .disclaimer { max-width: 820px; margin: 2rem auto 0; padding: 0 2rem; font-size: 0.72rem; color: var(--muted); line-height: 1.7; border-top: 1px solid var(--border); padding-top: 1.5rem; }
+    footer { text-align: center; padding: 3rem 2rem 2rem; font-size: 0.7rem; color: var(--muted); letter-spacing: 0.05em; border-top: 1px solid var(--border); max-width: 820px; margin: 0 auto; }
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+    .article-header, .article-intro { animation: fadeUp 0.5s ease both; }
+    @media (max-width: 600px) { .article-header h1 { font-size: 1.8rem; } .fact-card { padding: 1.4rem 1.2rem; } .fact-number { font-size: 2rem; top: 0.6rem; right: 0.8rem; } .fact-card h2 { font-size: 1rem; } .theme-toggle { top: 1rem; right: 1rem; } }
+  </style>
+</head>
+<body>
+
+  <button class="theme-toggle" aria-label="切换深色模式" onclick="toggleTheme()">&#9790;</button>
+
+  <header>
+    <div style="text-align:center;">
+      <a href="../../index.html" class="logo">Uselessly<span>Interesting</span></a>
+      <div class="logo-sub">没人要求的冷知识</div>
+    </div>
+  </header>
+
+  <nav class="breadcrumb" aria-label="面包屑导航">
+    <a href="../../index.html">首页</a>
+    <span class="sep">&rsaquo;</span>
+    <a href="../../index.html">文章</a>
+    <span class="sep">&rsaquo;</span>
+    <span>癌症并非随机 &mdash; 一个隐藏的基因程序决定你的生死</span>
+  </nav>
+
+  <div class="article-header">
+    <span class="category-tag">科学</span>
+    <h1>癌症并非随机 &mdash; 一个隐藏的基因程序决定你的生死</h1>
+    <div class="article-meta">
+      <span>2026年3月23日</span>
+      <span>&bull; 阅读约22分钟</span>
+    </div>
+  </div>
+
+  <main class="article-body">
+
+    <p class="article-intro">
+      几十年来，我们被告知癌症是混乱的 &mdash; 失控的叛变细胞，无目的地分裂，无逻辑地杀戮。如果这个故事是错的呢？如果癌症根本不是无政府状态，而是一个程序 &mdash; 一个古老的、扭曲的发育脚本在你体内运行，以冷酷的精确性决定你是活还是死？
+    </p>
+
+    <p class="section-intro">来自日内瓦大学、约翰霍普金斯大学和纪念斯隆-凯特琳癌症中心的新研究正在改写我们对癌症如何扩散的全部认知 &mdash; 以及为什么有些肿瘤会致命而有些不会。</p>
+
+    <div class="fact-card">
+      <div class="fact-number">01</div>
+      <h2>舒适的谎言：癌症是随机混乱</h2>
+      <p class="fact-text">打开过去四十年的任何一本教科书，你都会发现大致相同的故事。一个正常细胞随时间积累随机突变。某天，纯粹因为运气不好，足够多的突变堆积在错误的基因中 &mdash; 肿瘤抑制基因被关闭，致癌基因被激活 &mdash; 细胞失控了。它不受控制地分裂。它忽略所有停止信号。用肿瘤学家使用了几代人的语言来说，它变得"无政府"。</p>
+      <p class="fact-text">这个模型，即体细胞突变理论，自1970年代以来一直主导着癌症生物学。它本质上将癌症描绘为一场彩票。但这里有一个问题多年来一直悄悄困扰着癌症研究人员：如果癌症真的是随机混乱，为什么它又组织得如此可怕？</p>
+      <p class="fact-text">转移性肿瘤不只是生长 &mdash; 它们以特定顺序侵入特定器官。乳腺癌优先扩散到骨骼、肺、肝和大脑，大致按这个顺序。前列腺癌几乎总是先去骨骼。胰腺癌奔向肝脏。这不是随机的。这是一种模式。而模式暗示着一个程序。</p>
+      <p class="fact-twist">半个世纪以来，我们称癌症为"混乱"。但混乱没有首选目的地。混乱不遵循剧本。这里有别的东西在起作用。</p>
+    </div>
+
+    <div class="fact-card">
+      <div class="fact-number">02</div>
+      <h2>日内瓦的突破：癌症是扭曲的发育程序</h2>
+      <p class="fact-text">2026年初，日内瓦大学的一个研究团队在<em>Cell Reports</em>上发表了一篇论文，其核心发现看似简单却影响深远：癌症的行为不像无政府状态。它的行为像是出了错的胚胎发育。</p>
+      <p class="fact-text">转移性癌细胞似乎重新激活了同样的胚胎发育程序的片段。它们不是随机分裂的。它们在遵循指令 &mdash; 被破坏的、扭曲的指令，但毕竟是指令。那些从原发肿瘤脱离并殖民远处器官的细胞正在运行当初构建你身体的同一代码的一个版本。</p>
+      <blockquote>"癌症常被描述为无政府的细胞，但更好的理解是将其视为一种扭曲的发育形式。"</blockquote>
+      <p class="fact-text">这是一个范式转换。如果癌症是一个程序，那它就可以被读取。如果可以被读取，就可以被预测。如果可以被预测，就有可能在它杀人之前被截获。</p>
+      <p class="fact-twist">癌症没有在编写新的剧本。它在阅读一个古老的剧本 &mdash; 构建你的那个 &mdash; 然后反向执行它。</p>
+    </div>
+
+    <div class="fact-card">
+      <div class="fact-number">03</div>
+      <h2>MangroveGS：预测谁会死亡的AI</h2>
+      <p class="fact-text">如果癌症遵循程序，理论上你应该能将该程序输入计算机并预测它接下来会做什么。日内瓦团队正是这样做的。他们构建了一个名为MangroveGS的AI工具 &mdash; 它的精确度令人不安。</p>
+      <p class="fact-text">该工具分析基因表达的整体模式 &mdash; 哪些基因活跃，哪些沉默，这些模式如何在同一肿瘤内不同细胞群之间相互关联。它在读取程序，而不仅仅是检查代码中的拼写错误。</p>
+      <p class="fact-text">在验证研究中，MangroveGS以显著的准确性预测了转移结果。它能区分将保持局部的肿瘤和将扩散到远处器官的肿瘤，通常在任何转移的临床征象出现之前。</p>
+      <p class="fact-text">想象一下，在初始诊断时就知道患者的癌症正在运行一个将在十八个月内杀死他的程序 &mdash; 还是一个将安静地存在几十年的程序。对运行致命程序的给予积极治疗。对运行良性程序的给予主动监测。更少的过度治疗。更少的治疗不足。更少的死亡。</p>
+      <p class="fact-twist">我们构建了一个读取癌症源代码的AI。它能告诉你肿瘤计划做什么，在它做之前。问题是我们是否准备好了接受这个答案。</p>
+    </div>
+
+    <div class="fact-card">
+      <div class="fact-number">04</div>
+      <h2>不是一个叛变细胞 &mdash; 是一场阴谋</h2>
+      <p class="fact-text">日内瓦团队发现，转移不取决于单个细胞独自行动，而取决于基因相关的癌细胞群如何在肿瘤内相互作用。肿瘤内的癌细胞并非完全相同。它们形成了一个由基因不同的亚群组成的复杂生态系统 &mdash; 研究人员称之为"克隆" &mdash; 它们合作、竞争并相互交流。</p>
+      <p class="fact-text">肿瘤不是暴民。它是一个组织。转移不是单个细胞的越狱。它是涉及多个细胞群协同工作的协调行动。</p>
+      <p class="fact-twist">癌细胞不会独自叛变。它们结盟、分工、发动协调入侵。你的肿瘤不是暴动。它是一场有指挥链的军事行动。</p>
+    </div>
+
+    <div class="fact-card">
+      <div class="fact-number">05</div>
+      <h2>KLF5主开关：约翰霍普金斯找到了钥匙</h2>
+      <p class="fact-text">约翰霍普金斯的研究人员发现，转移性胰腺癌并没有携带与原发肿瘤显著不同的基因突变。DNA序列本质上是相同的。答案是表观遗传学。转移性细胞有相同的DNA，但它们以不同方式读取它。</p>
+      <p class="fact-text">在这种表观遗传转变的中心，研究人员发现一个单一基因充当主开关：KLF5。当KLF5表达改变时，它触发了下游变化的级联反应。数百个其他基因被开启或关闭。细胞的身份被重新编程。</p>
+      <p class="fact-text">约翰霍普金斯团队证明，你可以拿一个非转移性胰腺癌细胞，人为改变KLF5调控，然后观察它获得转移行为 &mdash; 无需引入任何新的DNA突变。转移程序已经写入基因组。KLF5只是打开它的开关。</p>
+      <p class="fact-twist">保持原位的癌症和杀死你的癌症之间的区别不在于新突变。而在于一个主开关如何读取现有代码。枪一直是上膛的。KLF5扣下扳机。</p>
+    </div>
+
+    <div class="fact-card">
+      <div class="fact-number">06</div>
+      <h2>表观遗传学：不是你的DNA &mdash; 而是它如何被读取</h2>
+      <p class="fact-text">把DNA想象成一个巨大的图书馆，包含所有曾经写过的书。表观遗传学是图书馆的编目系统 &mdash; 它决定哪些书在展示，哪些锁在仓库里，哪些打开放在阅读桌上。书不会变。但可供阅读的内容改变了图书馆运作的一切。</p>
+      <p class="fact-text">转移从根本上是一个表观遗传事件。癌细胞不需要新的遗传指令来扩散。它已经拥有所需的全部指令，在它的DNA中，继承自构建身体的发育程序。改变的是控制对这些指令访问权的表观遗传景观。</p>
+      <p class="fact-text">治疗的意义令人震惊。与基因突变不同，表观遗传变化是可能可逆的。靶向表观遗传机制的药物 &mdash; DNMT抑制剂、HDAC抑制剂 &mdash; 已经存在。</p>
+      <p class="fact-twist">你的DNA是一本永不改变的书。但癌症已经发现了如何以不同方式读取它 &mdash; 在那个新的阅读中，它找到了毁灭你的指令。可怕的部分？那些指令一直都在。</p>
+    </div>
+
+    <div class="fact-card">
+      <div class="fact-number">07</div>
+      <h2>癌症的社会生活：肿瘤是生态系统</h2>
+      <p class="fact-text">纪念斯隆-凯特琳癌症中心的研究揭示，肿瘤不仅仅是细胞的集合 &mdash; 它们是具有分工、通信网络和只能被描述为社会行为的功能性生态系统。</p>
+      <p class="fact-text">从原发肿瘤脱落并进入血流的癌细胞簇成功建立转移殖民地的可能性是单个细胞的50倍。这是一场全面的殖民行动，而非随机事故。</p>
+      <p class="fact-twist">癌细胞不只是分裂。它们专门化、交流、合作并发动协调攻击。肿瘤不是一种疾病。它是一个社会 &mdash; 一个残酷高效的社会。</p>
+    </div>
+
+    <div class="fact-card">
+      <div class="fact-number">08</div>
+      <h2>在发生之前预测：这对治疗意味着什么</h2>
+      <p class="fact-text">像MangroveGS这样的工具提供了在分子水平上截获转移的可能性，远在它变得可见之前。这种方法有时被称为"预期肿瘤学"，颠覆了当前的模式。</p>
+      <p class="fact-text">KLF5的发现开辟了另一条道路。如果一个主开关控制着使转移成为可能的表观遗传级联反应，那么直接靶向该开关可能在不造成传统化疗附带损害的情况下阻止转移。</p>
+      <p class="fact-text">还有一种令人着迷的可能性：打破癌细胞的社会行为。你不必杀死每一个癌细胞。你只需要瓦解它们的联盟。</p>
+      <p class="fact-twist">这是第一次，我们可以在癌症执行计划之前读取它们。竞赛不再是检测转移 &mdash; 而是预防它。实现这一目标的工具不再是理论性的。</p>
+    </div>
+
+    <div class="fact-card">
+      <div class="fact-number">09</div>
+      <h2>令人不安的真相：有些癌症被编程为致命</h2>
+      <p class="fact-text">如果癌症遵循程序，而有些程序比其他更致命，那么有些癌症在非常真实的意义上从一开始就被编程为致命的。不是因为病程中的坏运气。不是因为诊断延迟。而是因为驱动肿瘤的分子程序从它首次激活的那一刻起就是致命的。</p>
+      <p class="fact-text">日内瓦的数据表明，对于某些肿瘤，转移程序在初始诊断时就已经在运行，即使肿瘤很小且表面上是局部的。如果转移程序植根于发育基因 &mdash; 我们所有人都携带的基因 &mdash; 那么致命癌症的能力在某种意义上写在人类基因组中。</p>
+      <p class="fact-twist">有些癌症不是坏运气。它们运行的程序在第一个症状出现之前就已经是致命的。问题不仅是"我们发现得够早吗？"而是"它在运行什么程序？"我们才刚刚开始学会问这个问题。</p>
+    </div>
+
+    <div class="fact-card">
+      <div class="fact-number">10</div>
+      <h2>我们能黑入这个程序吗？</h2>
+      <p class="fact-text">如果癌症是一个程序，最终目标不仅是读取它 &mdash; 而是重写它。而这是肿瘤学历史上第一次，这个目标在合理范围之内。</p>
+      <p class="fact-text">基于CRISPR的表观遗传编辑正在快速推进。肿瘤的社会生态系统模型提出了生态疗法：打破使肿瘤危险的合作关系。把军队变成乌合之众 &mdash; 仍然危险，但效力大打折扣。</p>
+      <p class="fact-text">我们还没有到那一步。但概念性突破已经发生。我们知道癌症不是随机的。我们知道它遵循程序。我们知道那些程序可以被读取。整个人类技术史告诉我们：一旦我们能读取一个程序，我们最终就会学会重写它。</p>
+      <p class="fact-twist">癌症是一个程序。我们刚刚学会了读取它。下一步是黑入它。这是历史上第一次，这不是科幻小说 &mdash; 它是一个有明确目标、真实工具和真实机会的研究议程。</p>
+    </div>
+
+    <p style="margin-top: 2rem;">癌症的故事一直是关于控制的故事 &mdash; 或者说缺乏控制。几十年来，我们告诉自己癌症是随机的、混乱的、不可预测的。但事实证明，真相比舒适的谎言更复杂，也更有趣。</p>
+
+    <p>癌症是一个程序。构建你身体的发育代码的扭曲回声。理解这一点并不会让癌症变得不那么可怕。但它让癌症变得不那么神秘。在人类智慧与致命疾病的漫长战争中，神秘一直是真正的敌人。</p>
+
+    <p>我们现在可以读取这个程序。下一个篇章 &mdash; 我们学会重写它的那一章 &mdash; 刚刚开始。</p>
+
+  </main>
+
+  <div class="disclaimer">
+    <p><strong>免责声明：</strong>本文仅供信息和教育目的。不构成医疗建议。如果您或您认识的人被诊断出癌症，请咨询合格的医疗专业人员以获得诊断和治疗指导。此处讨论的研究正在进行中，尚未转化为批准的临床方案。</p>
+  </div>
+
+  <div class="category-links">
+    <p>对更多科学深度探索感兴趣？在<a href="../../index.html">UselesslyInteresting</a>上探索更多：</p>
+    <p>
+      <a href="../../index.html">生物学</a> &bull;
+      <a href="../../index.html">太空</a> &bull;
+      <a href="../../index.html">历史</a> &bull;
+      <a href="../../index.html">自然</a> &bull;
+      <a href="../../index.html">动物</a> &bull;
+      <a href="../../index.html">科学</a> &bull;
+      <a href="../../index.html">猎奇</a>
+    </p>
+    <p>或查看我们的其他文章：
+      <a href="mind-bending-science-facts-that-sound-fake.html">20个听起来像假的烧脑科学事实</a> &bull;
+      <a href="bizarre-animal-facts-you-never-learned-in-school.html">25个学校里从没教过的奇异动物事实</a> &bull;
+      <a href="30-useless-facts-that-will-blow-your-mind.html">30个让你大开眼界的无用事实</a>
+    </p>
+  </div>
+
+  <div class="article-footer-nav">
+    <a href="../../index.html">&larr; 返回首页</a>
+    <a href="../../index.html">探索每日事实</a>
+    <a href="mind-bending-science-facts-that-sound-fake.html">阅读：科学事实</a>
+  </div>
+
+  <footer>
+    <p>&copy; 2026 UselesslyInteresting. 所有事实已验证。某些世界观已永久重新校准。</p>
+  </footer>
+
+  <script>
+    function toggleTheme() {
+      var html = document.documentElement;
+      var current = html.getAttribute('data-theme');
+      var next = current === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('ui-theme', next);
+      document.querySelector('.theme-toggle').textContent = next === 'dark' ? '\u2600' : '\u263E';
+    }
+    (function() {
+      var saved = localStorage.getItem('ui-theme');
+      if (saved === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        document.addEventListener('DOMContentLoaded', function() {
+          document.querySelector('.theme-toggle').textContent = '\u2600';
+        });
+      }
+    })();
+    document.addEventListener('DOMContentLoaded', function() {
+      var cards = document.querySelectorAll('.fact-card');
+      if ('IntersectionObserver' in window) {
+        var observer = new IntersectionObserver(function(entries) {
+          entries.forEach(function(entry) {
+            if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
+          });
+        }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+        cards.forEach(function(card) { observer.observe(card); });
+      } else { cards.forEach(function(card) { card.classList.add('visible'); }); }
+    });
+  </script>
+
+</body>
+</html>
