@@ -318,68 +318,105 @@
     }
 
 
-    /* ── ARTICLE OF THE WEEK ── */
-    .article-week {
+    /* ── ARTICLES SECTION ── */
+    .articles-section {
       max-width: 1100px;
       margin: 0 auto;
       padding: 0 2rem 3rem;
     }
-    .article-week-card {
+    .articles-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.2rem;
+    }
+    .article-card-home {
       display: flex;
-      gap: 2rem;
+      flex-direction: column;
       background: var(--card);
       box-shadow: var(--shadow);
       overflow: hidden;
-      transition: box-shadow 0.3s;
+      transition: box-shadow 0.3s, background 0.3s;
       text-decoration: none;
       color: inherit;
+      position: relative;
     }
-    .article-week-card:hover { box-shadow: 0 4px 20px rgba(0,0,0,0.1); }
-    .article-week-accent {
-      width: 6px;
-      flex-shrink: 0;
+    .article-card-home::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
       background: var(--accent);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.4s ease;
     }
-    .article-week-body {
-      padding: 2rem 2rem 2rem 0;
+    .article-card-home:hover::before { transform: scaleX(1); }
+    .article-card-home:hover { box-shadow: 0 4px 20px rgba(0,0,0,0.1); }
+    .article-card-home .card-body {
+      padding: 1.5rem;
       flex: 1;
+      display: flex;
+      flex-direction: column;
     }
-    .article-week-tag {
-      font-size: 0.6rem;
+    .article-card-home .card-tag {
+      font-size: 0.55rem;
       letter-spacing: 0.2em;
       text-transform: uppercase;
       color: var(--accent);
       border: 1px solid var(--accent);
-      padding: 0.2rem 0.6rem;
+      padding: 0.15rem 0.5rem;
       display: inline-block;
       margin-bottom: 0.8rem;
+      align-self: flex-start;
     }
-    .article-week-body h3 {
+    .article-card-home h3 {
       font-family: 'Syne', sans-serif;
       font-weight: 800;
-      font-size: clamp(1.2rem, 3vw, 1.8rem);
-      line-height: 1.15;
+      font-size: clamp(0.9rem, 2vw, 1.15rem);
+      line-height: 1.2;
       letter-spacing: -0.02em;
-      margin-bottom: 0.8rem;
+      margin-bottom: 0.6rem;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
     }
-    .article-week-body p {
-      font-size: 0.82rem;
+    .article-card-home .card-desc {
+      font-size: 0.75rem;
       color: var(--muted);
-      line-height: 1.6;
-      margin-bottom: 1rem;
-      max-width: 600px;
+      line-height: 1.5;
+      flex: 1;
     }
-    .article-week-meta {
-      font-size: 0.65rem;
+    .article-card-home .card-meta {
+      font-size: 0.6rem;
       color: var(--muted);
       letter-spacing: 0.1em;
       text-transform: uppercase;
+      margin-top: 1rem;
+      padding-top: 0.8rem;
+      border-top: 1px solid var(--border);
     }
-    .article-week-meta span { color: var(--accent); }
+    .article-card-home .card-meta span { color: var(--accent); }
+    .articles-more {
+      display: block;
+      text-align: center;
+      margin-top: 1.5rem;
+      padding: 0.8rem 2rem;
+      border: 1px solid var(--accent);
+      color: var(--accent);
+      text-decoration: none;
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      transition: background 0.3s, color 0.3s;
+    }
+    .articles-more:hover {
+      background: var(--accent);
+      color: var(--bg);
+    }
     @media (max-width: 600px) {
-      .article-week-card { flex-direction: column; }
-      .article-week-accent { width: 100%; height: 4px; }
-      .article-week-body { padding: 1.5rem; }
+      .articles-grid { grid-template-columns: 1fr; }
+      .article-card-home .card-body { padding: 1.2rem; }
     }
 
     /* ── TICKER ── */
@@ -776,8 +813,8 @@ function declineCookies() {
     </div>
   </div>
 
-  <!-- ARTICLE OF THE WEEK -->
-  <div id="article-of-the-week" class="article-week" style="display:none;"></div>
+  <!-- ARTICLES SECTION -->
+  <div id="articles-section" class="articles-section" style="display:none;"></div>
 
   <div id="scheduled-facts"></div>
 
@@ -1455,8 +1492,9 @@ function setLanguage(lang) {
   document.getElementById('lang-menu').classList.remove('open');
   applyLanguage(lang);
   updateLangButtons();
-  // Reload dynamic facts with new language
+  // Reload dynamic facts and articles with new language
   reloadFactsWithLang(lang);
+  loadArticlesSection();
 }
 
 function cycleLang() {
@@ -1658,67 +1696,50 @@ async function loadScheduledFactsWithLang(lang) {
   if (typeof addScheduledReactions === 'function') addScheduledReactions();
 }
 
-// Load Article of the Week
-async function loadArticleOfTheWeek() {
-  var container = document.getElementById('article-of-the-week');
+// Load Articles Section
+async function loadArticlesSection() {
+  var container = document.getElementById('articles-section');
   if (!container) return;
 
-  var today = new Date();
-  var y = today.getFullYear();
-  var m = String(today.getMonth() + 1).padStart(2, '0');
-  var d = String(today.getDate()).padStart(2, '0');
-  var todayStr = y + '-' + m + '-' + d;
+  // Hardcoded list of published articles (newest first)
+  var articles = [
+    { slug: 'thc-creates-false-memories-your-brain-is-lying', key: 'thc', emoji: '🧠', category: 'Science', title: 'THC Can Create Memories That Never Happened', description: 'A groundbreaking study reveals cannabis creates entirely new memories that never happened.', date: 'March 23, 2026', readTime: '15 min read' },
+    { slug: 'cancer-is-not-random-genetic-program-decides', key: 'cancer', emoji: '🧬', category: 'Science', title: "Cancer Isn't Random \u2014 A Hidden Genetic Program Decides", description: 'New research reveals cancer metastasis follows a genetic program \u2014 not random chaos.', date: 'March 23, 2026', readTime: '15 min read' },
+    { slug: 'bull-sharks-have-friends-and-choose-them-carefully', key: 'sharks', emoji: '🦈', category: 'Animals', title: 'Bull Sharks Have Friends \u2014 And Choose Them Carefully', description: 'A six-year study of 184 bull sharks reveals they form friendships and complex social networks.', date: 'March 23, 2026', readTime: '18 min read' },
+    { slug: 'hedgehogs-hear-ultrasound-secret-superpower', key: 'hedgehog', emoji: '🦔', category: 'Animals', title: "Hedgehogs Hear Sounds Humans Can't", description: 'Scientists discovered hedgehogs hear ultrasound up to 85kHz \u2014 invisible to humans, dogs, and cats.', date: 'March 23, 2026', readTime: '15 min read' }
+  ];
 
-  // Check recent Tuesdays and Thursdays (last 7 days)
-  var latest = null;
-  for (var i = 0; i < 7; i++) {
-    var check = new Date(today);
-    check.setDate(check.getDate() - i);
-    var dow = check.getDay(); // 0=Sun, 2=Tue, 4=Thu
-    if (dow === 2 || dow === 4 || i === 0) {
-      var cy = check.getFullYear();
-      var cm = String(check.getMonth() + 1).padStart(2, '0');
-      var cd = String(check.getDate()).padStart(2, '0');
-      var dateStr = cy + '-' + cm + '-' + cd;
-      try {
-        var resp = await fetch('articles/schedule/' + dateStr + '.json');
-        if (resp.ok) {
-          var data = await resp.json();
-          if (dateStr <= todayStr) {
-            latest = data;
-            break;
-          }
-        }
-      } catch(e) {}
-    }
-  }
-
-  if (!latest) {
-    container.style.display = 'none';
-    return;
-  }
-
-  container.style.display = 'block';
   var lang = localStorage.getItem('lang') || 'en';
-  var labelText = lang === 'en' ? 'ARTICLE OF THE WEEK' : (i18nData && i18nData[lang] && i18nData[lang]['article_week'] ? i18nData[lang]['article_week'] : 'ARTICLE OF THE WEEK');
-  var readText = lang === 'en' ? 'READ ARTICLE →' : (i18nData && i18nData[lang] && i18nData[lang]['read_article'] ? i18nData[lang]['read_article'] : 'READ ARTICLE →');
+  var labelText = lang === 'en' ? 'ARTICLES' : (i18nData && i18nData[lang] && i18nData[lang]['nav_articles'] ? i18nData[lang]['nav_articles'].toUpperCase() : 'ARTICLES');
+  var readText = lang === 'en' ? 'READ ARTICLE \u2192' : (i18nData && i18nData[lang] && i18nData[lang]['articles_read_article'] ? i18nData[lang]['articles_read_article'] : 'READ ARTICLE \u2192');
+  var moreText = lang === 'en' ? 'VIEW ALL ARTICLES' : (i18nData && i18nData[lang] && i18nData[lang]['articles_view_all'] ? i18nData[lang]['articles_view_all'] : 'VIEW ALL ARTICLES');
 
-  var aTitle = (lang !== 'en' && latest['title_' + lang]) ? latest['title_' + lang] : latest.title;
-  var aDesc = (lang !== 'en' && latest['description_' + lang]) ? latest['description_' + lang] : latest.description;
-  var aCat = (lang !== 'en' && latest['category_' + lang]) ? latest['category_' + lang] : latest.category;
-  var aRead = (lang !== 'en' && latest['readTime_' + lang]) ? latest['readTime_' + lang] : latest.readTime;
-  var aHref = lang !== 'en' ? 'articles/' + lang + '/' + latest.slug + '.html' : 'articles/' + latest.slug + '.html';
+  var cardsHtml = '';
+  articles.forEach(function(a) {
+    var aTitle = (lang !== 'en' && i18nData && i18nData[lang]) ? (i18nData[lang]['articles_title_' + a.key] || a.title) : a.title;
+    var aDesc = (lang !== 'en' && i18nData && i18nData[lang]) ? (i18nData[lang]['articles_desc_' + a.key] || a.description) : a.description;
+    var aCat = (lang !== 'en' && i18nData && i18nData[lang]) ? (i18nData[lang]['articles_cat_' + a.key] || a.category) : a.category;
+    var aHref = lang !== 'en' ? 'articles/' + lang + '/' + a.slug + '.html' : 'articles/' + a.slug + '.html';
 
-  container.innerHTML = '<div class="section-label">' + labelText + '</div>' +
-    '<a href="' + aHref + '" class="article-week-card">' +
-      '<div class="article-week-accent"></div>' +
-      '<div class="article-week-body">' +
-        '<div class="article-week-tag">' + latest.emoji + ' ' + aCat + '</div>' +
+    cardsHtml += '<a href="' + aHref + '" class="article-card-home">' +
+      '<div class="card-body">' +
+        '<div class="card-tag">' + a.emoji + ' ' + aCat + '</div>' +
         '<h3>' + aTitle + '</h3>' +
-        '<p>' + aDesc + '</p>' +
-        '<div class="article-week-meta"><span>' + readText + '</span> · ' + aRead + ' · ' + latest.date + '</div>' +
+        '<p class="card-desc">' + aDesc + '</p>' +
+        '<div class="card-meta"><span>' + readText + '</span> \u00b7 ' + a.readTime + '</div>' +
       '</div>' +
     '</a>';
+  });
+
+  container.style.display = 'block';
+  container.innerHTML = '<div class="section-label">' + labelText + '</div>' +
+    '<div class="articles-grid">' + cardsHtml + '</div>' +
+    '<a href="articles.html" class="articles-more">' + moreText + '</a>';
+}
+
+// Compatibility stub
+async function loadArticleOfTheWeek() {
+  return loadArticlesSection();
 }
 
 // Initial load
