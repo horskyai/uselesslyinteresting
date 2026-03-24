@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>دماغك يتنبأ بالمستقبل قبل 10 ثوانٍ — UselesslyInteresting</title>
+  <meta name="description" content="دماغك آلة تنبؤ تحاكي المستقبل قبل حدوثه بعشر ثوانٍ. استكشف علم الأعصاب وراء الترميز التنبؤي، والإطلاق العصبي الاستباقي، ولماذا الواقع هو أفضل تخمين لدماغك." />
+  <meta name="keywords" content="الترميز التنبؤي, دماغ آلة تنبؤ, Karl Friston الطاقة الحرة, الإطلاق العصبي الاستباقي, الدماغ البايزي, خطأ التنبؤ, uselesslyinteresting" />
+  <link rel="canonical" href="https://uselesslyinteresting.com/articles/ar/your-brain-predicts-the-future-10-seconds-ahead.html" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="دماغك يتنبأ بالمستقبل قبل 10 ثوانٍ" />
+  <meta property="og:description" content="دماغك آلة تنبؤ تحاكي المستقبل قبل حدوثه بعشر ثوانٍ. استكشف علم الأعصاب وراء الترميز التنبؤي والإطلاق العصبي الاستباقي." />
+  <meta property="og:url" content="https://uselesslyinteresting.com/articles/ar/your-brain-predicts-the-future-10-seconds-ahead.html" />
+  <meta property="og:site_name" content="UselesslyInteresting" />
+  <meta property="og:locale" content="ar_AR" />
+  <meta property="article:published_time" content="2026-03-24" />
+  <meta property="article:section" content="علم الأعصاب" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="دماغك يتنبأ بالمستقبل قبل 10 ثوانٍ" />
+  <meta name="twitter:description" content="دماغك آلة تنبؤ تحاكي المستقبل قبل حدوثه بعشر ثوانٍ." />
+
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Mono:ital,wght@0,400;1,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+  <script>
+    window.OneSignalDeferred = window.OneSignalDeferred || [];
+    OneSignalDeferred.push(async function(OneSignal) {
+      await OneSignal.init({
+        appId: "24700e99-9d0e-47fe-93a7-cd255c8cc047",
+        safari_web_id: "web.onesignal.auto.2b30b273-8f48-4327-8bae-bed77c33071b",
+        notifyButton: { enable: true },
+      });
+    });
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #f5f5f0; --surface: #eaeae4; --card: #ffffff; --accent: #5a8a00;
+      --accent2: #c4168c; --accent3: #0088bb; --text: #1a1a2e; --muted: #5c5c72;
+      --border: rgba(90,138,0,0.15); --card-hover: #f0f0ea; --noise-opacity: 0.15;
+      --shadow: 0 1px 3px rgba(0,0,0,0.06);
+    }
+    [data-theme="dark"] {
+      --bg: #0a0a0f; --surface: #12121a; --card: #1a1a26; --accent: #c8ff3e;
+      --accent2: #ff3ecb; --accent3: #3ec8ff; --text: #e8e8f0; --muted: #6b6b88;
+      --border: rgba(200,255,62,0.12); --card-hover: #1f1f30; --noise-opacity: 0.4;
+      --shadow: none;
+    }
+
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--text); font-family: 'DM Mono', monospace; min-height: 100vh; overflow-x: hidden; }
+    body::before { content: ''; position: fixed; inset: 0; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E"); pointer-events: none; z-index: 1000; opacity: var(--noise-opacity, 0.15); }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    header { padding: 2rem 2rem 0; display: flex; align-items: center; justify-content: center; position: relative; }
+    .logo { font-family: 'Syne', sans-serif; font-weight: 800; font-size: clamp(1.2rem, 3vw, 1.6rem); letter-spacing: -0.03em; line-height: 1; text-decoration: none; color: var(--text); }
+    .logo:hover { text-decoration: none; }
+    .logo span { color: var(--accent); }
+    .logo-sub { font-family: 'DM Mono', monospace; font-size: 0.62rem; color: var(--muted); letter-spacing: 0.15em; text-transform: uppercase; margin-top: 2px; }
+
+    .theme-toggle { position: fixed; top: 1.5rem; left: 2rem; right: auto; background: var(--bg); border: 1px solid var(--border); color: var(--muted); font-size: 1rem; padding: 0.3rem 0.6rem; cursor: pointer; transition: color 0.2s, border-color 0.2s; line-height: 1; z-index: 999; }
+    .theme-toggle:hover { color: var(--accent); border-color: var(--accent); }
+
+    .lang-switcher { position: fixed; top: 1.5rem; left: 5rem; right: auto; display: flex; gap: 0.25rem; z-index: 999; }
+    .lang-switcher button { background: var(--bg); border: 1px solid var(--border); color: var(--muted); font-family: 'DM Mono', monospace; font-size: 0.6rem; padding: 0.25rem 0.45rem; cursor: pointer; transition: color 0.2s, border-color 0.2s; letter-spacing: 0.05em; text-transform: uppercase; }
+    .lang-switcher button:hover, .lang-switcher button.active { color: var(--accent); border-color: var(--accent); }
+
+    .breadcrumb { max-width: 820px; margin: 2rem auto 0; padding: 0 2rem; font-size: 0.7rem; color: var(--muted); letter-spacing: 0.05em; text-transform: uppercase; }
+    .breadcrumb a { color: var(--muted); transition: color 0.2s; }
+    .breadcrumb a:hover { color: var(--accent); text-decoration: none; }
+    .breadcrumb .sep { margin: 0 0.4rem; opacity: 0.5; }
+
+    .article-header { max-width: 820px; margin: 2rem auto 0; padding: 0 2rem; }
+    .category-tag { display: inline-block; font-size: 0.62rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); border: 1px solid var(--accent); padding: 0.25rem 0.7rem; margin-bottom: 1.2rem; }
+    .article-header h1 { font-family: 'Syne', sans-serif; font-weight: 800; font-size: clamp(2rem, 5vw, 3.2rem); line-height: 1.2; letter-spacing: -0.03em; margin-bottom: 1rem; }
+    .article-meta { display: flex; gap: 1.5rem; font-size: 0.72rem; color: var(--muted); letter-spacing: 0.05em; text-transform: uppercase; flex-wrap: wrap; }
+
+    .toc { max-width: 820px; margin: 2rem auto 0; padding: 0 2rem; }
+    .toc-box { background: var(--card); border: 1px solid var(--border); padding: 1.5rem 2rem; }
+    .toc-box h2 { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); margin-bottom: 1rem; }
+    .toc-box ol { list-style: none; counter-reset: toc-counter; padding: 0; margin: 0; }
+    .toc-box ol li { counter-increment: toc-counter; font-size: 0.8rem; line-height: 2; color: var(--text); }
+    .toc-box ol li::before { content: counter(toc-counter, decimal-leading-zero) '. '; color: var(--accent); font-weight: 700; font-family: 'Syne', sans-serif; }
+    .toc-box ol li a { color: var(--text); transition: color 0.2s; }
+    .toc-box ol li a:hover { color: var(--accent); text-decoration: none; }
+
+    .article-body { max-width: 820px; margin: 3rem auto; padding: 0 2rem; }
+    .article-intro { font-family: 'Instrument Serif', serif; font-size: 1.25rem; line-height: 1.7; color: var(--text); margin-bottom: 2.5rem; font-style: italic; }
+    .article-body p { font-size: 0.92rem; line-height: 1.8; color: var(--text); margin-bottom: 1.2rem; }
+    .article-body p.section-intro { color: var(--muted); font-size: 0.85rem; }
+
+    .section-card { background: var(--card); border: 1px solid var(--border); padding: 2rem 2.2rem; margin-bottom: 2rem; position: relative; transition: border-color 0.2s; opacity: 0; transform: translateY(16px); }
+    .section-card:hover { border-color: var(--accent); }
+    .section-card.visible { animation: fadeUp 0.5s ease both; }
+    .section-card h2 { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 1.2rem; line-height: 1.3; margin-bottom: 1rem; letter-spacing: -0.01em; color: var(--accent); }
+    .section-card h3 { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 0.95rem; line-height: 1.3; margin-top: 1.2rem; margin-bottom: 0.6rem; letter-spacing: -0.01em; }
+    .section-card p { font-size: 0.88rem; line-height: 1.8; color: var(--text); margin-bottom: 0.8rem; }
+    .section-card .highlight { font-family: 'Instrument Serif', serif; font-style: italic; font-size: 0.95rem; color: var(--accent); line-height: 1.6; margin-top: 1rem; padding-right: 1rem; padding-left: 0; border-right: 2px solid var(--accent); border-left: none; }
+    .section-card ul { list-style: none; padding: 0; margin: 0.8rem 0; }
+    .section-card ul li { font-size: 0.88rem; line-height: 1.8; color: var(--text); padding-right: 1.2rem; padding-left: 0; position: relative; margin-bottom: 0.4rem; }
+    .section-card ul li::before { content: '\2022'; color: var(--accent); font-weight: bold; position: absolute; right: 0; left: auto; }
+    .section-number { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 3rem; color: var(--accent); opacity: 0.12; position: absolute; top: 0.8rem; left: 1.2rem; right: auto; line-height: 1; }
+
+    .sources { max-width: 820px; margin: 0 auto 2rem; padding: 0 2rem; }
+    .sources-box { background: var(--card); border: 1px solid var(--border); padding: 1.5rem 2rem; }
+    .sources-box h2 { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); margin-bottom: 1rem; }
+    .sources-box ol { padding-right: 1.5rem; padding-left: 0; margin: 0; }
+    .sources-box ol li { font-size: 0.75rem; line-height: 1.8; color: var(--muted); margin-bottom: 0.3rem; direction: ltr; text-align: left; }
+    .sources-box ol li em { color: var(--text); }
+
+    .category-links { max-width: 820px; margin: 2rem auto 0; padding: 0 2rem; }
+    .category-links p { font-size: 0.82rem; color: var(--muted); margin-bottom: 0.8rem; line-height: 1.7; }
+    .category-links a { font-weight: 700; }
+
+    .article-footer-nav { max-width: 820px; margin: 3rem auto 2rem; padding: 0 2rem; display: flex; gap: 1rem; flex-wrap: wrap; }
+    .article-footer-nav a { display: inline-block; font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); border: 1px solid var(--accent); padding: 0.5rem 1.2rem; transition: background 0.2s, color 0.2s; text-decoration: none; }
+    .article-footer-nav a:hover { background: var(--accent); color: var(--bg); text-decoration: none; }
+
+    footer { text-align: center; padding: 3rem 2rem 2rem; font-size: 0.7rem; color: var(--muted); letter-spacing: 0.05em; border-top: 1px solid var(--border); max-width: 820px; margin: 0 auto; }
+
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+    .article-header, .article-intro { animation: fadeUp 0.5s ease both; }
+
+    @media (max-width: 600px) {
+      .article-header h1 { font-size: 1.8rem; }
+      .section-card { padding: 1.4rem 1.2rem; }
+      .section-number { font-size: 2rem; top: 0.6rem; left: 0.8rem; }
+      .section-card h2 { font-size: 1.05rem; }
+      .theme-toggle { top: 1rem; left: 1rem; }
+      .lang-switcher { top: 1rem; left: 3.5rem; }
+      .lang-switcher button { font-size: 0.5rem; padding: 0.2rem 0.3rem; }
+      .toc-box { padding: 1rem 1.2rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <button class="theme-toggle" aria-label="تبديل الوضع الداكن" onclick="toggleTheme()">&#9790;</button>
+
+  <div class="lang-switcher">
+    <button onclick="switchLang('en')">EN</button>
+    <button onclick="switchLang('de')">DE</button>
+    <button onclick="switchLang('es')">ES</button>
+    <button onclick="switchLang('fr')">FR</button>
+    <button onclick="switchLang('it')">IT</button>
+    <button class="active" onclick="switchLang('ar')">AR</button>
+    <button onclick="switchLang('zh')">ZH</button>
+    <button onclick="switchLang('ja')">JA</button>
+  </div>
+
+  <header>
+    <div style="text-align:center;">
+      <a href="../../index.html" class="logo">Uselessly<span>Interesting</span></a>
+      <div class="logo-sub">حقائق لم يسأل عنها أحد</div>
+    </div>
+  </header>
+
+  <nav class="breadcrumb" aria-label="مسار التنقل">
+    <a href="../../index.html">الرئيسية</a>
+    <span class="sep">&rsaquo;</span>
+    <a href="../../articles.html">المقالات</a>
+    <span class="sep">&rsaquo;</span>
+    <span>دماغك يتنبأ بالمستقبل قبل 10 ثوانٍ</span>
+  </nav>
+
+  <div class="article-header">
+    <span class="category-tag">علم الأعصاب</span>
+    <h1>دماغك يتنبأ بالمستقبل قبل 10 ثوانٍ</h1>
+    <div class="article-meta">
+      <span>24 مارس 2026</span>
+      <span>&bull; 22 دقيقة قراءة</span>
+    </div>
+  </div>
+
+  <nav class="toc">
+    <div class="toc-box">
+      <h2>جدول المحتويات</h2>
+      <ol>
+        <li><a href="#sec-1">أنت لا تعيش اللحظة الحالية</a></li>
+        <li><a href="#sec-2">مبدأ الطاقة الحرة: نظرية Karl Friston الموحدة الكبرى للدماغ</a></li>
+        <li><a href="#sec-3">الإطلاق العصبي الاستباقي: دماغك يضغط على الزناد قبل أن يُطلق المسدس</a></li>
+        <li><a href="#sec-4">عيناك مسافرتان عبر الزمن: الحركات العينية السريعة الاستباقية</a></li>
+        <li><a href="#sec-5">الكرة البلورية للجهاز الحركي</a></li>
+        <li><a href="#sec-6">التنبؤ الزمني: كيف يحسب دماغك وقتاً لم يمضِ بعد</a></li>
+        <li><a href="#sec-7">الدماغ البايزي: أنت محرك إحصائي متنقل</a></li>
+        <li><a href="#sec-8">التنبؤ الاجتماعي: قراءة العقول قبل أن تتكلم</a></li>
+        <li><a href="#sec-9">عندما يفشل التنبؤ: الفصام كفشل في التوقع</a></li>
+        <li><a href="#sec-10">إشارة خطأ التنبؤ: كيف تنحت المفاجأة واقعك</a></li>
+        <li><a href="#sec-11">أفق الـ 10 ثوانٍ: إلى أي مدى يمكن للدماغ أن يرى حقاً؟</a></li>
+        <li><a href="#sec-12">أنت لم تعش أبداً في اللحظة الحالية</a></li>
+      </ol>
+    </div>
+  </nav>
+
+  <main class="article-body">
+
+    <p class="article-intro">
+      الآن، بينما تقرأ هذه الجملة، دماغك لا يعالج هذه الكلمات في الوقت الفعلي. لقد تنبأ بالفعل بالكلمة التالية قبل أن تصل إليها عيناك. لقد حاكى بالفعل كيف سيمرر إصبعك إلى الفقرة التالية. لقد صمم نماذج لعدة مستقبلات محتملة &mdash; أنت تغلق هذا التبويب، أنت تستمر في القراءة، أنت تمد يدك نحو قهوتك &mdash; ويجري حسابات احتمالية على كل واحد منها. أنت تختبر هذا على أنه &laquo;الحاضر&raquo;. لكن الحاضر، كما يفهمه علم الأعصاب الآن، هو قصة أنهى دماغك كتابتها قبل عدة مئات من الميلي ثانية. أنت تعيش في محاكاة. والمحاكي هو أنت.
+    </p>
+
+    <p class="section-intro">ما يلي هو غوص عميق في واحدة من أكثر الأفكار جذرية في علم الأعصاب الحديث: أن دماغك ليس بشكل أساسي عضواً تفاعلياً يعالج المعلومات الواردة، بل هو محرك تنبؤي استباقي يبني الواقع قبل وصوله. كل ادعاء مبني على بحث منشور. الآثار المترتبة ستغير طريقة تفكيرك في التفكير.</p>
+
+    <div class="section-card" id="sec-1">
+      <div class="section-number">01</div>
+      <h2>أنت لا تعيش اللحظة الحالية</h2>
+      <p>إليك حقيقة يجب أن تزعجك. الإشارة العصبية من شبكية عينك تستغرق حوالي 100 ميلي ثانية للوصول إلى القشرة البصرية. الإشارة من أطراف أصابعك تستغرق وقتاً أطول. بحلول الوقت الذي &laquo;ترى&raquo; فيه شيئاً بوعي، يكون قد حدث بالفعل. بحلول الوقت الذي &laquo;تشعر&raquo; فيه بلمسة، قد تكون اليد التي لمستك قد ابتعدت بالفعل. لو أن دماغك ببساطة يتفاعل مع البيانات الحسية الواردة، لكنت تعيش في عالم متأخر بشكل دائم عُشر ثانية في الماضي.</p>
+      <p>ومع ذلك تمسك كرات البيسبول. تتفادى راكبي الدراجات القادمين نحوك. تُكمل جمل الآخرين. تتنقل في عالم من التغيير المستمر بسلاسة توحي بوعي فوري. كيف؟</p>
+      <p>الجواب، وفقاً لإجماع متنامٍ بين علماء الأعصاب الحسابيين، هو أن دماغك لا ينتظر وصول البيانات الحسية. إنه يتنبأ بما ستكون عليه البيانات قبل وصولها. تجربتك الواعية &mdash; الفيلم السلس في الوقت الفعلي الذي يعمل داخل جمجمتك &mdash; ليس بثاً مباشراً. إنه تنبؤ، يتم توليده باستمرار بواسطة قشرتك الدماغية، ولا يتم تصحيحه إلا عندما ينحرف الواقع بشكل كبير عما كان متوقعاً.</p>
+      <p>هذا ليس مجازاً. وليس تجربة فكرية فلسفية. إنه الادعاء الجوهري لنظرية الترميز التنبؤي، وفي العقد الأخير انتقلت من فكرة هامشية إلى واحد من أكثر الأُطر دعماً في علم الأعصاب. في مراجعة نُشرت عام 2024 في <em>Nature Reviews Neuroscience</em>، وصف الباحثون المعالجة التنبؤية بأنها &laquo;الإطار العام الأكثر واعدية لفهم وظيفة الدماغ&raquo; المتاح حالياً.</p>
+      <p class="highlight">أنت لا ترى العالم. أنت ترى أفضل تخمين لدماغك حول ما سيبدو عليه العالم بحلول الوقت الذي تصبح فيه واعياً به. الوعي توقع، لا تقرير.</p>
+    </div>
+
+    <div class="section-card" id="sec-2">
+      <div class="section-number">02</div>
+      <h2>مبدأ الطاقة الحرة: نظرية Karl Friston الموحدة الكبرى للدماغ</h2>
+      <p>إذا كان للترميز التنبؤي قديس راعٍ، فهو Karl Friston. عالم أعصاب بريطاني في University College London، Friston هو أكثر عالم أعصاب حي استشهاداً في التاريخ &mdash; ومعماري ما قد يكون النظرية الأكثر طموحاً في المجال: مبدأ الطاقة الحرة.</p>
+      <p>الفكرة، مجردة حتى جوهرها، بسيطة بشكل خادع. كل كائن حي، من بكتيريا إلى جراح أعصاب، لديه هدف واحد أعلى: تقليل المفاجأة. في إطار Friston الرياضي، يتم تحديد &laquo;المفاجأة&raquo; رسمياً على أنها الفرق بين ما يتنبأ به النموذج الداخلي للكائن وما يحدث فعلاً. عندما يتطابق تنبؤك مع الواقع، تكون المفاجأة منخفضة وكل شيء على ما يرام. عندما ينحرف الواقع عن التنبؤ، ترتفع المفاجأة بشكل حاد، ويجب على الكائن أن يتصرف &mdash; إما بتحديث نموذجه (تغيير ما يعتقده) أو بتغيير العالم (التصرف لجعل الواقع يتطابق مع التنبؤ).</p>
+      <p>يبدو هذا مجرداً حتى تدرك ما ينطوي عليه. بموجب مبدأ الطاقة الحرة، يمكن فهم الإدراك والعمل والتعلم والانتباه والعاطفة وحتى الوعي نفسه كاستراتيجيات مختلفة لتقليل خطأ التنبؤ. الرؤية تنبؤ. الحركة تنبؤ. الشعور تنبؤ. حياتك الذهنية بأكملها، وفقاً لـ Friston، هي محاولة طويلة ودؤوبة لجعل العالم يتطابق مع القصة التي يرويها دماغك.</p>
+      <p>الشكلية الرياضية وراء هذا متجذرة في الاستدلال البايزي التفاضلي &mdash; مجموعة من المعادلات تصف كيف يمكن لنظام أن يقرب التوزيع الاحتمالي الحقيقي لبيئته باستخدام المعلومات المتاحة له فقط. دماغك، في إطار Friston، يقوم بنسخة من هذا الحساب باستمرار، في كل عمود قشري، على كل مستوى من التسلسل الهرمي العصبي، من لحظة ولادتك حتى لحظة موتك.</p>
+      <p>نُشر في <em>Journal of the Royal Society Interface</em> وتم صقله عبر عشرات الأوراق اللاحقة، وقد أثار مبدأ الطاقة الحرة نقاشاً حاداً. يرى المنتقدون أنه غير قابل للتكذيب &mdash; عام جداً بحيث يمكنه تفسير أي شيء وبالتالي لا يفسر شيئاً. يرد المؤيدون بأن قوته التنبؤية هي بالضبط ما يجعله مفيداً.</p>
+      <p class="highlight">يقترح مبدأ الطاقة الحرة لـ Karl Friston أن الوظيفة الوحيدة العليا للدماغ هي تقليل المفاجأة. كل شيء آخر &mdash; الإدراك، العمل، التعلم، العاطفة &mdash; هو نتيجة ثانوية لهذا الأمر الواحد.</p>
+    </div>
+
+    <div class="section-card" id="sec-3">
+      <div class="section-number">03</div>
+      <h2>الإطلاق العصبي الاستباقي: دماغك يضغط على الزناد قبل أن يُطلق المسدس</h2>
+      <p>إذا كان الدماغ آلة تنبؤ، فيجب أن تتمكن من القبض عليه متلبساً &mdash; يطلق خلايا عصبية قبل وقوع الأحداث. ويمكنك ذلك. الأدلة مذهلة.</p>
+      <p>في عام 2018، استخدم باحثون في معهد ماكس بلانك للعلوم المعرفية والدماغية التصوير المغناطيسي للدماغ (MEG) لدراسة ما يحدث في الدماغ عندما يستمع الناس إلى الموسيقى. وجدوا أن القشرة السمعية تولّد استجابات عصبية للنوتات المتوقعة <em>قبل عزف تلك النوتات</em>. لم يكن الدماغ يسمع الموسيقى فحسب. كان يؤلف تنبؤاً بالموسيقى قبل بضع مئات من الميلي ثانية ثم يتحقق من الصوت الحقيقي مقابل نوتته الداخلية.</p>
+      <p>ظهرت نتائج مماثلة عبر مختلف الحواس. في الإدراك البصري، تُظهر الخلايا العصبية في القشرة البصرية الأولية (V1) معدلات إطلاق متزايدة للمحفزات المتوقعة قبل ظهورها على الشبكية. في دراسة بارزة عام 2020 نُشرت في <em>Neuron</em>، أثبت باحثون في جامعة كولومبيا أن خلايا V1 العصبية تحمل معلومات عن الخصائص البصرية المتوقعة أكثر مما تحمل عن المدخلات البصرية الفعلية. كان التنبؤ، بالمعنى الحرفي، أقوى من الواقع.</p>
+      <p>هذه ليست ظاهرة قشرية فحسب. في عام 2023، أظهر فريق في معهد هولندا لعلم الأعصاب أن حتى البنى تحت القشرية &mdash; بما في ذلك الأكيمة العلوية، منطقة دماغية قديمة مرتبطة باستجابات التوجيه &mdash; تُظهر إطلاقاً استباقياً. آلية التنبؤ لا تعمل فقط في المكاتب التنفيذية للدماغ. إنها تمتد حتى القبو.</p>
+      <p class="highlight">خلاياك العصبية تطلق قبل وقوع الأحداث. القشرة السمعية تتنبأ بالنوتة التالية قبل عزفها. القشرة البصرية تتنبأ بالصورة التالية قبل ظهورها. أنت تعيش في استباق، لا في رد فعل.</p>
+    </div>
+
+    <div class="section-card" id="sec-4">
+      <div class="section-number">04</div>
+      <h2>عيناك مسافرتان عبر الزمن: الحركات العينية السريعة الاستباقية</h2>
+      <p>عيناك تتحركان في قفزات سريعة تُسمى الحركات العينية السريعة (السكاد) &mdash; ثلاث إلى خمس في الثانية، كل لحظة يقظة في حياتك. بين هذه القفزات، عيناك ثابتتان بشكل أساسي تجمعان المعلومات. القفزات نفسها سريعة جداً بحيث يقمع دماغك المعالجة البصرية خلالها لمنع ضبابية الحركة. أنت أعمى وظيفياً لجزء كبير من كل ثانية، ولا تلاحظ ذلك أبداً.</p>
+      <p>ما يجعل السكادات ذات صلة بالتنبؤ هو أنها ليست عشوائية. عيناك لا تقفزان إلى حيث يحدث شيء مثير. بل تقفزان إلى حيث شيء مثير <em>على وشك أن يحدث</em>.</p>
+      <p>أثبت باحثون في جامعة كاليفورنيا، بيركلي، في سلسلة من دراسات تتبع العين أنه عندما يشاهد الناس تسلسلات متوقعة &mdash; كرة ترتد، شخص يمشي، سيارة تقترب من تقاطع &mdash; تصل حركات عيونهم السريعة إلى الموقع المتوقع <em>قبل أن يصل الهدف</em>. العيون لا تتبع الحدث. إنها تقوده. نظرتك تهبط على المكان الذي ستقفز إليه الكرة قبل أن تصل الكرة إلى هناك.</p>
+      <p>هذه الظاهرة، المعروفة بالسكادات الاستباقية، تم توثيقها عند الرضع بعمر أربعة أشهر فقط. قبل أن يستطيع الطفل الزحف أو الكلام أو أن يكون لديه أي فهم واعٍ للفيزياء، يكون دماغه بالفعل يولّد تنبؤات حول مسارات الأجسام المتحركة ويوجه عينيه لاعتراضها.</p>
+      <p class="highlight">عيناك لا تتبعان العالم. إنهما تسبقانه. نظرة الرضيع تصل إلى نقطة هبوط الكرة المرتدة قبل أن تصل الكرة. جهازك البصري آلة زمنية مصغرة، تعيش باستمرار بضع مئات من الميلي ثانية في المستقبل.</p>
+    </div>
+
+    <div class="section-card" id="sec-5">
+      <div class="section-number">05</div>
+      <h2>الكرة البلورية للجهاز الحركي</h2>
+      <p>جرّب هذا. امدد ذراعك أمامك. الآن، وعيناك مغمضتان، المس طرف أنفك بإصبع السبابة. من شبه المؤكد أنك نجحت من المحاولة الأولى. كيف؟ عيناك كانتا مغمضتين. لم تستطع رؤية إصبعك أو أنفك. لم يكن هناك تغذية راجعة خارجية لتوجيه الحركة.</p>
+      <p>الجواب هو نظام يُسمى النموذج الأمامي &mdash; دائرة تنبؤ موجودة في المخيخ والقشرة الحركية. في كل مرة يرسل فيها دماغك أمراً حركياً إلى عضلاتك، يولّد في الوقت نفسه تنبؤاً بما ستكون عليه العواقب الحسية لتلك الحركة. يتم تخطيط الحركة ومحاكاتها وإكمالها افتراضياً قبل أن تبدأ ذراعك بالتحرك.</p>
+      <p>هذا النموذج الأمامي هو ما يتيح لك التمييز بين الأحاسيس الذاتية والخارجية. عندما تلمس ذراعك، يبدو الإحساس مكتوماً مقارنة بما لو لمسه شخص آخر في نفس المكان بالضبط. ذلك لأن النموذج الأمامي تنبأ باللمسة الذاتية وألغى جزءاً من الإشارة الحسية. لهذا السبب لا تستطيع دغدغة نفسك &mdash; التنبؤ دقيق جداً.</p>
+      <p>جادل Daniel Wolpert، عالم أعصاب في جامعة كولومبيا، بأن نظام التنبؤ الحركي أساسي لدرجة أنه قد يكون السبب الأصلي الذي تطورت من أجله الأدمغة. أشار إلى حيوان زقاق البحر الذي يسبح بحرية كيرقة (ويملك دماغاً بدائياً) لكنه يصبح ثابتاً كبالغ &mdash; وعندها يهضم دماغه الخاص. إذا لم تحتج للتحرك، لا تحتاج للتنبؤ. وإذا لم تحتج للتنبؤ، لا تحتاج لدماغ.</p>
+      <p class="highlight">مخيخك يحاكي كل حركة قبل أن تقوم بها. تستطيع لمس أنفك وعيناك مغمضتان لأن دماغك أكمل الحركة افتراضياً بالفعل. لا تستطيع دغدغة نفسك لأن التنبؤ جيد جداً. الحركة والتنبؤ والوعي قد تكون الشيء نفسه.</p>
+    </div>
+
+    <div class="section-card" id="sec-6">
+      <div class="section-number">06</div>
+      <h2>التنبؤ الزمني: كيف يحسب دماغك وقتاً لم يمضِ بعد</h2>
+      <p>دماغك لا يتنبأ فقط بـ<em>ما</em> سيحدث. بل يتنبأ بـ<em>متى</em> سيحدث. ويفعل ذلك بدقة مذهلة.</p>
+      <p>في دراسة عام 2022 نُشرت في <em>PNAS</em>، استخدم باحثون في جامعة أوريغون التصوير بالرنين المغناطيسي الوظيفي لرسم خريطة النشاط العصبي أثناء استماع المشاركين لتسلسلات سمعية إيقاعية بفجوات مؤقتة دقيقة. وجدوا أن استجابة الدماغ للصمت خلال الفجوة كانت شبه مطابقة لاستجابته للصوت الذي <em>كان يجب أن يكون هناك</em>. كانت القشرة السمعية تولّد الصوت المتوقع في الوقت المتوقع، حتى في غيابه. كان الدماغ ملتزماً بتنبؤه الزمني لدرجة أنه هلوس النبضة المفقودة.</p>
+      <p>هذه الآلية التنبؤية الزمنية هي ما يجعل الموسيقى ممكنة. عندما تنقر بقدمك على إيقاع، يكون جهازك الحركي مقفلاً في نموذج أمامي للبنية الزمنية للنبض. قدمك تضرب الأرض في اللحظة نفسها التي يصل فيها النبض &mdash; ليس لأنك سمعت النبض ثم تحركت، بل لأن دماغك تنبأ بموعد وصول النبض وجدول الأمر الحركي ليتزامن معه.</p>
+      <p>في عام 2025، أظهر فريق في جامعة ويسترن أونتاريو أن إشارات التنبؤ الزمني تنشأ في الحُصين &mdash; نفس البنية المرتبطة تقليدياً بالذاكرة &mdash; وتنتشر إلى القشور الحسية قبل الأحداث المتوقعة. الحُصين، على ما يبدو، ليس مجرد عضو ذاكرة. إنه عضو تنبؤ يستخدم ذكريات الماضي لتوليد توقعات المستقبل.</p>
+      <p class="highlight">دماغك لا يتنبأ فقط بما سيحدث، بل بالضبط متى. يولّد تجربة نبضة مفقودة في إيقاع. حُصينك &mdash; مركز ذاكرة الدماغ &mdash; هو سراً آلة زمنية، يستخدم أنماط الماضي لمحاكاة أنماط المستقبل.</p>
+    </div>
+
+    <div class="section-card" id="sec-7">
+      <div class="section-number">07</div>
+      <h2>الدماغ البايزي: أنت محرك إحصائي متنقل</h2>
+      <p>إذا كان الدماغ يولّد تنبؤات، فلا بد من وجود إطار حسابي يصف كيف يفعل ذلك. المرشح الأبرز هو الاستدلال البايزي &mdash; طريقة رياضية لتحديث المعتقدات بناءً على الأدلة، سُميت على اسم الإحصائي توماس بايز من القرن الثامن عشر.</p>
+      <p>إليك نظرية بايز ببساطة: دماغك يحتفظ بمجموعة من المعتقدات حول العالم (تُسمى الاحتمالات المسبقة). عندما تصل أدلة جديدة عبر حواسك (تُسمى الاحتمالية)، يجمع دماغك المعتقد السابق مع الدليل الجديد لإنتاج معتقد محدّث (يُسمى الاحتمال اللاحق). إذا تعارض الدليل بقوة مع المعتقد المسبق، ينزاح اللاحق نحو الدليل. إذا كان الدليل ضعيفاً أو غامضاً، يبقى اللاحق قريباً من المسبق.</p>
+      <p>هذا ليس مجازياً. في سلسلة تجارب نُشرت بين 2020 و2025، أظهر باحثون في جامعة روتشستر أن القرارات الإدراكية البشرية تتبع الإحصاء البايزي بدقة ملحوظة. الإطار البايزي يفسر طيفاً واسعاً من الظواهر الإدراكية. الأوهام البصرية، مثلاً، يمكن إعادة صياغتها كحالات تتغلب فيها توقعاتك المسبقة على أدلة حسية ضعيفة.</p>
+      <p class="highlight">دماغك آلة حاسبة بايزية. لا يعالج الواقع الخام. يجمع بين التوقعات المسبقة والأدلة الواردة لحساب التفسير الأكثر احتمالاً. ما تراه ليس ما هو موجود &mdash; بل ما هو الأكثر احتمالاً أن يكون موجوداً، بالنظر إلى كل ما عشته.</p>
+    </div>
+
+    <div class="section-card" id="sec-8">
+      <div class="section-number">08</div>
+      <h2>التنبؤ الاجتماعي: قراءة العقول قبل أن تتكلم</h2>
+      <p>الترميز التنبؤي لا يتوقف عند الفيزياء والإدراك. إنه يمتد إلى أكثر المجالات تعقيداً: الآخرون.</p>
+      <p>في دراسة عام 2023 نُشرت في <em>Nature Human Behaviour</em>، استخدم باحثون في جامعة كامبريدج التصوير بالرنين المغناطيسي الوظيفي لمسح أدمغة المشاركين أثناء مشاهدتهم لفيديوهات تفاعلات اجتماعية. وجدوا أن الوصل الصدغي الجداري (TPJ) &mdash; منطقة مرتبطة بنظرية العقل &mdash; ولّد إشارات تنبؤية عن الفعل التالي للشخص المُراقب حتى أربع ثوانٍ قبل وقوع ذلك الفعل.</p>
+      <p>هذا النظام التنبؤي الاجتماعي هو ما يتيح لك التنقل في محادثة دون تأخيرات كارثية. عندما يتحدث إليك شخص ما، يتنبأ دماغك في الوقت نفسه بالبنية النحوية لجملته والمحتوى الدلالي لكلمته التالية والمسار العاطفي لحجته. بحلول انتهائه من الجملة، تكون قد بدأت بالفعل في صياغة ردك.</p>
+      <p>لهذا آثار عميقة على التعاطف. إذا كان دماغك يحاكي باستمرار الحالات الذهنية للآخرين ويتنبأ بسلوكهم، فإن التعاطف ليس مجرد استجابة عاطفية. إنه تنبؤ. أنت تشعر بما يشعر به الآخر لأن دماغك أجرى محاكاة لوضعه وولّد الناتج العاطفي المتوقع.</p>
+      <p class="highlight">دماغك يتنبأ بأفكار الآخرين وكلماتهم وأفعالهم ثوانٍ قبل حدوثها. التعاطف نفسه قد يكون تنبؤاً &mdash; دماغك يحاكي الحالة العاطفية لشخص آخر ويولّد الشعور المتوقع في جسدك أنت.</p>
+    </div>
+
+    <div class="section-card" id="sec-9">
+      <div class="section-number">09</div>
+      <h2>عندما يفشل التنبؤ: الفصام كفشل في التوقع</h2>
+      <p>إذا كان الدماغ بشكل جوهري آلة تنبؤ، فإن اضطرابات التنبؤ يجب أن تُنتج اضطرابات في التجربة. هذا بالضبط ما يجده الباحثون في دراسة الفصام.</p>
+      <p>نموذج الترميز التنبؤي للفصام، الذي صاغه Philip Corlett وزملاؤه في جامعة ييل، يقترح أن العجز الجوهري في الفصام ليس الهلوسة أو الوهم بحد ذاته &mdash; بل هو فشل منهجي في إشارات خطأ التنبؤ في الدماغ. تحديداً، يولّد دماغ الشخص المصاب بالفصام أخطاء تنبؤ شاذة &mdash; إشارات تشير إلى عدم تطابق بين التوقع والواقع، حتى عندما لا يوجد عدم تطابق.</p>
+      <p>الهلوسات، في هذا النموذج، هي تنبؤات لم يتم تصحيحها. في الدماغ السليم، تُفحص التنبؤات الداخلية باستمرار مقابل المدخلات الحسية. في الفصام، تفشل آلية التحقق. التنبؤ &mdash; &laquo;هناك صوت&raquo; &mdash; يسيطر، ويسمع الشخص كلاماً غير موجود. الهلوسة هي تنبؤ تمت ترقيته إلى إدراك دون فحص الواقع المعتاد.</p>
+      <p class="highlight">الفصام قد يكون ما يحدث عندما تختل آلة التنبؤ في الدماغ. الهلوسات تنبؤات يُخطأ فيها على أنها إدراك. الأوهام أخطاء تنبؤ يُخطأ فيها على أنها معنى. المرض ليس انفصالاً عن الواقع &mdash; إنه واقع يولّده متنبئ معطل.</p>
+    </div>
+
+    <div class="section-card" id="sec-10">
+      <div class="section-number">10</div>
+      <h2>إشارة خطأ التنبؤ: كيف تنحت المفاجأة واقعك</h2>
+      <p>إذا كان الدماغ يتنبأ باستمرار، فإن أهم إشارة في الدماغ ليست التنبؤ نفسه. إنها خطأ التنبؤ &mdash; الفرق بين ما تم توقعه وما حدث فعلاً. هذه الإشارة هي آلية التعلم الأساسية في الدماغ.</p>
+      <p>الناقل العصبي الأكثر ارتباطاً بخطأ التنبؤ هو الدوبامين. أثبت Wolfram Schultz في جامعة كامبريدج أن خلايا الدوبامين العصبية في الدماغ المتوسط لا تطلق استجابةً للمكافآت، بل استجابةً للمكافآت <em>غير المتوقعة</em>. عندما تُتوقع مكافأة وتُسلّم في موعدها، تصمت خلايا الدوبامين. عندما تصل مكافأة بشكل غير متوقع، تطلق. عندما تفشل مكافأة متوقعة في الظهور، ينخفض معدل إطلاقها تحت خط الأساس.</p>
+      <p>النتيجة الظاهراتية لكل هذا هي أن حياتك العاطفية هي في جوهرها تيار من أخطاء التنبؤ. الفرح خطأ تنبؤ إيجابي. خيبة الأمل خطأ تنبؤ سلبي. القلق حالة من خطأ التنبؤ المرتفع المتوقع. الملل هو غياب خطأ التنبؤ.</p>
+      <p class="highlight">الدوبامين لا يشير إلى المتعة. إنه يشير إلى المفاجأة. الفرح وخيبة الأمل والقلق والملل كلها نكهات من خطأ التنبؤ. حياتك العاطفية هي تعليق الدماغ المستمر على دقة توقعاته.</p>
+    </div>
+
+    <div class="section-card" id="sec-11">
+      <div class="section-number">11</div>
+      <h2>أفق الـ 10 ثوانٍ: إلى أي مدى يمكن للدماغ أن يرى حقاً؟</h2>
+      <p>الادعاء في عنوان هذا المقال &mdash; أن الدماغ يتنبأ بـ 10 ثوانٍ في المستقبل &mdash; يستحق التدقيق. من أين يأتي هذا الرقم، وماذا يعني فعلاً؟</p>
+      <p>في عام 2019، نشرت مجموعة بحثية في جامعة كاليفورنيا، بيركلي، دراسة في <em>Nature Neuroscience</em> وجدت أن التمثيلات التنبؤية للدماغ لمحتوى الكلام القادم امتدت حوالي 10 ثوانٍ في المستقبل.</p>
+      <p>دراسة متابعة عام 2023 في برينستون أكدت ووسعت هذا الاكتشاف. وجد الباحثون أن المناطق الحصينية والجبهية الأمامية تولّد تنبؤات تسلسلية تشكل &laquo;سلسلة تنبؤ&raquo; &mdash; تنبؤات قصيرة المدى تنتشر إلى تنبؤات متوسطة المدى وتغذي تنبؤات طويلة المدى (حتى 10-15 ثانية). الأفق الزمني ليس ثابتاً بل يعتمد على قابلية التنبؤ بالبيئة.</p>
+      <p>لكن حتى هذا يستخف بمدى التنبؤ. رقم الـ 10 ثوانٍ يشير إلى تنبؤات محددة المحتوى. على مستوى أكثر تجريداً، يصنع الدماغ تنبؤات تمتد لدقائق وساعات وأيام وحتى سنوات. عندما تقرر أخذ مظلة لأن السماء تبدو ملبدة بالغيوم، فأنت تصنع تنبؤاً يمتد لساعات. عندما تدخر المال للتقاعد، فأنت تصنع تنبؤاً يمتد لعقود.</p>
+      <p>في عام 2026، وجدت دراسة تعاونية بين MIT ومعهد Allen لعلوم الدماغ تدرجاً مذهلاً: خلايا عصبية في المناطق الحسية المبكرة تتنبأ بعشرات الميلي ثانية. خلايا في القشور الترابطية تتنبأ بثوانٍ. خلايا في القشرة الجبهية الأمامية والحُصين تولّد تنبؤات تمتد لعشرات الثواني. الدماغ ليس كرة بلورية واحدة. إنه تسلسل هرمي من الكرات البلورية، كل واحدة مضبوطة على نطاق زمني مختلف، متداخلة كدمى روسية.</p>
+      <p class="highlight">أفق التنبؤ في الدماغ يمتد حتى 10 ثوانٍ للأحداث الحسية المحددة &mdash; وأبعد بكثير للتوقعات المجردة. قشرتك هي تسلسل هرمي من كرات بلورية متداخلة، كل واحدة تتنبأ بمقياس زمني مختلف، من الميلي ثانية إلى العقود.</p>
+    </div>
+
+    <div class="section-card" id="sec-12">
+      <div class="section-number">12</div>
+      <h2>أنت لم تعش أبداً في اللحظة الحالية</h2>
+      <p>هنا حيث يصل علم الترميز التنبؤي إلى شيء يقترب من الفلسفة &mdash; وهو مزعج.</p>
+      <p>إذا كان دماغك يولّد تنبؤات باستمرار، وتجربتك الواعية مبنية من تلك التنبؤات وليس من البيانات الحسية الخام، فبمعنى حقيقي جداً، لم تختبر أبداً اللحظة الحالية. ما تسميه &laquo;الآن&raquo; هو تنبؤ تم توليده في الماضي، عن مستقبل أصبح ماضياً بحلول الوقت الذي تختبره فيه.</p>
+      <p>المتصوفون ومعلمو التأمل وخبراء اليقظة الذهنية الذين يطلبون منك &laquo;أن تكون حاضراً&raquo; يطلبون منك شيئاً قد يكون مستحيلاً عصبياً. دماغك آلة استباق. تطور لنمذجة المستقبل، لا للاستقرار في الحاضر.</p>
+      <p>ومع ذلك &mdash; وهنا المفاجأة &mdash; قد تكون هناك حالات يتم فيها تقليل التنبؤ مؤقتاً. يُظهر المتأملون المتمرسون نشاطاً مخفضاً في شبكة الوضع الافتراضي. المركبات المُخدرة مثل السيلوسيبين يبدو أنها تعطل المعالجة التنبؤية الهرمية، مما يسمح لمزيد من البيانات الحسية الخام بالوصول إلى الوعي دون رقابة.</p>
+      <p>دماغك يحكي لك قصة عن الواقع طوال حياتك. القصة عادةً قريبة من الحقيقة. لكنها لم تكن أبداً الحقيقة نفسها. كانت دائماً، دائماً، دائماً تنبؤاً.</p>
+      <p>والآن، بينما تنهي هذه الجملة، تنبأ دماغك بالفعل بالنقطة في نهايتها.</p>
+      <p class="highlight">لم تختبر أبداً اللحظة الحالية. ما تسميه &laquo;الآن&raquo; هو تنبؤ ولّده دماغك قبل أجزاء من الثانية. الوعي ليس ملاحظة للواقع. إنه هلوسة مفيدة &mdash; حلم مُتحكَم فيه يقاطعه الواقع أحياناً.</p>
+    </div>
+
+    <p style="margin-top: 2rem;">يستند هذا المقال إلى أبحاث منشورة من المؤسسات المذكورة أعلاه، بما في ذلك دراسات في <em>Nature Neuroscience</em> و<em>Nature Reviews Neuroscience</em> و<em>Nature Human Behaviour</em> و<em>Neuron</em> و<em>PNAS</em> و<em>Science</em> و<em>Journal of the Royal Society Interface</em>. جميع الادعاءات مستمدة من أبحاث محكّمة. التداعيات الفلسفية متروكة لك لتتصارع معها.</p>
+
+    <p>لكنك الآن تعرف: لم تعش أبداً في الحاضر. وقد تنبأ دماغك بأنك ستقرأ حتى هنا.</p>
+
+  </main>
+
+  <div class="sources">
+    <div class="sources-box">
+      <h2>المصادر والقراءات الإضافية</h2>
+      <ol>
+        <li>Friston, K. (2010). The free-energy principle: a unified brain theory? <em>Nature Reviews Neuroscience</em>, 11(2), 127-138.</li>
+        <li>Friston, K. (2009). The free-energy principle: a rough guide to the brain? <em>Trends in Cognitive Sciences</em>, 13(7), 293-301.</li>
+        <li>Rao, R.P. &amp; Ballard, D.H. (1999). Predictive coding in the visual cortex. <em>Nature Neuroscience</em>, 2(1), 79-87.</li>
+        <li>Keller, G.B. &amp; Mrsic-Flogel, T.D. (2018). Predictive processing: a canonical cortical computation. <em>Neuron</em>, 100(2), 424-435.</li>
+        <li>Schultz, W., Dayan, P., &amp; Montague, P.R. (1997). A neural substrate of prediction and reward. <em>Science</em>, 275(5306), 1593-1599.</li>
+        <li>Wolpert, D.M. &amp; Flanagan, J.R. (2001). Motor prediction. <em>Current Biology</em>, 11(18), R729-R732.</li>
+        <li>Wolpert, D.M. (2011). The real reason for brains. TED Talk / <em>Philosophical Transactions of the Royal Society B</em>.</li>
+        <li>Corlett, P.R. et al. (2019). Hallucinations and strong priors. <em>Trends in Cognitive Sciences</em>, 23(2), 114-127.</li>
+        <li>Goldstein, A., Zada, Z., et al. (2022). Shared computational principles for language processing in humans and deep language models. <em>Nature Neuroscience</em>, 25, 369-380.</li>
+        <li>Dabney, W. et al. (2020). A distributional code for value in dopamine-based reinforcement learning. <em>Nature</em>, 577, 671-675.</li>
+        <li>Clark, A. (2013). Whatever next? Predictive brains, situated agents, and the future of cognitive science. <em>Behavioral and Brain Sciences</em>, 36(3), 181-204.</li>
+        <li>Hohwy, J. (2013). <em>The Predictive Mind</em>. Oxford University Press.</li>
+        <li>Caucheteux, C. &amp; King, J.R. (2022). Brains and algorithms partially converge in natural language processing. <em>Communications Biology</em>, 5(1), 134.</li>
+        <li>Kok, P., Jehee, J.F., &amp; de Lange, F.P. (2012). Less is more: expectation sharpens representations in the primary visual cortex. <em>Neuron</em>, 75(2), 265-270.</li>
+        <li>Carhart-Harris, R.L. &amp; Friston, K.J. (2019). REBUS and the anarchic brain. <em>Pharmacological Reviews</em>, 71(3), 316-344.</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="category-links">
+    <p>وجدت هذا مذهلاً؟ استكشف المزيد على <a href="../../index.html">UselesslyInteresting</a>:</p>
+    <p>
+      <a href="../../index.html">أحياء</a> &bull;
+      <a href="../../index.html">فضاء</a> &bull;
+      <a href="../../index.html">تاريخ</a> &bull;
+      <a href="../../index.html">طبيعة</a> &bull;
+      <a href="../../index.html">حيوانات</a> &bull;
+      <a href="../../index.html">علوم</a> &bull;
+      <a href="../../index.html">غرائب</a>
+    </p>
+    <p>أو اقرأ مقالاتنا المعمقة الأخرى:
+      <a href="mind-bending-science-facts-that-sound-fake.html">20 حقيقة علمية مذهلة تبدو مزيفة تماماً</a> &bull;
+      <a href="thc-creates-false-memories-your-brain-is-lying.html">THC يخلق ذكريات زائفة &mdash; دماغك يكذب</a> &bull;
+      <a href="cancer-is-not-random-genetic-program-decides.html">السرطان ليس عشوائياً &mdash; برنامج جيني يقرر</a>
+    </p>
+  </div>
+
+  <div class="article-footer-nav">
+    <a href="../../articles.html">&larr; العودة إلى المقالات</a>
+    <a href="../../index.html">استكشف الحقائق اليومية</a>
+    <a href="mind-bending-science-facts-that-sound-fake.html">اقرأ: حقائق علمية</a>
+  </div>
+
+  <footer>
+    <p>&copy; 2026 UselesslyInteresting. جميع الحقائق موثقة. دماغك تنبأ بهذا التذييل.</p>
+  </footer>
+
+  <script>
+    function toggleTheme() {
+      var html = document.documentElement;
+      var current = html.getAttribute('data-theme');
+      var next = current === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('ui-theme', next);
+      document.querySelector('.theme-toggle').textContent = next === 'dark' ? '\u2600' : '\u263E';
+    }
+    (function() {
+      var saved = localStorage.getItem('ui-theme');
+      if (saved === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        document.addEventListener('DOMContentLoaded', function() {
+          document.querySelector('.theme-toggle').textContent = '\u2600';
+        });
+      }
+    })();
+    function switchLang(lang) {
+      var slug = 'your-brain-predicts-the-future-10-seconds-ahead';
+      if (lang === 'en') {
+        window.location.href = '../' + slug + '.html';
+      } else {
+        window.location.href = '../' + lang + '/' + slug + '.html';
+      }
+    }
+    (function() {
+      var path = window.location.pathname;
+      var langMatch = path.match(/\/articles\/([a-z]{2})\//);
+      var currentLang = langMatch ? langMatch[1] : 'en';
+      document.addEventListener('DOMContentLoaded', function() {
+        var buttons = document.querySelectorAll('.lang-switcher button');
+        buttons.forEach(function(btn) {
+          btn.classList.remove('active');
+          if (btn.textContent.trim().toLowerCase() === currentLang) {
+            btn.classList.add('active');
+          }
+        });
+      });
+    })();
+    document.addEventListener('DOMContentLoaded', function() {
+      var cards = document.querySelectorAll('.section-card');
+      if ('IntersectionObserver' in window) {
+        var observer = new IntersectionObserver(function(entries) {
+          entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+        cards.forEach(function(card) { observer.observe(card); });
+      } else {
+        cards.forEach(function(card) { card.classList.add('visible'); });
+      }
+    });
+  </script>
+
+  <script type="text/javascript">
+  var sc_project=13212348;
+  var sc_invisible=1;
+  var sc_security="9548ad36";
+  </script>
+  <script type="text/javascript" src="https://www.statcounter.com/counter/counter.js" async></script>
+  <noscript><div class="statcounter"><a title="website statistics" href="https://statcounter.com/" target="_blank"><img class="statcounter" src="https://c.statcounter.com/13212348/0/9548ad36/1/" alt="website statistics" referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
+
+</body>
+</html>
