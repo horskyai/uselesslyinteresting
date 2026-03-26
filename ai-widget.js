@@ -183,7 +183,9 @@
   };
 
   // Load data and render
-  fetch('../articles-data.json')
+  // Works from both /articles/ and /articles/lang/ paths
+  var dataPath = window.location.pathname.match(/\/articles\/[a-z]{2}\//) ? '../../articles-data.json' : '../articles-data.json';
+  fetch(dataPath)
     .then(function(r) { return r.json(); })
     .then(function(data) {
       var d = data[slug];
