@@ -1701,12 +1701,19 @@ async function loadArticlesSection() {
   var container = document.getElementById('articles-section');
   if (!container) return;
 
-  // Hardcoded list of published articles (newest first)
+  // Articles with optional publishAt (13:00 UTC = 14:00 CET); null = always visible
   var articles = [
-    { slug: 'thc-creates-false-memories-your-brain-is-lying', key: 'thc', emoji: '🧠', category: 'Science', title: 'THC Can Create Memories That Never Happened', description: 'A groundbreaking study reveals cannabis creates entirely new memories that never happened.', date: 'March 23, 2026', readTime: '15 min read' },
-    { slug: 'cancer-is-not-random-genetic-program-decides', key: 'cancer', emoji: '🧬', category: 'Science', title: "Cancer Isn't Random \u2014 A Hidden Genetic Program Decides", description: 'New research reveals cancer metastasis follows a genetic program \u2014 not random chaos.', date: 'March 23, 2026', readTime: '15 min read' },
-    { slug: 'bull-sharks-have-friends-and-choose-them-carefully', key: 'sharks', emoji: '🦈', category: 'Animals', title: 'Bull Sharks Have Friends \u2014 And Choose Them Carefully', description: 'A six-year study of 184 bull sharks reveals they form friendships and complex social networks.', date: 'March 23, 2026', readTime: '18 min read' },
-    { slug: 'hedgehogs-hear-ultrasound-secret-superpower', key: 'hedgehog', emoji: '🦔', category: 'Animals', title: "Hedgehogs Hear Sounds Humans Can't", description: 'Scientists discovered hedgehogs hear ultrasound up to 85kHz \u2014 invisible to humans, dogs, and cats.', date: 'March 23, 2026', readTime: '15 min read' }
+    { slug: 'insects-are-disappearing-so-fast-nobody-noticed',    key: 'insects',  emoji: '🪲', category: 'Environment', title: 'Insects Are Disappearing So Fast Nobody Noticed',              description: 'A 75% decline in flying insects over 27 years. The insect apocalypse is happening \u2014 and it threatens civilization.', date: 'March 30, 2026', readTime: '22 min read', publishAt: '2026-03-30T13:00:00Z' },
+    { slug: 'time-moves-faster-for-your-face-than-your-feet',     key: 'time',     emoji: '⏰', category: 'Physics',      title: 'Time Moves Faster for Your Face Than Your Feet',              description: 'Einstein proved time bends with gravity. Atomic clocks confirm your head ages faster than your toes.', date: 'March 29, 2026', readTime: '22 min read', publishAt: '2026-03-29T13:00:00Z' },
+    { slug: 'crows-remember-your-face-and-tell-their-friends',    key: 'crows',    emoji: '🐦‍⬛', category: 'Animals',   title: 'Crows Remember Your Face \u2014 And They Tell Their Friends', description: 'Crows hold grudges for years, teach their children who to hate, hold funerals, and solve puzzles like 7-year-old humans.', date: 'March 28, 2026', readTime: '22 min read', publishAt: '2026-03-28T13:00:00Z' },
+    { slug: 'bacteria-in-your-gut-are-controlling-your-thoughts', key: 'gut',      emoji: '🦠', category: 'Biology',     title: 'The Bacteria in Your Gut Are Controlling Your Thoughts',   description: 'Your gut has 500 million neurons, produces 95% of your serotonin, and its bacteria manipulate your cravings, mood, and decisions.', date: 'March 27, 2026', readTime: '22 min read', publishAt: '2026-03-27T13:00:00Z' },
+    { slug: 'there-are-colors-no-human-has-ever-seen',            key: 'colors',   emoji: '🎨', category: 'Science',     title: 'There Are Colors No Human Has Ever Seen',                  description: 'Impossible colors, tetrachromats who see 100 million shades, and why your brain refuses to show you what\u2019s really out there.', date: 'March 26, 2026', readTime: '22 min read', publishAt: '2026-03-26T13:00:00Z' },
+    { slug: 'trees-send-messages-through-underground-fungal-network', key: 'trees', emoji: '🌳', category: 'Nature',    title: 'Trees Send Messages Through an Underground Fungal Network', description: 'Beneath every forest lies an internet of fungi connecting trees \u2014 they share nutrients, warn each other of danger, and nurture their young.', date: 'March 25, 2026', readTime: '22 min read', publishAt: '2026-03-25T13:00:00Z' },
+    { slug: 'your-brain-predicts-the-future-10-seconds-ahead',    key: 'brain',    emoji: '🔮', category: 'Neuroscience', title: 'Your Brain Predicts the Future 10 Seconds Ahead',          description: 'Your brain is not reacting to the present \u2014 it\u2019s running a constant simulation of the future using predictive coding.', date: 'March 24, 2026', readTime: '22 min read', publishAt: '2026-03-24T13:00:00Z' },
+    { slug: 'thc-creates-false-memories-your-brain-is-lying',     key: 'thc',      emoji: '🧠', category: 'Science',     title: 'THC Can Create Memories That Never Happened',              description: 'A groundbreaking study reveals cannabis creates entirely new memories that never happened.', date: 'March 23, 2026', readTime: '15 min read', publishAt: null },
+    { slug: 'cancer-is-not-random-genetic-program-decides',       key: 'cancer',   emoji: '🧬', category: 'Science',     title: "Cancer Isn\u2019t Random \u2014 A Hidden Genetic Program Decides", description: 'New research reveals cancer metastasis follows a genetic program \u2014 not random chaos.', date: 'March 23, 2026', readTime: '15 min read', publishAt: null },
+    { slug: 'bull-sharks-have-friends-and-choose-them-carefully', key: 'sharks',   emoji: '🦈', category: 'Animals',     title: 'Bull Sharks Have Friends \u2014 And Choose Them Carefully', description: 'A six-year study of 184 bull sharks reveals they form friendships and complex social networks.', date: 'March 23, 2026', readTime: '18 min read', publishAt: null },
+    { slug: 'hedgehogs-hear-ultrasound-secret-superpower',        key: 'hedgehog', emoji: '🦔', category: 'Animals',     title: "Hedgehogs Hear Sounds Humans Can\u2019t",                  description: 'Scientists discovered hedgehogs hear ultrasound up to 85kHz \u2014 invisible to humans, dogs, and cats.', date: 'March 23, 2026', readTime: '15 min read', publishAt: null }
   ];
 
   var lang = localStorage.getItem('lang') || 'en';
@@ -1714,8 +1721,10 @@ async function loadArticlesSection() {
   var readText = lang === 'en' ? 'READ ARTICLE \u2192' : (i18nData && i18nData[lang] && i18nData[lang]['articles_read_article'] ? i18nData[lang]['articles_read_article'] : 'READ ARTICLE \u2192');
   var moreText = lang === 'en' ? 'VIEW ALL ARTICLES' : (i18nData && i18nData[lang] && i18nData[lang]['articles_view_all'] ? i18nData[lang]['articles_view_all'] : 'VIEW ALL ARTICLES');
 
+  var now = new Date();
   var cardsHtml = '';
   articles.forEach(function(a) {
+    if (a.publishAt && now < new Date(a.publishAt)) return;
     var aTitle = (lang !== 'en' && i18nData && i18nData[lang]) ? (i18nData[lang]['articles_title_' + a.key] || a.title) : a.title;
     var aDesc = (lang !== 'en' && i18nData && i18nData[lang]) ? (i18nData[lang]['articles_desc_' + a.key] || a.description) : a.description;
     var aCat = (lang !== 'en' && i18nData && i18nData[lang]) ? (i18nData[lang]['articles_cat_' + a.key] || a.category) : a.category;
