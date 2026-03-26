@@ -1,0 +1,282 @@
+{
+  "your-brain-predicts-the-future-10-seconds-ahead": {
+    "eli5": "Your brain is like a time-traveling fortune teller that makes guesses about what will happen next before it actually happens. By the time you think you're seeing or feeling something, your brain already predicted it a fraction of a second ago. What you experience as 'right now' is actually your brain's best guess about the future. When the guess is wrong, your brain gets surprised and quickly updates its picture of the world.",
+    "quiz": [
+      {
+        "question": "How long does it take for a signal from your retina to reach your visual cortex?",
+        "options": ["A) 10 milliseconds", "B) 100 milliseconds", "C) 1 second", "D) 10 seconds"],
+        "correct": 1
+      },
+      {
+        "question": "According to Karl Friston's free energy principle, what is the brain's single overriding function?",
+        "options": ["A) Store memories as accurately as possible", "B) Process sensory information in real time", "C) Minimize surprise", "D) Maximize pleasure"],
+        "correct": 2
+      },
+      {
+        "question": "What happens in the brain of someone with schizophrenia, according to predictive coding theory?",
+        "options": ["A) The brain predicts too far into the future", "B) The prediction and error-correction system breaks down", "C) The brain stops making predictions entirely", "D) The brain makes predictions only for movement, not perception"],
+        "correct": 1
+      }
+    ]
+  },
+  "trees-send-messages-through-underground-fungal-network": {
+    "eli5": "Under every forest there is a secret internet made of tiny fungal threads connecting all the tree roots together. Trees use this underground network to share food with each other and send warning messages when bugs are attacking them. Big old trees called 'mother trees' act like network hubs that feed smaller young trees. When a tree is dying, it sends all its leftover food through the network to its neighbors.",
+    "quiz": [
+      {
+        "question": "What is the popular nickname for the underground fungal network connecting trees?",
+        "options": ["A) The Forest Highway", "B) The Wood Wide Web", "C) The Root Internet", "D) The Mycorrhizal Matrix"],
+        "correct": 1
+      },
+      {
+        "question": "Which scientist is most closely associated with discovering and championing the role of mother trees in mycorrhizal networks?",
+        "options": ["A) Jane Goodall", "B) David Attenborough", "C) Suzanne Simard", "D) E.O. Wilson"],
+        "correct": 2
+      },
+      {
+        "question": "What do trees trade with fungi through the mycorrhizal network?",
+        "options": ["A) Water for oxygen", "B) Carbon for phosphorus", "C) Nitrogen for sugar", "D) Sunlight for minerals"],
+        "correct": 1
+      }
+    ]
+  },
+  "there-are-colors-no-human-has-ever-seen": {
+    "eli5": "The colors you can see are only a tiny tiny slice of all the light that exists — less than 0.004% of it! There are colors that exist in math and physics that your brain physically cannot make. Some special women are born with four types of color sensors instead of three, and they can see about 100 million colors. Mantis shrimps have 16 color sensors, way more than us, but scientists think they actually process colors differently than we do.",
+    "quiz": [
+      {
+        "question": "What percentage of the electromagnetic spectrum does human visible light represent?",
+        "options": ["A) About 10%", "B) About 1%", "C) Less than 0.004%", "D) About 50%"],
+        "correct": 2
+      },
+      {
+        "question": "What is a person called who has four types of cone cells in their eyes instead of the usual three?",
+        "options": ["A) A synesthete", "B) A tetrachromat", "C) A hyperchromat", "D) A dichromat"],
+        "correct": 1
+      },
+      {
+        "question": "Why can't humans see 'reddish-green' as a single color?",
+        "options": ["A) The color wavelength is outside visible light", "B) Human eyes lack the right type of cone cell", "C) Red and green are processed by opponent channels that cancel each other out", "D) The brain does not have enough neurons to process it"],
+        "correct": 2
+      }
+    ]
+  },
+  "bacteria-in-your-gut-are-controlling-your-thoughts": {
+    "eli5": "Your belly has its own brain with 500 million nerve cells, and the tiny bacteria living there can actually affect how you feel and think. They make most of the happy chemical (serotonin) in your body and send messages up to your brain through a special nerve called the vagus nerve. Some gut bacteria can even make you crave certain foods because they need that food to survive. Scientists have even moved gut bacteria from one animal to another and changed that animal's personality!",
+    "quiz": [
+      {
+        "question": "What percentage of your body's serotonin is produced in the gut?",
+        "options": ["A) 5%", "B) 30%", "C) 50%", "D) 95%"],
+        "correct": 3
+      },
+      {
+        "question": "How many neurons does the enteric nervous system (your gut's 'second brain') contain?",
+        "options": ["A) 1 million", "B) 500 million", "C) 5 billion", "D) 100 billion"],
+        "correct": 1
+      },
+      {
+        "question": "What is Toxoplasma gondii?",
+        "options": ["A) A beneficial probiotic bacterium", "B) A brain chemical that regulates mood", "C) A parasite that can alter host behavior to benefit its reproduction", "D) A type of gut neuron"],
+        "correct": 2
+      }
+    ]
+  },
+  "crows-remember-your-face-and-tell-their-friends": {
+    "eli5": "Crows are incredibly smart birds that never forget a face. In a famous experiment, scientists wearing rubber masks trapped crows, and those crows remembered the masks and scolded anyone wearing them for years afterward — even crows that were never trapped learned to recognize the dangerous face from other crows. Crows can also make tools, solve puzzles that 7-year-old children can solve, and they even gather together when one of their own dies, almost like a funeral.",
+    "quiz": [
+      {
+        "question": "In the University of Washington mask experiment, how did the number of crows scolding the caveman mask change over time?",
+        "options": ["A) It stayed the same", "B) It decreased as crows forgot", "C) It tripled after two years and kept spreading", "D) It doubled once, then stopped"],
+        "correct": 2
+      },
+      {
+        "question": "What type of tool does the New Caledonian crow famously manufacture and use?",
+        "options": ["A) Stones for cracking nuts", "B) Hooked sticks to extract insects from holes", "C) Woven baskets to carry food", "D) Sharpened bones for digging"],
+        "correct": 1
+      },
+      {
+        "question": "Why do crows hold gatherings around their dead?",
+        "options": ["A) To grieve emotionally, as primates do", "B) To assess threats and learn what killed their companion", "C) To compete for the dead crow's territory", "D) To perform a mating ritual"],
+        "correct": 1
+      }
+    ]
+  },
+  "time-moves-faster-for-your-face-than-your-feet": {
+    "eli5": "Time actually moves at different speeds depending on where you are — and this is a real, measurable thing, not just science fiction! Your head is slightly farther from Earth's center than your feet, so time actually ticks a tiny bit faster for your face than your toes. Scientists proved this using super-precise clocks separated by just one foot. GPS satellites have to correct for this effect every single day or your maps would be wrong by kilometers.",
+    "quiz": [
+      {
+        "question": "What did scientists at NIST use to prove time dilation at a vertical difference of just 33 centimeters (about 1 foot)?",
+        "options": ["A) Atomic bombs", "B) Optical clocks", "C) Radioactive decay measurements", "D) GPS satellites"],
+        "correct": 1
+      },
+      {
+        "question": "By approximately how much does GPS position drift each day if relativistic corrections are not applied?",
+        "options": ["A) A few centimeters", "B) About 1 meter", "C) About 10 kilometers", "D) About 100 kilometers"],
+        "correct": 2
+      },
+      {
+        "question": "In the 1971 Hafele-Keating experiment, what happened to atomic clocks flown on commercial airlines?",
+        "options": ["A) They stopped working at high altitude", "B) They ran faster than identical clocks left on the ground", "C) They ran at exactly the same rate as ground clocks", "D) They ran slower than ground clocks due to magnetic interference"],
+        "correct": 1
+      }
+    ]
+  },
+  "insects-are-disappearing-so-fast-nobody-noticed": {
+    "eli5": "Bugs are disappearing from our world really fast, and most people haven't even noticed. A 27-year study in Germany found that 76% of flying insects — by weight — have vanished from protected nature reserves. One in every three bites of food you eat exists because insects pollinated the plants that made it. Pesticides called neonicotinoids have made farmland 48 times more toxic to bees than it was 30 years ago, and even artificial lights at night are killing billions of moths.",
+    "quiz": [
+      {
+        "question": "By how much did total flying insect biomass decline in the Krefeld study's 27 years of German nature reserve monitoring?",
+        "options": ["A) 25%", "B) 50%", "C) 76%", "D) 95%"],
+        "correct": 2
+      },
+      {
+        "question": "What fraction of human food bites depends on insect pollination?",
+        "options": ["A) One in ten", "B) One in five", "C) One in three", "D) One in two"],
+        "correct": 2
+      },
+      {
+        "question": "How did canopy arthropod biomass change in the Luquillo rainforest in Puerto Rico between the 1970s and 2018?",
+        "options": ["A) It declined by 25%", "B) It declined by half", "C) It declined by a factor of 8", "D) It declined by a factor of 60"],
+        "correct": 3
+      }
+    ]
+  },
+  "thc-creates-false-memories-your-brain-is-lying": {
+    "eli5": "A big study found that cannabis (the plant that has THC in it) can make your brain create memories of things that never happened. Your brain doesn't just forget things — it actually invents fake memories that feel completely real. In the study, people who took THC 'remembered' words they had never actually seen. This happens because THC messes with the part of your brain that records new memories, so your brain fills in the blanks with made-up stuff.",
+    "quiz": [
+      {
+        "question": "How many of the 21 memory tests were significantly affected by THC in the Washington State University study?",
+        "options": ["A) 3 of 21", "B) 7 of 21", "C) 15 of 21", "D) All 21"],
+        "correct": 2
+      },
+      {
+        "question": "What did University of Colorado Boulder researchers find that CBD (cannabidiol) does to THC's memory effects?",
+        "options": ["A) It makes them much worse", "B) It has no effect", "C) It acts as a partial 'safety fuse' that may reduce some effects", "D) It completely eliminates false memory formation"],
+        "correct": 2
+      },
+      {
+        "question": "What was the lowest THC dose in the Washington State University study that was enough to trigger false memories?",
+        "options": ["A) 5 milligrams", "B) 10 milligrams", "C) 20 milligrams", "D) 100 milligrams"],
+        "correct": 2
+      }
+    ]
+  },
+  "cancer-is-not-random-genetic-program-decides": {
+    "eli5": "Scientists used to think cancer was just bad luck — cells going crazy in a random way. But new research shows cancer is more like a computer program running old instructions from when your body was being built as a baby. Cancer cells don't go rogue alone — they team up like an army, with different cells doing different jobs. An AI tool called MangroveGS can now read this cancer 'program' and predict whether it will spread before you can even see it on a scan.",
+    "quiz": [
+      {
+        "question": "What does the University of Geneva research say metastatic cancer cells are actually doing?",
+        "options": ["A) Accumulating random new mutations to gain new powers", "B) Reactivating fragments of embryonic developmental programs", "C) Copying DNA from healthy cells nearby", "D) Responding to viral infections in the tumor"],
+        "correct": 1
+      },
+      {
+        "question": "What is MangroveGS?",
+        "options": ["A) A new chemotherapy drug targeting pancreatic cancer", "B) An AI tool that reads cancer's gene expression program to predict metastasis", "C) A surgical technique for removing metastatic tumors", "D) A blood test for genetic mutations"],
+        "correct": 1
+      },
+      {
+        "question": "According to Johns Hopkins research on pancreatic cancer, what triggers the switch to metastatic behavior?",
+        "options": ["A) New DNA mutations acquired over time", "B) Viral infection of cancer cells", "C) Epigenetic changes, particularly in a gene called KLF5", "D) The tumor growing larger than 2 centimeters"],
+        "correct": 2
+      }
+    ]
+  },
+  "bull-sharks-have-friends-and-choose-them-carefully": {
+    "eli5": "Scientists used to think sharks were lonely killing machines, but a six-year study proved that bull sharks actually have friends they choose on purpose! Researchers tracked 184 bull sharks in Fiji and found they prefer spending time with specific individuals, swim in synchronized patterns side by side, and even follow each other in 'lead-follow' behaviors. Younger sharks tend to be more social, and females are more connected than males in the network.",
+    "quiz": [
+      {
+        "question": "Where did the University of Exeter study tracking 184 bull sharks take place?",
+        "options": ["A) The Great Barrier Reef, Australia", "B) The Gulf of Mexico", "C) The waters off Fiji", "D) The coast of South Africa"],
+        "correct": 2
+      },
+      {
+        "question": "Which age group of bull sharks showed the most social behavior according to the study?",
+        "options": ["A) Very young pups", "B) Sub-adults (teenagers)", "C) Advanced adults (post-reproductive)", "D) All age groups showed equal sociality"],
+        "correct": 1
+      },
+      {
+        "question": "What specific film is credited with deeply damaging public perception of sharks as social animals?",
+        "options": ["A) The Deep", "B) Shark Tale", "C) Jaws", "D) Open Water"],
+        "correct": 2
+      }
+    ]
+  },
+  "hedgehogs-hear-ultrasound-secret-superpower": {
+    "eli5": "Scientists just discovered that the little hedgehog in your garden can hear sounds that are completely invisible to you — sounds so high-pitched that even dogs can barely hear them! Hedgehogs can hear up to at least 85,000 vibrations per second (humans only go up to about 20,000). Now scientists want to use this discovery to save hedgehogs from cars by placing silent buzzers along roads that only hedgehogs can hear, warning them to turn back.",
+    "quiz": [
+      {
+        "question": "Up to what frequency can European hedgehogs hear, as discovered in the 2026 Biology Letters study?",
+        "options": ["A) 20 kHz (same as humans)", "B) 45 kHz (same as dogs)", "C) At least 85 kHz", "D) Over 200 kHz"],
+        "correct": 2
+      },
+      {
+        "question": "Around what frequency does the hedgehog's hearing reach peak sensitivity?",
+        "options": ["A) 4 kHz", "B) 20 kHz", "C) 40 kHz", "D) 85 kHz"],
+        "correct": 2
+      },
+      {
+        "question": "What conservation application did the researchers propose based on the hedgehog's ultrasonic hearing?",
+        "options": ["A) Ultrasonic collar devices to track hedgehogs", "B) Ultrasonic roadside repellent devices inaudible to humans", "C) Ultrasonic fences around gardens", "D) Breeding hedgehogs with better road-awareness instincts"],
+        "correct": 1
+      }
+    ]
+  },
+  "mind-bending-science-facts-that-sound-fake": {
+    "eli5": "Science is full of facts that sound like someone made them up but are completely true! Every time you shuffle a deck of cards you almost certainly create an arrangement that has never existed before in all of history. The number of possible chess games is bigger than the number of atoms in the whole universe. And if you removed all the empty space from every atom in every human being, all of humanity would fit inside a sugar cube!",
+    "quiz": [
+      {
+        "question": "How many possible arrangements does a standard 52-card deck have?",
+        "options": ["A) About 10 to the power of 20", "B) About 10 to the power of 50", "C) About 8 times 10 to the power of 67", "D) About 10 to the power of 120"],
+        "correct": 2
+      },
+      {
+        "question": "What color is liquid oxygen?",
+        "options": ["A) Colorless, like gaseous oxygen", "B) Pale blue", "C) Bright green", "D) Clear with a red tint"],
+        "correct": 1
+      },
+      {
+        "question": "Where is the coldest known place in the universe?",
+        "options": ["A) In the void between galaxies", "B) Near a black hole's event horizon", "C) On the far side of the Moon", "D) In an MIT laboratory on Earth"],
+        "correct": 3
+      }
+    ]
+  },
+  "30-useless-facts-that-will-blow-your-mind": {
+    "eli5": "This article is packed with wonderfully silly and surprising facts about the world. Did you know that bananas are actually berries but strawberries aren't? Wombats are the only animals that poop in cubes! Astronauts get up to 2 inches taller in space because there's no gravity squishing their spine. And 3,000-year-old honey found in Egyptian tombs is still perfectly good to eat!",
+    "quiz": [
+      {
+        "question": "Why do wombats produce cube-shaped droppings?",
+        "options": ["A) They eat square-shaped food", "B) Their intestines have varying elasticity that shapes the feces", "C) They chew their food in a cubic pattern", "D) Scientists do not know why"],
+        "correct": 1
+      },
+      {
+        "question": "Botanically speaking, which of these is actually a berry?",
+        "options": ["A) Strawberry", "B) Raspberry", "C) Banana", "D) Blackberry"],
+        "correct": 2
+      },
+      {
+        "question": "How fast did NASA transmit data to the Moon in a 2013 test using a pulsed laser system?",
+        "options": ["A) 10 megabits per second", "B) 100 megabits per second", "C) 622 megabits per second", "D) 1 gigabit per second"],
+        "correct": 2
+      }
+    ]
+  },
+  "bizarre-animal-facts-you-never-learned-in-school": {
+    "eli5": "Animals are way weirder than your school textbook ever told you! A mantis shrimp punches so hard it actually boils the water around it. Axolotls can regrow not just arms and legs but parts of their actual brain. Dolphins have names — they each make a special unique whistle that works like a name and other dolphins use it to call them. The immortal jellyfish can get old or hurt and then just restart its whole life from the beginning!",
+    "quiz": [
+      {
+        "question": "What makes the pistol shrimp's claw snap so extreme?",
+        "options": ["A) It creates an electrical discharge", "B) The collapsing cavitation bubble reaches temperatures near the surface of the sun", "C) It produces a venomous spray", "D) It generates a magnetic pulse"],
+        "correct": 1
+      },
+      {
+        "question": "What did scientists discover about platypus fur in 2020?",
+        "options": ["A) It is waterproof due to a unique oil", "B) It contains venom glands similar to their spurs", "C) It is biofluorescent — it glows under ultraviolet light", "D) It changes color with temperature"],
+        "correct": 2
+      },
+      {
+        "question": "How do male white-spotted pufferfish attract mates?",
+        "options": ["A) They produce bioluminescent displays", "B) They construct elaborate geometric sand patterns on the ocean floor", "C) They perform synchronized swimming dances", "D) They change color to match the female's preference"],
+        "correct": 1
+      }
+    ]
+  }
+}
