@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>太平洋垃圾带是德克萨斯州的两倍大 — UselesslyInteresting</title>
+  <meta name="description" content="太平洋中漂浮着一片塑料垃圾带，面积是德克萨斯州的两倍。它永远不会分解——只会碎裂成越来越小的碎片，进入地球上每一条食物链。" />
+  <meta name="keywords" content="太平洋垃圾带, 海洋塑料, 塑料污染, 微塑料, 海洋环流, 塑料废物, 海洋污染, uselesslyinteresting" />
+  <link rel="canonical" href="https://uselesslyinteresting.com/articles/zh/the-great-pacific-garbage-patch-is-twice-the-size-of-texas.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="太平洋垃圾带是德克萨斯州的两倍大" />
+  <meta property="og:description" content="太平洋中漂浮着一片塑料垃圾带，面积是德克萨斯州的两倍。它永远不会分解——只会碎裂成越来越小的碎片，进入地球上每一条食物链。" />
+  <meta property="og:url" content="https://uselesslyinteresting.com/articles/zh/the-great-pacific-garbage-patch-is-twice-the-size-of-texas.html" />
+  <meta property="og:site_name" content="UselesslyInteresting" />
+  <meta property="og:locale" content="zh_CN" />
+  <meta property="article:published_time" content="2026-03-31" />
+  <meta property="article:section" content="环境" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="太平洋垃圾带是德克萨斯州的两倍大" />
+  <meta name="twitter:description" content="太平洋中漂浮着一片塑料垃圾带，面积是德克萨斯州的两倍。它永远不会分解——只会碎裂成越来越小的碎片，进入地球上每一条食物链。" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Mono:ital,wght@0,400;1,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+
+  <!-- OneSignal -->
+  <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+  <script>
+    window.OneSignalDeferred = window.OneSignalDeferred || [];
+    OneSignalDeferred.push(async function(OneSignal) {
+      await OneSignal.init({
+        appId: "24700e99-9d0e-47fe-93a7-cd255c8cc047",
+        safari_web_id: "web.onesignal.auto.2b30b273-8f48-4327-8bae-bed77c33071b",
+        notifyButton: {
+          enable: true,
+        },
+      });
+    });
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    /* -- LIGHT MODE (default) -- */
+    :root {
+      --bg: #f5f5f0;
+      --surface: #eaeae4;
+      --card: #ffffff;
+      --accent: #5a8a00;
+      --accent2: #c4168c;
+      --accent3: #0088bb;
+      --text: #1a1a2e;
+      --muted: #5c5c72;
+      --border: rgba(90,138,0,0.15);
+      --card-hover: #f0f0ea;
+      --noise-opacity: 0.15;
+      --shadow: 0 1px 3px rgba(0,0,0,0.06);
+    }
+
+    /* -- DARK MODE -- */
+    [data-theme="dark"] {
+      --bg: #0a0a0f;
+      --surface: #12121a;
+      --card: #1a1a26;
+      --accent: #c8ff3e;
+      --accent2: #ff3ecb;
+      --accent3: #3ec8ff;
+      --text: #e8e8f0;
+      --muted: #6b6b88;
+      --border: rgba(200,255,62,0.12);
+      --card-hover: #1f1f30;
+      --noise-opacity: 0.4;
+      --shadow: none;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'DM Mono', monospace;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* Noise overlay */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 1000;
+      opacity: var(--noise-opacity, 0.15);
+    }
+
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* -- HEADER -- */
+    header {
+      padding: 2rem 2rem 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .logo {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: clamp(1.2rem, 3vw, 1.6rem);
+      letter-spacing: -0.03em;
+      line-height: 1;
+      text-decoration: none;
+      color: var(--text);
+    }
+    .logo:hover { text-decoration: none; }
+    .logo span { color: var(--accent); }
+
+    .logo-sub {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.62rem;
+      color: var(--muted);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-top: 2px;
+    }
+
+    /* -- TOP CONTROLS -- */
+    .top-controls {
+      position: fixed;
+      top: 1.5rem;
+      right: 2rem;
+      display: flex;
+      gap: 0.5rem;
+      z-index: 999;
+      align-items: center;
+    }
+
+    /* -- THEME TOGGLE -- */
+    .theme-toggle {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 1rem;
+      padding: 0.3rem 0.6rem;
+      cursor: pointer;
+      transition: color 0.2s, border-color 0.2s;
+      line-height: 1;
+    }
+    .theme-toggle:hover { color: var(--accent); border-color: var(--accent); }
+
+    /* -- LANGUAGE SWITCHER -- */
+    .lang-dropdown {
+      position: relative;
+      display: inline-block;
+    }
+    .lang-btn {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      color: var(--text);
+      font-family: 'DM Mono', monospace;
+      font-size: 0.7rem;
+      padding: 0.3rem 0.6rem;
+      cursor: pointer;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      transition: background 0.2s, color 0.2s, border-color 0.2s;
+    }
+    .lang-btn:hover { border-color: var(--accent); color: var(--accent); }
+    .lang-menu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      background: var(--card);
+      border: 1px solid var(--border);
+      min-width: 130px;
+      z-index: 1000;
+      margin-top: 4px;
+    }
+    .lang-menu.open { display: block; }
+    .lang-menu button {
+      display: block;
+      width: 100%;
+      text-align: left;
+      background: none;
+      border: none;
+      padding: 0.5rem 0.8rem;
+      font-family: 'DM Mono', monospace;
+      font-size: 0.72rem;
+      color: var(--text);
+      cursor: pointer;
+      transition: background 0.15s;
+    }
+    .lang-menu button:hover { background: var(--surface); }
+    .lang-menu button.active { color: var(--accent); font-weight: 700; }
+
+    /* -- BREADCRUMB -- */
+    .breadcrumb {
+      max-width: 820px;
+      margin: 2rem auto 0;
+      padding: 0 2rem;
+      font-size: 0.7rem;
+      color: var(--muted);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+    .breadcrumb a { color: var(--muted); transition: color 0.2s; }
+    .breadcrumb a:hover { color: var(--accent); text-decoration: none; }
+    .breadcrumb .sep { margin: 0 0.4rem; opacity: 0.5; }
+
+    /* -- ARTICLE HEADER -- */
+    .article-header {
+      max-width: 820px;
+      margin: 2rem auto 0;
+      padding: 0 2rem;
+    }
+
+    .category-tag {
+      display: inline-block;
+      font-size: 0.62rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent);
+      border: 1px solid var(--accent);
+      padding: 0.25rem 0.7rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .article-header h1 {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+      margin-bottom: 1rem;
+    }
+
+    .article-meta {
+      display: flex;
+      gap: 1.5rem;
+      font-size: 0.72rem;
+      color: var(--muted);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      flex-wrap: wrap;
+    }
+
+    /* -- TABLE OF CONTENTS -- */
+    .toc {
+      max-width: 820px;
+      margin: 2rem auto 0;
+      padding: 0 2rem;
+    }
+    .toc-box {
+      background: var(--card);
+      border: 1px solid var(--border);
+      padding: 1.5rem 2rem;
+    }
+    .toc-box h2 {
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      font-size: 0.85rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1rem;
+    }
+    .toc-box ol {
+      list-style: none;
+      counter-reset: toc-counter;
+      padding: 0;
+      margin: 0;
+    }
+    .toc-box ol li {
+      counter-increment: toc-counter;
+      margin-bottom: 0.5rem;
+    }
+    .toc-box ol li a {
+      font-size: 0.8rem;
+      color: var(--text);
+      transition: color 0.2s;
+      line-height: 1.5;
+    }
+    .toc-box ol li a:hover { color: var(--accent); text-decoration: none; }
+    .toc-box ol li a::before {
+      content: counter(toc-counter, decimal-leading-zero) ". ";
+      color: var(--accent);
+      font-weight: 700;
+      margin-right: 0.3rem;
+    }
+
+    /* -- ARTICLE BODY -- */
+    .article-body {
+      max-width: 820px;
+      margin: 3rem auto;
+      padding: 0 2rem;
+    }
+
+    .article-intro {
+      font-family: 'Instrument Serif', serif;
+      font-size: 1.25rem;
+      line-height: 1.7;
+      color: var(--text);
+      margin-bottom: 2.5rem;
+      font-style: italic;
+    }
+
+    .article-body p {
+      font-size: 0.92rem;
+      line-height: 1.8;
+      color: var(--text);
+      margin-bottom: 1.2rem;
+    }
+
+    .article-body p.section-intro {
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+
+    /* -- SECTION CARDS -- */
+    .section-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      padding: 2rem 2.2rem;
+      margin-bottom: 2rem;
+      position: relative;
+      transition: border-color 0.2s;
+      opacity: 0;
+      transform: translateY(16px);
+    }
+    .section-card:hover {
+      border-color: var(--accent);
+    }
+    .section-card.visible {
+      animation: fadeUp 0.5s ease both;
+    }
+
+    .section-card h2 {
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      font-size: 1.2rem;
+      line-height: 1.3;
+      margin-bottom: 1rem;
+      letter-spacing: -0.01em;
+      color: var(--accent);
+    }
+
+    .section-card h3 {
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      font-size: 0.95rem;
+      line-height: 1.3;
+      margin-top: 1.2rem;
+      margin-bottom: 0.6rem;
+      letter-spacing: -0.01em;
+    }
+
+    .section-card p {
+      font-size: 0.88rem;
+      line-height: 1.8;
+      color: var(--text);
+      margin-bottom: 0.8rem;
+    }
+
+    .section-card .highlight {
+      font-family: 'Instrument Serif', serif;
+      font-style: italic;
+      font-size: 0.95rem;
+      color: var(--accent);
+      line-height: 1.6;
+      margin-top: 1rem;
+      padding-left: 1rem;
+      border-left: 2px solid var(--accent);
+    }
+
+    .section-card ul {
+      list-style: none;
+      padding: 0;
+      margin: 0.8rem 0;
+    }
+
+    .section-card ul li {
+      font-size: 0.88rem;
+      line-height: 1.8;
+      color: var(--text);
+      padding-left: 1.2rem;
+      position: relative;
+      margin-bottom: 0.4rem;
+    }
+
+    .section-card ul li::before {
+      content: '\2022';
+      color: var(--accent);
+      font-weight: bold;
+      position: absolute;
+      left: 0;
+    }
+
+    .section-number {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: 3rem;
+      color: var(--accent);
+      opacity: 0.12;
+      position: absolute;
+      top: 0.8rem;
+      right: 1.2rem;
+      line-height: 1;
+    }
+
+    /* -- SOURCES -- */
+    .sources {
+      max-width: 820px;
+      margin: 1rem auto 2rem;
+      padding: 0 2rem;
+    }
+    .sources-box {
+      background: var(--card);
+      border: 1px solid var(--border);
+      padding: 1.5rem 2rem;
+    }
+    .sources-box h2 {
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      font-size: 0.85rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1rem;
+    }
+    .sources-box ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .sources-box ul li {
+      font-size: 0.75rem;
+      line-height: 1.7;
+      color: var(--muted);
+      margin-bottom: 0.4rem;
+      padding-left: 1rem;
+      position: relative;
+    }
+    .sources-box ul li::before {
+      content: '\2022';
+      color: var(--accent);
+      position: absolute;
+      left: 0;
+    }
+
+    /* -- INTERNAL LINKS -- */
+    .category-links {
+      max-width: 820px;
+      margin: 2rem auto 0;
+      padding: 0 2rem;
+    }
+    .category-links p {
+      font-size: 0.82rem;
+      color: var(--muted);
+      margin-bottom: 0.8rem;
+      line-height: 1.7;
+    }
+    .category-links a {
+      font-weight: 700;
+    }
+
+    /* -- BOTTOM NAV -- */
+    .article-footer-nav {
+      max-width: 820px;
+      margin: 3rem auto 2rem;
+      padding: 0 2rem;
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .article-footer-nav a {
+      display: inline-block;
+      font-size: 0.72rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      border: 1px solid var(--accent);
+      padding: 0.5rem 1.2rem;
+      transition: background 0.2s, color 0.2s;
+      text-decoration: none;
+    }
+    .article-footer-nav a:hover {
+      background: var(--accent);
+      color: var(--bg);
+      text-decoration: none;
+    }
+
+    /* -- FOOTER -- */
+    footer {
+      text-align: center;
+      padding: 3rem 2rem 2rem;
+      font-size: 0.7rem;
+      color: var(--muted);
+      letter-spacing: 0.05em;
+      border-top: 1px solid var(--border);
+      max-width: 820px;
+      margin: 0 auto;
+    }
+
+    /* -- ANIMATIONS -- */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(16px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .article-header, .article-intro {
+      animation: fadeUp 0.5s ease both;
+    }
+
+    /* -- RESPONSIVE -- */
+    @media (max-width: 600px) {
+      .article-header h1 { font-size: 1.8rem; }
+      .section-card { padding: 1.4rem 1.2rem; }
+      .section-number { font-size: 2rem; top: 0.6rem; right: 0.8rem; }
+      .section-card h2 { font-size: 1.05rem; }
+      .top-controls { top: 1rem; right: 1rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Controls -->
+  <div class="top-controls">
+    <div class="lang-dropdown">
+      <button class="lang-btn" onclick="toggleLangMenu()" id="lang-btn">ZH</button>
+      <div class="lang-menu" id="lang-menu">
+        <button onclick="setLanguage('en')">English</button>
+        <button onclick="setLanguage('de')">Deutsch</button>
+        <button onclick="setLanguage('es')">Espa&ntilde;ol</button>
+        <button onclick="setLanguage('ar')">&#1575;&#1604;&#1593;&#1585;&#1576;&#1610;&#1577;</button>
+        <button onclick="setLanguage('it')">Italiano</button>
+        <button onclick="setLanguage('fr')">Fran&ccedil;ais</button>
+        <button onclick="setLanguage('zh')" class="active">&#20013;&#25991;</button>
+        <button onclick="setLanguage('ja')">&#26085;&#26412;&#35486;</button>
+      </div>
+    </div>
+    <button class="theme-toggle" aria-label="切换深色模式" onclick="toggleTheme()">&#9790;</button>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <div style="text-align:center;">
+      <a href="../../index.html" class="logo">Uselessly<span>Interesting</span></a>
+      <div class="logo-sub">没人要求的冷知识</div>
+    </div>
+  </header>
+
+  <!-- Breadcrumb -->
+  <nav class="breadcrumb" aria-label="面包屑导航">
+    <a href="../../index.html">首页</a>
+    <span class="sep">&rsaquo;</span>
+    <a href="../../articles.html">文章</a>
+    <span class="sep">&rsaquo;</span>
+    <span>太平洋垃圾带是德克萨斯州的两倍大</span>
+  </nav>
+
+  <!-- Article Header -->
+  <div class="article-header">
+    <span class="category-tag">环境</span>
+    <h1>太平洋垃圾带是德克萨斯州的两倍大</h1>
+    <div class="article-meta">
+      <span>2026年3月31日</span>
+      <span>&bull; 20分钟阅读</span>
+    </div>
+  </div>
+
+  <!-- Table of Contents -->
+  <div class="toc">
+    <div class="toc-box">
+      <h2>目录</h2>
+      <ol>
+        <li><a href="#section-1">垃圾带的真实面貌</a></li>
+        <li><a href="#section-2">海洋环流如何将塑料困住数十年</a></li>
+        <li><a href="#section-3">海洋中有多少塑料？</a></li>
+        <li><a href="#section-4">塑料永不消失——只会越变越小</a></li>
+        <li><a href="#section-5">正在吞食我们垃圾的动物们</a></li>
+        <li><a href="#section-6">微塑料已进入食物链</a></li>
+        <li><a href="#section-7">幽灵渔网：永不停歇的捕捞机器</a></li>
+        <li><a href="#section-8">这些塑料从哪里来？</a></li>
+        <li><a href="#section-9">另外四个无人谈论的垃圾带</a></li>
+        <li><a href="#section-10">我们能清理海洋吗？</a></li>
+        <li><a href="#section-11">塑料行业对回收利用的战争</a></li>
+        <li><a href="#section-12">真正有效的办法：从源头减少塑料</a></li>
+      </ol>
+    </div>
+  </div>
+
+  <!-- Article Body -->
+  <main class="article-body">
+
+    <p class="article-intro">
+      在夏威夷和加利福尼亚之间，有一片比整个墨西哥还要大的海域，其中漂浮着一团五十年前根本不存在的塑料垃圾。它从太空中看不见——它不是一座固体岛屿，而是悬浮在蓝色海水中的碎片、纤维和幽灵渔具的弥漫性"汤"。只有当你驶入其中，它才会现身。然后，它就绵延不绝，要好几个星期才能穿越。
+    </p>
+
+    <p class="section-intro">以下是人类如何将世界最大的海洋变成一个塑料深渊的故事——以及这对每一个依赖海洋的生物（包括我们人类）意味着什么。</p>
+
+    <!-- Section 1 -->
+    <div class="section-card" id="section-1">
+      <div class="section-number">01</div>
+      <h2>垃圾带的真实面貌</h2>
+      <p>"太平洋垃圾带"这个名字会让人联想到一片由瓶子和塑料袋堆砌而成的漂浮大陆——一块可以行走其上的固体团块。现实既不那么戏剧化，又更令人不安。驶入垃圾带，你看到的是海水——广阔、湛蓝、看似平常。但用细密的网拖过这片海水，检视收集到的东西，画面就会彻底改变。</p>
+      <p>垃圾带更准确的描述是"塑料烟雾"而非"塑料岛屿"。其大部分质量由比米粒还小的颗粒组成——微塑料，即较大物体在多年乃至数十年的紫外线辐射、波浪作用和温度循环下分解而成的残余碎片。这些颗粒悬浮在整个水柱中，而不仅仅漂浮在表面。它们肉眼不可见，直到你仔细察看——然后你会发现它们无处不在。</p>
+      <p>较大的物体也存在——渔网、绳索、浮标、瓶子、袋子、箱子以及人类文明可识别的废弃物——但它们分散在如此广阔的区域，以至于你可能行驶数小时也遇不到一块肉眼可见的碎片。垃圾带的决定性特征不是密度，而是广度。它覆盖面积估计达<strong>160万平方公里</strong>——大约是德克萨斯州面积的两倍，或法国面积的三倍。</p>
+      <p>Ocean Cleanup项目2018年进行的研究——迄今最全面的垃圾带调查——估计其中含有约<strong>8万公吨塑料</strong>。这个数字听起来还算可控，直到你意识到它代表什么：1.8万亿个塑料碎片，从大型物体到微塑料颗粒，集中在一个海洋区域。而这只是五大主要海洋塑料积聚区之一。</p>
+      <p class="highlight">太平洋垃圾带不是一座固体岛屿。它是由1.8万亿个塑料碎片组成的隐形烟雾，散布在面积是德克萨斯州两倍的海域中。你可以在其中航行数日而看不见它——直到你仔细观察。然后，它无处不在。</p>
+    </div>
+
+    <!-- Section 2 -->
+    <div class="section-card" id="section-2">
+      <div class="section-number">02</div>
+      <h2>海洋环流如何将塑料困住数十年</h2>
+      <p>要理解为什么塑料会聚集在太平洋中部——远离任何海岸线，远离任何明显的来源——你需要了解海洋环流。环流是由全球风型和科里奥利效应（地球自转造成的偏转）驱动的大型旋转洋流系统。地球上有五个主要的亚热带环流，分布在各大主要洋盆中。每一个都持续旋转，将表层水及其中漂浮的一切物质向其平静、高压的中心汇聚。</p>
+      <p>北太平洋亚热带环流——太平洋垃圾带所在地——顺时针旋转，横跨太平洋北部大部分区域。其中心是一片相对静止、稳定的水域，汇聚的洋流在此减速，表层物质在此积聚。塑料从数千公里外的沿海来源进入——被河流携带、被吹离海滩、从船只上落入——然后在数月乃至数年间逐渐螺旋向内，最终到达环流核心的汇聚区。</p>
+      <p>塑料一旦到达汇聚区，就倾向于留下来。将它带到这里的环流现在又将它困在这里。紫外线辐射慢慢将较大的碎片分解成更小的碎片，但物质不会离开。它只是变得更小、更分散。今天在日本海岸附近落入海洋的一个塑料瓶，五十年后可能仍在北太平洋环流中——不再是一个瓶子，而是数以千计的微小碎片，与将不可避免地吞食它们的滤食性动物所吃的浮游生物毫无区别。</p>
+      <p>塑料在海洋环流中的停留时间以数十年到数百年计。聚乙烯和聚丙烯等常见塑料在海洋中完全分解为二氧化碳和水的估计时间为450至1000年——如果它们在海洋条件下能完全分解的话。没有人确切知道，因为塑料污染比研究它的科研项目更年轻。</p>
+      <p class="highlight">海洋环流是大自然的传送带——它将塑料从每一处海岸送往平静的、困住它的中心。一旦到达，它就不会离开。今天在海上丢失的一个瓶子，一个世纪后仍将以微塑料碎片的形式在其中循环。</p>
+    </div>
+
+    <!-- Section 3 -->
+    <div class="section-card" id="section-3">
+      <div class="section-number">03</div>
+      <h2>海洋中有多少塑料？</h2>
+      <p>诚实的回答是：我们不确切知道，而且科学家越仔细研究，情况就越糟糕。</p>
+      <p>引用最广泛的估计来自Jambeck等人2015年发表在《科学》杂志上的研究，该研究计算出每年约有<strong>800万公吨塑料</strong>进入海洋。这一数字基于192个沿海国家的废物产生数据及管理不当率的估计。换一个具体的说法：相当于每分钟向海洋倾倒一辆满载塑料的垃圾车。</p>
+      <p>自这一估计发表以来，后续研究一再表明它是保守的。2021年发表在《科学进展》上的一项研究估计，目前海洋中存在的塑料总量——表面、水柱和海底——可能已超过<strong>1.5亿公吨</strong>。事实证明，海底是一个比表面垃圾带大得多的塑料沉积处：深海调查在地球最深处的马里亚纳海沟发现了塑料碎屑，深度超过1万米。</p>
+      <p>每年进入海洋的塑料量与表面调查发现的塑料量之间的差距，长期困扰着研究人员。所有塑料都去哪里了？新兴的答案是：向下沉去。微塑料颗粒随着被细菌和藻类生物膜群落定殖而密度增大，会沉入海底。较大的物体被物理过程拉到底部。我们能采样的海洋表面只代表了海洋塑料总量的一小部分。</p>
+      <p>生产率使问题呈指数级恶化。全球塑料产量从1950年的约200万公吨增至今天的每年超过<strong>4亿公吨</strong>。有史以来生产的所有塑料中，不到10%被回收利用。其余的被填埋、焚烧，或——相当数量——泄漏到自然环境中。除非生产和废物管理实践发生根本性变化，否则预计到2040年海洋塑料输入量将增加三倍。</p>
+      <p class="highlight">每年有800万公吨塑料进入海洋——每分钟一辆垃圾车。超过1.5亿公吨已躺在海洋中，大部分在海底。而生产还在加速。数字越量越糟糕。</p>
+    </div>
+
+    <!-- Section 4 -->
+    <div class="section-card" id="section-4">
+      <div class="section-number">04</div>
+      <h2>塑料永不消失——只会越变越小</h2>
+      <p>关于塑料污染，最重要的一点是：塑料在任何有意义的层面上都不会生物降解。当塑料在海洋中暴露于阳光、热量和机械磨损时，会发生光降解——紫外线辐射破坏赋予塑料结构的聚合物链，使其变脆并碎裂。但碎裂不是降解。聚合物分子仍然存在，只是变得更小了。</p>
+      <p>这一过程会无限期持续，至少在人类的时间尺度上如此。宏观塑料（大于5厘米的物体）碎裂成中型塑料（5毫米至5厘米），再碎裂成微塑料（小于5毫米），再碎裂成纳米塑料（小于1微米）。在纳米塑料尺度上，颗粒肉眼不可见，能够穿越生物膜，且无法用任何现有技术从海洋中清除。从任何实际意义上说，它们都是永久性的。</p>
+      <p>微塑料的扩散现在已非常普遍，研究人员开始将微塑料浓度作为海洋沉积物岩芯中的地层标志——一种类似于地质学家使用同位素来确定沉积层年代的方式。塑料信号在20世纪中叶清晰出现，并在1990年代和2000年代迅速增强。未来的地质学家在检查海洋沉积物岩芯时，将会看到我们这个时代是一个由合成聚合物颗粒定义的独特地质层。我们正在将塑料留在岩石记录中。</p>
+      <p>一些塑料添加剂——增塑剂、阻燃剂、紫外线稳定剂、着色剂——会在塑料降解时从碎片中渗出，溶入周围海水。其中许多添加剂是具有已知内分泌干扰、致癌或神经毒性的持久性有机污染物。塑料碎片还像海绵一样，从周围海水中吸附其他持久性污染物，如多氯联苯和DDT，将其浓缩至比环境海水高出数个数量级的水平。当海洋动物摄入塑料时，也会随之摄入这一浓缩的化学污染物鸡尾酒。</p>
+      <p class="highlight">塑料不会分解——它只会碎裂。有史以来制造的每一块塑料都以某种形式仍然存在。在纳米尺度上，它是不可见的、无法收集的，并且能够穿越细胞膜。我们创造了一种不朽的污染物，并将其释放到了地球上的每一片海洋中。</p>
+    </div>
+
+    <!-- Section 5 -->
+    <div class="section-card" id="section-5">
+      <div class="section-number">05</div>
+      <h2>正在吞食我们垃圾的动物们</h2>
+      <p>1997年，一位名叫查尔斯·摩尔的研究人员驾驶双体帆船从夏威夷的比赛返回加利福尼亚，他决定抄近路穿越北太平洋亚热带环流。一周内，无论他向哪个方向望去，都能看到漂浮的塑料碎屑。他后来写道："在穿越亚热带高压的那一周，无论我何时低头，塑料碎片都在各处漂浮。"</p>
+      <p>摩尔后来创立了藻类海洋研究与教育基金会，并将余生献给了研究海洋塑料的事业。他和后继研究人员关于对海洋野生动物影响的记录，是人类工业行为最全面的起诉书之一。</p>
+      <p>海鸟是最显眼的受害者。信天翁在海面上掠过，捕捉鱿鱼和鱼类，却无法区分塑料碎片和食物。成年信天翁在位于北太平洋、距任何大陆海岸数千公里的中途岛礁上用塑料喂养雏鸟——研究人员发现死亡雏鸟的胃里装满了瓶盖、打火机、玩具兵和塑料袋。根据2015年发表在《美国国家科学院院刊》的一项研究，目前存活的所有海鸟中估计有<strong>90%</strong>曾在某个时刻摄入过塑料。如果当前趋势持续，这一数字预计到2050年将达到99%。</p>
+      <p>海龟把塑料袋误认为水母——它们的主要猎物。2018年的一项分析发现，摄入仅14块塑料的海龟死亡概率为50%。摄入的塑料会导致肠道堵塞、穿孔、假性饱腹感（海龟感到饱了却没有摄入任何营养），以及塑料携带的添加剂和吸附污染物引起的化学中毒。</p>
+      <p>鲸鱼和海豚搁浅在海滩上，胃里装满了塑料。2019年，一头搁浅在菲律宾的柯氏喙鲸胃里发现了40公斤的塑料袋。2018年，一头搁浅在西班牙海滩上的抹香鲸胃肠道被29公斤塑料废物堵塞。这些不是孤立事件；它们以越来越高的频率在全球各地的海岸线上被记录。</p>
+      <p>即使是那些看似不吃塑料的生物也会受到影响。珊瑚礁被塑料碎屑缠绕，这会遮挡阳光，磨损珊瑚脆弱的水螅体，并引入细菌病原体。2018年发表在《科学》杂志上的一项研究发现，与塑料接触的珊瑚群落患病概率为89%，而无塑料接触的珊瑚群落仅为4%。</p>
+      <p class="highlight">今天存活的所有海鸟中有90%吃过塑料。海龟在摄入仅14块塑料后就会死亡。鲸鱼搁浅时胃里装着几公斤的袋子。我们已经让塑料无处不在，以至于它成了地球上几乎每一种海洋动物的食物。</p>
+    </div>
+
+    <!-- Section 6 -->
+    <div class="section-card" id="section-6">
+      <div class="section-number">06</div>
+      <h2>微塑料已进入食物链</h2>
+      <p>多年来，对塑料污染的关注主要集中在可见的层面：被钓鱼线缠绕的海龟图片，装满瓶盖的海鸟胃。但更令人警觉的故事正在发生在一个肉眼看不见的尺度上。微塑料现在在海洋环境中已如此普遍，以至于它们从食物链的底部就已进入，而这对海洋中每一种生物——包括人类——的影响才刚刚开始被理解。</p>
+      <p>浮游动物——构成海洋食物网基础的微小动物——正在摄入微塑料颗粒。研究表明，微塑料摄入会降低浮游动物的摄食率、繁殖率和存活率。当浮游动物受损，整个海洋食物网都会受到影响：吃浮游动物的鱼、吃那些鱼的更大的鱼、吃那些更大的鱼的海洋哺乳动物和海鸟，以及最终吃海鲜的人类。</p>
+      <p>海鲜被微塑料污染的事实现已有充分记录。2017年的一项研究发现，来自世界各地市场的83%虾类样品中含有微塑料。贻贝、牡蛎和其他滤食性动物从周围水体中浓缩微塑料，并直接传递给消费者。根据发表在《环境科学与技术》杂志的研究，经常吃海鲜的人每年摄入的微塑料颗粒估计为<strong>1.1万至13万个</strong>。</p>
+      <p>长期低剂量微塑料摄入对健康的影响是当前大量研究的课题。已经确立的是：微塑料及其携带的化学添加剂可导致细胞氧化应激和炎症，干扰激素信号（许多塑料添加剂是内分泌干扰物），并可能将病原体携带至不寻常的解剖位置。小到足以穿越细胞膜的纳米塑料已在人类血液、肺组织和胎盘中被检测到。长期暴露是否会对人类健康造成可测量的危害仍在调查中——但预防原则表明，让不朽的合成聚合物颗粒及其化学载荷分布在你的全身组织中并非有益。</p>
+      <p class="highlight">微塑料已进入海洋食物链的底部。吃海鲜的人每年摄入多达13万个塑料颗粒。纳米塑料已在人类血液、肺部和胎盘中被发现。我们尚不知道健康后果。我们知道颗粒确实存在。</p>
+    </div>
+
+    <!-- Section 7 -->
+    <div class="section-card" id="section-7">
+      <div class="section-number">07</div>
+      <h2>幽灵渔网：永不停歇的捕捞机器</h2>
+      <p>在海洋中所有的塑料中，最具主动破坏性的可能是被遗弃、丢失或丢弃的渔具——海洋保护界称之为"幽灵渔具"。Ocean Cleanup 2018年对太平洋垃圾带的分析发现，其塑料质量中约<strong>46%由渔网组成</strong>，其余为其他渔业相关物品和一般消费者塑料废物的混合物。</p>
+      <p>幽灵渔网是海洋中最危险的物体之一，因为它们继续做着被设计来做的事：捕捉海洋生物。一张从浮子和重物上脱落的漂流渔网，会下沉直到捕获足够多的海洋生物来提供浮力，然后上升到表面，在那里紫外线和波浪作用使一些被困生物降解，减轻负荷，导致渔网再次下沉，重新开始循环。这种"幽灵捕捞"循环可以持续数年乃至数十年，不断地缠绕并杀死鱼类、海龟、海豚、海豹和海鸟。</p>
+      <p>世界动物保护协会估计，幽灵渔具每年杀死超过10万头鲸鱼、海豚、海豹和海狮，以及无数鱼类和海鸟。一张被遗弃的渔网可能有数十公里长。2020年，在加利福尼亚州南部海岸潜水的人发现并清除了一张长度超过一公里、重量接近三吨、含有四十多头海洋哺乳动物遗骸的幽灵渔网。</p>
+      <p>幽灵渔具主要来自商业捕鱼作业。渔具在风暴中丢失，因回收成本太高而被遗弃，或被故意丢弃。许多司法管辖区有要求渔具标记和强制回收丢失设备的法规，但执行力度很差，在公海上尤其如此。捕鱼的经济学往往使遗弃渔具比回收它更便宜。</p>
+      <p>一些捕鱼社区和保护组织已启动渔具回收计划，付钱给渔船从海洋中回收废弃渔网。在阿拉斯加，由美国国家海洋和大气管理局海洋碎屑项目运营的一个计划自2002年以来已从北太平洋清除了超过3000公吨废弃渔具。这些努力是有意义的，但其规模只是问题规模的一小部分。</p>
+      <p class="highlight">幽灵渔网占太平洋垃圾带质量的46%。它们无限期地继续捕捞，每年杀死超过10万头海洋哺乳动物。一张被遗弃的渔网可能长达一公里，捕杀数十年。海洋中最活跃的杀手是无形的、漂流的，完全是人为制造的。</p>
+    </div>
+
+    <!-- Section 8 -->
+    <div class="section-card" id="section-8">
+      <div class="section-number">08</div>
+      <h2>这些塑料从哪里来？</h2>
+      <p>关于海洋塑料，最常见的误解之一是它主要来自船只和海上平台在海上倾倒废物。船源污染是真实存在且重要的，但海洋塑料的主要来源是陆基的，主要通过河流输送。</p>
+      <p>Schmidt等人2017年发表在《自然·通讯》的一项里程碑式研究估计，每年有<strong>115万至241万公吨塑料</strong>从河流进入海洋。该研究确定了主要贡献者：十条河流约占河流塑料入海总量的88%至95%。其中八条在亚洲，长江被估计是单一最大贡献者。印度的恒河、中国的西江、东江和珠江、巴基斯坦的印度河，以及几条东南亚河流完成了这份名单。</p>
+      <p>这种地理集中反映了高塑料消费、废物管理基础设施不足和高河流流量的交叉。在许多快速发展的国家，塑料消费的增长速度快于安全管理塑料废物的基础设施建设。未被收集的塑料最终进入水道，被风吹入排水渠，或沉积在河岸，洪水再将其冲入大海。</p>
+      <p>这不仅仅是发展中国家个人不负责任行为的问题——富裕国家经常用这种说法来转移对自身角色的注意力。美国和欧洲国家向发展中国家出口大量塑料废物，名义上用于回收。这些出口废物中有许多最终进入水道。例如，英国2019年出口了超过50万公吨塑料废物，其中大部分流向回收能力有限的国家。塑料污染在一定程度上是富裕国家消费模式的外部化成本。</p>
+      <p>一次性塑料物品在海洋塑料的类型分布中占主导地位：袋子、瓶子、吸管、食品包装、烟蒂（是塑料）和泡沫容器。这些产品被设计为一次性使用后丢弃，使用寿命以分钟计，而在海洋中的存留时间以世纪计。</p>
+      <p class="highlight">90%的海洋塑料通过河流到达，主要在亚洲——但富裕国家将其塑料废物出口到那里。为使用几分钟而设计的一次性物品在海洋中持续存在数百年。这个问题是全球性的，来源是人为的，责任分散在每一个生产和消费塑料的国家。</p>
+    </div>
+
+    <!-- Section 9 -->
+    <div class="section-card" id="section-9">
+      <div class="section-number">09</div>
+      <h2>另外四个无人谈论的垃圾带</h2>
+      <p>太平洋垃圾带是研究最多、讨论最多的积聚区，但它并非独一无二。每个主要的海洋环流都积聚塑料，地球上有五个亚热带环流。北大西洋垃圾带、南太平洋垃圾带、南大西洋垃圾带和印度洋垃圾带都存在，都在增长，且都远不如其太平洋对应物受到科学和媒体的关注。</p>
+      <p>北大西洋垃圾带位于欧洲和北美洲之间，估计含有超过20万公吨塑料。它至少从1970年代起就在积聚碎屑，研究人员注意到其微塑料浓度与北太平洋垃圾带相当。马尾藻海——北大西洋的一个被周围环流所界定、以漂浮的马尾藻垫闻名的区域——污染尤为严重——海藻垫捕获塑料碎屑，将其集中在许多物种依赖以躲避和繁殖的生物多样丰富的栖息地中。</p>
+      <p>印度洋垃圾带尤为令人担忧，因为印度洋接纳了世界上一些人口最稠密的海岸线的径流，包括非洲东海岸、印度次大陆、东南亚和澳大利亚。它也是塑料碎屑监测最少的海洋区域之一，这意味着对其大小和内容的估计不如太平洋垃圾带的估计可靠。</p>
+      <p>除五个主要基于环流的积聚区外，北冰洋也有塑料碎屑的记录，那里的塑料通过大西洋和太平洋的洋流到达。2017年的一项研究发现北极海冰中的微塑料浓度高于许多海洋环流的表层水，表明海冰充当了微塑料的临时汇聚处，随着气候变化减少北极冰盖，这些微塑料将被释放出来。</p>
+      <p class="highlight">垃圾带不只有一个，而是五个。太平洋垃圾带不过是最著名的那个。北大西洋、印度洋、南太平洋和南大西洋垃圾带都在增长。塑料甚至已被发现在北极海冰中浓缩——等待冰融化时被释放。</p>
+    </div>
+
+    <!-- Section 10 -->
+    <div class="section-card" id="section-10">
+      <div class="section-number">10</div>
+      <h2>我们能清理海洋吗？</h2>
+      <p>自从太平洋垃圾带在2000年代中期进入公众意识以来，已有数十个清理提案被提出。有些是严肃的工程项目；其他的不过是技术语言包装的一厢情愿。对海洋塑料清理工作的诚实评估是：在边际上有用，但如果没有上游减少，则根本不够。</p>
+      <p>荷兰企业家博扬·斯拉特2013年创立的Ocean Cleanup项目获得了最多关注和资金。其System 003——一个2.2公里长的漂浮屏障，配有水下防护网，允许鱼类从下方通过同时拦截塑料——在其第一个完整运营年内从北太平洋环流中收集了超过10000公斤塑料。这确实是有意义的。但这大约也只是垃圾带估计8万公吨中的0.013%。按这个速度，仅清理北太平洋垃圾带就需要大约6000年。</p>
+      <p>更深层的问题是，表面收集系统无法捕获微塑料，而微塑料按数量计构成了海洋中绝大多数的塑料颗粒。微塑料太小、太分散，无法从公海中经济地收集。任何足够细密以捕获它们的系统也会以灾难性的速度捕获浮游动物和其他海洋生物。目前已知的海洋微塑料问题没有技术解决方案。防止微塑料输入是唯一可行的策略。</p>
+      <p>河流拦截——在塑料到达大海之前从河流中收集——比公海收集更容易实现。Ocean Cleanup等组织已在印度尼西亚、马来西亚、越南和其他东南亚国家的主要塑料输入河流中部署了"拦截器"系统。这些系统能在塑料进入海洋（在那里它变得越来越难以收集）之前清除大量塑料。但同样，它们运行的规模只是年度塑料输入规模的一小部分。</p>
+      <p>全球数百万志愿者开展的海滩清洁活动从沿海地区清除了大量塑料，防止了一些塑料进入海洋。它们还产生了关于塑料类型和来源的宝贵数据。但海洋的广阔和塑料的持久性意味着，如果不从根本上改变生产和处置模式，无论多么积极的清理都只是后卫行动。</p>
+      <p class="highlight">Ocean Cleanup项目是真实的、令人印象深刻的，每年收集北太平洋垃圾带塑料的0.013%。微塑料无法在不杀死海洋生物的情况下从公海中清除。解决海洋塑料问题的唯一方法是停止将塑料投入其中。</p>
+    </div>
+
+    <!-- Section 11 -->
+    <div class="section-card" id="section-11">
+      <div class="section-number">11</div>
+      <h2>塑料行业对回收利用的战争</h2>
+      <p>2019年，美国全国公共广播电台和PBS前线节目的调查记者获得了塑料行业可追溯至1970年代的内部文件。它们揭示的是环境史上最具影响力的欺骗之一：数十年来，塑料行业将回收宣传为解决塑料污染的方案，同时私下承认大多数塑料回收在经济上是不可行的，功能上是不可能的。</p>
+      <p>文件显示，行业高管早在1970年代就知道塑料回收的经济学从根本上就有问题。原生塑料生产成本低廉。收集和分类后的塑料处理成本高昂。最终产品——再生树脂——质量往往不如原生材料，生产成本更高。没有补贴或强制规定，经济上几乎从来行不通。机械回收还受到材料相容性的限制：许多不同类型的塑料（PET、HDPE、PVC、LDPE、PP、PS等）无法混合回收，需要昂贵的分选基础设施。</p>
+      <p>尽管如此，该行业仍大力宣传塑料的可回收性，以阻止监管。熟悉的"追逐箭头"回收符号被放在几乎所有塑料产品上，无论是否存在回收它们的基础设施。这个符号并不意味着产品会被回收——它意味着在理想条件下理论上可以回收。大多数消费者不理解这种区别，而行业方面也没有费心去澄清它。</p>
+      <p>结果：在自1950年以来生产的约92亿公吨塑料中，只有约<strong>9%曾被回收</strong>。约12%被焚烧。其余79%积累在垃圾填埋场或泄漏到自然环境中。回收系统不是解决方案。它是一个旨在让塑料污染成为消费者问题而不是生产者责任的叙事。</p>
+      <p class="highlight">有史以来制造的所有塑料中只有9%被回收利用。该行业数十年来就知道回收不可行，却仍然大力宣传。你塑料包装上的回收符号不是承诺——而是误导。</p>
+    </div>
+
+    <!-- Section 12 -->
+    <div class="section-card" id="section-12">
+      <div class="section-number">12</div>
+      <h2>真正有效的办法：从源头减少塑料</h2>
+      <p>环境政策史上有许多污染问题看似难以解决、直到政治决策简单地停止生产污染物的例子。铅之所以从汽油中被清除，不是因为开发出了更好的铅清除技术，而是因为逐步淘汰了含铅燃料。氯氟烃之所以从制冷剂和气溶胶中被消除，不是因为开发出了更好的大气净化系统，而是因为强制要求使用替代化学品。对于塑料污染的启示是明确的：最有效的解决方案是从源头减少。</p>
+      <p>超过120个国家已以各种形式实施了一次性塑料禁令。欧盟《一次性塑料指令》于2021年生效，禁止了在欧洲海滩上发现的十种最常见的一次性塑料物品：棉签棒、餐具、盘子、吸管、搅拌棒、气球棒、杯子、食品容器、烟蒂和塑料袋。来自成员国的早期数据表明，沿海调查中这些物品有了可测量的减少。</p>
+      <p>延伸生产者责任（EPR）计划——要求塑料制造商资助其生产的塑料的收集和回收——在某些司法管辖区已显示出前景。其理论是：如果生产者承担其产品整个生命周期的全部成本，他们就有经济激励去设计可回收的产品、减少用料，并开发真正循环的商业模式。几个欧洲国家已为包装实施了EPR，包装废物有了可测量的减少。</p>
+      <p>迄今为止最雄心勃勃的全球应对措施是联合国《全球塑料条约》，谈判于2022年开始，旨在到2024年达成具有法律约束力的协议。如果以有意义的承诺通过，该条约可以建立全球塑料生产上限、规定最低再生含量、消除最有问题的塑料类型，并建立一次性塑料逐步淘汰的约束性时间表。其最终范围和可执行性仍受到激烈谈判，主要石化产品生产国反对生产上限。</p>
+      <p>个人能有意义地做的是支持减少塑料生产而非在塑料废物产生后管理它的政策和购买选择。在有替代品时避免一次性塑料，支持有真正塑料减少承诺的企业，并为支持有约束力的塑料生产监管的政客投票，这创造了使系统性变革成为可能的需求信号。海洋不需要更好的清理技术。它需要的是减少进入其中的塑料。</p>
+      <p class="highlight">铅污染通过从汽油中去除铅而得到解决。臭氧层破坏通过禁止氯氟烃而得到解决。海洋塑料将通过减少塑料生产而得到解决——而不是通过更好的回收或清理技术。解决方案存在。它需要的是政治意愿，而不是创新。</p>
+    </div>
+
+    <!-- Closing -->
+    <p style="margin-top: 2rem;">太平洋垃圾带在20世纪中叶之前并不存在。它完全是由人类的决定创造的：设计没有可行生命终结方案的一次性产品的决定，让生产者将废物管理成本外部化的决定，出口废物而不是减少废物的决定，以及集体决定将海洋视为具有无限承载能力的汇聚处——可以吸收我们选择丢弃的一切。</p>
+
+    <p>海洋的承载能力并非无限。这一点的证据已在将瓶盖喂给雏鸟的海鸟身上可见，在搁浅时胃里装满袋子的鲸鱼身上可见，在人类胎盘中积聚的微塑料身上可见，在散布于两块德克萨斯州大小的太平洋海域的万亿块塑料烟雾中可见。</p>
+
+    <p>这一切都不是不可避免的。一次性塑料存在了大约七十年。海洋存在了大约四十亿年。问题是，我们是否以对待过去七十年的方式来对待未来七十年，还是我们决定，一种使每一条海洋食物链饱和并进入每一种吃海鲜的动物——包括我们——组织的不朽污染物，构成了做些不同事情的充分理由。</p>
+
+    <p>垃圾带明天仍会在那里。问题是它是更大还是更小。</p>
+
+  </main>
+
+  <!-- Sources -->
+  <div class="sources">
+    <div class="sources-box">
+      <h2>来源与延伸阅读</h2>
+      <ul>
+        <li>Lebreton, L. et al. (2018). Evidence that the Great Pacific Garbage Patch is rapidly accumulating plastic. <em>Scientific Reports</em>, 8, 4666.</li>
+        <li>Jambeck, J.R. et al. (2015). Plastic waste inputs from land into the ocean. <em>Science</em>, 347(6223), 768-771.</li>
+        <li>Schmidt, C., Krauth, T., &amp; Wagner, S. (2017). Export of plastic debris by rivers into the sea. <em>Environmental Science &amp; Technology</em>, 51(21), 12246-12253.</li>
+        <li>Lavers, J.L. &amp; Bond, A.L. (2017). Exceptional and rapid accumulation of anthropogenic debris on one of the world's most remote and pristine islands. <em>PNAS</em>, 114(23), 6052-6055.</li>
+        <li>Provencher, J.F. et al. (2018). Quantifying ingested debris in marine megafauna: a review and recommendations for standardization. <em>Analytical Methods</em>, 9, 1454-1469.</li>
+        <li>Gall, S.C. &amp; Thompson, R.C. (2015). The impact of debris on marine life. <em>Marine Pollution Bulletin</em>, 92(1-2), 170-179.</li>
+        <li>Rochman, C.M. et al. (2018). Rethinking microplastics as a diverse contaminant suite. <em>Environmental Toxicology and Chemistry</em>, 38(4), 703-711.</li>
+        <li>Geyer, R., Jambeck, J.R., &amp; Law, K.L. (2017). Production, use, and fate of all plastics ever made. <em>Science Advances</em>, 3(7), e1700782.</li>
+        <li>Van Cauwenberghe, L. &amp; Janssen, C.R. (2014). Microplastics in bivalves cultured for human consumption. <em>Environmental Pollution</em>, 193, 65-70.</li>
+        <li>Wilcox, C. et al. (2015). Threat of plastic pollution to seabirds is global, pervasive, and increasing. <em>PNAS</em>, 112(38), 11899-11904.</li>
+        <li>Kühn, S. et al. (2015). Deleterious effects of litter on marine life. <em>The Handbook of Environmental Chemistry</em>, 78, 75-116.</li>
+        <li>NPR/PBS Frontline (2020). How Big Oil Misled the Public into Believing Plastic Would Be Recycled. <em>ProPublica</em>.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Category Links -->
+  <div class="category-links">
+    <p>觉得触目惊心？在 <a href="../../index.html">UselesslyInteresting</a> 探索更多：</p>
+    <p>
+      <a href="../../index.html">生物</a> &bull;
+      <a href="../../index.html">太空</a> &bull;
+      <a href="../../index.html">历史</a> &bull;
+      <a href="../../index.html">自然</a> &bull;
+      <a href="../../index.html">动物</a> &bull;
+      <a href="../../index.html">科学</a> &bull;
+      <a href="../../index.html">环境</a>
+    </p>
+    <p>或阅读我们其他深度文章：
+      <a href="../insects-are-disappearing-so-fast-nobody-noticed.html">昆虫正在以无人察觉的速度消失</a> &bull;
+      <a href="../trees-send-messages-through-underground-fungal-network.html">树木通过地下真菌网络传递信息</a> &bull;
+      <a href="../mind-bending-science-facts-that-sound-fake.html">20个听起来像假的震撼科学事实</a>
+    </p>
+  </div>
+
+  <!-- Bottom Navigation -->
+  <div class="article-footer-nav">
+    <a href="../../articles.html">&larr; 返回文章列表</a>
+    <a href="../../index.html">探索每日冷知识</a>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 UselesslyInteresting. 所有事实均已核实。部分海洋遭到永久质疑。</p>
+  </footer>
+
+  <!-- Theme Toggle + Language Switcher + Fade-up Animation Script -->
+  <script>
+    function toggleTheme() {
+      var html = document.documentElement;
+      var current = html.getAttribute('data-theme');
+      var next = current === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('ui-theme', next);
+      document.querySelector('.theme-toggle').textContent = next === 'dark' ? '\u2600' : '\u263E';
+    }
+
+    // Restore saved theme
+    (function() {
+      var saved = localStorage.getItem('ui-theme');
+      if (saved === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        document.addEventListener('DOMContentLoaded', function() {
+          document.querySelector('.theme-toggle').textContent = '\u2600';
+        });
+      }
+    })();
+
+    // Language switcher
+    function toggleLangMenu() {
+      document.getElementById('lang-menu').classList.toggle('open');
+    }
+
+    // Close lang menu on outside click
+    document.addEventListener('click', function(e) {
+      var dropdown = document.querySelector('.lang-dropdown');
+      if (dropdown && !dropdown.contains(e.target)) {
+        document.getElementById('lang-menu').classList.remove('open');
+      }
+    });
+
+    function setLanguage(lang) {
+      localStorage.setItem('lang', lang);
+      document.getElementById('lang-menu').classList.remove('open');
+      var btn = document.getElementById('lang-btn');
+      if (btn) btn.textContent = lang.toUpperCase();
+
+      // Update active state
+      var menuBtns = document.querySelectorAll('#lang-menu button');
+      var codes = ['en','de','es','ar','it','fr','zh','ja'];
+      menuBtns.forEach(function(b, i) {
+        b.classList.toggle('active', codes[i] === lang);
+      });
+
+      // Redirect to translated version if available
+      if (lang === 'en') {
+        window.location.href = '../../articles/the-great-pacific-garbage-patch-is-twice-the-size-of-texas.html';
+      } else {
+        window.location.href = '../../articles/' + lang + '/the-great-pacific-garbage-patch-is-twice-the-size-of-texas.html';
+      }
+    }
+
+    // Restore saved language indicator
+    (function() {
+      var lang = localStorage.getItem('lang') || 'zh';
+      var btn = document.getElementById('lang-btn');
+      if (btn) btn.textContent = lang.toUpperCase();
+      var menuBtns = document.querySelectorAll('#lang-menu button');
+      var codes = ['en','de','es','ar','it','fr','zh','ja'];
+      menuBtns.forEach(function(b, i) {
+        b.classList.toggle('active', codes[i] === lang);
+      });
+    })();
+
+    // Fade-up animation on scroll using IntersectionObserver
+    document.addEventListener('DOMContentLoaded', function() {
+      var cards = document.querySelectorAll('.section-card');
+      if ('IntersectionObserver' in window) {
+        var observer = new IntersectionObserver(function(entries) {
+          entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+        cards.forEach(function(card) { observer.observe(card); });
+      } else {
+        cards.forEach(function(card) { card.classList.add('visible'); });
+      }
+    });
+  </script>
+
+  <!-- Default Statcounter code for uselesslyinteresting -->
+  <script type="text/javascript">
+  var sc_project=13212348;
+  var sc_invisible=1;
+  var sc_security="9548ad36";
+  </script>
+  <script type="text/javascript" src="https://www.statcounter.com/counter/counter.js" async></script>
+  <noscript><div class="statcounter"><a title="website statistics" href="https://statcounter.com/" target="_blank"><img class="statcounter" src="https://c.statcounter.com/13212348/0/9548ad36/1/" alt="website statistics" referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
+
+  <script src="../../ai-widget.js"></script>
+</body>
+</html>

@@ -1,4 +1,24 @@
 {
+  "the-great-pacific-garbage-patch-is-twice-the-size-of-texas": {
+    "eli5": "In the middle of the Pacific Ocean, there is a giant area full of tiny bits of plastic — so much plastic that it covers a space twice as big as the whole state of Texas. The plastic doesn't disappear — it just breaks into smaller and smaller pieces, like how a cookie crumbles. Fish, birds, and even tiny sea creatures eat these plastic bits by mistake, because the pieces look like food. And when we eat seafood, we eat some of those plastic bits too.",
+    "quiz": [
+      {
+        "question": "How large is the Great Pacific Garbage Patch estimated to be?",
+        "options": ["A) About the size of California", "B) About twice the size of Texas", "C) About the size of Europe", "D) About the size of Australia"],
+        "correct": 1
+      },
+      {
+        "question": "What percentage of the Great Pacific Garbage Patch's plastic mass by weight is made up of fishing nets?",
+        "options": ["A) About 10%", "B) About 25%", "C) About 46%", "D) About 70%"],
+        "correct": 2
+      },
+      {
+        "question": "Of all the plastic ever produced since 1950, approximately what percentage has been recycled?",
+        "options": ["A) About 9%", "B) About 25%", "C) About 40%", "D) About 60%"],
+        "correct": 0
+      }
+    ]
+  },
   "your-brain-predicts-the-future-10-seconds-ahead": {
     "eli5": "Your brain is like a time-traveling fortune teller that makes guesses about what will happen next before it actually happens. By the time you think you're seeing or feeling something, your brain already predicted it a fraction of a second ago. What you experience as 'right now' is actually your brain's best guess about the future. When the guess is wrong, your brain gets surprised and quickly updates its picture of the world.",
     "quiz": [
