@@ -34,8 +34,8 @@ jobs:
           if [ ! -f "$FACT_FILE" ]; then
             echo "No fact file for today ($TODAY), skipping fact notification."
           else
-            TITLE=$(cat "$FACT_FILE" | python3 -c "import sys,json; print(json.load(sys.stdin)[0]['title'])")
-            EMOJI=$(cat "$FACT_FILE" | python3 -c "import sys,json; print(json.load(sys.stdin)[0]['emoji'])")
+            TITLE=$(python3 -c "import json,sys; d=json.load(open('$FACT_FILE',encoding='utf-8')); print(d[0]['title'])")
+            EMOJI=$(python3 -c "import json,sys; d=json.load(open('$FACT_FILE',encoding='utf-8')); print(d[0]['emoji'])")
 
             curl -s -X POST "https://onesignal.com/api/v1/notifications" \
               -H "Authorization: Basic ${ONESIGNAL_API_KEY}" \
@@ -70,9 +70,9 @@ jobs:
             exit 0
           fi
 
-          TITLE=$(cat "$ARTICLE_FILE" | python3 -c "import sys,json; print(json.load(sys.stdin)['title'])")
-          EMOJI=$(cat "$ARTICLE_FILE" | python3 -c "import sys,json; print(json.load(sys.stdin)['emoji'])")
-          SLUG=$(cat "$ARTICLE_FILE" | python3 -c "import sys,json; print(json.load(sys.stdin)['slug'])")
+          TITLE=$(python3 -c "import json; d=json.load(open('$ARTICLE_FILE',encoding='utf-8')); print(d['title'])")
+          EMOJI=$(python3 -c "import json; d=json.load(open('$ARTICLE_FILE',encoding='utf-8')); print(d['emoji'])")
+          SLUG=$(python3 -c "import json; d=json.load(open('$ARTICLE_FILE',encoding='utf-8')); print(d['slug'])")
 
           curl -s -X POST "https://onesignal.com/api/v1/notifications" \
             -H "Authorization: Basic ${ONESIGNAL_API_KEY}" \
