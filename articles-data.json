@@ -298,5 +298,65 @@
         "correct": 1
       }
     ]
+  },
+  "the-accidental-inventions-that-changed-the-world": {
+    "eli5": "Some of the most important things we use every day — like sticky notes, microwave ovens, and even the internet — were discovered completely by accident. Scientists were trying to do something else entirely, spilled something, forgot something, or noticed a weird side effect — and ended up inventing something that changed the whole world. Mistakes can sometimes be the best discoveries.",
+    "quiz": [
+      {
+        "question": "How was the microwave oven invented?",
+        "options": ["A) A scientist deliberately designed it to heat food faster", "B) An engineer noticed radar waves melted a chocolate bar in his pocket", "C) A chef accidentally left a radio near his stove", "D) It was adapted from military heating technology after World War II"],
+        "correct": 1
+      },
+      {
+        "question": "What was Spencer Silver originally trying to create when he invented the material used in Post-it Notes?",
+        "options": ["A) A waterproof coating for paper", "B) A strong permanent adhesive for aerospace use", "C) A reusable label for filing cabinets", "D) A flexible glue for bookbinding"],
+        "correct": 1
+      },
+      {
+        "question": "What accidental discovery did Alexander Fleming make that led to penicillin?",
+        "options": ["A) A mold contaminated his petri dish and killed the bacteria around it", "B) A chemical spill in his lab destroyed a bacterial culture", "C) He left a patient's wound unwashed and it healed faster", "D) A fungus grew on his bread and he tested it on mice"],
+        "correct": 0
+      }
+    ]
+  },
+  "the-country-that-has-four-time-zones-but-uses-only-one": {
+    "eli5": "China is a huge country — so wide that the sun rises and sets at very different times depending on where you are. Most big countries like the USA use several different clocks for different parts of the country. But China decided to use just one clock everywhere, set to the time in Beijing, the capital city. So in the far west of China, the sun doesn't rise until 10 in the morning — but everyone's clock still says it's a normal morning time. It was a political decision to make the whole country feel united.",
+    "quiz": [
+      {
+        "question": "How many time zones did China use before 1949?",
+        "options": ["A) Two", "B) Three", "C) Five", "D) Seven"],
+        "correct": 2
+      },
+      {
+        "question": "What is the approximate difference between official Beijing time and the natural solar time in Kashgar, Xinjiang?",
+        "options": ["A) About 30 minutes", "B) About 1 hour", "C) About 2 hours", "D) About 4 hours"],
+        "correct": 2
+      },
+      {
+        "question": "Which country's time zone did Spain align itself with in 1940 as a political gesture?",
+        "options": ["A) Italy", "B) France", "C) Portugal", "D) Nazi Germany"],
+        "correct": 3
+      }
+    ]
+  },
+  "the-wow-signal-the-only-possible-alien-message-ever-received": {
+    "eli5": "In 1977, a big radio telescope in Ohio was listening to space — like a giant ear pointed at the sky. One night it heard something very unusual: a signal that lasted 72 seconds and was exactly the kind of thing scientists thought an alien message might sound like. An astronomer was so surprised when he saw it printed out that he wrote 'Wow!' next to it. Scientists have been trying to explain it ever since, but nobody has found a convincing answer. It has never been heard again.",
+    "quiz": [
+      {
+        "question": "What frequency did the Wow! Signal appear at, and why was that significant?",
+        "options": ["A) 1420 MHz — the frequency of neutral hydrogen, considered a universal marker", "B) 2400 MHz — the frequency used by early satellite communications", "C) 100 MHz — the standard FM radio broadcast frequency", "D) 500 MHz — the frequency SETI had specifically requested alien civilizations use"],
+        "correct": 0
+      },
+      {
+        "question": "How long did the Wow! Signal last?",
+        "options": ["A) 12 seconds", "B) 37 seconds", "C) 72 seconds", "D) 144 seconds"],
+        "correct": 2
+      },
+      {
+        "question": "What did the 2017 comet hypothesis propose as a natural explanation for the Wow! Signal?",
+        "options": ["A) A solar flare caused unusual interference at the hydrogen line frequency", "B) Two comets passing through the region produced hydrogen emission at 1420 MHz", "C) A pulsar in Sagittarius emitted an unusually long single burst", "D) Interstellar hydrogen clouds briefly aligned to produce a focused beam"],
+        "correct": 1
+      }
+    ]
   }
 }
