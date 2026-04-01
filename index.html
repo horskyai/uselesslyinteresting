@@ -1644,8 +1644,12 @@ async function loadScheduledFactsWithLang(lang) {
       if (!resp.ok) continue;
       var facts = await resp.json();
 
-      if (dateStr >= '2026-03-20') {
+      if (dateStr >= '2026-03-20' && dateStr <= '2026-03-31') {
         var publishTime = new Date(dateStr + 'T13:00:00Z');
+        if (now < publishTime) continue;
+      }
+      if (dateStr >= '2026-04-01') {
+        var publishTime = new Date(dateStr + 'T12:00:00Z');
         if (now < publishTime) continue;
       }
 
