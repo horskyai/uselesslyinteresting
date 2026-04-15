@@ -4,142 +4,94 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>About — UselesslyInteresting</title>
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Mono:ital,wght@0,400;1,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet"/>
-  <script>if(localStorage.getItem('theme')==='dark')document.documentElement.setAttribute('data-theme','dark');</script>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    /* ── LIGHT MODE (default) ── */
     :root {
-      --bg: #f5f5f0; --surface: #eaeae4; --card: #ffffff;
-      --accent: #5a8a00; --accent2: #c4168c; --accent3: #0088bb;
-      --text: #1a1a2e; --muted: #5c5c72; --border: rgba(90,138,0,0.15);
-      --card-hover: #f0f0ea; --noise-opacity: 0.15; --shadow: 0 1px 3px rgba(0,0,0,0.06);
+      --bg: #ffffff; --surface: #f4f4f4; --card: #f9f9f9;
+      --accent: #6ab000; --accent2: #c4168c; --accent3: #0088bb;
+      --text: #111111; --muted: #666666; --border: #e0e0e0;
     }
-
-    /* ── DARK MODE ── */
-    [data-theme="dark"] {
-      --bg: #0a0a0f; --surface: #12121a; --card: #1a1a26;
-      --accent: #c8ff3e; --accent2: #ff3ecb; --accent3: #3ec8ff;
-      --text: #e8e8f0; --muted: #6b6b88; --border: rgba(200,255,62,0.12);
-      --card-hover: #1f1f30; --noise-opacity: 0.4; --shadow: none;
-    }
-
-    body { background: var(--bg); color: var(--text); font-family: 'DM Mono', monospace; min-height: 100vh; overflow-x: hidden; transition: background 0.3s, color 0.3s; }
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--text); font-family: Arial, Helvetica, sans-serif; min-height: 100vh; overflow-x: hidden; }
 
     /* HEADER */
-    header { padding: 2rem 2rem 0; display: flex; flex-direction: column; align-items: center; }
-    .logo { font-family: 'Syne', sans-serif; font-weight: 800; font-size: clamp(1.2rem, 3vw, 1.6rem); letter-spacing: -0.03em; text-decoration: none; color: var(--text); line-height: 1; }
+    header { position: sticky; top: 0; z-index: 100; background: #fff; border-bottom: 1px solid var(--border); padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; height: 64px; }
+    .logo { font-weight: 900; font-size: 1.25rem; letter-spacing: -0.03em; text-decoration: none; color: var(--text); }
     .logo span { color: var(--accent); }
-    .logo-sub { font-size: 0.62rem; color: var(--muted); letter-spacing: 0.15em; text-transform: uppercase; margin-top: 2px; }
-    nav { display: flex; justify-content: center; gap: 1.5rem; font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-top: 1.5rem; }
-    nav a { color: var(--accent); text-decoration: none; border: 1px solid var(--accent); padding: 0.35rem 0.9rem; transition: background 0.2s, color 0.2s; }
-    nav a:hover { background: var(--accent); color: var(--bg); }
-    nav a.active { background: var(--accent); color: var(--bg); }
-
-    /* TOP-RIGHT CONTROLS */
-    .top-controls {
-      position: fixed; top: 1.5rem; right: 2rem;
-      display: flex; gap: 0.5rem; align-items: center; z-index: 999;
-    }
+    nav { display: flex; align-items: center; gap: 0.25rem; }
+    nav a { color: var(--muted); text-decoration: none; font-size: 0.82rem; font-weight: 500; padding: 0.45rem 0.9rem; border-radius: 6px; transition: background 0.15s, color 0.15s; }
+    nav a:hover { background: var(--surface); color: var(--text); }
+    nav a.active { color: var(--accent); font-weight: 700; }
+    .nav-cta { background: var(--accent); color: #fff !important; border-radius: 6px; padding: 0.45rem 1.1rem !important; font-weight: 700 !important; margin-left: 0.5rem; }
+    .nav-cta:hover { opacity: 0.85; background: var(--accent) !important; color: #fff !important; }
+    .top-controls { display: flex; align-items: center; gap: 0.5rem; }
     .lang-dropdown { position: relative; display: inline-block; }
-    .lang-btn {
-      background: var(--bg); border: 1px solid var(--border); color: var(--text);
-      font-family: 'DM Mono', monospace; font-size: 0.72rem; padding: 0.35rem 0.9rem;
-      cursor: pointer; letter-spacing: 0.1em; text-transform: uppercase;
-      transition: background 0.2s, color 0.2s, border-color 0.2s;
-    }
-    .lang-btn:hover { border-color: var(--accent); color: var(--accent); }
-    .lang-menu {
-      display: none; position: absolute; top: 100%; right: 0;
-      background: var(--card); border: 1px solid var(--border);
-      min-width: 140px; z-index: 100; box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    }
+    .lang-btn { background: var(--surface); border: 1px solid var(--border); color: var(--text); font-family: Arial, Helvetica, sans-serif; font-size: 0.78rem; font-weight: 600; padding: 0.4rem 0.9rem; border-radius: 6px; cursor: pointer; transition: background 0.15s; }
+    .lang-btn:hover { background: #e8e8e8; }
+    .lang-menu { display: none; position: absolute; top: calc(100% + 6px); right: 0; background: #fff; border: 1px solid var(--border); border-radius: 8px; min-width: 140px; z-index: 200; box-shadow: 0 8px 24px rgba(0,0,0,0.1); overflow: hidden; }
     .lang-menu.open { display: block; }
-    .lang-menu button {
-      display: block; width: 100%; background: transparent; border: none;
-      color: var(--text); font-family: 'DM Mono', monospace; font-size: 0.75rem;
-      padding: 0.6rem 1rem; cursor: pointer; text-align: left; transition: background 0.2s;
-    }
+    .lang-menu button { display: block; width: 100%; background: transparent; border: none; color: var(--text); font-family: Arial, Helvetica, sans-serif; font-size: 0.82rem; padding: 0.65rem 1rem; cursor: pointer; text-align: left; transition: background 0.15s; }
     .lang-menu button:hover { background: var(--surface); }
-    .lang-menu button.active { color: var(--accent); font-weight: bold; }
-    .theme-toggle {
-      background: var(--bg); border: 1px solid var(--border); color: var(--muted);
-      font-size: 1rem; padding: 0.3rem 0.6rem; cursor: pointer;
-      transition: color 0.2s, border-color 0.2s; line-height: 1;
-    }
-    .theme-toggle:hover { color: var(--accent); border-color: var(--accent); }
+    .lang-menu button.active { color: var(--accent); font-weight: 700; }
+
+    @media (max-width: 768px) { nav a { display: none; } .nav-cta { display: none; } .top-controls { display: none; } }
 
     /* HERO */
-    .hero { padding: 5rem 2rem 3rem; max-width: 1100px; margin: 0 auto; }
-    .hero-tag { display: inline-block; font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); border: 1px solid var(--accent); padding: 0.3rem 0.8rem; margin-bottom: 1.5rem; animation: fadeUp 0.6s ease both; }
-    .hero h1 { font-family: 'Syne', sans-serif; font-weight: 800; font-size: clamp(3rem, 9vw, 7rem); line-height: 0.95; letter-spacing: -0.04em; animation: fadeUp 0.6s 0.1s ease both; }
-    .hero h1 em { font-family: 'Instrument Serif', serif; font-style: italic; color: var(--accent); }
+    .hero { padding: 4rem 2rem 2.5rem; max-width: 1100px; margin: 0 auto; }
+    .hero-tag { display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent); background: rgba(106,176,0,0.08); border: 1px solid rgba(106,176,0,0.25); padding: 0.3rem 0.8rem; border-radius: 100px; margin-bottom: 1.5rem; animation: fadeUp 0.5s ease both; }
+    .hero h1 { font-weight: 900; font-size: clamp(2.8rem, 8vw, 5.5rem); line-height: 1.0; letter-spacing: -0.04em; animation: fadeUp 0.5s 0.1s ease both; }
+    .hero h1 em { font-style: italic; color: var(--accent); }
 
     /* CONTENT */
-    .content { max-width: 1100px; margin: 0 auto; padding: 3rem 2rem 6rem; }
+    .content { max-width: 1100px; margin: 0 auto; padding: 2rem 2rem 6rem; display: flex; flex-direction: column; gap: 1rem; }
 
-    .block { border: 1px solid var(--border); padding: 3rem; margin-bottom: 1.5px; position: relative; overflow: hidden; animation: fadeUp 0.5s ease both; }
-    .block::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: var(--accent); transform: scaleX(0); transform-origin: left; transition: transform 0.4s ease; }
-    .block:hover::before { transform: scaleX(1); }
-    .block:nth-child(2)::before { background: var(--accent2); }
+    .block { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 2.5rem; animation: fadeUp 0.5s ease both; transition: transform 0.2s, box-shadow 0.2s; }
+    .block:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.07); }
+    .block::before { display: none; }
 
-    .block-num { font-size: 0.6rem; letter-spacing: 0.2em; color: var(--muted); margin-bottom: 1.5rem; text-transform: uppercase; }
-
-    .block h2 { font-family: 'Syne', sans-serif; font-size: clamp(1.8rem, 4vw, 3rem); font-weight: 800; letter-spacing: -0.03em; line-height: 1.1; margin-bottom: 1.5rem; }
-    .block h2 em { font-family: 'Instrument Serif', serif; font-style: italic; color: var(--accent); }
+    .block-num { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.12em; color: var(--muted); margin-bottom: 1rem; text-transform: uppercase; }
+    .block h2 { font-weight: 900; font-size: clamp(1.6rem, 4vw, 2.5rem); letter-spacing: -0.03em; line-height: 1.15; margin-bottom: 1.2rem; }
+    .block h2 em { font-style: italic; color: var(--accent); }
     .block:nth-child(2) h2 em { color: var(--accent2); }
-
-    .block p { font-size: 0.88rem; color: var(--muted); line-height: 1.9; max-width: 680px; }
-    .block p + p { margin-top: 1rem; }
-
+    .block p { font-size: 0.92rem; color: var(--muted); line-height: 1.8; max-width: 680px; }
+    .block p + p { margin-top: 0.8rem; }
     .block .highlight { color: var(--text); font-style: italic; }
 
     /* STATS */
-    .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5px; margin-top: 1.5px; }
-    .stat { background: var(--card); padding: 2rem; text-align: center; animation: fadeUp 0.5s ease both; }
-    .stat-num { font-family: 'Syne', sans-serif; font-size: 3rem; font-weight: 800; color: var(--accent); letter-spacing: -0.04em; }
-    .stat-label { font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted); margin-top: 0.5rem; }
+    .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+    .stat { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 2rem; text-align: center; animation: fadeUp 0.5s ease both; }
+    .stat-num { font-size: 3rem; font-weight: 900; color: var(--accent); letter-spacing: -0.04em; }
+    .stat-label { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin-top: 0.5rem; }
 
-    @media (max-width: 680px) {
-      .stats { grid-template-columns: 1fr; }
-      nav { display: none; }
-      .top-controls { top: 1rem; right: 1rem; }
-    }
+    @media (max-width: 680px) { .stats { grid-template-columns: 1fr; } }
 
-    /* FOOTER */
-    footer { border-top: 1px solid var(--border); padding: 2rem; display: flex; justify-content: space-between; align-items: center; font-size: 0.65rem; letter-spacing: 0.1em; color: var(--muted); text-transform: uppercase; max-width: 1100px; margin: 0 auto; }
+    footer { border-top: 1px solid var(--border); padding: 2rem; display: flex; justify-content: space-between; align-items: center; font-size: 0.72rem; color: var(--muted); max-width: 1100px; margin: 0 auto; }
+    @media (max-width: 680px) { footer { flex-direction: column; gap: 0.5rem; text-align: center; } }
 
-    @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
   </style>
 </head>
 <body>
 
   <header>
+    <a href="index.html" class="logo">Uselessly<span>Interesting</span></a>
     <nav>
       <a href="index.html" data-i18n="nav_home">Home</a>
-      <a href="index.html#categories" data-i18n="nav_categories">Categories</a>
-      <a href="articles.html" data-i18n="nav_articles">Articles</a>
       <a href="about.html" class="active" data-i18n="nav_about">About</a>
       <a href="https://www.instagram.com/uselesslyinteresting" target="_blank" data-i18n="nav_instagram">Instagram</a>
+      <a href="articles.html" class="nav-cta" data-i18n="nav_articles">Articles</a>
     </nav>
-    <a href="index.html" style="text-decoration:none; color: inherit; margin-top: 1.5rem;">
-      <div class="logo">Uselessly<span>Interesting</span></div>
-      <div class="logo-sub" data-i18n="about_logo_sub">Facts nobody asked for</div>
-    </a>
-  </header>
-
-  <div class="top-controls">
-    <div class="lang-dropdown">
-      <button class="lang-btn" onclick="toggleLangMenu()" id="lang-btn">🌐 EN</button>
-      <div class="lang-menu" id="lang-menu">
-        <button onclick="setLanguage('en')" class="active">🇬🇧 English</button>
-        <button onclick="setLanguage('es')">🇪🇸 Español</button>
-        <button onclick="setLanguage('zh')">🇨🇳 中文</button>
+    <div class="top-controls">
+      <div class="lang-dropdown">
+        <button class="lang-btn" onclick="toggleLangMenu()" id="lang-btn">🌐 EN</button>
+        <div class="lang-menu" id="lang-menu">
+          <button onclick="setLanguage('en')" class="active">🇬🇧 English</button>
+          <button onclick="setLanguage('es')">🇪🇸 Español</button>
+          <button onclick="setLanguage('zh')">🇨🇳 中文</button>
+        </div>
       </div>
     </div>
-    <button class="theme-toggle" onclick="toggleTheme()" id="theme-btn" title="Toggle dark mode">☀️</button>
-  </div>
+  </header>
 
   <div class="hero">
     <div class="hero-tag" data-i18n="about_hero_tag">✦ Our story</div>
@@ -248,26 +200,8 @@
     }
   });
 
-  function toggleTheme() {
-    var html = document.documentElement;
-    var isDark = html.getAttribute('data-theme') === 'dark';
-    if (isDark) {
-      html.removeAttribute('data-theme');
-      localStorage.setItem('theme', 'light');
-      document.getElementById('theme-btn').textContent = '☀️';
-    } else {
-      html.setAttribute('data-theme', 'dark');
-      localStorage.setItem('theme', 'dark');
-      document.getElementById('theme-btn').textContent = '🌙';
-    }
-  }
-
   // Load translations and apply saved language
   (function() {
-    var saved = localStorage.getItem('theme');
-    if (saved === 'dark') {
-      document.getElementById('theme-btn').textContent = '🌙';
-    }
     var lang = localStorage.getItem('lang') || 'en';
     updateLangButtons(lang);
 

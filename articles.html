@@ -4,301 +4,125 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Articles — UselesslyInteresting</title>
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Mono:ital,wght@0,400;1,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet"/>
   <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <script>if(localStorage.getItem('theme')==='dark')document.documentElement.setAttribute('data-theme','dark');</script>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-    /* ── LIGHT MODE (default) ── */
     :root {
-      --bg: #f5f5f0; --surface: #eaeae4; --card: #ffffff;
-      --accent: #5a8a00; --accent2: #c4168c; --accent3: #0088bb;
-      --text: #1a1a2e; --muted: #5c5c72; --border: rgba(90,138,0,0.15);
-      --card-hover: #f0f0ea; --noise-opacity: 0.15; --shadow: 0 1px 3px rgba(0,0,0,0.06);
-    }
-
-    /* ── DARK MODE ── */
-    [data-theme="dark"] {
-      --bg: #0a0a0f; --surface: #12121a; --card: #1a1a26;
-      --accent: #c8ff3e; --accent2: #ff3ecb; --accent3: #3ec8ff;
-      --text: #e8e8f0; --muted: #6b6b88; --border: rgba(200,255,62,0.12);
-      --card-hover: #1f1f30; --noise-opacity: 0.4; --shadow: none;
+      --bg: #ffffff; --surface: #f4f4f4; --card: #f9f9f9; --card-hover: #f0f0f0;
+      --accent: #6ab000; --accent2: #c4168c; --accent3: #0088bb;
+      --text: #111111; --muted: #666666; --border: #e0e0e0;
+      --shadow: 0 2px 8px rgba(0,0,0,0.06);
     }
 
     html { scroll-behavior: smooth; }
-
-    body {
-      background: var(--bg); color: var(--text);
-      font-family: 'DM Mono', monospace;
-      min-height: 100vh; overflow-x: hidden;
-      transition: background 0.3s, color 0.3s;
-    }
-
-    /* Noise overlay */
-    body::before {
-      content: '';
-      position: fixed; inset: 0;
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
-      pointer-events: none; z-index: 1000;
-      opacity: var(--noise-opacity, 0.15);
-    }
+    body { background: var(--bg); color: var(--text); font-family: Arial, Helvetica, sans-serif; min-height: 100vh; overflow-x: hidden; }
 
     /* ── HEADER ── */
     header {
-      padding: 2rem 2rem 0;
-      display: flex; align-items: center; justify-content: center;
-      position: relative;
+      position: sticky; top: 0; z-index: 100;
+      background: #fff; border-bottom: 1px solid var(--border);
+      padding: 0 2rem; display: flex; align-items: center;
+      justify-content: space-between; height: 64px;
     }
-
-    .logo {
-      font-family: 'Syne', sans-serif; font-weight: 800;
-      font-size: clamp(1.2rem, 3vw, 1.6rem);
-      letter-spacing: -0.03em; line-height: 1;
-    }
+    .logo { font-weight: 900; font-size: 1.25rem; letter-spacing: -0.03em; color: var(--text); text-decoration: none; }
     .logo span { color: var(--accent); }
+    nav { display: flex; align-items: center; gap: 0.25rem; }
+    nav a { color: var(--muted); text-decoration: none; font-size: 0.82rem; font-weight: 500; padding: 0.45rem 0.9rem; border-radius: 6px; transition: background 0.15s, color 0.15s; }
+    nav a:hover { background: var(--surface); color: var(--text); }
+    nav a.active { color: var(--accent); font-weight: 700; }
+    .nav-cta { background: var(--accent); color: #fff !important; border-radius: 6px; padding: 0.45rem 1.1rem !important; font-weight: 700 !important; margin-left: 0.5rem; }
+    .nav-cta:hover { opacity: 0.85; background: var(--accent) !important; color: #fff !important; }
 
-    .logo-sub {
-      font-family: 'DM Mono', monospace;
-      font-size: 0.62rem; color: var(--muted);
-      letter-spacing: 0.15em; text-transform: uppercase; margin-top: 2px;
-    }
-
-    nav {
-      display: flex; justify-content: center; gap: 1.5rem;
-      font-size: 0.72rem; letter-spacing: 0.1em;
-      text-transform: uppercase; color: var(--muted);
-    }
-    nav a {
-      color: var(--accent); text-decoration: none;
-      border: 1px solid var(--accent);
-      padding: 0.35rem 0.9rem;
-      transition: background 0.2s, color 0.2s;
-    }
-    nav a:hover { background: var(--accent); color: var(--bg); }
-    nav a.active { background: var(--accent); color: var(--bg); }
-
-    /* ── HAMBURGER ── */
-    .hamburger {
-      display: none; background: transparent;
-      border: 1px solid var(--border); color: var(--accent);
-      font-size: 1.2rem; padding: 0.3rem 0.7rem; cursor: pointer;
-    }
-
-    .mobile-menu {
-      display: none; flex-wrap: wrap;
-      background: var(--bg); border-top: 1px solid var(--border);
-      padding: 1rem 1.5rem; gap: 0.5rem;
-    }
-    .mobile-menu a {
-      color: var(--text); text-decoration: none;
-      font-family: 'DM Mono', monospace; font-size: 0.75rem;
-      letter-spacing: 0.1em; text-transform: uppercase;
-      padding: 0.5rem 0.8rem; border: 1px solid var(--border);
-      width: calc(50% - 0.25rem); text-align: center;
-    }
-    .mobile-menu a:hover { color: var(--accent); border-color: var(--accent); }
-    .mobile-menu.open { display: flex; }
-
-    .mobile-lang-submenu {
-      display: none; flex-wrap: wrap; width: 100%;
-      gap: 0.4rem; justify-content: center; padding-top: 0.3rem;
-    }
-    .mobile-lang-submenu.open { display: flex; }
-    .mobile-lang-submenu button {
-      background: transparent; border: 1px solid var(--border);
-      color: var(--text); font-family: 'DM Mono', monospace;
-      font-size: 0.7rem; letter-spacing: 0.05em;
-      padding: 0.35rem 0.6rem; cursor: pointer; text-align: center;
-    }
-    .mobile-lang-submenu button:hover { color: var(--accent); border-color: var(--accent); }
-    .mobile-lang-submenu button.active { color: var(--accent); border-color: var(--accent); font-weight: bold; }
-
-    /* ── TOP-RIGHT CONTROLS ── */
-    .top-controls {
-      position: fixed; top: 1.5rem; right: 2rem;
-      display: flex; gap: 0.5rem; align-items: center; z-index: 999;
-    }
-
+    .top-controls { display: flex; align-items: center; gap: 0.5rem; }
     .lang-dropdown { position: relative; display: inline-block; }
-    .lang-btn {
-      background: var(--bg); border: 1px solid var(--border); color: var(--text);
-      font-family: 'DM Mono', monospace; font-size: 0.72rem;
-      padding: 0.35rem 0.9rem; cursor: pointer;
-      letter-spacing: 0.1em; text-transform: uppercase;
-      transition: background 0.2s, color 0.2s, border-color 0.2s;
-    }
-    .lang-btn:hover { border-color: var(--accent); color: var(--accent); }
-    .lang-menu {
-      display: none; position: absolute; top: 100%; right: 0;
-      background: var(--card); border: 1px solid var(--border);
-      min-width: 140px; z-index: 100; box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    }
+    .lang-btn { background: var(--surface); border: 1px solid var(--border); color: var(--text); font-family: Arial, Helvetica, sans-serif; font-size: 0.78rem; font-weight: 600; padding: 0.4rem 0.9rem; border-radius: 6px; cursor: pointer; transition: background 0.15s; }
+    .lang-btn:hover { background: #e8e8e8; }
+    .lang-menu { display: none; position: absolute; top: calc(100% + 6px); right: 0; background: #fff; border: 1px solid var(--border); border-radius: 8px; min-width: 140px; z-index: 200; box-shadow: 0 8px 24px rgba(0,0,0,0.1); overflow: hidden; }
     .lang-menu.open { display: block; }
-    .lang-menu button {
-      display: block; width: 100%; background: transparent; border: none;
-      color: var(--text); font-family: 'DM Mono', monospace; font-size: 0.75rem;
-      padding: 0.6rem 1rem; cursor: pointer; text-align: left; transition: background 0.2s;
-    }
+    .lang-menu button { display: block; width: 100%; background: transparent; border: none; color: var(--text); font-family: Arial, Helvetica, sans-serif; font-size: 0.82rem; padding: 0.65rem 1rem; cursor: pointer; text-align: left; transition: background 0.15s; }
     .lang-menu button:hover { background: var(--surface); }
-    .lang-menu button.active { color: var(--accent); font-weight: bold; }
+    .lang-menu button.active { color: var(--accent); font-weight: 700; }
 
-    .theme-toggle {
-      background: var(--bg); border: 1px solid var(--border); color: var(--muted);
-      font-size: 1rem; padding: 0.3rem 0.6rem; cursor: pointer;
-      transition: color 0.2s, border-color 0.2s; line-height: 1;
-    }
-    .theme-toggle:hover { color: var(--accent); border-color: var(--accent); }
+    .hamburger { display: none; background: transparent; border: 1px solid var(--border); color: var(--text); font-size: 1.2rem; padding: 0.3rem 0.7rem; border-radius: 6px; cursor: pointer; }
+    .mobile-menu { display: none; flex-direction: column; background: #fff; border-bottom: 1px solid var(--border); padding: 1rem 1.5rem; gap: 0.3rem; }
+    .mobile-menu a { color: var(--text); text-decoration: none; font-size: 0.9rem; font-weight: 500; padding: 0.6rem 0.8rem; border-radius: 6px; }
+    .mobile-menu a:hover { background: var(--surface); }
+    .mobile-menu.open { display: flex; }
+    .mobile-lang-submenu { display: none; flex-wrap: wrap; gap: 0.4rem; padding: 0.5rem 0.8rem; }
+    .mobile-lang-submenu.open { display: flex; }
+    .mobile-lang-submenu button { background: var(--surface); border: 1px solid var(--border); color: var(--text); font-family: Arial, Helvetica, sans-serif; font-size: 0.78rem; padding: 0.35rem 0.7rem; border-radius: 4px; cursor: pointer; }
+    .mobile-lang-submenu button.active { color: var(--accent); border-color: var(--accent); font-weight: 700; }
 
     @media (max-width: 768px) {
-      nav a { display: none; }
-      .hamburger { display: block; }
-      .top-controls { display: none !important; }
+      nav a { display: none; } .nav-cta { display: none; }
+      .hamburger { display: block; } .top-controls { display: none; }
     }
 
     /* ── HERO ── */
-    .hero {
-      padding: 5rem 2rem 3rem; max-width: 1100px; margin: 0 auto;
-    }
+    .hero { padding: 4rem 2rem 2.5rem; max-width: 1100px; margin: 0 auto; }
     .hero-tag {
-      display: inline-block; font-size: 0.65rem;
-      letter-spacing: 0.2em; text-transform: uppercase;
-      color: var(--accent); border: 1px solid var(--accent);
-      padding: 0.3rem 0.8rem; margin-bottom: 1.5rem;
-      animation: fadeUp 0.6s ease both;
+      display: inline-flex; align-items: center; gap: 0.4rem;
+      font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em;
+      color: var(--accent); background: rgba(106,176,0,0.08); border: 1px solid rgba(106,176,0,0.25);
+      padding: 0.3rem 0.8rem; border-radius: 100px; margin-bottom: 1.5rem;
+      animation: fadeUp 0.5s ease both;
     }
-    .hero h1 {
-      font-family: 'Syne', sans-serif; font-weight: 800;
-      font-size: clamp(3rem, 9vw, 7rem); line-height: 0.95;
-      letter-spacing: -0.04em; animation: fadeUp 0.6s 0.1s ease both;
-    }
-    .hero h1 em {
-      font-family: 'Instrument Serif', serif;
-      font-style: italic; color: var(--accent);
-    }
-    .hero-desc {
-      max-width: 560px; margin-top: 1.5rem;
-      font-size: 0.88rem; color: var(--muted); line-height: 1.7;
-      animation: fadeUp 0.6s 0.2s ease both;
-    }
+    .hero h1 { font-weight: 900; font-size: clamp(2.5rem, 7vw, 5rem); line-height: 1.0; letter-spacing: -0.04em; animation: fadeUp 0.5s 0.1s ease both; }
+    .hero h1 em { font-style: italic; color: var(--accent); }
+    .hero-desc { max-width: 540px; margin-top: 1.2rem; font-size: 1rem; color: var(--muted); line-height: 1.65; animation: fadeUp 0.5s 0.2s ease both; }
 
-    /* ── ARTICLES GRID ── */
-    .articles-section {
-      max-width: 1100px; margin: 0 auto; padding: 0 2rem 6rem;
-    }
-    .section-label {
-      font-size: 0.65rem; letter-spacing: 0.2em;
-      text-transform: uppercase; color: var(--muted);
-      margin-bottom: 2rem; display: flex; align-items: center; gap: 1rem;
-    }
-    .section-label::after {
-      content: ''; flex: 1; height: 1px; background: var(--border);
-    }
+    /* ── ARTICLES ── */
+    .articles-section { max-width: 1100px; margin: 0 auto; padding: 0 2rem 6rem; }
+    .section-label { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-bottom: 1.5rem; display: flex; align-items: center; gap: 1rem; }
+    .section-label::after { content: ''; flex: 1; height: 1px; background: var(--border); }
 
-    .articles-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-      gap: 1.5px;
-    }
+    .articles-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1rem; }
 
     .article-card {
-      background: var(--card); padding: 2.5rem;
-      position: relative; overflow: hidden;
-      transition: background 0.3s, box-shadow 0.3s;
+      background: var(--card); border: 1px solid var(--border); border-radius: 12px;
+      padding: 2rem; position: relative;
+      transition: transform 0.2s, box-shadow 0.2s;
       animation: fadeUp 0.5s ease both;
-      box-shadow: var(--shadow);
-      text-decoration: none; color: inherit;
-      display: flex; flex-direction: column;
+      text-decoration: none; color: inherit; display: flex; flex-direction: column;
     }
-    .article-card:hover { background: var(--card-hover); }
-
-    .article-card::before {
-      content: ''; position: absolute;
-      top: 0; left: 0; right: 0; height: 2px;
-      background: var(--card-accent, var(--accent));
-      transform: scaleX(0); transform-origin: left;
-      transition: transform 0.4s ease;
-    }
-    .article-card:hover::before { transform: scaleX(1); }
-
-    .article-card:nth-child(1) { --card-accent: var(--accent); }
-    .article-card:nth-child(2) { --card-accent: var(--accent2); }
-    .article-card:nth-child(3) { --card-accent: var(--accent3); }
+    .article-card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(0,0,0,0.09); }
+    .article-card::before { display: none; }
 
     .article-card .cat-tag {
-      display: inline-block; font-size: 0.6rem;
-      letter-spacing: 0.2em; text-transform: uppercase;
-      color: var(--card-accent, var(--accent));
-      border: 1px solid var(--card-accent, var(--accent));
-      padding: 0.2rem 0.6rem; margin-bottom: 1.2rem;
-      align-self: flex-start;
+      display: inline-block; font-size: 0.68rem; font-weight: 700;
+      letter-spacing: 0.06em; text-transform: uppercase;
+      color: var(--accent); background: rgba(106,176,0,0.08);
+      border: 1px solid rgba(106,176,0,0.2);
+      padding: 0.2rem 0.65rem; border-radius: 100px;
+      margin-bottom: 1rem; align-self: flex-start;
     }
 
-    .article-card h2 {
-      font-family: 'Syne', sans-serif; font-weight: 800;
-      font-size: clamp(1.2rem, 3vw, 1.6rem);
-      line-height: 1.15; letter-spacing: -0.02em;
-      margin-bottom: 1rem;
-      word-wrap: break-word; overflow-wrap: break-word;
-    }
-
-    .article-card .desc {
-      font-size: 0.82rem; color: var(--muted);
-      line-height: 1.7; flex: 1;
-    }
-
-    .article-card .meta {
-      margin-top: 1.5rem; padding-top: 1rem;
-      border-top: 1px solid var(--border);
-      display: flex; justify-content: space-between; align-items: center;
-    }
-
-    .article-card .date {
-      font-size: 0.62rem; letter-spacing: 0.15em;
-      text-transform: uppercase; color: var(--muted);
-    }
-
-    .article-card .read-link {
-      font-family: 'Syne', sans-serif; font-weight: 700;
-      font-size: 0.72rem; letter-spacing: 0.05em;
-      text-transform: uppercase; color: var(--card-accent, var(--accent));
-      text-decoration: none; transition: opacity 0.2s;
-    }
+    .article-card h2 { font-weight: 700; font-size: clamp(1.1rem, 2.5vw, 1.4rem); line-height: 1.25; margin-bottom: 0.8rem; word-wrap: break-word; }
+    .article-card .desc { font-size: 0.88rem; color: var(--muted); line-height: 1.65; flex: 1; }
+    .article-card .meta { margin-top: 1.2rem; padding-top: 1rem; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; }
+    .article-card .date { font-size: 0.68rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
+    .article-card .read-link { font-weight: 700; font-size: 0.78rem; color: var(--accent); text-decoration: none; transition: opacity 0.2s; }
     .article-card .read-link:hover { opacity: 0.7; }
 
-    /* ── FOOTER ── */
-    footer {
-      border-top: 1px solid var(--border); padding: 2rem;
-      display: flex; justify-content: space-between; align-items: center;
-      font-size: 0.65rem; letter-spacing: 0.1em;
-      color: var(--muted); text-transform: uppercase;
-      max-width: 1100px; margin: 0 auto;
-    }
+    footer { border-top: 1px solid var(--border); padding: 2rem; display: flex; justify-content: space-between; align-items: center; font-size: 0.72rem; color: var(--muted); max-width: 1100px; margin: 0 auto; }
+    @media (max-width: 680px) { .articles-grid { grid-template-columns: 1fr; } footer { flex-direction: column; gap: 0.5rem; text-align: center; } }
 
-    @media (max-width: 680px) {
-      .articles-grid { grid-template-columns: 1fr; }
-      footer { flex-direction: column; gap: 0.5rem; text-align: center; }
-    }
-
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
   </style>
 </head>
 <body>
 
   <!-- HEADER -->
   <header>
+    <a href="index.html" class="logo">Uselessly<span>Interesting</span></a>
     <nav>
       <a href="index.html" data-i18n="nav_home">Home</a>
-      <a href="#" onclick="openCategories(); return false;" data-i18n="nav_categories">Categories</a>
-      <a href="articles.html" class="active" data-i18n="nav_articles">Articles</a>
       <a href="about.html" data-i18n="nav_about">About</a>
       <a href="https://www.instagram.com/uselesslyinteresting" target="_blank" data-i18n="nav_instagram">Instagram</a>
+      <a href="articles.html" class="nav-cta active" data-i18n="nav_articles">Articles</a>
       <button class="hamburger" onclick="toggleMenu()" id="hamburger-btn">☰</button>
     </nav>
-
     <div class="top-controls">
       <div class="lang-dropdown">
         <button class="lang-btn" onclick="toggleLangMenu()" id="lang-btn">🌐 EN</button>
@@ -308,16 +132,12 @@
           <button onclick="setLanguage('zh')">🇨🇳 中文</button>
         </div>
       </div>
-      <button class="theme-toggle" onclick="toggleTheme()" id="theme-btn" title="Toggle dark mode">☀️</button>
     </div>
-
     <div class="mobile-menu" id="mobile-menu">
       <a href="index.html" onclick="toggleMenu()" data-i18n="nav_home">Home</a>
-      <a href="#" onclick="openCategories(); toggleMenu(); return false;" data-i18n="nav_categories">Categories</a>
       <a href="articles.html" onclick="toggleMenu()" data-i18n="nav_articles">Articles</a>
       <a href="about.html" onclick="toggleMenu()" data-i18n="nav_about">About</a>
       <a href="https://www.instagram.com/uselesslyinteresting" target="_blank" onclick="toggleMenu()" data-i18n="nav_instagram">Instagram</a>
-      <a href="#" onclick="toggleTheme(); return false;" id="mobile-theme-btn">☀️ Light Mode</a>
       <a href="#" onclick="toggleMobileLangSubmenu(); return false;" id="mobile-lang-btn">🌐 English ▾</a>
       <div class="mobile-lang-submenu" id="mobile-lang-submenu">
         <button onclick="setLanguage('en'); closeMobileLangSubmenu();">🇬🇧 English</button>
@@ -326,11 +146,6 @@
       </div>
     </div>
   </header>
-
-  <a href="index.html" style="text-decoration:none; color:inherit; display:block; text-align:center; margin-top:1.5rem;">
-    <div class="logo">Uselessly<span>Interesting</span></div>
-    <div class="logo-sub">Facts nobody asked for</div>
-  </a>
 
   <!-- HERO -->
   <div class="hero">
