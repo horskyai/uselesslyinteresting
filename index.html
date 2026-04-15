@@ -1817,14 +1817,6 @@ async function loadArticleOfTheWeek() {
 }
 
 // Set today's date in read-more banner
-(function() {
-  var el = document.getElementById('banner-date');
-  if (el) {
-    var d = new Date();
-    el.textContent = d.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
-  }
-})();
-
 // Initial load
 (function() {
   var lang = localStorage.getItem('lang') || 'en';
