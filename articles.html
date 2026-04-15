@@ -304,13 +304,8 @@
         <button class="lang-btn" onclick="toggleLangMenu()" id="lang-btn">🌐 EN</button>
         <div class="lang-menu" id="lang-menu">
           <button onclick="setLanguage('en')" class="active">🇬🇧 English</button>
-          <button onclick="setLanguage('de')">🇩🇪 Deutsch</button>
           <button onclick="setLanguage('es')">🇪🇸 Español</button>
-          <button onclick="setLanguage('ar')">🇸🇦 العربية</button>
-          <button onclick="setLanguage('it')">🇮🇹 Italiano</button>
-          <button onclick="setLanguage('fr')">🇫🇷 Français</button>
           <button onclick="setLanguage('zh')">🇨🇳 中文</button>
-          <button onclick="setLanguage('ja')">🇯🇵 日本語</button>
         </div>
       </div>
       <button class="theme-toggle" onclick="toggleTheme()" id="theme-btn" title="Toggle dark mode">☀️</button>
@@ -326,13 +321,8 @@
       <a href="#" onclick="toggleMobileLangSubmenu(); return false;" id="mobile-lang-btn">🌐 English ▾</a>
       <div class="mobile-lang-submenu" id="mobile-lang-submenu">
         <button onclick="setLanguage('en'); closeMobileLangSubmenu();">🇬🇧 English</button>
-        <button onclick="setLanguage('de'); closeMobileLangSubmenu();">🇩🇪 Deutsch</button>
         <button onclick="setLanguage('es'); closeMobileLangSubmenu();">🇪🇸 Español</button>
-        <button onclick="setLanguage('ar'); closeMobileLangSubmenu();">🇸🇦 العربية</button>
-        <button onclick="setLanguage('it'); closeMobileLangSubmenu();">🇮🇹 Italiano</button>
-        <button onclick="setLanguage('fr'); closeMobileLangSubmenu();">🇫🇷 Français</button>
         <button onclick="setLanguage('zh'); closeMobileLangSubmenu();">🇨🇳 中文</button>
-        <button onclick="setLanguage('ja'); closeMobileLangSubmenu();">🇯🇵 日本語</button>
       </div>
     </div>
   </header>
@@ -365,8 +355,8 @@
   </footer>
 
   <script>
-  var langNames = { en: 'English', de: 'Deutsch', es: 'Español', ar: 'العربية', it: 'Italiano', fr: 'Français', zh: '中文', ja: '日本語' };
-  var langFlags = { en: '🇬🇧', de: '🇩🇪', es: '🇪🇸', ar: '🇸🇦', it: '🇮🇹', fr: '🇫🇷', zh: '🇨🇳', ja: '🇯🇵' };
+  var langNames = { en: 'English', es: 'Español', zh: '中文' };
+  var langFlags = { en: '🇬🇧', es: '🇪🇸', zh: '🇨🇳' };
   var i18nData = null;
   var currentLang = 'en';
 

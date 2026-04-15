@@ -755,13 +755,8 @@ function declineCookies() {
     <button class="lang-btn" onclick="toggleLangMenu()" id="lang-btn">🌐 EN</button>
     <div class="lang-menu" id="lang-menu">
       <button onclick="setLanguage('en')" class="active">🇬🇧 English</button>
-      <button onclick="setLanguage('de')">🇩🇪 Deutsch</button>
       <button onclick="setLanguage('es')">🇪🇸 Español</button>
-      <button onclick="setLanguage('ar')">🇸🇦 العربية</button>
-      <button onclick="setLanguage('it')">🇮🇹 Italiano</button>
-      <button onclick="setLanguage('fr')">🇫🇷 Français</button>
       <button onclick="setLanguage('zh')">🇨🇳 中文</button>
-      <button onclick="setLanguage('ja')">🇯🇵 日本語</button>
     </div>
   </div>
   <button class="theme-toggle" onclick="toggleTheme()" id="theme-btn" title="Toggle dark mode">☀️</button>
@@ -777,13 +772,8 @@ function declineCookies() {
   <a href="#" onclick="toggleMobileLangSubmenu(); return false;" id="mobile-lang-btn">🌐 English ▾</a>
   <div class="mobile-lang-submenu" id="mobile-lang-submenu">
     <button onclick="setLanguage('en'); closeMobileLangSubmenu();">🇬🇧 English</button>
-    <button onclick="setLanguage('de'); closeMobileLangSubmenu();">🇩🇪 Deutsch</button>
     <button onclick="setLanguage('es'); closeMobileLangSubmenu();">🇪🇸 Español</button>
-    <button onclick="setLanguage('ar'); closeMobileLangSubmenu();">🇸🇦 العربية</button>
-    <button onclick="setLanguage('it'); closeMobileLangSubmenu();">🇮🇹 Italiano</button>
-    <button onclick="setLanguage('fr'); closeMobileLangSubmenu();">🇫🇷 Français</button>
     <button onclick="setLanguage('zh'); closeMobileLangSubmenu();">🇨🇳 中文</button>
-    <button onclick="setLanguage('ja'); closeMobileLangSubmenu();">🇯🇵 日本語</button>
   </div>
 </div>
   </header>
@@ -1313,6 +1303,13 @@ function toggleMore(id, btn) {
         <div onclick="filterCategory('Animals')" style="background:var(--surface); border:1px solid var(--border); padding:1rem; cursor:pointer; font-size:0.8rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--text);">🐾 Animals</div>
         <div onclick="filterCategory('Science')" style="background:var(--surface); border:1px solid var(--border); padding:1rem; cursor:pointer; font-size:0.8rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--text);">🔬 Science</div>
         <div onclick="filterCategory('Weird')" style="background:var(--surface); border:1px solid var(--border); padding:1rem; cursor:pointer; font-size:0.8rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--text);">😂 Weird</div>
+        <div onclick="filterCategory('Celebrity')" style="background:var(--surface); border:1px solid var(--border); padding:1rem; cursor:pointer; font-size:0.8rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--text);">🌟 Celebrity</div>
+        <div onclick="filterCategory('Food')" style="background:var(--surface); border:1px solid var(--border); padding:1rem; cursor:pointer; font-size:0.8rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--text);">🍽️ Food</div>
+        <div onclick="filterCategory('Psychology')" style="background:var(--surface); border:1px solid var(--border); padding:1rem; cursor:pointer; font-size:0.8rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--text);">🧠 Psychology</div>
+        <div onclick="filterCategory('Geography')" style="background:var(--surface); border:1px solid var(--border); padding:1rem; cursor:pointer; font-size:0.8rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--text);">🌍 Geography</div>
+        <div onclick="filterCategory('Language')" style="background:var(--surface); border:1px solid var(--border); padding:1rem; cursor:pointer; font-size:0.8rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--text);">💬 Language</div>
+        <div onclick="filterCategory('Crime')" style="background:var(--surface); border:1px solid var(--border); padding:1rem; cursor:pointer; font-size:0.8rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--text);">🔍 Crime</div>
+        <div onclick="filterCategory('Sports')" style="background:var(--surface); border:1px solid var(--border); padding:1rem; cursor:pointer; font-size:0.8rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--text);">🏆 Sports</div>
       </div>
     </div>
 
@@ -1410,13 +1407,13 @@ function toggleMobileLangSubmenu() {
 function closeMobileLangSubmenu() {
   document.getElementById('mobile-lang-submenu').classList.remove('open');
   // Update mobile lang button text
-  var langNames = {en:'English',de:'Deutsch',es:'Español',ar:'العربية',it:'Italiano',fr:'Français',zh:'中文',ja:'日本語'};
-  var langFlags = {en:'🇬🇧',de:'🇩🇪',es:'🇪🇸',ar:'🇸🇦',it:'🇮🇹',fr:'🇫🇷',zh:'🇨🇳',ja:'🇯🇵'};
+  var langNames = {en:'English',es:'Español',zh:'中文'};
+  var langFlags = {en:'🇬🇧',es:'🇪🇸',zh:'🇨🇳'};
   var lang = localStorage.getItem('lang') || 'en';
   document.getElementById('mobile-lang-btn').textContent = '🌐 ' + langNames[lang] + ' ▾';
   // Update active state in submenu
   var btns = document.getElementById('mobile-lang-submenu').querySelectorAll('button');
-  var codes = ['en','de','es','ar','it','fr','zh','ja'];
+  var codes = ['en','es','zh'];
   btns.forEach(function(b, i) { b.classList.toggle('active', codes[i] === lang); });
   toggleMenu();
 }
@@ -1464,9 +1461,9 @@ function updateThemeButtons(theme) {
 // ── LANGUAGE SWITCHER ──
 var i18nData = null;
 var currentLang = localStorage.getItem('lang') || 'en';
-var langNames = { en: 'English', de: 'Deutsch', es: 'Español', ar: 'العربية', it: 'Italiano', fr: 'Français', zh: '中文', ja: '日本語' };
-var langCodes = ['en', 'de', 'es', 'ar', 'it', 'fr', 'zh', 'ja'];
-var langFlags = { en: '🇬🇧', de: '🇩🇪', es: '🇪🇸', ar: '🇸🇦', it: '🇮🇹', fr: '🇫🇷', zh: '🇨🇳', ja: '🇯🇵' };
+var langNames = { en: 'English', es: 'Español', zh: '中文' };
+var langCodes = ['en', 'es', 'zh'];
+var langFlags = { en: '🇬🇧', es: '🇪🇸', zh: '🇨🇳' };
 
 // Load translations
 fetch('translations.json').then(function(r) { return r.json(); }).then(function(data) {
@@ -1554,7 +1551,7 @@ function applyLanguage(lang) {
   }
 
   // Special: categories popup
-  var catLabels = ['cat_all','cat_biology','cat_space','cat_history','cat_nature','cat_animals','cat_science','cat_weird'];
+  var catLabels = ['cat_all','cat_biology','cat_space','cat_history','cat_nature','cat_animals','cat_science','cat_weird','cat_celebrity','cat_food','cat_psychology','cat_geography','cat_language','cat_crime','cat_sports'];
   var catDivs = document.querySelectorAll('#categories-popup [onclick^="filterCategory"]');
   catDivs.forEach(function(div, idx) {
     if (t[catLabels[idx]]) div.textContent = t[catLabels[idx]];

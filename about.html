@@ -134,13 +134,8 @@
       <button class="lang-btn" onclick="toggleLangMenu()" id="lang-btn">🌐 EN</button>
       <div class="lang-menu" id="lang-menu">
         <button onclick="setLanguage('en')" class="active">🇬🇧 English</button>
-        <button onclick="setLanguage('de')">🇩🇪 Deutsch</button>
         <button onclick="setLanguage('es')">🇪🇸 Español</button>
-        <button onclick="setLanguage('ar')">🇸🇦 العربية</button>
-        <button onclick="setLanguage('it')">🇮🇹 Italiano</button>
-        <button onclick="setLanguage('fr')">🇫🇷 Français</button>
         <button onclick="setLanguage('zh')">🇨🇳 中文</button>
-        <button onclick="setLanguage('ja')">🇯🇵 日本語</button>
       </div>
     </div>
     <button class="theme-toggle" onclick="toggleTheme()" id="theme-btn" title="Toggle dark mode">☀️</button>
@@ -200,8 +195,8 @@
   </footer>
 
   <script>
-  var langNames = { en: 'English', de: 'Deutsch', es: 'Español', ar: 'العربية', it: 'Italiano', fr: 'Français', zh: '中文', ja: '日本語' };
-  var langFlags = { en: '🇬🇧', de: '🇩🇪', es: '🇪🇸', ar: '🇸🇦', it: '🇮🇹', fr: '🇫🇷', zh: '🇨🇳', ja: '🇯🇵' };
+  var langNames = { en: 'English', es: 'Español', zh: '中文' };
+  var langFlags = { en: '🇬🇧', es: '🇪🇸', zh: '🇨🇳' };
   var translations = null;
 
   function toggleLangMenu() {
