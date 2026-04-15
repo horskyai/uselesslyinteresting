@@ -318,6 +318,49 @@
     }
 
 
+    /* ── READ MORE BANNER ── */
+    .read-more-banner {
+      max-width: 1100px;
+      margin: 2rem auto;
+      padding: 0 1.5rem;
+    }
+    .read-more-banner a {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.2rem 2rem;
+      border: 1px solid var(--border);
+      background: var(--card);
+      text-decoration: none;
+      transition: box-shadow 0.2s;
+    }
+    .read-more-banner a:hover {
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+    .read-more-banner .banner-left {
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+    }
+    .read-more-banner .banner-date {
+      font-size: 0.6rem;
+      letter-spacing: 0.15em;
+      color: var(--muted);
+      text-transform: uppercase;
+    }
+    .read-more-banner .banner-text {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: 1.1rem;
+      color: var(--text);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .read-more-banner .banner-arrow {
+      font-size: 1.4rem;
+      color: var(--accent);
+    }
+
     /* ── ARTICLES SECTION ── */
     .articles-section {
       max-width: 1100px;
@@ -804,6 +847,17 @@ function declineCookies() {
   </div>
 
 
+
+  <!-- READ MORE BANNER -->
+  <div class="read-more-banner">
+    <a href="articles.html">
+      <div class="banner-left">
+        <span class="banner-date" id="banner-date"></span>
+        <span class="banner-text">Read more →</span>
+      </div>
+      <span class="banner-arrow">→</span>
+    </a>
+  </div>
 
   <div id="scheduled-facts"></div>
 
@@ -1762,6 +1816,15 @@ async function loadArticlesSection() {
 async function loadArticleOfTheWeek() {
   return loadArticlesSection();
 }
+
+// Set today's date in read-more banner
+(function() {
+  var el = document.getElementById('banner-date');
+  if (el) {
+    var d = new Date();
+    el.textContent = d.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
+  }
+})();
 
 // Initial load
 (function() {
