@@ -1731,11 +1731,11 @@ async function loadArticlesSection() {
   var moreText = lang === 'en' ? 'VIEW ALL ARTICLES' : (i18nData && i18nData[lang] && i18nData[lang]['articles_view_all'] ? i18nData[lang]['articles_view_all'] : 'VIEW ALL ARTICLES');
 
   var now = new Date();
-  // Show last 3 published articles
+  // Show last 1 published article
   var cardsHtml = '';
   var shown = 0;
   articles.forEach(function(a) {
-    if (shown >= 3) return;
+    if (shown >= 1) return;
     if (a.publishAt && now < new Date(a.publishAt)) return;
     var aTitle = (lang !== 'en' && i18nData && i18nData[lang]) ? (i18nData[lang]['articles_title_' + a.key] || a.title) : a.title;
     var aDesc = (lang !== 'en' && i18nData && i18nData[lang]) ? (i18nData[lang]['articles_desc_' + a.key] || a.description) : a.description;
